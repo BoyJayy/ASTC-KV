@@ -1,0 +1,218 @@
+{
+  "created_utc": "2026-10-28T20:00:35.411808+00:00",
+  "config": {
+    "schema": "astckv.kernel_split.v2",
+    "registered_before_results": true,
+    "hypothesis": "The long serial token loop and too few context splits explain much of the observed v1 latency. More splits may improve all storage paths; this alone is not ASTC-specific novelty.",
+    "source_fixture": "results/metal_fixtures/story_l17_v_token6/manifest.json",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tile_tokens": [
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "sessions": 2,
+    "rounds": 30,
+    "iterations": 10,
+    "seed": 20261029,
+    "correctness": "Unchanged v1 relative-L2 <=1e-4 on each path's own reconstructed values, plus existing engineering decode gate",
+    "scope": "T384 is the original fixture; T2048/T8192 repeat its known blocks and FP16 K solely as traffic/shape controls, not long-context model quality. All tests repeatedly read one cache and may fit GPU cache.",
+    "negative_outcome": "Reducing tile length gives no reproducible latency reduction, or an optimized ASTC path remains slower than the best own buffer path. No inference claim from microbenchmarks.",
+    "decision": "Freeze split choices for each shape before subsequent v2 attribution controls; retain all raw rounds and both session medians. Do not compare batched GPU timings to Python host latency."
+  },
+  "hashes_before": {
+    "/path/to/ASTC-KV/build/metal/astc-kv-probe": "c4d78d74336e0938832b19318c94e28819f4e48b597eac4fb322dff652901146",
+    "/path/to/ASTC-KV/metal/attention.metal": "0c05dd441f46df989e27cf325688f6decbe4a5b747025513091a5f208208fd61",
+    "/path/to/ASTC-KV/configs/kernel_split_v2.json": "f290c89a1ecb5f982fe25bb86ce8e21a3fd6fc9390848b80db03e3447695685e",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "e0e5cdf98232349e246cc1d084ae0c47fb5b11308a3c61540182dfb62855af12"
+  },
+  "schedule": [
+    [
+      0,
+      2048,
+      256
+    ],
+    [
+      0,
+      384,
+      8
+    ],
+    [
+      0,
+      384,
+      64
+    ],
+    [
+      0,
+      2048,
+      64
+    ],
+    [
+      0,
+      8192,
+      16
+    ],
+    [
+      0,
+      8192,
+      128
+    ],
+    [
+      0,
+      2048,
+      32
+    ],
+    [
+      0,
+      384,
+      16
+    ],
+    [
+      0,
+      2048,
+      8
+    ],
+    [
+      0,
+      8192,
+      8
+    ],
+    [
+      0,
+      384,
+      32
+    ],
+    [
+      0,
+      384,
+      128
+    ],
+    [
+      0,
+      8192,
+      64
+    ],
+    [
+      0,
+      384,
+      256
+    ],
+    [
+      0,
+      2048,
+      128
+    ],
+    [
+      0,
+      2048,
+      16
+    ],
+    [
+      0,
+      8192,
+      32
+    ],
+    [
+      0,
+      8192,
+      256
+    ],
+    [
+      1,
+      8192,
+      16
+    ],
+    [
+      1,
+      384,
+      8
+    ],
+    [
+      1,
+      384,
+      32
+    ],
+    [
+      1,
+      8192,
+      64
+    ],
+    [
+      1,
+      2048,
+      128
+    ],
+    [
+      1,
+      2048,
+      8
+    ],
+    [
+      1,
+      2048,
+      16
+    ],
+    [
+      1,
+      2048,
+      256
+    ],
+    [
+      1,
+      8192,
+      256
+    ],
+    [
+      1,
+      8192,
+      32
+    ],
+    [
+      1,
+      8192,
+      8
+    ],
+    [
+      1,
+      384,
+      64
+    ],
+    [
+      1,
+      384,
+      16
+    ],
+    [
+      1,
+      2048,
+      64
+    ],
+    [
+      1,
+      384,
+      256
+    ],
+    [
+      1,
+      2048,
+      32
+    ],
+    [
+      1,
+      384,
+      128
+    ],
+    [
+      1,
+      8192,
+      128
+    ]
+  ]
+}

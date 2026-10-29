@@ -1,0 +1,49 @@
+-- Arm backend options
+--   SVE 256b backend     - OFF
+--   SVE 128b backend     - OFF
+--   NEON backend         - OFF
+-- x86-64 backend options
+--   AVX2 backend         - OFF
+--   SSE4.1 backend       - OFF
+--   SSE2 backend         - OFF
+--   Use native gathers   - ON
+-- Agnostic backend options
+--   NONE backend         - OFF
+--   NATIVE backend       - ON
+-- Build options
+--   Universal bin        - OFF
+--   Invariance           - ON
+--   Shared libs          - OFF
+--   Decompressor         - OFF
+-- Developer options
+--   Diagnostics          - OFF
+--   ASAN                 - OFF
+--   UBSAN                - OFF
+--   Unit tests           - OFF
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /path/to/ASTC-KV/build/astc
+[ 17%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_color_quantize.cpp.o
+[ 17%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_averages_and_directions.cpp.o
+[ 17%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_color_unquantize.cpp.o
+[ 17%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_block_sizes.cpp.o
+[ 21%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_compress_symbolic.cpp.o
+[ 26%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_compute_variance.cpp.o
+[ 30%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_decompress_symbolic.cpp.o
+[ 34%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_diagnostic_trace.cpp.o
+[ 39%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_entry.cpp.o
+[ 43%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_find_best_partitioning.cpp.o
+[ 47%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_ideal_endpoints_and_weights.cpp.o
+[ 52%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_image.cpp.o
+[ 56%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_integer_sequence.cpp.o
+[ 60%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_mathlib.cpp.o
+[ 65%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_mathlib_softfloat.cpp.o
+[ 69%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_partition_tables.cpp.o
+[ 73%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_percentile_tables.cpp.o
+[ 78%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_pick_best_endpoint_format.cpp.o
+[ 82%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_quantization.cpp.o
+[ 86%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_symbolic_physical.cpp.o
+[ 91%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_weight_align.cpp.o
+[ 95%] Building CXX object Source/CMakeFiles/astcenc-native-static.dir/astcenc_weight_quant_xfer_tables.cpp.o
+[100%] Linking CXX static library libastcenc-native-static.a
+[100%] Built target astcenc-native-static

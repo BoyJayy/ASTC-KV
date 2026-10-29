@@ -1,0 +1,82 @@
+{
+  "schema": "astckv.independent_audit.v1",
+  "scope": "Recalculation of archived results; no fresh model execution",
+  "archive_sha256": "13ddaaa57a0b2c81457155aeece426e1977c3bc3a805bca0f8f0988d77e60b95",
+  "archive_manifest_files_verified": 113,
+  "snapshot_rows": 936,
+  "snapshot_aggregates": 117,
+  "max_snapshot_difference": 0.0,
+  "model_loss_rows": 3040,
+  "max_nll_difference": 8.881784197001252e-16,
+  "selected_snapshot": [
+    {
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "relative_l2": 0.07425469323115132,
+      "bits_per_kv": 11.5625
+    },
+    {
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "relative_l2": 0.06645038004152973,
+      "bits_per_kv": 7.3125
+    },
+    {
+      "variant": "u4_token",
+      "mode": "V_only",
+      "relative_l2": 0.04039357218176319,
+      "bits_per_kv": 11.6875
+    }
+  ],
+  "model_recomputed": {
+    "fp16": {
+      "targets": 380,
+      "mean_nll": 3.363042382815968,
+      "ppl_ratio": 1.0
+    },
+    "scalar6_page_KV": {
+      "targets": 380,
+      "mean_nll": 3.454703878084965,
+      "ppl_ratio": 1.0959937602082803
+    },
+    "scalar6_page_V_only": {
+      "targets": 380,
+      "mean_nll": 3.447986461679293,
+      "ppl_ratio": 1.0886561861047832
+    },
+    "scalar6_token_KV": {
+      "targets": 380,
+      "mean_nll": 3.384095005220879,
+      "ppl_ratio": 1.021275792211801
+    },
+    "scalar6_token_V_only": {
+      "targets": 380,
+      "mean_nll": 3.3730947361043597,
+      "ppl_ratio": 1.0101030479160862
+    },
+    "u4_asymmetric_KV": {
+      "targets": 380,
+      "mean_nll": 3.3671350024681255,
+      "ppl_ratio": 1.0041010058565782
+    },
+    "u4_token_KV": {
+      "targets": 380,
+      "mean_nll": 3.3909255682874457,
+      "ppl_ratio": 1.0282755598806974
+    },
+    "u4_token_V_only": {
+      "targets": 380,
+      "mean_nll": 3.364849051452183,
+      "ppl_ratio": 1.001808301645283
+    }
+  },
+  "memory_bytes": {
+    "fp16": 8824320,
+    "u4_V": 6439680.0,
+    "astc_token6_V": 6370560.0,
+    "u4_asymmetric_KV": 4020480.0
+  },
+  "astc_V_saving_vs_u4_V_fraction": 0.01073345259391767,
+  "source_sha256": "f2174fc63df65f1aac260354e8bb79d6e96a7c4e8174d0bf799752a4c2865a4b",
+  "passed": true
+}

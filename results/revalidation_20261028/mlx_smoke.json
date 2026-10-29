@@ -1,0 +1,80 @@
+{
+  "schema": "astckv.mlx_attention_baseline.v1",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.14",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "numpy": "2.3.5"
+  },
+  "git_commit": {
+    "returncode": 0,
+    "stdout": "869ffc277aa38dd8b12f96409c037f1edc32d414",
+    "stderr": ""
+  },
+  "macos": {
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "stderr": ""
+  },
+  "xcode": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  },
+  "metal_sdk": {
+    "returncode": 0,
+    "stdout": "26.5",
+    "stderr": ""
+  },
+  "power": {
+    "returncode": 0,
+    "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t94%; AC attached; not charging present: true",
+    "stderr": ""
+  },
+  "status": "correctness_failed",
+  "metal_performance_verified": false,
+  "source_sha256": "878095d6a773dae70131b7028117ae37c6039befad517bf693248ffabbb0c482",
+  "mlx_default_device": "Device(gpu, 0)",
+  "metal_device_info": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 40200896512,
+    "memory_size": 51539607552,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 30150672384,
+    "resource_limit": 499000
+  },
+  "correctness": {
+    "fp16_fast_sdpa": {
+      "relative_l2_vs_own_fp64_reference": 0.00022660115722203058,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q4_g32": {
+      "relative_l2_vs_own_fp64_reference": 0.0005031414657046478,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q4_g64": {
+      "relative_l2_vs_own_fp64_reference": 1.628603373020685,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": false
+    },
+    "mlx_q8_g32": {
+      "relative_l2_vs_own_fp64_reference": 2.177944103122434,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": false
+    },
+    "mlx_q8_g64": {
+      "relative_l2_vs_own_fp64_reference": 2.1573235565351143,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": false
+    }
+  }
+}

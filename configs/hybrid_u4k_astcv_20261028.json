@@ -1,0 +1,17 @@
+{
+  "schema": "astckv.hybrid_diagnostic.v1",
+  "registered_before_hybrid_results": true,
+  "date": "2026-10-28",
+  "hypothesis": "Combining channel-wise affine U4 K with scalar6 token-normalized ASTC V retains the pilot PPL screen while reducing logical bytes relative to asymmetric U4 K+V.",
+  "selection": "Post-hoc combination selected after independent reproduction of old pilot and the negative mean-correction experiment; not a fresh confirmation dataset.",
+  "K": {"bits":4,"axis":"channel","group":96},
+  "V": {"layout":"scalar","block":6,"normalization":"token","profile":"ldr","quality":98},
+  "prefix_tokens":288,
+  "context_tokens":384,
+  "precise_tail":"FP16 with genuine model error feedback; compress historical prefix once",
+  "model":"SmolLM2-135M, fixed original BF16 weights widened to FP32, 30 layers",
+  "comparators":"New same-Mac FP16 and asymmetric U4 reproductions",
+  "pilot_gate":"aggregate PPL ratio to FP16 <=1.02; no per-document gate retroactively imposed",
+  "negative_outcome":"Aggregate PPL ratio exceeds1.02, nonfinite outputs, or no logical-memory saving versus asymmetric U4. Even a pass is only a candidate; latency and physical memory remain unmeasured.",
+  "budget":"One fixed hybrid, all four old documents,380 target losses. No tuning, corrections, mode selection, GPU encoder or new model."
+}

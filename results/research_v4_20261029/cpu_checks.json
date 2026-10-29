@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-28T21:38:07.432997+00:00",
+  "command": [
+    ".venv-research/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_gather_pairs_v8.py",
+    "-v"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "test_even_pairs_never_cross_astc_or_atlas_seams (test_gather_pairs_v8.GatherPairTests.test_even_pairs_never_cross_astc_or_atlas_seams) ... ok\ntest_odd_block_boundary_requires_fallback (test_gather_pairs_v8.GatherPairTests.test_odd_block_boundary_requires_fallback) ... ok\ntest_pair_algebra_with_softmax_extremes (test_gather_pairs_v8.GatherPairTests.test_pair_algebra_with_softmax_extremes) ... ok\ntest_split_pair_coverage_and_mask (test_gather_pairs_v8.GatherPairTests.test_split_pair_coverage_and_mask) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.578s\n\nOK\n",
+  "test_sha256": "63f9373d968862617c19d2eb4049bb86f4da00e344be1f8d2f4884d31e903113",
+  "geometric_pairs": 541632,
+  "coverage_cases": 90,
+  "algebra_cases": 75
+}

@@ -1,0 +1,973 @@
+{
+  "status": "PASS",
+  "stages": {
+    "gather": {
+      "primary_passed": false,
+      "primary_session_medians": [
+        1.4520267934839484,
+        1.3837639869317124,
+        1.335167066683204,
+        1.3793851865999345,
+        1.3372143223784752
+      ],
+      "comparisons": [
+        {
+          "tokens": 384,
+          "pair": "hoisted_to_gather",
+          "session_ratios": [
+            1.1859966819485441,
+            1.182413124086434,
+            1.1877602290855926,
+            1.1881640165951683,
+            1.1825634844780764
+          ],
+          "median_session_ratio": 1.1859966819485441,
+          "a_us_median_of_session_medians": 7.859270184978678,
+          "b_us_median_of_session_medians": 9.322344802601666,
+          "all_block_ratio_range": [
+            0.17562968583389993,
+            4.28345629179053
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "paired_direct_to_gather",
+          "session_ratios": [
+            0.9329734208929015,
+            0.9586882227644027,
+            0.9574017981019898,
+            0.9571862517175123,
+            0.9574158341200956
+          ],
+          "median_session_ratio": 0.9574017981019898,
+          "a_us_median_of_session_medians": 9.705689493918591,
+          "b_us_median_of_session_medians": 9.294269368619473,
+          "all_block_ratio_range": [
+            0.2953939836037734,
+            3.8072210901380465
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "fp16_to_gather",
+          "session_ratios": [
+            1.6152329764105797,
+            1.6206496486887474,
+            1.6179074284867734,
+            1.620243369136213,
+            1.6198204057777388
+          ],
+          "median_session_ratio": 1.6198204057777388,
+          "a_us_median_of_session_medians": 5.746842150683127,
+          "b_us_median_of_session_medians": 9.303360411099714,
+          "all_block_ratio_range": [
+            0.347459164731815,
+            9.697801551918822
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "hoisted_to_gather",
+          "session_ratios": [
+            1.1439763965205612,
+            1.140492870952975,
+            1.1416848642381145,
+            1.1408124691809736,
+            1.1443884519640628
+          ],
+          "median_session_ratio": 1.1416848642381145,
+          "a_us_median_of_session_medians": 16.563609369093683,
+          "b_us_median_of_session_medians": 20.360395901520075,
+          "all_block_ratio_range": [
+            0.3171831247035897,
+            3.618198923313141
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "paired_direct_to_gather",
+          "session_ratios": [
+            0.9425098251601187,
+            0.943743020167715,
+            0.9452211065110037,
+            0.944854756794188,
+            0.9456736924073423
+          ],
+          "median_session_ratio": 0.944854756794188,
+          "a_us_median_of_session_medians": 20.1832754955158,
+          "b_us_median_of_session_medians": 19.106270160338667,
+          "all_block_ratio_range": [
+            0.2643130617192445,
+            2.8262816085297398
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "fp16_to_gather",
+          "session_ratios": [
+            1.5618821332208546,
+            1.556533136793755,
+            1.559171754098685,
+            1.560575952627723,
+            1.5590198522805252
+          ],
+          "median_session_ratio": 1.559171754098685,
+          "a_us_median_of_session_medians": 11.836930248820364,
+          "b_us_median_of_session_medians": 19.353298782854026,
+          "all_block_ratio_range": [
+            0.3227500937323636,
+            5.192455492274107
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "hoisted_to_gather",
+          "session_ratios": [
+            1.4520267934839484,
+            1.3837639869317124,
+            1.335167066683204,
+            1.3793851865999345,
+            1.3372143223784752
+          ],
+          "median_session_ratio": 1.3793851865999345,
+          "a_us_median_of_session_medians": 45.16718641250434,
+          "b_us_median_of_session_medians": 61.418347513111186,
+          "all_block_ratio_range": [
+            0.6255185937148798,
+            2.5482160764159425
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "paired_direct_to_gather",
+          "session_ratios": [
+            0.9177804702583965,
+            0.9191148065076042,
+            0.9187005373220174,
+            0.9208798847352495,
+            1.0040673771351565
+          ],
+          "median_session_ratio": 0.9191148065076042,
+          "a_us_median_of_session_medians": 66.36461326703281,
+          "b_us_median_of_session_medians": 61.74736879897661,
+          "all_block_ratio_range": [
+            0.4732429763744754,
+            1.872598772977849
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "fp16_to_gather",
+          "session_ratios": [
+            2.096403005170502,
+            2.1328449680248567,
+            2.1071516333486313,
+            2.095943936054534,
+            2.0909450427234333
+          ],
+          "median_session_ratio": 2.096403005170502,
+          "a_us_median_of_session_medians": 31.14240375140895,
+          "b_us_median_of_session_medians": 62.90457879520814,
+          "all_block_ratio_range": [
+            0.7932139060577285,
+            4.00270077729991
+          ]
+        }
+      ],
+      "memory_rows": [
+        {
+          "session": 0,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 0,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 0,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 1,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 1,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 1,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 2,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 2,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 2,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 3,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 3,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 3,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 4,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        }
+      ]
+    },
+    "exchange": {
+      "primary_passed": false,
+      "primary_session_medians": [
+        1.297857068500785,
+        1.2300952935153737,
+        1.2267630442172917,
+        1.2544425492527904,
+        1.2309392257672351
+      ],
+      "comparisons": [
+        {
+          "tokens": 384,
+          "pair": "hoisted_to_exchange",
+          "session_ratios": [
+            1.127798406898453,
+            1.1314623096617797,
+            1.1272322376320614,
+            1.1255800384922323,
+            1.127730228206104
+          ],
+          "median_session_ratio": 1.127730228206104,
+          "a_us_median_of_session_medians": 7.854086558819888,
+          "b_us_median_of_session_medians": 8.84270505320772,
+          "all_block_ratio_range": [
+            0.24186106172950025,
+            4.642730272089802
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "exchange_direct_to_gather",
+          "session_ratios": [
+            0.9588720404029036,
+            0.9583960932422534,
+            0.9567898851065415,
+            0.9583680806704383,
+            0.9615812888989849
+          ],
+          "median_session_ratio": 0.9583960932422534,
+          "a_us_median_of_session_medians": 9.229602236987859,
+          "b_us_median_of_session_medians": 8.841665706542187,
+          "all_block_ratio_range": [
+            0.16331567248851778,
+            6.078351343662741
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "paired_to_exchange",
+          "session_ratios": [
+            0.9525769118008746,
+            0.949776484550196,
+            0.9523600317964533,
+            0.9495438521447949,
+            0.9520676127052075
+          ],
+          "median_session_ratio": 0.9520676127052075,
+          "a_us_median_of_session_medians": 9.309853130911058,
+          "b_us_median_of_session_medians": 8.843649775424044,
+          "all_block_ratio_range": [
+            0.22198303014878926,
+            4.5879682061634535
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "fp16_to_exchange",
+          "session_ratios": [
+            1.541716641096542,
+            1.5398760065018595,
+            1.5402145473870126,
+            1.5379316744643483,
+            1.5430026972277304
+          ],
+          "median_session_ratio": 1.5402145473870126,
+          "a_us_median_of_session_medians": 5.7348705805046585,
+          "b_us_median_of_session_medians": 8.83728704941769,
+          "all_block_ratio_range": [
+            0.2466660464113873,
+            7.52456183049214
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "hoisted_to_exchange",
+          "session_ratios": [
+            1.1018811761015548,
+            1.103231014389333,
+            1.1003519646055422,
+            1.1023773287027194,
+            1.100254940512968
+          ],
+          "median_session_ratio": 1.1018811761015548,
+          "a_us_median_of_session_medians": 16.034873784541034,
+          "b_us_median_of_session_medians": 18.06234627139824,
+          "all_block_ratio_range": [
+            0.25532501073633057,
+            4.47126774760964
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "exchange_direct_to_gather",
+          "session_ratios": [
+            0.9313648864267164,
+            0.9335969638894269,
+            0.9328051516049045,
+            0.9369465260282301,
+            0.9043171677327533
+          ],
+          "median_session_ratio": 0.9328051516049045,
+          "a_us_median_of_session_medians": 18.919260888591168,
+          "b_us_median_of_session_medians": 17.656213657845452,
+          "all_block_ratio_range": [
+            0.19409263956899359,
+            3.762343263295471
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "paired_to_exchange",
+          "session_ratios": [
+            0.9632710251598642,
+            0.9640235576716698,
+            0.9628467737433015,
+            0.9643478661425416,
+            0.9628733940022327
+          ],
+          "median_session_ratio": 0.9632710251598642,
+          "a_us_median_of_session_medians": 18.316059641728664,
+          "b_us_median_of_session_medians": 17.669726624018317,
+          "all_block_ratio_range": [
+            0.18336863915133755,
+            3.8617020260286186
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "fp16_to_exchange",
+          "session_ratios": [
+            1.5041815218957213,
+            1.503022357655968,
+            1.502723103033311,
+            1.50469998190306,
+            1.4949273816652977
+          ],
+          "median_session_ratio": 1.503022357655968,
+          "a_us_median_of_session_medians": 11.783250381740462,
+          "b_us_median_of_session_medians": 17.73692634150141,
+          "all_block_ratio_range": [
+            0.3508367848302741,
+            7.682139313655643
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "hoisted_to_exchange",
+          "session_ratios": [
+            1.297857068500785,
+            1.2300952935153737,
+            1.2267630442172917,
+            1.2544425492527904,
+            1.2309392257672351
+          ],
+          "median_session_ratio": 1.2309392257672351,
+          "a_us_median_of_session_medians": 45.850696075546374,
+          "b_us_median_of_session_medians": 57.73148038720218,
+          "all_block_ratio_range": [
+            0.5300711518310279,
+            2.710276981632819
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "exchange_direct_to_gather",
+          "session_ratios": [
+            0.8973995581207738,
+            0.8527585097792942,
+            0.9100208741140172,
+            0.8248994690001186,
+            0.8939293011532583
+          ],
+          "median_session_ratio": 0.8939293011532583,
+          "a_us_median_of_session_medians": 63.08383333271821,
+          "b_us_median_of_session_medians": 57.59708718912423,
+          "all_block_ratio_range": [
+            0.42224284675977086,
+            1.9428814486041839
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "paired_to_exchange",
+          "session_ratios": [
+            0.9197092941621499,
+            0.9136871443935941,
+            0.9970065629293203,
+            0.9232389640640671,
+            0.9168997226140726
+          ],
+          "median_session_ratio": 0.9197092941621499,
+          "a_us_median_of_session_medians": 63.349531747158956,
+          "b_us_median_of_session_medians": 56.042642658621375,
+          "all_block_ratio_range": [
+            0.4037599186933822,
+            1.967230486983627
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "fp16_to_exchange",
+          "session_ratios": [
+            1.9479752418446048,
+            1.9251990512232449,
+            1.9251717033920521,
+            2.1174185349074284,
+            1.9313912782605467
+          ],
+          "median_session_ratio": 1.9313912782605467,
+          "a_us_median_of_session_medians": 29.609113402406575,
+          "b_us_median_of_session_medians": 55.421994578578634,
+          "all_block_ratio_range": [
+            0.6141942897354498,
+            3.8828289805149754
+          ]
+        }
+      ],
+      "memory_rows": [
+        {
+          "session": 0,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 0,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 0,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 1,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 1,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 1,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 2,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 2,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 2,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 3,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 3,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 3,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 4,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        }
+      ]
+    },
+    "gqa": {
+      "primary_passed": false,
+      "primary_session_medians": {
+        "fused_fp16_to_astc": [
+          1.1561719132109147,
+          1.0570372532777945,
+          1.1586722255134592,
+          1.1487894536702319,
+          1.084247102211052
+        ],
+        "fp16_to_gqa_astc": [
+          2.00088104196832,
+          2.1323152070096976,
+          1.9894426057037986,
+          2.0184567284819432,
+          1.9800625037272916
+        ]
+      },
+      "comparisons": [
+        {
+          "tokens": 384,
+          "pair": "hoisted_to_gqa",
+          "session_ratios": [
+            1.274532557003898,
+            1.280259086170701,
+            1.2789292509258616,
+            1.2792364575531159,
+            1.2759784250548147
+          ],
+          "median_session_ratio": 1.2789292509258616,
+          "a_us_median_of_session_medians": 7.82750686217498,
+          "b_us_median_of_session_medians": 10.003644475444606,
+          "all_block_ratio_range": [
+            0.25917022919739674,
+            7.802586516205765
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "fused_fp16_to_astc",
+          "session_ratios": [
+            1.1591967694122596,
+            1.1589186332385006,
+            1.161476836618978,
+            1.161989316490887,
+            1.158711754124389
+          ],
+          "median_session_ratio": 1.1591967694122596,
+          "a_us_median_of_session_medians": 8.599477174170985,
+          "b_us_median_of_session_medians": 9.971782433564979,
+          "all_block_ratio_range": [
+            0.2418457038360648,
+            4.771153217182111
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "fp16_to_gqa_astc",
+          "session_ratios": [
+            1.7407760117252162,
+            1.7474338241333502,
+            1.7480012644883292,
+            1.748335031876628,
+            1.7504081148170312
+          ],
+          "median_session_ratio": 1.7480012644883292,
+          "a_us_median_of_session_medians": 5.719749415562132,
+          "b_us_median_of_session_medians": 9.99895596911243,
+          "all_block_ratio_range": [
+            0.19335847286606594,
+            7.532883469297081
+          ]
+        },
+        {
+          "tokens": 384,
+          "pair": "fp16_to_gqa_fp16",
+          "session_ratios": [
+            1.5000036697587855,
+            1.5024331196729843,
+            1.5032720167180371,
+            1.5098645293689859,
+            1.5025449692070336
+          ],
+          "median_session_ratio": 1.5025449692070336,
+          "a_us_median_of_session_medians": 5.726553127841848,
+          "b_us_median_of_session_medians": 8.622841721929365,
+          "all_block_ratio_range": [
+            0.2728470943293524,
+            8.183314009217877
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "hoisted_to_gqa",
+          "session_ratios": [
+            1.1710260750754629,
+            1.1748781586536927,
+            1.174454800333132,
+            1.1768637397979989,
+            1.1761763236443632
+          ],
+          "median_session_ratio": 1.1748781586536927,
+          "a_us_median_of_session_medians": 16.432397302186594,
+          "b_us_median_of_session_medians": 20.539572519988823,
+          "all_block_ratio_range": [
+            0.3406110449900894,
+            4.309337003636364
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "fused_fp16_to_astc",
+          "session_ratios": [
+            1.146469758673983,
+            1.1476787088968965,
+            1.1483163389947757,
+            1.1486488426998025,
+            1.148281436883403
+          ],
+          "median_session_ratio": 1.148281436883403,
+          "a_us_median_of_session_medians": 17.832570927025863,
+          "b_us_median_of_session_medians": 21.22398037685004,
+          "all_block_ratio_range": [
+            0.3352810213343851,
+            2.73718895135733
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "fp16_to_gqa_astc",
+          "session_ratios": [
+            1.6012921786476833,
+            1.6018076843489444,
+            1.6081480848061873,
+            1.6088145841564874,
+            1.6075748196122144
+          ],
+          "median_session_ratio": 1.6075748196122144,
+          "a_us_median_of_session_medians": 11.749429200561146,
+          "b_us_median_of_session_medians": 22.199142470038808,
+          "all_block_ratio_range": [
+            0.38789283395169316,
+            5.759977607705388
+          ]
+        },
+        {
+          "tokens": 2048,
+          "pair": "fp16_to_gqa_fp16",
+          "session_ratios": [
+            1.395270126370938,
+            1.3984158479810531,
+            1.396527615697985,
+            1.400556206136454,
+            1.3973051072277374
+          ],
+          "median_session_ratio": 1.3973051072277374,
+          "a_us_median_of_session_medians": 11.752054398939855,
+          "b_us_median_of_session_medians": 16.770155795997276,
+          "all_block_ratio_range": [
+            0.20311607192450457,
+            3.848940428954436
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "hoisted_to_gqa",
+          "session_ratios": [
+            1.2666425168546624,
+            1.3115626037085615,
+            1.265226244504618,
+            1.265318403561757,
+            1.2611582152547256
+          ],
+          "median_session_ratio": 1.265318403561757,
+          "a_us_median_of_session_medians": 46.70660070482057,
+          "b_us_median_of_session_medians": 57.2769149199012,
+          "all_block_ratio_range": [
+            0.4815703750232932,
+            2.6504309763208966
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "fused_fp16_to_astc",
+          "session_ratios": [
+            1.1561719132109147,
+            1.0570372532777945,
+            1.1586722255134592,
+            1.1487894536702319,
+            1.084247102211052
+          ],
+          "median_session_ratio": 1.1487894536702319,
+          "a_us_median_of_session_medians": 49.7395549550065,
+          "b_us_median_of_session_medians": 56.05812505415726,
+          "all_block_ratio_range": [
+            0.5784724724675236,
+            2.3106754592998566
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "fp16_to_gqa_astc",
+          "session_ratios": [
+            2.00088104196832,
+            2.1323152070096976,
+            1.9894426057037986,
+            2.0184567284819432,
+            1.9800625037272916
+          ],
+          "median_session_ratio": 2.00088104196832,
+          "a_us_median_of_session_medians": 29.64111882946419,
+          "b_us_median_of_session_medians": 58.77654444435405,
+          "all_block_ratio_range": [
+            0.7623009798507699,
+            3.6905301711318774
+          ]
+        },
+        {
+          "tokens": 8192,
+          "pair": "fp16_to_gqa_fp16",
+          "session_ratios": [
+            1.9002699587693213,
+            1.726323357713912,
+            1.7196661707625416,
+            1.6935757921765882,
+            1.7303390346602057
+          ],
+          "median_session_ratio": 1.726323357713912,
+          "a_us_median_of_session_medians": 30.559773820307885,
+          "b_us_median_of_session_medians": 50.15626426352624,
+          "all_block_ratio_range": [
+            0.644685083476824,
+            3.5214722216794865
+          ]
+        }
+      ],
+      "memory_rows": [
+        {
+          "session": 0,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 0,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 0,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 1,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 1,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 1,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 2,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 2,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 2,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 3,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        },
+        {
+          "session": 3,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 3,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 384,
+          "astc_bytes": 201216,
+          "fp16_bytes": 294912,
+          "ratio": 0.6822916666666666
+        },
+        {
+          "session": 4,
+          "tokens": 8192,
+          "astc_bytes": 3981312,
+          "fp16_bytes": 6291456,
+          "ratio": 0.6328125
+        },
+        {
+          "session": 4,
+          "tokens": 2048,
+          "astc_bytes": 1007616,
+          "fp16_bytes": 1572864,
+          "ratio": 0.640625
+        }
+      ]
+    }
+  },
+  "totals": {
+    "gpu_processes": 72,
+    "attention_checks": 1008,
+    "gather_scalar_checks": 32624640,
+    "main_blocks": 6600,
+    "main_samples": 26400,
+    "max_relative_l2": 9.307367557825085e-07
+  }
+}

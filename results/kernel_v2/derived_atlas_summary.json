@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "tokens": 384,
+      "compact_over_original_session_median_ratios": [
+        1.0714098765068938,
+        1.1270040353604762,
+        1.0677499927385943
+      ],
+      "within_round_ratio_medians": [
+        1.0683147201882548,
+        1.069805620392691,
+        1.0685074717666811
+      ],
+      "memory": {
+        "compact_v_texture_allocated_bytes": 49152,
+        "compact_persistent_k_v_metadata_allocated_bytes": 201216,
+        "astc_texture_allocated_bytes": 49152,
+        "fp16_buffer_allocated_bytes": 294912
+      }
+    },
+    {
+      "tokens": 2048,
+      "compact_over_original_session_median_ratios": [
+        1.1000398085722485,
+        1.0928389511127747,
+        1.1000928374759855
+      ],
+      "within_round_ratio_medians": [
+        1.0980790625137853,
+        1.0906333065410916,
+        1.0972519063189308
+      ],
+      "memory": {
+        "compact_v_texture_allocated_bytes": 196608,
+        "compact_persistent_k_v_metadata_allocated_bytes": 1007616,
+        "astc_texture_allocated_bytes": 393216,
+        "fp16_buffer_allocated_bytes": 1572864
+      }
+    },
+    {
+      "tokens": 8192,
+      "compact_over_original_session_median_ratios": [
+        1.1427032005947209,
+        1.1452977667739,
+        1.1445036929276422
+      ],
+      "within_round_ratio_medians": [
+        1.143703044408797,
+        1.1446818618794665,
+        1.145768535290635
+      ],
+      "memory": {
+        "compact_v_texture_allocated_bytes": 737280,
+        "compact_persistent_k_v_metadata_allocated_bytes": 3981312,
+        "astc_texture_allocated_bytes": 1572864,
+        "fp16_buffer_allocated_bytes": 6291456
+      }
+    }
+  ],
+  "max_attention_reference_rel_l2": 9.307367557825085e-07,
+  "ragged_exact_decode_passed": true,
+  "scope": "Exact unchanged represented V; allocation reduction with measured latency cost. T384 has major inter-session absolute-time drift; all sessions retained. No full-model speedup."
+}

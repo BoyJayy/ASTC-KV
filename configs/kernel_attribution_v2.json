@@ -1,0 +1,12 @@
+{
+  "schema":"astckv.kernel_attribution.v2",
+  "registered_before_results":true,
+  "hypothesis":"Separate affine reconstruction, scalar texture accesses, and vector texture layout at fixed numerically checked inputs.",
+  "tokens":[384,2048,8192],
+  "tiles_by_tokens":{"384":[16],"2048":[32,64],"8192":[128]},
+  "tile_selection":"Frozen from v1 two-session sweep;2048 includes ASTC-best32 and buffer-best64;other shapes share best tile. No v2 results used.",
+  "sessions":3,"rounds":30,"iterations":10,"seed":20261029,
+  "negative_manifest":"results/kernel_v2/fixtures/t2048/manifest.json",
+  "scope":"Three independent serialized process sessions of original T384 and repeated-block traffic controls T2048/T8192. Fixed Q, reference for actual values of each branch, plus exact-value match for three normalized controls. Reused cache; no model-generation or memory-bandwidth claim.",
+  "negative_outcome":"No consistent difference attributable to affine or texture layout, or ASTC still slower than strong baseline. An ordinary RGBA control is not a quality result for RGBA ASTC."
+}

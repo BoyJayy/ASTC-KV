@@ -1,0 +1,928 @@
+{
+  "name": "bread_notes",
+  "text_sha256": "909f74ea77c5ae6ee9c449916953ab586fe89b68dabcd947e794df3b127145db",
+  "token_file_sha256": "175c58960d0108cde5fac31c8e0aee9826d8e7e18b24c357e3fa72ce8d589a31",
+  "per_layer": [
+    {
+      "layer": 0,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "d4913f2ad07f26af9aded7e904f5b4209ec5cffc744214bdfe4f88584e0e22f2",
+      "transpose_payload_sha256": "017d28f89badf9e0394ded7e3de7ac7b3e3f818645cafdba54bb329dd3ac8172",
+      "identity_encode_cpu_s": 0.10926575100165792,
+      "transpose_encode_cpu_s": 0.1086052509926958
+    },
+    {
+      "layer": 1,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "c8eb440510cfeb2c99d6a92c9cab401af3781027d2a411bc58e6311de0bbfa9e",
+      "transpose_payload_sha256": "fac3ded9b99029a8a4f8d3fc5fdf741931ca8acbd51fc01a6e5b86c65885a559",
+      "identity_encode_cpu_s": 0.10697649902431294,
+      "transpose_encode_cpu_s": 0.10817712599236984
+    },
+    {
+      "layer": 2,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "1cdf74b120529f8ca256ade180efb9c1713f442df6978613c918f3a377386ee2",
+      "transpose_payload_sha256": "87c6960d80b3938a124116b5d8e47a3e73da1d17b08769ceee75e473f1fc0ed7",
+      "identity_encode_cpu_s": 0.10591575100261252,
+      "transpose_encode_cpu_s": 0.10635570900922175
+    },
+    {
+      "layer": 3,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "0a5e63c7806349911c319aa6a5d2449c389b81fc15a7ab155f59d26787296361",
+      "transpose_payload_sha256": "8de54266d858d4f699cb3ee034a35772b28db3b91ef7c9f39956dad84e2ac8b0",
+      "identity_encode_cpu_s": 0.10533291599131189,
+      "transpose_encode_cpu_s": 0.10453120901365764
+    },
+    {
+      "layer": 4,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "49bcf8716f616668aca67939d346ba08c05691c24cbeb7b981b53dda38564045",
+      "transpose_payload_sha256": "73af95cd8b3aaea8d3eb186f57dfb785aeaea8c59e8e4ed2d28190134e512032",
+      "identity_encode_cpu_s": 0.10540258300898131,
+      "transpose_encode_cpu_s": 0.10391570800857153
+    },
+    {
+      "layer": 5,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "de0cfb444c322c66caee24596e91b6bd0cffb5aa66e31b90888f15349f587284",
+      "transpose_payload_sha256": "7458386d4347a663dc9c5398ee8b873b05e047a9cdcbd948a394895d0049a753",
+      "identity_encode_cpu_s": 0.10525662500003818,
+      "transpose_encode_cpu_s": 0.10523475000809412
+    },
+    {
+      "layer": 6,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "25a0d855fa61700a213ac2e4950bc25939c6240cc13f5f2fe112d74f7179e29a",
+      "transpose_payload_sha256": "fdd33f6a020763ffbb4070040e4b12444481d43ee7960e2813d3e278884e2094",
+      "identity_encode_cpu_s": 0.10522829300316516,
+      "transpose_encode_cpu_s": 0.10667016699153464
+    },
+    {
+      "layer": 7,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "46ff4d1d5f5a147a5ceabd79623dea8dcf35112cb62b9725d4e20494e54dcfe8",
+      "transpose_payload_sha256": "83d6010cb021a0b7910b671141193d0326df14c4fd40b3eefcfa184572f1d184",
+      "identity_encode_cpu_s": 0.10558204000699334,
+      "transpose_encode_cpu_s": 0.10420712499762885
+    },
+    {
+      "layer": 8,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "97f2b86bb59fc506d0a05e0bdd9fb7f34fd1da747f052492a9b0676b2ceb28ed",
+      "transpose_payload_sha256": "c7b8ceb8d7b563c8ceeb7c46e1b8ebdf6f48f3ba922b4e4bf57ec98fe6e933d3",
+      "identity_encode_cpu_s": 0.10857720799685922,
+      "transpose_encode_cpu_s": 0.10574445899692364
+    },
+    {
+      "layer": 9,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "594a4f7a3b2568583bab5d8f6764543ac84587daab2c6f3edc45b37067b08c62",
+      "transpose_payload_sha256": "cbb1087919cdc83b1633fa00b2cda9da783df3998922342ebc74a0e251d51349",
+      "identity_encode_cpu_s": 0.11141283198958263,
+      "transpose_encode_cpu_s": 0.11187720899761189
+    },
+    {
+      "layer": 10,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "68136b85cb8217efa09cda936dade422eeb63aa2baf84a3f4e78482c4f37d16b",
+      "transpose_payload_sha256": "eb065defd842837b6eaab00182c6358b3dc131e945cfc542fdd7f41a14452cd3",
+      "identity_encode_cpu_s": 0.11118283300311305,
+      "transpose_encode_cpu_s": 0.10724341600143816
+    },
+    {
+      "layer": 11,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "14b2c23195882d59c804de1d3e90c83fc7ecd94b2019f010a5d92bfaeb1fbfb0",
+      "transpose_payload_sha256": "e431185e4bc66b3aa65c2d91ea5030f85b2eab1808ae425c57a79dca7e637fa2",
+      "identity_encode_cpu_s": 0.10686775000067428,
+      "transpose_encode_cpu_s": 0.10568954201880842
+    },
+    {
+      "layer": 12,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "b3f27352ed5c919131b525554b692be46fc29fdc5cca3907ca81fb6dc5988fad",
+      "transpose_payload_sha256": "13ec7f74ba728f846a422305eaa76f2a65445e8ea1242c4a9991375c904e74a1",
+      "identity_encode_cpu_s": 0.10513141700357664,
+      "transpose_encode_cpu_s": 0.10466479098249692
+    },
+    {
+      "layer": 13,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "7738310b27447f6ca55ef8912a0fbd56ccd899a4a5a7495b973bade685bf715f",
+      "transpose_payload_sha256": "0f564673a4b902a8dc28bd690d7a3dc11731aade59c106c91f63fae1f83c6b20",
+      "identity_encode_cpu_s": 0.10562191599456128,
+      "transpose_encode_cpu_s": 0.10595933299919125
+    },
+    {
+      "layer": 14,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "b96406926a923ca1e71cd9a7ee72a762b5299fc51dda3e96c83b1deb4b0b21aa",
+      "transpose_payload_sha256": "4e54e2f47e7c87f9c74a4798e1df1a8ede029f8bc165b1a20adcf05c5dbaba8f",
+      "identity_encode_cpu_s": 0.1061568329896545,
+      "transpose_encode_cpu_s": 0.10606658199685626
+    },
+    {
+      "layer": 15,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "7dd5f90b9c2b3e806a2897ec65b10e66df392d79e849a0af718f9874ed8c3809",
+      "transpose_payload_sha256": "14d8fb5f57bb9c9d14f92180a3734cf32811fbe52dafa8508770a3184f3ba990",
+      "identity_encode_cpu_s": 0.1058503340173047,
+      "transpose_encode_cpu_s": 0.1068455840140814
+    },
+    {
+      "layer": 16,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "7ba8537d5fee3c10009856fb0f11191a9dce2d80a25664f77b6e9d4fe4f21724",
+      "transpose_payload_sha256": "7d12cceb9a37b91aee7d7d3720368328e24fb2d0d0ffafcb79b0128d889878cb",
+      "identity_encode_cpu_s": 0.10842174998833798,
+      "transpose_encode_cpu_s": 0.10801299999002367
+    },
+    {
+      "layer": 17,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "0b659d3374160eeae8a40097fbe20748a5462300ddea55dafabc3855c3cabc0c",
+      "transpose_payload_sha256": "2011fb92891719e018f5f4ed522b27f2ce60603f01cd5dbeaa05df17663f4f6d",
+      "identity_encode_cpu_s": 0.10817545700410847,
+      "transpose_encode_cpu_s": 0.10725012500188313
+    },
+    {
+      "layer": 18,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "55fd77ef7e34a5879207a63a9e481171ed0a918887bf4c554013100ed5503265",
+      "transpose_payload_sha256": "3d543f5c7287c41e06ac39c07feaf48a485ae1962628b367642b8845021b289c",
+      "identity_encode_cpu_s": 0.10732149900286458,
+      "transpose_encode_cpu_s": 0.10715062399685849
+    },
+    {
+      "layer": 19,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "4d4d0b17f566b799add19bb22e70daae311c06e43d511dca0a552344f6ea4dc3",
+      "transpose_payload_sha256": "e2e246d0a777ab24ad9cd887134f97cd83c38d4f6caaba45ddb51534cb07f00b",
+      "identity_encode_cpu_s": 0.10885529199731536,
+      "transpose_encode_cpu_s": 0.10769395901297685
+    },
+    {
+      "layer": 20,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "7c8bcdd74f4b2c70967835e87d4bf50b1878d2077e1c9bc4d8d0d980d517551a",
+      "transpose_payload_sha256": "16c611cd6e2bb165de6f00377111f6dd2d6f9177584d690e3ffca414122e320d",
+      "identity_encode_cpu_s": 0.10560920801071916,
+      "transpose_encode_cpu_s": 0.10559812501014676
+    },
+    {
+      "layer": 21,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "63f5b4da6f03d4e216f8a48832f8b8cebc5f6a7e8111fce60c3090920b716d2a",
+      "transpose_payload_sha256": "8604f68db16106a7ad37d22b82bebeb85bf253af0925713170bcea9232e5fa14",
+      "identity_encode_cpu_s": 0.10753287500119768,
+      "transpose_encode_cpu_s": 0.10696220799582079
+    },
+    {
+      "layer": 22,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "90327bbfb879e89f4466110fd62403cc55a3be6fc53d94524e80bd9dbece0442",
+      "transpose_payload_sha256": "8d14bb1cf53577cae3c698fc259fd844bc0dd338a7e4ee2c738245ef18289966",
+      "identity_encode_cpu_s": 0.10669295898696873,
+      "transpose_encode_cpu_s": 0.10589812500984408
+    },
+    {
+      "layer": 23,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "8113038a0da44d0cb329af4e630cbf86c8670f2f2599d3cd53dbf3e7321c637f",
+      "transpose_payload_sha256": "3035e232336195996c8ccc81e32c6de71590abde339735b63bca2e977e96bcf9",
+      "identity_encode_cpu_s": 0.10390141801326536,
+      "transpose_encode_cpu_s": 0.10467908201098908
+    },
+    {
+      "layer": 24,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "0fba1947fa4c705fbfa85f45e0128cd0c9f71099bd135dce0b90c3d69b597e8d",
+      "transpose_payload_sha256": "e8b71d1ed3e5d9ec1615ef25a7073660c78d0c79661d86b2cc83f578c9cf42cf",
+      "identity_encode_cpu_s": 0.10494137600471731,
+      "transpose_encode_cpu_s": 0.10510816701571457
+    },
+    {
+      "layer": 25,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "558f72bc6d9d4dcee30623c1ecfcb6c0223d7e9b1b710aa04769d3a953e37150",
+      "transpose_payload_sha256": "0fa3eb039e0f327b2b0b0ba760992c046210ca23d12b33c6d3e08184948c533b",
+      "identity_encode_cpu_s": 0.10664645700308029,
+      "transpose_encode_cpu_s": 0.10622375100501813
+    },
+    {
+      "layer": 26,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "888f7a69a8e7a4aba3701e0bc76fd20c75f1fb1b65a9469bbf524977f636a9c8",
+      "transpose_payload_sha256": "aa127ae0dc696c7dabafa8b234378a1f4bad2eb46183948a21c1de147510e7d6",
+      "identity_encode_cpu_s": 0.10658204098581336,
+      "transpose_encode_cpu_s": 0.1050811250024708
+    },
+    {
+      "layer": 27,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "909f37400554077e4907f68c329f82186a9ebe278ac5687cdcc9f3e65d5f011a",
+      "transpose_payload_sha256": "f80b83d22af4846b4614173233528687738f56685db1078f7ff2522039b148ea",
+      "identity_encode_cpu_s": 0.10843591699085664,
+      "transpose_encode_cpu_s": 0.10947758202382829
+    },
+    {
+      "layer": 28,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "368f63fbc67736c9464b1b51dd2bf21b418c3e769d353f12fd925dbbb202d645",
+      "transpose_payload_sha256": "a775794bcdb64faaeeb96fe9f25988ed1abae055eee409ff407e91562306a36c",
+      "identity_encode_cpu_s": 0.1087367090076441,
+      "transpose_encode_cpu_s": 0.1085687080048956
+    },
+    {
+      "layer": 29,
+      "astc_identity_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "astc_transpose_counts": {
+        "astc_blocks_including_edge_padding": 25344,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728,
+        "permutation_map": 0
+      },
+      "u4_k_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1152,
+        "fp16_scales": 1152
+      },
+      "u4_v_counts": {
+        "packed_codes": 27648,
+        "fp16_offsets": 1728,
+        "fp16_scales": 1728
+      },
+      "identity_payload_sha256": "1b3e8d37da5e6a00788026cb287be02691d517caaa8ad9c9ef518a46cf632afe",
+      "transpose_payload_sha256": "bbea5b1643153a866575f1c33c6e00e620422df76bdf605006f3b07785cd6f7b",
+      "identity_encode_cpu_s": 0.10862987399741542,
+      "transpose_encode_cpu_s": 0.10938687600719277
+    }
+  ],
+  "methods": {
+    "fp16": {
+      "targets": 95,
+      "logical_bytes": 8824320,
+      "memory_breakdown": {
+        "prefix_k_bytes": 3317760,
+        "prefix_v_bytes": 3317760,
+        "fp16_tail_bytes": 2188800
+      },
+      "effective_bits_per_kv_scalar": 16.0,
+      "mean_nll": 2.947707644099268,
+      "cpu_wall_s_diagnostic_only": 0.7009337499912363
+    },
+    "astc_identity_V_only": {
+      "targets": 95,
+      "logical_bytes": 6370560,
+      "memory_breakdown": {
+        "prefix_k_bytes": 3317760,
+        "prefix_v_bytes": 864000,
+        "fp16_tail_bytes": 2188800
+      },
+      "effective_bits_per_kv_scalar": 11.550913838120104,
+      "mean_nll": 2.96031291149759,
+      "cpu_wall_s_diagnostic_only": 0.6808057080052095
+    },
+    "astc_transpose_V_only": {
+      "targets": 95,
+      "logical_bytes": 6370560,
+      "memory_breakdown": {
+        "prefix_k_bytes": 3317760,
+        "prefix_v_bytes": 864000,
+        "fp16_tail_bytes": 2188800
+      },
+      "effective_bits_per_kv_scalar": 11.550913838120104,
+      "mean_nll": 2.9649662050082233,
+      "cpu_wall_s_diagnostic_only": 0.6526691250037402
+    },
+    "asymmetric_u4_KV": {
+      "targets": 95,
+      "logical_bytes": 4020480,
+      "memory_breakdown": {
+        "prefix_k_bytes": 898560,
+        "prefix_v_bytes": 933120,
+        "fp16_tail_bytes": 2188800
+      },
+      "effective_bits_per_kv_scalar": 7.289817232375979,
+      "mean_nll": 2.9540454138889554,
+      "cpu_wall_s_diagnostic_only": 0.6832096250000177
+    }
+  },
+  "wall_s": 9.362880915999995
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "command": [
+      ".venv-research/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_gather*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_even_pairs_never_cross_astc_or_atlas_seams (test_gather_pairs_v8.GatherPairTests.test_even_pairs_never_cross_astc_or_atlas_seams) ... ok\ntest_odd_block_boundary_requires_fallback (test_gather_pairs_v8.GatherPairTests.test_odd_block_boundary_requires_fallback) ... ok\ntest_pair_algebra_with_softmax_extremes (test_gather_pairs_v8.GatherPairTests.test_pair_algebra_with_softmax_extremes) ... ok\ntest_split_pair_coverage_and_mask (test_gather_pairs_v8.GatherPairTests.test_split_pair_coverage_and_mask) ... ok\ntest_false_gate_renamed_variant_and_large_error (test_gather_protocol_v8.ProtocolTests.test_false_gate_renamed_variant_and_large_error) ... ok\ntest_invalid_times_iterations_and_extra_samples (test_gather_protocol_v8.ProtocolTests.test_invalid_times_iterations_and_extra_samples) ... ok\ntest_valid_ratio (test_gather_protocol_v8.ProtocolTests.test_valid_ratio) ... ok\ntest_wrong_labels_and_missing_pair (test_gather_protocol_v8.ProtocolTests.test_wrong_labels_and_missing_pair) ... ok\ntest_false_gate_renamed_variant_and_large_error (test_gather_protocol_v9.ProtocolTests.test_false_gate_renamed_variant_and_large_error) ... ok\ntest_invalid_times_iterations_and_extra_samples (test_gather_protocol_v9.ProtocolTests.test_invalid_times_iterations_and_extra_samples) ... ok\ntest_valid_ratio (test_gather_protocol_v9.ProtocolTests.test_valid_ratio) ... ok\ntest_wrong_labels_and_missing_pair (test_gather_protocol_v9.ProtocolTests.test_wrong_labels_and_missing_pair) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.591s\n\nOK\n"
+  },
+  {
+    "command": [
+      ".venv-research/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_gqa*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_false_gate_renamed_variant_and_large_error (test_gqa_protocol_v10.ProtocolTests.test_false_gate_renamed_variant_and_large_error) ... ok\ntest_invalid_times_iterations_and_extra_samples (test_gqa_protocol_v10.ProtocolTests.test_invalid_times_iterations_and_extra_samples) ... ok\ntest_valid_ratio (test_gqa_protocol_v10.ProtocolTests.test_valid_ratio) ... ok\ntest_wrong_labels_and_missing_pair (test_gqa_protocol_v10.ProtocolTests.test_wrong_labels_and_missing_pair) ... ok\ntest_separate_heads_partial_splits_and_extreme_scores (test_gqa_states_v10.SharedGQAStates.test_separate_heads_partial_splits_and_extreme_scores) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.023s\n\nOK\n"
+  },
+  {
+    "command": [
+      ".venv-research/bin/python",
+      "scripts/verify_research_v4.py"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"PASS\", \"totals\": {\"gpu_processes\": 72, \"attention_checks\": 1008, \"gather_scalar_checks\": 32624640, \"main_blocks\": 6600, \"main_samples\": 26400, \"max_relative_l2\": 9.307367557825085e-07}, \"primary_results\": {\"gather\": false, \"exchange\": false, \"gqa\": false}}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv-research/bin/python",
+      "scripts/freeze_research_v3.py",
+      "--verify"
+    ],
+    "exit": 0,
+    "stdout": "{\"status\": \"PASS\", \"files\": 218, \"binaries\": 2}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv-research/bin/python",
+      "scripts/verify_historical_reports.py"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"manifest_sha256\": \"352c079ddfae984b14c9404c7995fb0c517a37592bfcd1df342d7698cd787a8f\",\n  \"historical_files\": 1644,\n  \"matched_current\": 1625,\n  \"matched_original_report_backup\": 19,\n  \"report_backups\": 21,\n  \"matched_report_backups\": 21,\n  \"local_binaries\": 9,\n  \"matched_local_binaries\": 9,\n  \"historical_anchors\": {\n    \"previous_manifest_sha256\": true,\n    \"original_archive_sha256\": true\n  },\n  \"failures\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "bash",
+      "-n",
+      "metal/build_gather_v8.sh"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "bash",
+      "-n",
+      "metal/build_gather_exchange_v9.sh"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "bash",
+      "-n",
+      "metal/build_gqa_v10.sh"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

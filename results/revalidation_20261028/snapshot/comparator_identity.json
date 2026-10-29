@@ -1,0 +1,5183 @@
+{
+  "schema": "astckv.snapshot_reproduction.comparison.v1",
+  "scope": "Independent row and aggregate comparison after CPU re-encoding; no new holdout or GPU speed claim",
+  "rows": 936,
+  "aggregates": 117,
+  "source_sha256": "e3e2720a96c8657afd960cf319c95280f067b7a9efbdc4456bb0fcd0e4c31e22",
+  "input_sha256": {
+    "original": {
+      "pilot_systems.jsonl": "0569b7792efa2324941e9ad97c11106dad09967b5577a35e508522281f78eda8",
+      "pilot_story.jsonl": "2bc552004feacee8ea0e7ac9a40806353091d7b03f7458bd2ae3ea9c545376df",
+      "pilot_science.jsonl": "6804ba31332cb45126eb3ed7435e1fc149ed603018ca5e64f9a6dc816694192b",
+      "pilot_records.jsonl": "b4af1ede16a618896b91adf477772f0143d03a7df8d07ba9a2de19943db4eae2"
+    },
+    "reproduced": {
+      "pilot_systems.jsonl": "0569b7792efa2324941e9ad97c11106dad09967b5577a35e508522281f78eda8",
+      "pilot_story.jsonl": "2bc552004feacee8ea0e7ac9a40806353091d7b03f7458bd2ae3ea9c545376df",
+      "pilot_science.jsonl": "6804ba31332cb45126eb3ed7435e1fc149ed603018ca5e64f9a6dc816694192b",
+      "pilot_records.jsonl": "b4af1ede16a618896b91adf477772f0143d03a7df8d07ba9a2de19943db4eae2"
+    }
+  },
+  "structural_mismatches": [],
+  "memory_mismatches": [],
+  "screening_changes": [],
+  "variant_stats": {
+    "fp16": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "rgba4_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar4_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar6_channel_permuted": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar6_hdr_block": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar6_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar6_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar6_token_permuted": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "scalar8_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "u2_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "u4_asymmetric": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "u4_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    },
+    "u8_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 0,
+      "max_row_relative_l2_abs_difference": 0.0,
+      "max_error_sse_symmetric_relative_difference": 0.0,
+      "max_reference_sse_symmetric_relative_difference": 0.0
+    }
+  },
+  "numeric_fields": {
+    "error_sum_squares": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "error_sum_squares",
+        "original": 5.726834136483029e-08,
+        "reproduced": 5.726834136483029e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "error_sum_squares",
+        "original": 5.726834136483029e-08,
+        "reproduced": 5.726834136483029e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.cosine",
+        "original": 0.9999999950834451,
+        "reproduced": 0.9999999950834451,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.cosine",
+        "original": 0.9999999950834451,
+        "reproduced": 0.9999999950834451,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.max_abs",
+        "original": 7.659196853637695e-05,
+        "reproduced": 7.659196853637695e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.max_abs",
+        "original": 7.659196853637695e-05,
+        "reproduced": 7.659196853637695e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_kl_nats",
+        "original": 3.594642562961878e-08,
+        "reproduced": 3.594642562961878e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_kl_nats",
+        "original": 3.594642562961878e-08,
+        "reproduced": 3.594642562961878e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_total_variation",
+        "original": 9.773741433133056e-05,
+        "reproduced": 9.773741433133056e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_total_variation",
+        "original": 9.773741433133056e-05,
+        "reproduced": 9.773741433133056e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mse",
+        "original": 6.21401273489912e-12,
+        "reproduced": 6.21401273489912e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mse",
+        "original": 6.21401273489912e-12,
+        "reproduced": 6.21401273489912e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.p95_kl_nats",
+        "original": 1.4075804113898007e-07,
+        "reproduced": 1.4075804113898007e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.p95_kl_nats",
+        "original": 1.4075804113898007e-07,
+        "reproduced": 1.4075804113898007e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "metrics.relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.relative_l2",
+        "original": 0.00010090207059902403,
+        "reproduced": 0.00010090207059902403,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.relative_l2",
+        "original": 0.00010090207059902403,
+        "reproduced": 0.00010090207059902403,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].cosine",
+        "original": 0.999999979763837,
+        "reproduced": 0.999999979763837,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].cosine",
+        "original": 0.999999979763837,
+        "reproduced": 0.999999979763837,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].max_abs",
+        "original": 0.0019006729125976562,
+        "reproduced": 0.0019006729125976562,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].max_abs",
+        "original": 0.0019006729125976562,
+        "reproduced": 0.0019006729125976562,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].mse",
+        "original": 4.2922731716509865e-08,
+        "reproduced": 4.2922731716509865e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].mse",
+        "original": 4.2922731716509865e-08,
+        "reproduced": 4.2922731716509865e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].relative_l2",
+        "original": 0.00020119226477578433,
+        "reproduced": 0.00020119226477578433,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].relative_l2",
+        "original": 0.00020119226477578433,
+        "reproduced": 0.00020119226477578433,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].cosine",
+        "original": 0.9999999778749346,
+        "reproduced": 0.9999999778749346,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].cosine",
+        "original": 0.9999999778749346,
+        "reproduced": 0.9999999778749346,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].mse",
+        "original": 1.4086481333857982e-07,
+        "reproduced": 1.4086481333857982e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].mse",
+        "original": 1.4086481333857982e-07,
+        "reproduced": 1.4086481333857982e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].relative_l2",
+        "original": 0.00021036512187218005,
+        "reproduced": 0.00021036512187218005,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].relative_l2",
+        "original": 0.00021036512187218005,
+        "reproduced": 0.00021036512187218005,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].cosine",
+        "original": 0.9999999777870726,
+        "reproduced": 0.9999999777870726,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].cosine",
+        "original": 0.9999999777870726,
+        "reproduced": 0.9999999777870726,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].max_abs",
+        "original": 0.0019168853759765625,
+        "reproduced": 0.0019168853759765625,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].max_abs",
+        "original": 0.0019168853759765625,
+        "reproduced": 0.0019168853759765625,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].mse",
+        "original": 5.6715454482319586e-08,
+        "reproduced": 5.6715454482319586e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].mse",
+        "original": 5.6715454482319586e-08,
+        "reproduced": 5.6715454482319586e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].relative_l2",
+        "original": 0.0002107746172999233,
+        "reproduced": 0.0002107746172999233,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].relative_l2",
+        "original": 0.0002107746172999233,
+        "reproduced": 0.0002107746172999233,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].cosine",
+        "original": 0.9999999832680943,
+        "reproduced": 0.9999999832680943,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].cosine",
+        "original": 0.9999999832680943,
+        "reproduced": 0.9999999832680943,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].max_abs",
+        "original": 0.00011584162712097168,
+        "reproduced": 0.00011584162712097168,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].max_abs",
+        "original": 0.00011584162712097168,
+        "reproduced": 0.00011584162712097168,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].mse",
+        "original": 4.969242373402422e-11,
+        "reproduced": 4.969242373402422e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].mse",
+        "original": 4.969242373402422e-11,
+        "reproduced": 4.969242373402422e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].relative_l2",
+        "original": 0.00018366577590212725,
+        "reproduced": 0.00018366577590212725,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].relative_l2",
+        "original": 0.00018366577590212725,
+        "reproduced": 0.00018366577590212725,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].cosine",
+        "original": 0.9999999777884737,
+        "reproduced": 0.9999999777884737,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].cosine",
+        "original": 0.9999999777884737,
+        "reproduced": 0.9999999777884737,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].max_abs",
+        "original": 0.00010994076728820801,
+        "reproduced": 0.00010994076728820801,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].max_abs",
+        "original": 0.00010994076728820801,
+        "reproduced": 0.00010994076728820801,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].mse",
+        "original": 4.677428373568947e-11,
+        "reproduced": 4.677428373568947e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].mse",
+        "original": 4.677428373568947e-11,
+        "reproduced": 4.677428373568947e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].relative_l2",
+        "original": 0.00021425523309898895,
+        "reproduced": 0.00021425523309898895,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].relative_l2",
+        "original": 0.00021425523309898895,
+        "reproduced": 0.00021425523309898895,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].cosine",
+        "original": 0.9999999765233126,
+        "reproduced": 0.9999999765233126,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].cosine",
+        "original": 0.9999999765233126,
+        "reproduced": 0.9999999765233126,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].mse",
+        "original": 9.619481603632129e-11,
+        "reproduced": 9.619481603632129e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].mse",
+        "original": 9.619481603632129e-11,
+        "reproduced": 9.619481603632129e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].relative_l2",
+        "original": 0.00021785276762480374,
+        "reproduced": 0.00021785276762480374,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].relative_l2",
+        "original": 0.00021785276762480374,
+        "reproduced": 0.00021785276762480374,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].cosine",
+        "original": 0.9999999920024419,
+        "reproduced": 0.9999999920024419,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].cosine",
+        "original": 0.9999999920024419,
+        "reproduced": 0.9999999920024419,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].max_abs",
+        "original": 1.5428289771080017e-05,
+        "reproduced": 1.5428289771080017e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].max_abs",
+        "original": 1.5428289771080017e-05,
+        "reproduced": 1.5428289771080017e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_kl_nats",
+        "original": 2.5300293388429258e-08,
+        "reproduced": 2.5300293388429258e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_kl_nats",
+        "original": 2.5300293388429258e-08,
+        "reproduced": 2.5300293388429258e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_total_variation",
+        "original": 6.696538821415743e-05,
+        "reproduced": 6.696538821415743e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_total_variation",
+        "original": 6.696538821415743e-05,
+        "reproduced": 6.696538821415743e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mse",
+        "original": 2.388323066742033e-12,
+        "reproduced": 2.388323066742033e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mse",
+        "original": 2.388323066742033e-12,
+        "reproduced": 2.388323066742033e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].p95_kl_nats",
+        "original": 1.2270439721597834e-07,
+        "reproduced": 1.2270439721597834e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].p95_kl_nats",
+        "original": 1.2270439721597834e-07,
+        "reproduced": 1.2270439721597834e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[0].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].relative_l2",
+        "original": 0.0001623809095426974,
+        "reproduced": 0.0001623809095426974,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].relative_l2",
+        "original": 0.0001623809095426974,
+        "reproduced": 0.0001623809095426974,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].cosine",
+        "original": 0.9999999948222745,
+        "reproduced": 0.9999999948222745,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].cosine",
+        "original": 0.9999999948222745,
+        "reproduced": 0.9999999948222745,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].max_abs",
+        "original": 7.659196853637695e-05,
+        "reproduced": 7.659196853637695e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].max_abs",
+        "original": 7.659196853637695e-05,
+        "reproduced": 7.659196853637695e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_kl_nats",
+        "original": 2.8919901484929256e-08,
+        "reproduced": 2.8919901484929256e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_kl_nats",
+        "original": 2.8919901484929256e-08,
+        "reproduced": 2.8919901484929256e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_total_variation",
+        "original": 7.877880352680222e-05,
+        "reproduced": 7.877880352680222e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_total_variation",
+        "original": 7.877880352680222e-05,
+        "reproduced": 7.877880352680222e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mse",
+        "original": 1.2970235897381539e-11,
+        "reproduced": 1.2970235897381539e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mse",
+        "original": 1.2970235897381539e-11,
+        "reproduced": 1.2970235897381539e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].p95_kl_nats",
+        "original": 1.3008858686119462e-07,
+        "reproduced": 1.3008858686119462e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].p95_kl_nats",
+        "original": 1.3008858686119462e-07,
+        "reproduced": 1.3008858686119462e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[1].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].relative_l2",
+        "original": 0.00014022087670879148,
+        "reproduced": 0.00014022087670879148,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].relative_l2",
+        "original": 0.00014022087670879148,
+        "reproduced": 0.00014022087670879148,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].cosine",
+        "original": 0.9999999948847026,
+        "reproduced": 0.9999999948847026,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].cosine",
+        "original": 0.9999999948847026,
+        "reproduced": 0.9999999948847026,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].max_abs",
+        "original": 2.625584602355957e-05,
+        "reproduced": 2.625584602355957e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].max_abs",
+        "original": 2.625584602355957e-05,
+        "reproduced": 2.625584602355957e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_kl_nats",
+        "original": 6.21179325234204e-09,
+        "reproduced": 6.21179325234204e-09,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_kl_nats",
+        "original": 6.21179325234204e-09,
+        "reproduced": 6.21179325234204e-09,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_total_variation",
+        "original": 6.827472088843933e-05,
+        "reproduced": 6.827472088843933e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_total_variation",
+        "original": 6.827472088843933e-05,
+        "reproduced": 6.827472088843933e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mse",
+        "original": 3.408833546354252e-12,
+        "reproduced": 3.408833546354252e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mse",
+        "original": 3.408833546354252e-12,
+        "reproduced": 3.408833546354252e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].p95_kl_nats",
+        "original": 1.0688827540724361e-07,
+        "reproduced": 1.0688827540724361e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].p95_kl_nats",
+        "original": 1.0688827540724361e-07,
+        "reproduced": 1.0688827540724361e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[2].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].relative_l2",
+        "original": 0.00010120545674306343,
+        "reproduced": 0.00010120545674306343,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].relative_l2",
+        "original": 0.00010120545674306343,
+        "reproduced": 0.00010120545674306343,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].cosine",
+        "original": 0.999999910143266,
+        "reproduced": 0.999999910143266,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].cosine",
+        "original": 0.999999910143266,
+        "reproduced": 0.999999910143266,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].max_abs",
+        "original": 6.382167339324951e-05,
+        "reproduced": 6.382167339324951e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].max_abs",
+        "original": 6.382167339324951e-05,
+        "reproduced": 6.382167339324951e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_kl_nats",
+        "original": 7.09741451909506e-08,
+        "reproduced": 7.09741451909506e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_kl_nats",
+        "original": 7.09741451909506e-08,
+        "reproduced": 7.09741451909506e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_total_variation",
+        "original": 0.00014799121602507292,
+        "reproduced": 0.00014799121602507292,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_total_variation",
+        "original": 0.00014799121602507292,
+        "reproduced": 0.00014799121602507292,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mse",
+        "original": 1.9630445930608064e-11,
+        "reproduced": 1.9630445930608064e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mse",
+        "original": 1.9630445930608064e-11,
+        "reproduced": 1.9630445930608064e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].p95_kl_nats",
+        "original": 1.7129813785230152e-07,
+        "reproduced": 1.7129813785230152e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].p95_kl_nats",
+        "original": 1.7129813785230152e-07,
+        "reproduced": 1.7129813785230152e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[3].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].relative_l2",
+        "original": 0.00042407322462406297,
+        "reproduced": 0.00042407322462406297,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].relative_l2",
+        "original": 0.00042407322462406297,
+        "reproduced": 0.00042407322462406297,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].cosine",
+        "original": 0.9999999903435719,
+        "reproduced": 0.9999999903435719,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].cosine",
+        "original": 0.9999999903435719,
+        "reproduced": 0.9999999903435719,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].max_abs",
+        "original": 1.6361474990844727e-05,
+        "reproduced": 1.6361474990844727e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].max_abs",
+        "original": 1.6361474990844727e-05,
+        "reproduced": 1.6361474990844727e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_kl_nats",
+        "original": 2.883469716656325e-08,
+        "reproduced": 2.883469716656325e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_kl_nats",
+        "original": 2.883469716656325e-08,
+        "reproduced": 2.883469716656325e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_total_variation",
+        "original": 9.819435115332453e-05,
+        "reproduced": 9.819435115332453e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_total_variation",
+        "original": 9.819435115332453e-05,
+        "reproduced": 9.819435115332453e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mse",
+        "original": 1.7468798909049103e-12,
+        "reproduced": 1.7468798909049103e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mse",
+        "original": 1.7468798909049103e-12,
+        "reproduced": 1.7468798909049103e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].p95_kl_nats",
+        "original": 1.2925123976745337e-07,
+        "reproduced": 1.2925123976745337e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].p95_kl_nats",
+        "original": 1.2925123976745337e-07,
+        "reproduced": 1.2925123976745337e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[4].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].relative_l2",
+        "original": 0.00015575678529722214,
+        "reproduced": 0.00015575678529722214,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].relative_l2",
+        "original": 0.00015575678529722214,
+        "reproduced": 0.00015575678529722214,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].cosine",
+        "original": 0.9999999847330497,
+        "reproduced": 0.9999999847330497,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].cosine",
+        "original": 0.9999999847330497,
+        "reproduced": 0.9999999847330497,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].max_abs",
+        "original": 3.6135315895080566e-05,
+        "reproduced": 3.6135315895080566e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].max_abs",
+        "original": 3.6135315895080566e-05,
+        "reproduced": 3.6135315895080566e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_kl_nats",
+        "original": 1.530341127370417e-08,
+        "reproduced": 1.530341127370417e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_kl_nats",
+        "original": 1.530341127370417e-08,
+        "reproduced": 1.530341127370417e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_total_variation",
+        "original": 9.50047976004953e-05,
+        "reproduced": 9.50047976004953e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_total_variation",
+        "original": 9.50047976004953e-05,
+        "reproduced": 9.50047976004953e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mse",
+        "original": 5.617896733136062e-12,
+        "reproduced": 5.617896733136062e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mse",
+        "original": 5.617896733136062e-12,
+        "reproduced": 5.617896733136062e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].p95_kl_nats",
+        "original": 1.0977233377395253e-07,
+        "reproduced": 1.0977233377395253e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].p95_kl_nats",
+        "original": 1.0977233377395253e-07,
+        "reproduced": 1.0977233377395253e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[5].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].relative_l2",
+        "original": 0.00022306184245425898,
+        "reproduced": 0.00022306184245425898,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].relative_l2",
+        "original": 0.00022306184245425898,
+        "reproduced": 0.00022306184245425898,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].cosine",
+        "original": 0.9999999997395748,
+        "reproduced": 0.9999999997395748,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].cosine",
+        "original": 0.9999999997395748,
+        "reproduced": 0.9999999997395748,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].max_abs",
+        "original": 1.6450881958007812e-05,
+        "reproduced": 1.6450881958007812e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].max_abs",
+        "original": 1.6450881958007812e-05,
+        "reproduced": 1.6450881958007812e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_kl_nats",
+        "original": 5.713993385846398e-08,
+        "reproduced": 5.713993385846398e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_kl_nats",
+        "original": 5.713993385846398e-08,
+        "reproduced": 5.713993385846398e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_total_variation",
+        "original": 7.877819939494657e-05,
+        "reproduced": 7.877819939494657e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_total_variation",
+        "original": 7.877819939494657e-05,
+        "reproduced": 7.877819939494657e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mse",
+        "original": 2.0612471491084777e-12,
+        "reproduced": 2.0612471491084777e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mse",
+        "original": 2.0612471491084777e-12,
+        "reproduced": 2.0612471491084777e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].p95_kl_nats",
+        "original": 1.5763213120447435e-07,
+        "reproduced": 1.5763213120447435e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].p95_kl_nats",
+        "original": 1.5763213120447435e-07,
+        "reproduced": 1.5763213120447435e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[6].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].relative_l2",
+        "original": 3.989691276489352e-05,
+        "reproduced": 3.989691276489352e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].relative_l2",
+        "original": 3.989691276489352e-05,
+        "reproduced": 3.989691276489352e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].cosine",
+        "original": 0.9999999989295041,
+        "reproduced": 0.9999999989295041,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].cosine",
+        "original": 0.9999999989295041,
+        "reproduced": 0.9999999989295041,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].max_abs",
+        "original": 2.777576446533203e-05,
+        "reproduced": 2.777576446533203e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].max_abs",
+        "original": 2.777576446533203e-05,
+        "reproduced": 2.777576446533203e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_kl_nats",
+        "original": 3.638401883579207e-08,
+        "reproduced": 3.638401883579207e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_kl_nats",
+        "original": 3.638401883579207e-08,
+        "reproduced": 3.638401883579207e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_total_variation",
+        "original": 0.0001238740102991187,
+        "reproduced": 0.0001238740102991187,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_total_variation",
+        "original": 0.0001238740102991187,
+        "reproduced": 0.0001238740102991187,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mse",
+        "original": 3.73560148942411e-12,
+        "reproduced": 3.73560148942411e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mse",
+        "original": 3.73560148942411e-12,
+        "reproduced": 3.73560148942411e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].p95_kl_nats",
+        "original": 1.180887482494723e-07,
+        "reproduced": 1.180887482494723e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].p95_kl_nats",
+        "original": 1.180887482494723e-07,
+        "reproduced": 1.180887482494723e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[7].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].relative_l2",
+        "original": 5.4324496708467004e-05,
+        "reproduced": 5.4324496708467004e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].relative_l2",
+        "original": 5.4324496708467004e-05,
+        "reproduced": 5.4324496708467004e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].cosine",
+        "original": 0.9999999996166895,
+        "reproduced": 0.9999999996166895,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].cosine",
+        "original": 0.9999999996166895,
+        "reproduced": 0.9999999996166895,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].max_abs",
+        "original": 1.9162893295288086e-05,
+        "reproduced": 1.9162893295288086e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].max_abs",
+        "original": 1.9162893295288086e-05,
+        "reproduced": 1.9162893295288086e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].mean_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_kl_nats",
+        "original": 5.4449636215394355e-08,
+        "reproduced": 5.4449636215394355e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_kl_nats",
+        "original": 5.4449636215394355e-08,
+        "reproduced": 5.4449636215394355e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].mean_total_variation": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_total_variation",
+        "original": 0.00012177524187961808,
+        "reproduced": 0.00012177524187961808,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_total_variation",
+        "original": 0.00012177524187961808,
+        "reproduced": 0.00012177524187961808,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mse",
+        "original": 4.366650910432633e-12,
+        "reproduced": 4.366650910432633e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mse",
+        "original": 4.366650910432633e-12,
+        "reproduced": 4.366650910432633e-12,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].p95_kl_nats": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].p95_kl_nats",
+        "original": 1.4477649458141648e-07,
+        "reproduced": 1.4477649458141648e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].p95_kl_nats",
+        "original": 1.4477649458141648e-07,
+        "reproduced": 1.4477649458141648e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_query_head[8].relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].relative_l2",
+        "original": 5.2988745882744594e-05,
+        "reproduced": 5.2988745882744594e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].relative_l2",
+        "original": 5.2988745882744594e-05,
+        "reproduced": 5.2988745882744594e-05,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "reference_sum_squares": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "reference_sum_squares",
+        "original": 5.6248953664509855,
+        "reproduced": 5.6248953664509855,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "reference_sum_squares",
+        "original": 5.6248953664509855,
+        "reproduced": 5.6248953664509855,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.cosine",
+        "original": 0.9999999782161205,
+        "reproduced": 0.9999999782161205,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.cosine",
+        "original": 0.9999999782161205,
+        "reproduced": 0.9999999782161205,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.mse",
+        "original": 8.016766651246976e-08,
+        "reproduced": 8.016766651246976e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.mse",
+        "original": 8.016766651246976e-08,
+        "reproduced": 8.016766651246976e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.relative_l2",
+        "original": 0.0002087299276095765,
+        "reproduced": 0.0002087299276095765,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.relative_l2",
+        "original": 0.0002087299276095765,
+        "reproduced": 0.0002087299276095765,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.cosine": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.cosine",
+        "original": 0.9999999787728373,
+        "reproduced": 0.9999999787728373,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.cosine",
+        "original": 0.9999999787728373,
+        "reproduced": 0.9999999787728373,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.mse",
+        "original": 6.422050783534498e-11,
+        "reproduced": 6.422050783534498e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.mse",
+        "original": 6.422050783534498e-11,
+        "reproduced": 6.422050783534498e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.relative_l2": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.relative_l2",
+        "original": 0.00020648142354367575,
+        "reproduced": 0.00020648142354367575,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.relative_l2",
+        "original": 0.00020648142354367575,
+        "reproduced": 0.00020648142354367575,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    }
+  },
+  "top_absolute_differences": [],
+  "top_symmetric_relative_differences": [],
+  "aggregate_comparison": [
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.6688106703217376,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.6688106703217376,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4505662553726199,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4505662553726199,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5955938322434815,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5955938322434815,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.039598330217345636,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.039598330217345636,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.016206630612469054,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.016206630612469054,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.03610592954438744,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03610592954438744,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2798197756373597,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2798197756373597,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.16767156672077616,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.16767156672077616,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2540894064384817,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2540894064384817,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5066489376738547,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5066489376738547,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4257303615207261,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4257303615207261,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3519976734273752,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3519976734273752,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2857165923743375,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2857165923743375,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14553350261887704,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14553350261887704,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.26342512898599824,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.26342512898599824,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.1671462624537682,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1671462624537682,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14364972267234524,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14364972267234524,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0827655652091951,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.0827655652091951,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.30500161725543656,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.30500161725543656,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.18409187182752387,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.18409187182752387,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2600704847599516,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2600704847599516,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5693195754806393,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5693195754806393,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4347161731638661,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4347161731638661,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5427582178858754,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5427582178858754,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9907852457443845,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.9907852457443845,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8679997175021998,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8679997175021998,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2554353746091028,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2554353746091028,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.07334872056561109,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07334872056561109,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.05707311400644395,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.05707311400644395,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.125650967849803,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.125650967849803,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.11647985557994711,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.11647985557994711,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006730427865490805,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006730427865490805,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0062256543283632435,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0062256543283632435,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.002553664894770778,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.002553664894770778,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.6277160417803375,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.6277160417803375,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.5156932489921296,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5156932489921296,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5152259125763246,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5152259125763246,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.03114897591851522,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 10.25,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03114897591851522,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 10.25,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.015328205902760699,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.015328205902760699,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.027097540053279703,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.027097540053279703,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2607596833232289,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2607596833232289,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14226433154993295,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14226433154993295,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.23400135267963038,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.23400135267963038,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.4763654376258883,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 7.09375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4763654376258883,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 7.09375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.39472829940492665,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.39472829940492665,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3163712707581256,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3163712707581256,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2490054739598667,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 7.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2490054739598667,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 7.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12531267150410097,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12531267150410097,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22552408807696553,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.22552408807696553,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.14791282938291583,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 7.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14791282938291583,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 7.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12960696402117855,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12960696402117855,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.07425469323115132,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07425469323115132,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2717269908039377,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2717269908039377,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.19750421160793372,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.19750421160793372,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22170894938838281,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.22170894938838281,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5585440719829965,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5585440719829965,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4907953788777958,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4907953788777958,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.49336859441598,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.49336859441598,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9868821713715635,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 5.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.9868821713715635,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 5.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8726299285022313,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8726299285022313,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.21977375979852376,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.21977375979852376,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.06645038004152973,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 7.3125,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.06645038004152973,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 7.3125,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.05274666053653759,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 11.625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.05274666053653759,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 11.625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.11562565752767523,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 7.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.11562565752767523,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 7.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.10785921726391413,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.10785921726391413,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006399442971618025,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 10.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006399442971618025,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 10.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.005974251422745501,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.005974251422745501,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0023893737097791163,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0023893737097791163,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5785175965878333,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5785175965878333,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4946078342629457,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4946078342629457,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5667833174724983,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5667833174724983,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.03410981514070659,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03410981514070659,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.014117428655381082,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.014117428655381082,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.03096393711866243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03096393711866243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2599186486141668,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2599186486141668,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12350503636275971,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12350503636275971,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.23541097254944243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.23541097254944243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.4907627849909334,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4907627849909334,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.41063661516020583,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.41063661516020583,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3490057508484043,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3490057508484043,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.251157208555282,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.251157208555282,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12328068127389018,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12328068127389018,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2295118992155167,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2295118992155167,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.13632529801798232,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.13632529801798232,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.11425985464209835,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.11425985464209835,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.07442183607123024,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07442183607123024,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2781532156176207,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2781532156176207,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.15804898022684608,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.15804898022684608,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.25339388157958476,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.25339388157958476,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.48966085180398167,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.48966085180398167,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.35197054232729297,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.35197054232729297,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.47673846086971805,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.47673846086971805,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9272742621444551,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.9272742621444551,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8248416208592447,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8248416208592447,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22644007234534286,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.22644007234534286,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.06734612690406358,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.06734612690406358,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.052827124630767594,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.052827124630767594,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.10800480912424562,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.10800480912424562,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.09958457360195552,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.09958457360195552,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006364314010150029,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006364314010150029,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.005931029687918382,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.005931029687918382,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.002399799333888225,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.002399799333888225,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 0.0
+    }
+  ],
+  "reproduced_summary_max_difference_vs_independent": 0.0,
+  "reproduced_summary_gate_agreement": true,
+  "equality_tolerance": "None chosen post hoc: numerical differences are reported. Exact memory and screening agreement are separate checks."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "astckv.compact_atlas.v6",
+  "registered_before_results": true,
+  "hypothesis": "Linear packing of unchanged ASTC blocks into a 32-block-wide atlas may remove physical allocation waste. Attention must decode exactly the same normalized V values; address arithmetic may hurt latency.",
+  "tokens": [
+    384,
+    2048,
+    8192
+  ],
+  "tiles_by_tokens": {
+    "384": [
+      32
+    ],
+    "2048": [
+      64
+    ],
+    "8192": [
+      256
+    ]
+  },
+  "tile_selection": "Frozen from v1 two-session sweep;2048 includes ASTC-best32 and buffer-best64;other shapes share best tile. No v2 results used.",
+  "sessions": 3,
+  "rounds": 30,
+  "iterations": 10,
+  "seed": 20261029,
+  "negative_manifest": "results/kernel_v2/fixtures/t2048/manifest.json",
+  "scope": "Same payload blocks, original source width/height and ranges, compactatlas width192texels. Decode all normalized V and require exactfloat match against original ASTCtexture before timing. Same Q/ref, ownFP16 control. T2048/8192 repeatedblock trafficcontrols. Noencoder/update/modelqualityclaim.",
+  "negative_outcome": "Any payload/decode mismatch invalidates result; otherwise report actual allocation and all timing outcomes, including slowdowns. Smaller allocation alone does not establish runtime advantage.",
+  "experiment": "compact_block_atlas_v6",
+  "selection": "Width32 chosen by completed allocation-only probe (among32/64/128/256 widths); no compact attention results used. Tiles frozen from v4 per-shape ASTC optima. Exploratory representation-layout check, not independent universal performance confirmation."
+}

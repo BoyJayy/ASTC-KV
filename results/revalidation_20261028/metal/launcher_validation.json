@@ -1,0 +1,11 @@
+{
+  "shell_syntax": "pass",
+  "host_build_with_clt": "pass",
+  "runtime_source_selected": "/path/to/ASTC-KV/metal/attention.metal",
+  "existing_output_guard": {
+    "returncode": 2,
+    "stderr": "Refusing to overwrite existing results: /path/to/ASTC-KV/results/revalidation_20261028/metal. Set OUT_DIR to a new directory."
+  },
+  "gpu_run_in_this_check": "not_run",
+  "offline_metal_compiler_branch": "not_available_on_this_machine"
+}

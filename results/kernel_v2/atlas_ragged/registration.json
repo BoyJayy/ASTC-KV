@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-28T20:53:31.605401+00:00",
+  "config": {
+    "schema": "astckv.atlas_ragged.v6",
+    "tokens": [
+      391
+    ],
+    "tile_tokens": [
+      13
+    ],
+    "sessions": 1,
+    "rounds": 1,
+    "iterations": 1,
+    "seed": 20261029,
+    "scope": "Correctness smoke only. T391/tile13 exercises partial page, partial SIMD wave, 6x6 channel boundaries and incomplete compact-atlas final block row. Timing is not interpreted."
+  },
+  "hashes_before": {
+    "/path/to/ASTC-KV/build/metal-atlas-v6/astc-kv-probe-atlas-v6": "22b5bd222fd404885c61621c91fc451edd6fb07b242997c425fc4dcf2e59cf75",
+    "/path/to/ASTC-KV/metal/attention_atlas_v6.metal": "cd054608d3b9eea121757dc0358f24bbdacaea01536e8315cc6e2a7b69d1d02f",
+    "/path/to/ASTC-KV/configs/kernel_atlas_ragged_v6.json": "2bbb76f53074e355abb56a7bb573a09f020a504a209b885926248e977ff4cc2e",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "30013acee5fb53942b79f5ba1fc19f093c6e02c48d6a933e77cb9636bf3acf8b"
+  },
+  "schedule": [
+    [
+      0,
+      391,
+      13
+    ]
+  ]
+}

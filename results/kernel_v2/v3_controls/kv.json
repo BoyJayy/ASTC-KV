@@ -1,0 +1,333 @@
+{
+  "attribution_controls" : {
+    "factored_v_applied" : false,
+    "factored_v_identity" : "sum(p*(s*u+o)) = sum((p*s)*u) + sum(p*o); per-token V only",
+    "normalized_fp16_buffer" : "Same FP16 normalized scalars, metadata and affine reconstruction as ordinary textures",
+    "ordinary_input_components" : 1,
+    "packed_texture_width" : 16,
+    "same_query_buffer_all_variants" : true,
+    "scalar_vs_rgba_attribution_applicable" : true,
+    "uncompressed_rgba_texture" : "Ordinary RGBA16Float packing of the same normalized scalars; not RGBA ASTC"
+  },
+  "correctness" : {
+    "astc_factored_v" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.9802322387695312e-07,
+        "relative_l2" : 2.0724261376606009e-07,
+        "rmse" : 4.8663741015679941e-08
+      }
+    },
+    "astc_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.9802322387695312e-07,
+        "relative_l2" : 2.0724261376606009e-07,
+        "rmse" : 4.8663741015679941e-08
+      }
+    },
+    "fp16_buffer" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 3.8743019104003906e-07,
+        "relative_l2" : 1.9709420786275662e-07,
+        "rmse" : 4.6295117665585208e-08
+      }
+    },
+    "k_decode_gate" : {
+      "criterion" : "abs_delta <= scale\/1024 + FP32_roundoff",
+      "passed" : true,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "k_gpu_vs_offline_decode" : {
+      "finite" : true,
+      "max_abs" : 0.0068111419677734375,
+      "relative_l2" : 0.00066802267903173925,
+      "rmse" : 0.0012474003459955268
+    },
+    "k_ordinary_vs_normalized_buffer" : {
+      "errors" : {
+        "finite" : true,
+        "max_abs" : 0,
+        "relative_l2" : 0,
+        "rmse" : 0
+      },
+      "passed_exact_values" : true
+    },
+    "k_rgba_vs_normalized_buffer" : {
+      "errors" : {
+        "finite" : true,
+        "max_abs" : 0,
+        "relative_l2" : 0,
+        "rmse" : 0
+      },
+      "passed_exact_values" : true
+    },
+    "normalized_buffer_factored_v" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.384185791015625e-07,
+        "relative_l2" : 1.571467133106796e-07,
+        "rmse" : 3.6899579446925666e-08
+      }
+    },
+    "normalized_fp16_buffer" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.384185791015625e-07,
+        "relative_l2" : 1.571467133106796e-07,
+        "rmse" : 3.6899579446925666e-08
+      }
+    },
+    "uncompressed_rgba_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.384185791015625e-07,
+        "relative_l2" : 1.571467133106796e-07,
+        "rmse" : 3.6899579446925666e-08
+      }
+    },
+    "uncompressed_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.384185791015625e-07,
+        "relative_l2" : 1.571467133106796e-07,
+        "rmse" : 3.6899579446925666e-08
+      }
+    },
+    "v_decode_gate" : {
+      "criterion" : "abs_delta <= scale\/1024 + FP32_roundoff",
+      "passed" : true,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "v_gpu_vs_offline_decode" : {
+      "finite" : true,
+      "max_abs" : 0.0040163993835449219,
+      "relative_l2" : 0.0010138217398907102,
+      "rmse" : 0.00089552539443312753
+    },
+    "v_ordinary_vs_normalized_buffer" : {
+      "errors" : {
+        "finite" : true,
+        "max_abs" : 0,
+        "relative_l2" : 0,
+        "rmse" : 0
+      },
+      "passed_exact_values" : true
+    },
+    "v_rgba_vs_normalized_buffer" : {
+      "errors" : {
+        "finite" : true,
+        "max_abs" : 0,
+        "relative_l2" : 0,
+        "rmse" : 0
+      },
+      "passed_exact_values" : true
+    }
+  },
+  "environment" : {
+    "astc_allocation_probe" : {
+      "ASTC_4x4_LDR" : true,
+      "ASTC_6x6_LDR" : true,
+      "ASTC_8x8_LDR" : true
+    },
+    "counter_sampling_dispatch" : false,
+    "counter_sets" : [
+      {
+        "counters" : [
+          "GPUTimestamp"
+        ],
+        "name" : "timestamp"
+      }
+    ],
+    "device" : "Apple M5 Pro",
+    "max_buffer_length" : 30150672384,
+    "note" : "Allocation is not a decoding test; full probe execution tests texture reads.",
+    "os" : "Version 26.6.2 (Build 25G83)",
+    "physical_memory_bytes" : 51539607552,
+    "recommended_max_working_set_bytes" : 40200896512,
+    "registry_id" : 4294968641,
+    "supports_apple7" : true,
+    "supports_apple8" : true,
+    "unified_memory" : true
+  },
+  "hardware_astc_read_exercised" : true,
+  "input_manifest" : {
+    "capture_sha256" : "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+    "encoder" : {
+      "input_decode" : "float32 library",
+      "name" : "Arm astcenc",
+      "profile" : "LDR",
+      "quality" : 98,
+      "version" : "5.7.0"
+    },
+    "file_header_bytes" : 96,
+    "format" : "astc-kv-probe-v1",
+    "head_dim" : 64,
+    "k_decoded_file" : "k_decoded.f32",
+    "k_files" : [
+      "k-h000.astc",
+      "k-h001.astc",
+      "k-h002.astc"
+    ],
+    "k_normalization" : "page_channel",
+    "k_offset_file" : "k_offset.f16",
+    "k_scale_file" : "k_scale.f16",
+    "k_storage" : "astc",
+    "kv_heads" : 3,
+    "layer" : 17,
+    "layout" : "scalar",
+    "logical_bits_per_original_kv_scalar" : 4,
+    "logical_cache_bytes" : {
+      "k" : {
+        "astc_blocks_with_padding" : 33792,
+        "fp16_offsets" : 1536,
+        "fp16_scales" : 1536
+      },
+      "v" : {
+        "astc_blocks_with_padding" : 33792,
+        "fp16_offsets" : 1536,
+        "fp16_scales" : 1536
+      }
+    },
+    "metadata_dtype" : "float16_le",
+    "model" : "HuggingFaceTB\/SmolLM2-135M",
+    "model_revision" : "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+    "page_tokens" : 96,
+    "query_absolute_position" : 383,
+    "query_file" : "q.f32",
+    "query_heads" : 9,
+    "status" : "offline_fixture_for_precompressed_gpu_control; Metal execution pending",
+    "tokens" : 384,
+    "v_decoded_file" : "v_decoded.f32",
+    "v_files" : [
+      "v-h000.astc",
+      "v-h001.astc",
+      "v-h002.astc"
+    ],
+    "v_normalization" : "page_channel",
+    "v_offset_file" : "v_offset.f16",
+    "v_scale_file" : "v_scale.f16",
+    "v_storage" : "astc"
+  },
+  "memory" : {
+    "astc_file_bytes" : 67680,
+    "astc_payload_with_texture_padding_bytes" : 67584,
+    "astc_texture_allocated_bytes" : 98304,
+    "attention_scratch_allocated_bytes" : 69568,
+    "compressed_upload_staging_bytes" : 98304,
+    "control_params_bytes" : 60,
+    "device_current_allocated_bytes_all_diagnostics" : 5767168,
+    "fp16_buffer_allocated_bytes" : 294912,
+    "fp16_cache_allocated_bytes" : 0,
+    "fp16_cache_logical_bytes" : 0,
+    "fp16_decode_control_only_allocated_bytes" : 294912,
+    "inactive_binding_allocated_bytes" : 0,
+    "k_logical_effective_bits_per_scalar" : 4,
+    "logical_effective_bits_per_original_kv_scalar" : 4,
+    "metadata_allocated_bytes" : 6144,
+    "metadata_logical_bytes" : 6144,
+    "normalized_buffer_control_allocated_bytes" : 294912,
+    "ordinary_rgba_control_allocated_bytes" : 425984,
+    "ordinary_texture_allocated_bytes" : 819200,
+    "peak_note" : "Probe keeps decoded CPU tensors and control GPU resources live; process peak is a diagnostic-process peak, not a compressed-runtime peak.",
+    "process_max_rss_bytes_macos" : 23576576,
+    "production_peak_bytes" : null,
+    "v_logical_effective_bits_per_scalar" : 4
+  },
+  "raw_samples" : [
+    {
+      "gpu_batch_ms" : 0.026875000912696123,
+      "iterations" : 1,
+      "order_within_round" : 0,
+      "round" : 0,
+      "variant" : "normalized_buffer_factored_v",
+      "wall_batch_ms" : 0.19408300000000001
+    },
+    {
+      "gpu_batch_ms" : 0.01824999344535172,
+      "iterations" : 1,
+      "order_within_round" : 1,
+      "round" : 0,
+      "variant" : "fp16_buffer",
+      "wall_batch_ms" : 0.151833
+    },
+    {
+      "gpu_batch_ms" : 0.026125009753741324,
+      "iterations" : 1,
+      "order_within_round" : 2,
+      "round" : 0,
+      "variant" : "normalized_fp16_buffer",
+      "wall_batch_ms" : 0.15525
+    },
+    {
+      "gpu_batch_ms" : 0.04762499884236604,
+      "iterations" : 1,
+      "order_within_round" : 3,
+      "round" : 0,
+      "variant" : "uncompressed_texture",
+      "wall_batch_ms" : 0.232875
+    },
+    {
+      "gpu_batch_ms" : 0.57458333321847022,
+      "iterations" : 1,
+      "order_within_round" : 4,
+      "round" : 0,
+      "variant" : "astc_texture",
+      "wall_batch_ms" : 0.67812499999999998
+    },
+    {
+      "gpu_batch_ms" : 0.12479166616685688,
+      "iterations" : 1,
+      "order_within_round" : 5,
+      "round" : 0,
+      "variant" : "uncompressed_rgba_texture",
+      "wall_batch_ms" : 0.199541
+    },
+    {
+      "gpu_batch_ms" : 0.063500003307126462,
+      "iterations" : 1,
+      "order_within_round" : 6,
+      "round" : 0,
+      "variant" : "astc_factored_v",
+      "wall_batch_ms" : 0.15279100000000001
+    }
+  ],
+  "schema" : "astc-kv-metal-probe-result-v3",
+  "scope" : "precompressed, one-query diagnostic; no runtime speedup claim",
+  "shader_compilation" : "runtime_source_metal3_no_fast_math",
+  "shape" : {
+    "atlas_height" : 384,
+    "atlas_width" : 66,
+    "head_dim" : 64,
+    "kv_heads" : 3,
+    "page_tokens" : 96,
+    "query_heads" : 9,
+    "splits" : 24,
+    "tile_tokens" : 16,
+    "tokens" : 384
+  },
+  "status" : "executed_on_metal",
+  "timing" : {
+    "block_upload_gpu_ms" : 0.114916663733311,
+    "block_upload_wall_ms" : 2.9013749999999998,
+    "cache_state" : "repeated read of same cache; run large working sets separately",
+    "codec_time_ms" : null,
+    "decode_or_model_latency_ms" : null,
+    "iterations_per_round" : 1,
+    "order_seed" : 20261028,
+    "pipeline_creation_wall_ms" : 1.0887500000000001,
+    "process_elapsed_ms" : 38.189082999999997,
+    "rounds" : 1,
+    "variant_order" : "seeded shuffle each warmup and measured round",
+    "warmup_command_buffers_per_variant" : 10,
+    "warmup_iterations_per_variant" : 10
+  }
+}

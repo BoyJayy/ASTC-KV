@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-28",
+  "scope": "Целевой обзор первичных источников, а не исчерпывающий патентный или библиографический поиск",
+  "novelty_status": "Прямого аналога активного KV-кэша с прямым чтением ASTC в attention в проверенных источниках не найдено; мировое первенство не установлено.",
+  "works": [
+    {
+      "id": "apple_2025",
+      "title": "Apple Intelligence Foundation Language Models",
+      "version": "arXiv:2507.13575v3, 2025-08-27; Apple article updated 2025-07-17",
+      "urls": [
+        "https://arxiv.org/html/2507.13575v3",
+        "https://machinelearning.apple.com/research/apple-foundation-models-2025-updates"
+      ],
+      "compressed": "Веса серверной модели: ASTC HDR-ch 6×6; KV отдельно квантуется до 8 бит.",
+      "encoding_time": "После обучения; используются quality-recovery adapters.",
+      "storage": "ASTC-блоки весов и FP16-минимум каждого блока.",
+      "decoding": "Аппаратный ASTC-декодер Apple GPU; минимум добавляется внутри tensor operations.",
+      "direct_compressed_attention": "ASTC KV-attention не описан.",
+      "full_decoded_copy": "Отдельная полная реконструкция весов не требуется по описанию.",
+      "hardware": "Apple Private Cloud Compute; точная конфигурация ASTC-microbenchmark не раскрыта.",
+      "measured": "Качество моделей; отдельного воспроизводимого сравнения ASTC KV decode latency нет.",
+      "code": "Открытого кода этого ASTC backend в источниках не найдено.",
+      "distinction": "Активный append-only KV, онлайн-кодирование и attention вместо фиксированных весов.",
+      "caution": "128/36 = 3.56 — payload; с одним FP16-минимумом (128+16)/36 = 4.00 бит/вес до остальных расходов."
+    },
+    {
+      "id": "llm265",
+      "title": "LLM.265: Video Codecs are Secretly Tensor Codecs",
+      "version": "MICRO 2025 camera-ready; code 262e588b11937801a2b3bd0ce760ba05abc4da32",
+      "urls": [
+        "https://www.yongjiwu.me/assets/pdf/micro25-llm265.pdf",
+        "https://github.com/Entropy-xcy/llm.265/tree/262e588b11937801a2b3bd0ce760ba05abc4da32"
+      ],
+      "compressed": "Веса, KV, активации и градиенты; HEVC/H.264 после 8-битной квантизации.",
+      "encoding_time": "Веса офлайн; активации/KV/градиенты при исполнении.",
+      "storage": "Видео-битстримы; runtime учитывает восстановленные тензоры.",
+      "decoding": "NVDEC → тензоры; опубликованный pipeline возвращает torch.stack(decoded).",
+      "direct_compressed_attention": "Нет продемонстрированного attention, читающего битстрим непосредственно.",
+      "full_decoded_copy": "Декодированные тензоры материализуются; размер одновременно живущей копии всего KV не установлен.",
+      "hardware": "NVIDIA; в опытах обучения RTX3090; отдельные предложения аппаратуры моделируются.",
+      "measured": "Качество/размеры, обучение; §6.1: примерно 1.1/1.3 GB/s NVENC/NVDEC, признаны ограничением.",
+      "code": "Открытый codec pipeline и quality-evaluation scripts; полная active-KV интеграция не подтверждена ревизией.",
+      "distinction": "Произвольный доступ через текстурный тракт и отсутствие внешнего восстановления KV.",
+      "caution": "Не переносить модельные будущие ускорения кодеков в измерения существующего GPU."
+    },
+    {
+      "id": "kvcodec",
+      "title": "Efficient Remote KV Cache Reuse with GPU-native Video Codec",
+      "version": "arXiv:2602.09725v3, 2026-05-12; SIGCOMM 2026",
+      "urls": [
+        "https://arxiv.org/html/2602.09725v3"
+      ],
+      "compressed": "KV-фрагменты для удалённого повторного использования; codec-friendly layout.",
+      "encoding_time": "Заранее, до remote reuse.",
+      "storage": "Удалённое хранилище → host bitstream buffer → GPU frames.",
+      "decoding": "NVDEC и frame-wise restoration в paged KV vLLM.",
+      "direct_compressed_attention": "Нет: inference получает восстановленный KV.",
+      "full_decoded_copy": "Рабочий paged KV восстановлен; временный decoder buffer сокращён покадровой обработкой.",
+      "hardware": "NVIDIA A100, H20, L20; несколько GPU, сети 1–40 Gbps.",
+      "measured": "TTFT, TPOT, качество и память remote reuse; до 3.51× TTFT в исследованных сценариях.",
+      "code": "Ссылка на авторский открытый репозиторий в проверенной статье/поиске не найдена.",
+      "distinction": "Сжатое resident-представление для каждого последующего attention, включая динамическое добавление.",
+      "caution": "Свойства временной/пространственной избыточности KV и влияние раскладки уже исследованы."
+    },
+    {
+      "id": "compute_astc",
+      "title": "Compute ASTC",
+      "version": "Author post 2021-12-18; code 7cd3af99a01a3889347cc7c8d62699e247b638ca",
+      "urls": [
+        "https://niepp.github.io/2021/12/18/Compute-ASTC.html",
+        "https://github.com/niepp/astc_encoder/tree/7cd3af99a01a3889347cc7c8d62699e247b638ca"
+      ],
+      "compressed": "LDR-текстуры, ограниченное подмножество ASTC 4×4/6×6.",
+      "encoding_time": "Runtime compute shader.",
+      "storage": "Валидные блоки ASTC, затем сжатая текстура.",
+      "decoding": "Обычный аппаратный texture decoder.",
+      "direct_compressed_attention": "Нет attention.",
+      "full_decoded_copy": "Не нужна для графического texture sampling.",
+      "hardware": "В статье iPhone6s+/iPhone12; опубликованный repo использует D3D11.",
+      "measured": "PSNR текстур и GPU-время кодирования; не K/V, не LLM.",
+      "code": "Авторский код доступен, исходный backend D3D compute.",
+      "distinction": "K/V-специфичный отбор режимов, attention-error objective и окупаемость обновлений.",
+      "caution": "Перенос существующего кодировщика на Metal сам по себе не новизна."
+    },
+    {
+      "id": "arm_astcenc",
+      "title": "Arm ASTC Encoder",
+      "version": "main d0f91386350222fcbf6da533c0f7a3f9b5c6b783, 2026-10-21; use separately pinned release for experiments",
+      "urls": [
+        "https://github.com/ARM-software/astc-encoder",
+        "https://github.com/ARM-software/astc-encoder/blob/main/Docs/Encoding.md",
+        "https://github.com/ARM-software/astc-encoder/blob/main/Docs/FormatOverview.md"
+      ],
+      "compressed": "Изображения/текстуры, LDR/HDR, 1–4 компоненты.",
+      "encoding_time": "Офлайн CPU reference/tool; пригоден для начальной оценки качества.",
+      "storage": "128-битные ASTC-блоки и контейнер.",
+      "decoding": "Программная reference-декомпрессия или аппаратная поддержка API/GPU.",
+      "direct_compressed_attention": "Нет KV runtime.",
+      "full_decoded_copy": "CPU validation может материализовать изображение; GPU sampling не требует полной копии.",
+      "hardware": "CPU SIMD; аппаратный ASTC проверяется отдельно.",
+      "measured": "Reference codec; собственных K/V-измерений нет.",
+      "code": "Открытый авторский codec и документация, Apache-2.0.",
+      "distinction": "Reference oracle, а не научный baseline готовой active-KV системы.",
+      "caution": "Биты/texel не равны битам/исходный KV-скаляр при разном распределении компонент."
+    },
+    {
+      "id": "kivi",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "version": "arXiv:2402.02750v2, 2024-07-25; code 876b4d2d08e3b1d5f70d0969c299d8c7c42ddfb6",
+      "urls": [
+        "https://arxiv.org/html/2402.02750v2",
+        "https://github.com/jy-yuan/KIVI"
+      ],
+      "compressed": "Активный KV: K per-channel, V per-token; остаточный FP16-буфер.",
+      "encoding_time": "Онлайн группами.",
+      "storage": "Packed low-bit GPU tensors, scale/zero-point и residual cache.",
+      "decoding": "CUDA: dequantization объединена с matrix multiplication; Triton quantization.",
+      "direct_compressed_attention": "Да для QK/PV matmul; это не обязательно одно fused softmax-attention ядро.",
+      "full_decoded_copy": "Для основного low-bit пути полная FP16-копия не требуется.",
+      "hardware": "NVIDIA A100 80GB в системных опытах.",
+      "measured": "Качество, peak memory, throughput при увеличении допустимого batch.",
+      "code": "Открыт; CUDA/Triton, не подтверждённый Metal baseline.",
+      "distinction": "Fixed-function ASTC, layout и стоимость encoding/upload.",
+      "caution": "Batch-throughput из статьи не считать ускорением batch=1 decode на Mac."
+    },
+    {
+      "id": "kvquant",
+      "title": "KVQuant",
+      "version": "arXiv:2401.18079v6, 2025-05-28; code 57a238357f0ffe50084670fcd5781c9848f80ea2",
+      "urls": [
+        "https://arxiv.org/pdf/2401.18079v6",
+        "https://github.com/SqueezeAILab/KVQuant"
+      ],
+      "compressed": "KV; K до RoPE; per-channel/per-token, nonuniform codebooks, sparse outliers.",
+      "encoding_time": "Калибровка кодовых книг офлайн; квантизация KV онлайн.",
+      "storage": "Packed dense+sparse KV на GPU.",
+      "decoding": "Собственные CUDA matvec kernels с dequantization/RoPE.",
+      "direct_compressed_attention": "Да, fused low-bit matvec-путь.",
+      "full_decoded_copy": "Не требуется в соответствующих kernels.",
+      "hardware": "NVIDIA A100; расширение памяти до нескольких GPU.",
+      "measured": "PPL, memory capacity и matrix-vector kernel timings; отдельные границы контекста.",
+      "code": "Открыт; Metal-путь не установлен.",
+      "distinction": "Взвешенная ошибка и исключения уже известны; нужен ASTC-специфичный алгоритм.",
+      "caution": "Не переносить заявленную скорость отдельных matvec на полный decode."
+    },
+    {
+      "id": "quarot",
+      "title": "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+      "version": "arXiv:2404.00456v2, 2024-10-29; code 5008669b08c1f11f9b64d52d16fddd47ca754c5a",
+      "urls": [
+        "https://arxiv.org/pdf/2404.00456v2",
+        "https://github.com/spcl/QuaRot"
+      ],
+      "compressed": "Веса, активации, KV после ортогональных/Hadamard-преобразований.",
+      "encoding_time": "Преобразование весов офлайн; activation/KV quantization онлайн.",
+      "storage": "Low-bit GPU tensors.",
+      "decoding": "CUDA low-bit operators, dequantization по мере потребления.",
+      "direct_compressed_attention": "Представлен low-bit KV decode path; детали fusion зависят от operator.",
+      "full_decoded_copy": "Полная persistent FP16-копия KV не является требованием метода.",
+      "hardware": "NVIDIA GPU; не Apple Metal.",
+      "measured": "PPL, zero-shot accuracy, latency и memory.",
+      "code": "Открытый авторский репозиторий.",
+      "distinction": "Само применение ортогонального преобразования не является новым вкладом.",
+      "caution": "Rotation может улучшать scalar quantization, но ухудшать пространственную гладкость для ASTC."
+    },
+    {
+      "id": "turboquant",
+      "title": "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate",
+      "version": "arXiv:2504.19874v1, 2025-04-28; author blog 2026-03-24",
+      "urls": [
+        "https://arxiv.org/html/2504.19874v1",
+        "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/"
+      ],
+      "compressed": "Векторы/KV; rotation, scalar codebooks, MSE/product variants.",
+      "encoding_time": "Онлайн; без калибровки на конкретном наборе данных.",
+      "storage": "Коды векторов, нормы и необходимые вспомогательные данные.",
+      "decoding": "Программные vector estimators/quantization operators.",
+      "direct_compressed_attention": "Работа с кодами для logits описана; готовый сопоставимый fused Metal KV backend не проверен.",
+      "full_decoded_copy": "Для оценивания dot products не нужна; полная интеграция требует отдельной проверки реализации.",
+      "hardware": "Статья: A100; блог: H100 для logits timing.",
+      "measured": "LongBench/NIH и искажения; блог: до 8× logits vs FP32 keys, не полный decode vs FP16.",
+      "code": "В проверенных авторских источниках официальный Metal-код не найден; независимые реализации существуют.",
+      "distinction": "ASTC-ограничения, аппаратный decoder, online обновление и все накладные расходы.",
+      "caution": "§4.3 v1 называет (32×3+96×2)/128 значением 2.5, хотя это 2.25; перепроверять фактическую бухгалтерию битов."
+    },
+    {
+      "id": "pagedattention",
+      "title": "PagedAttention / vLLM",
+      "version": "arXiv:2309.06180v1, 2023-09-12",
+      "urls": [
+        "https://arxiv.org/abs/2309.06180",
+        "https://github.com/vllm-project/vllm"
+      ],
+      "compressed": "Исходный вклад — управление размещением KV, не lossy codec.",
+      "encoding_time": "Динамическое выделение/сопоставление страниц при inference.",
+      "storage": "Несмежные GPU blocks, block tables, shared prefixes.",
+      "decoding": "Attention адресует физические blocks через таблицы.",
+      "direct_compressed_attention": "Квантизация не является центральным условием исходной работы.",
+      "full_decoded_copy": "Копия contiguous KV не нужна.",
+      "hardware": "NVIDIA GPU serving systems.",
+      "measured": "Throughput, latency, memory fragmentation/sharing.",
+      "code": "Открыт.",
+      "distinction": "Страницы ASTC и FP-tail — применение известных идей управления памятью.",
+      "caution": "Нельзя заявлять новизной только pages, append-only layout или prefix sharing."
+    },
+    {
+      "id": "flashinfer",
+      "title": "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
+      "version": "arXiv:2501.01005v2, 2025-04-21",
+      "urls": [
+        "https://arxiv.org/html/2501.01005v2",
+        "https://github.com/flashinfer-ai/flashinfer"
+      ],
+      "compressed": "Attention engine для разных KV layouts; в статье также FP8/FP16 mixed precision.",
+      "encoding_time": "Prefill/append/decode в runtime; собственно encoder зависит от формата.",
+      "storage": "Paged/ragged/block-sparse, composable shared-prefix storage.",
+      "decoding": "CUDA/CUTLASS attention, преобразование tiles внутри kernel.",
+      "direct_compressed_attention": "Да для поддерживаемых low-precision путей; не ASTC.",
+      "full_decoded_copy": "Полная FP16-копия cache не требуется для on-the-fly пути.",
+      "hardware": "NVIDIA Turing–Hopper в статье.",
+      "measured": "Kernel и end-to-end serving latency, распределения workload.",
+      "code": "Открытый авторский engine.",
+      "distinction": "Слияние частичных attention и разные layouts известны; новый предмет — аппаратный ASTC путь.",
+      "caution": "CUDA результаты не служат сравнением скорости с Apple GPU."
+    },
+    {
+      "id": "mlx_lm",
+      "title": "MLX / MLX-LM current public implementation",
+      "version": "MLX-LM 1f7057ca530f8a594d4aab50bac41a2ed5e5c5c7; MLX 7d2d94a5561ebc3965884a0fc3dfc35b7b1bb17a; 2026-10-28",
+      "urls": [
+        "https://github.com/ml-explore/mlx-lm/blob/1f7057ca530f8a594d4aab50bac41a2ed5e5c5c7/mlx_lm/models/base.py",
+        "https://github.com/ml-explore/mlx-lm/blob/1f7057ca530f8a594d4aab50bac41a2ed5e5c5c7/mlx_lm/models/cache.py",
+        "https://github.com/ml-explore/mlx"
+      ],
+      "compressed": "QuantizedKVCache: packed KV и scale/bias; FP cache тоже поддержан.",
+      "encoding_time": "update_and_fetch онлайн; расширение capacity порциями 256.",
+      "storage": "MLX GPU arrays, uint32 payload и metadata.",
+      "decoding": "Quantized matmul → scores/softmax → quantized matmul. FP branch использует mx.fast SDPA.",
+      "direct_compressed_attention": "QK и PV получают packed KV; весь attention не является единым fused kernel в этом Python-пути.",
+      "full_decoded_copy": "Python-путь не разворачивает полный KV; scores материализуются.",
+      "hardware": "Apple Silicon/Metal; на нашей Linux-среде не выполнен.",
+      "measured": "Здесь проверен исходный код, не latency.",
+      "code": "Открытый авторский runtime; ревизии зафиксированы.",
+      "distinction": "Практический совместимый baseline; сравнивать также с fused Metal low-bit implementation.",
+      "caution": "Наличие quantized_matmul не доказывает, что этот путь оптимален для полного decode."
+    },
+    {
+      "id": "llamacpp_metal",
+      "title": "llama.cpp Metal quantized FlashAttention",
+      "version": "ac8e1694d837b11ed0aab944a6a2eee34b9c4d80, 2026-10-28",
+      "urls": [
+        "https://github.com/ggml-org/llama.cpp/blob/ac8e1694d837b11ed0aab944a6a2eee34b9c4d80/ggml/src/ggml-metal/kernels/fa_q4_0.metal",
+        "https://github.com/ggml-org/llama.cpp/blob/ac8e1694d837b11ed0aab944a6a2eee34b9c4d80/ggml/src/ggml-metal/kernels/fa_vec_q4_0.metal",
+        "https://github.com/ggml-org/llama.cpp/blob/ac8e1694d837b11ed0aab944a6a2eee34b9c4d80/ggml/src/ggml-metal/kernels/fa_vec_common.metal"
+      ],
+      "compressed": "KV Q4_0/Q4_1/Q5_0/Q5_1/Q8_0, FP16 и другие разрешённые варианты.",
+      "encoding_time": "Runtime KV update; конкретные сочетания необходимо проверить запуском.",
+      "storage": "GGML block-quantized buffers.",
+      "decoding": "Metal FlashAttention templates вызывают dequantize_q4_0 внутри вычисления.",
+      "direct_compressed_attention": "Да: kernel_flash_attn_ext и vec; есть специализация D=64.",
+      "full_decoded_copy": "Полная FP16-копия не требуется для этих kernel templates.",
+      "hardware": "Apple Silicon/Metal; фактический dispatch на данном Mac ещё не измерен.",
+      "measured": "Здесь проверено существование и устройство kernels; сравнительные замеры запланированы.",
+      "code": "Открыт; CLI: --flash-attn on --cache-type-k q4_0 --cache-type-v q4_0.",
+      "distinction": "Сильный Metal baseline для конкуренции с fixed-function decode.",
+      "caution": "4-битный payload Q4_0 имеет FP16 scale на 32 значения: минимум 4.5 бит/скаляр до padding."
+    },
+    {
+      "id": "open_tq_metal",
+      "title": "Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon",
+      "version": "arXiv:2604.16957v1, submitted 2026-04-18; PDF masthead 2026-04-21; Llama code e3dd4ca41d2e028dea3569dcc36b9055915f9968, 2026-04-14; Gemma code 0f09466b7fde772a4876bf7bee3ccdeb34313304, 2026-04-13",
+      "urls": [
+        "https://arxiv.org/abs/2604.16957v1",
+        "https://arxiv.org/pdf/2604.16957v1",
+        "https://github.com/mutable-state-inc/turboquant-llama3.170B/tree/e3dd4ca41d2e028dea3569dcc36b9055915f9968",
+        "https://github.com/mutable-state-inc/gemma4metal/tree/0f09466b7fde772a4876bf7bee3ccdeb34313304"
+      ],
+      "compressed": "Активный K/V: affine INT4, FP16 scale/zero на группу 32, то есть 5 эффективных бит/скаляр до остальных расходов.",
+      "encoding_time": "Онлайн; после FP16 prefill и при добавлении каждого decode token; в Llama code append через concatenate.",
+      "storage": "Packed Metal/MLX arrays и FP16 metadata в unified memory.",
+      "decoding": "Metal register unpack внутри SDPA, online softmax, split-K partial/reduce; Llama kernel специализируется на D=128.",
+      "direct_compressed_attention": "Да: реальный опубликованный packed-INT4 attention kernel; не ASTC.",
+      "full_decoded_copy": "В fused decode полная FP16 KV-копия не нужна; prefill FP16 и partial/reduce buffers остаются.",
+      "hardware": "Автор сообщает M1 Max, 64 GB, 32 GPU cores, macOS 15; здесь статический аудит, без аппаратного повторения.",
+      "measured": "Опубликованы synthetic kernel tests до 128K и короткая model generation. Объявленные 48× и full-context capacity требуют отдельной проверки; см. аудит ниже.",
+      "code": "Два открытых авторских репозитория. В Llama benchmark слабый unfused reference, в model prefill отсутствует causal mask; baseline нельзя принять без исправлений.",
+      "distinction": "Аппаратный ASTC decoder, специализированное представление и экономия полного пути; само fused compressed Metal attention уже не кандидат на новизну.",
+      "caution": "48× относится к несопоставимому unfused kernel reference, не к оптимизированному FP16 или q4 runtime; 128K end-to-end и качество не подтверждены просмотренными тестами.",
+      "source_audit": [
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/tests/sdpa_int4_bench.cpp",
+          "finding": "Reference повторяет K/V по GQA-heads, выполняет separate matmul/softmax/matmul и не вызывает fast SDPA; dequantized K/V созданы до таймера. Fused path прогревается и повторяется 5 раз, reference замерен один раз. Это не честный optimized FP16 benchmark."
+        },
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/engine/llama_model.cpp",
+          "finding": "Prefill S>1 передаёт mask_mode=\"\" и пустые mask arrays; перед вызовом лишь projection/reshape/RoPE. FP16 fallback тоже не добавляет causal mask. Необходимо исправить причинность и проверить chunked prefill. D!=128 возвращается к FP16 KV."
+        },
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/tests/llama_e2e.cpp",
+          "finding": "Пример использует 5 prompt + 200 decode tokens и явно экстраполирует размер KV к 131072; это не демонстрация полноценного 128K запуска."
+        },
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/tests/kv_memory_test.cpp",
+          "finding": "Суммирует nbytes массивов, созданных по одному слою в локальных переменных; для длин >16384 тестирует 10 слоёв. Не измеряет simultaneous 80-layer resident/peak memory."
+        },
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/tests/context_scaling.cpp",
+          "finding": "Prompt lengths 32/128/256/512. В timed decode выполняются n_decode-1=4 forward calls, throughput считает n_decode=5: завышение числа timed calls на 25%."
+        },
+        {
+          "file": "https://github.com/mutable-state-inc/turboquant-llama3.170B/blob/e3dd4ca41d2e028dea3569dcc36b9055915f9968/tests/sdpa_int4_bench.cpp",
+          "finding": "Synthetic reference формируется с исходными FP32 scale/zero перед их FP16 округлением для kernel; обе стороны не в точности используют одно декодированное представление. Проверка mean absolute error <0.02 не заменяет модельную оценку."
+        },
+        {
+          "file": "https://arxiv.org/pdf/2604.16957v1",
+          "finding": "Eq.6 angular-error formula не является общей: при q перпендикулярном k поворот k к q даёт first-order sin(delta), а не 1-cos(delta). Scalar attn_scale нельзя рассматривать отдельно от норм Q/K; произведение межслойных correlations rho^L не доказанная модель error propagation."
+        }
+      ]
+    }
+  ],
+  "search_log": [
+    {
+      "engine": "system1",
+      "queries": [
+        "\"ASTC\" \"KV cache\"",
+        "\"ASTC\" \"attention\" compression cache",
+        "\"texture compression\" \"key-value\" cache"
+      ],
+      "result": "Exact active ASTC KV attention match not found in retrieved primary sources."
+    },
+    {
+      "engine": "system2",
+      "queries": [
+        "\"ASTC\" \"KV\" attention github",
+        "\"ASTC\" \"cache\" LLM Metal",
+        "\"texture\" \"KV cache\" compression Apple"
+      ],
+      "result": "Apple weights and an MLX-LM ASTC weight feature request; no verified active KV implementation."
+    },
+    {
+      "engine": "system1",
+      "queries": [
+        "site.research.google \"TurboQuant\" 2026",
+        "\"KVCodec\" github \"Liang\"",
+        "\"ASTC\" \"KV-cache\""
+      ],
+      "result": "Author TurboQuant March 2026 blog located; no verified exact ASTC KV analogue."
+    },
+    {
+      "engine": "system1/root discovery + primary paper and pinned code audit",
+      "queries": [
+        "\"fused\" \"compressed\" \"attention\" \"Apple Silicon\"",
+        "arXiv:2604.16957"
+      ],
+      "outcome": "Open-TQ-Metal is direct active INT4 KV attention on Metal, not ASTC. Significant baseline/correctness/capacity-evidence caveats found in released code."
+    }
+  ]
+}

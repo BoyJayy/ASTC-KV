@@ -1,0 +1,39 @@
+fp16                       KV      bits=16.000 relL2=0.0004 KL=0.00000 head95=0.001 gate=False
+fp16                       K_only  bits=16.000 relL2=0.0004 KL=0.00000 head95=0.001 gate=False
+fp16                       V_only  bits=16.000 relL2=0.0004 KL=0.00000 head95=0.001 gate=False
+rgba4_page                 KV      bits= 5.750 relL2=0.6277 KL=0.46414 head95=2.396 gate=False
+rgba4_page                 K_only  bits=10.875 relL2=0.5157 KL=0.46414 head95=1.824 gate=False
+rgba4_page                 V_only  bits=10.875 relL2=0.5152 KL=0.00000 head95=2.534 gate=False
+scalar4_page               KV      bits=10.250 relL2=0.0311 KL=0.00039 head95=0.139 gate=False
+scalar4_page               K_only  bits=13.125 relL2=0.0153 KL=0.00039 head95=0.048 gate=False
+scalar4_page               V_only  bits=13.125 relL2=0.0271 KL=0.00000 head95=0.133 gate=False
+scalar6_channel_permuted   KV      bits= 7.014 relL2=0.2608 KL=0.03104 head95=1.094 gate=False
+scalar6_channel_permuted   K_only  bits=11.507 relL2=0.1423 KL=0.03104 head95=0.377 gate=False
+scalar6_channel_permuted   V_only  bits=11.507 relL2=0.2340 KL=0.00000 head95=1.163 gate=False
+scalar6_hdr_block          KV      bits= 7.094 relL2=0.4764 KL=0.22074 head95=1.569 gate=False
+scalar6_hdr_block          K_only  bits=11.547 relL2=0.3947 KL=0.22074 head95=0.877 gate=False
+scalar6_hdr_block          V_only  bits=11.547 relL2=0.3164 KL=0.00000 head95=1.422 gate=False
+scalar6_page               KV      bits= 7.000 relL2=0.2490 KL=0.02858 head95=1.069 gate=False
+scalar6_page               K_only  bits=11.500 relL2=0.1253 KL=0.02858 head95=0.326 gate=False
+scalar6_page               V_only  bits=11.500 relL2=0.2255 KL=0.00000 head95=1.082 gate=False
+scalar6_token              KV      bits= 7.125 relL2=0.1479 KL=0.03537 head95=0.333 gate=False
+scalar6_token              K_only  bits=11.562 relL2=0.1296 KL=0.03537 head95=0.303 gate=False
+scalar6_token              V_only  bits=11.562 relL2=0.0743 KL=0.00000 head95=0.162 gate=True
+scalar6_token_permuted     KV      bits= 7.021 relL2=0.2717 KL=0.04523 head95=1.056 gate=False
+scalar6_token_permuted     K_only  bits=11.510 relL2=0.1975 KL=0.04523 head95=0.603 gate=False
+scalar6_token_permuted     V_only  bits=11.510 relL2=0.2217 KL=0.00000 head95=1.066 gate=False
+scalar8_page               KV      bits= 5.750 relL2=0.5585 KL=0.37539 head95=2.350 gate=False
+scalar8_page               K_only  bits=10.875 relL2=0.4908 KL=0.37539 head95=1.902 gate=False
+scalar8_page               V_only  bits=10.875 relL2=0.4934 KL=0.00000 head95=2.412 gate=False
+u2_token                   KV      bits= 5.875 relL2=0.9869 KL=0.68337 head95=2.449 gate=False
+u2_token                   K_only  bits=10.938 relL2=0.8726 KL=0.68337 head95=2.131 gate=False
+u2_token                   V_only  bits=10.938 relL2=0.2198 KL=0.00000 head95=0.662 gate=False
+u4_asymmetric              KV      bits= 7.312 relL2=0.0665 KL=0.00631 head95=0.160 gate=True
+u4_asymmetric              K_only  bits=11.625 relL2=0.0527 KL=0.00631 head95=0.142 gate=True
+u4_asymmetric              V_only  bits=11.688 relL2=0.0404 KL=0.00000 head95=0.106 gate=True
+u4_token                   KV      bits= 7.375 relL2=0.1156 KL=0.02495 head95=0.234 gate=False
+u4_token                   K_only  bits=11.688 relL2=0.1079 KL=0.02495 head95=0.222 gate=False
+u4_token                   V_only  bits=11.688 relL2=0.0404 KL=0.00000 head95=0.106 gate=True
+u8_token                   KV      bits=10.375 relL2=0.0064 KL=0.00008 head95=0.014 gate=False
+u8_token                   K_only  bits=13.188 relL2=0.0060 KL=0.00008 head95=0.013 gate=False
+u8_token                   V_only  bits=13.188 relL2=0.0024 KL=0.00000 head95=0.007 gate=False

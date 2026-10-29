@@ -1,0 +1,43 @@
+{
+  "schema": "astckv.gather_exchange.v9",
+  "registered_before_results": true,
+  "hypothesis": "V8 pairing after softmax was slower despite fewer fetch calls. V9 preserves v7 pre-softmax V loading and per-token accumulation; even token quads gather two rows and exchange the peer values using SIMD shuffle. Direct-exchange control isolates gather from sharing/scheduling.",
+  "tokens": [
+    384,
+    2048,
+    8192
+  ],
+  "tiles": {
+    "384": 32,
+    "2048": 64,
+    "8192": 256
+  },
+  "sessions": 5,
+  "primary_max_ratio": 0.85,
+  "blocks": 40,
+  "iterations": 20,
+  "seed": 20261101,
+  "primary": "compact hoisted v7 to gather exchange v9, T8192, median ABBA/BAAB GPU ratio B/A <=0.85 in all five sessions",
+  "positive_criterion": "At least 15% lower GPU time than hoisted v7 in every session, unchanged persistent memory, all fourteen represented-value attention gates <=1e-4 and exact gather-versus-read checks passed.",
+  "secondary": "Direct exchange versus gather exchange isolates fetch instruction; v8 paired gather versus v9 exchange compares scheduling; own FP16 versus exchange measures remaining gap. No secondary comparison replaces the primary.",
+  "correctness_cases": [
+    [
+      391,
+      1
+    ],
+    [
+      391,
+      7
+    ],
+    [
+      391,
+      13
+    ],
+    [
+      391,
+      256
+    ]
+  ],
+  "timing_design": "Seeded ABBA or BAAB for four comparisons, random comparison order per block, ten warmup command buffers per variant, retain every sample. Five separately launched sessions, shapes shuffled per session.",
+  "scope": "Same compressed payload, normalized values, affine metadata and Q/K. Same persistent resources. V9 restores per-token weighted accumulation instead of V8 pair arithmetic. Sharing texels can still change compiler scheduling. Source-level instruction count is not measured hardware instruction count or DRAM traffic. Precompressed warm repeated fixtures, not a model-quality, dynamic-cache or full-inference result. T2048 and T8192 repeat real fixture blocks."
+}

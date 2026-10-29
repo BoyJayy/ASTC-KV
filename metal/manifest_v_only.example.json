@@ -1,0 +1,20 @@
+{
+  "format": "astc-kv-probe-v1",
+  "tokens": 512,
+  "query_heads": 9,
+  "kv_heads": 3,
+  "head_dim": 64,
+  "page_tokens": 96,
+  "layout": "scalar",
+  "metadata_dtype": "float16_le",
+  "k_storage": "fp16",
+  "v_storage": "astc",
+  "v_normalization": "token",
+  "query_file": "q.f32",
+  "k_file": "k.f16",
+  "v_files": ["v-h000.astc", "v-h001.astc", "v-h002.astc"],
+  "v_offset_file": "v_offset.f16",
+  "v_scale_file": "v_scale.f16",
+  "v_decoded_file": "v_decoded.f32",
+  "note": "Schema illustration only: V metadata [Hkv,T,1]; K has no affine metadata."
+}

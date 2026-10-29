@@ -1,0 +1,121 @@
+{
+  "schema": "astckv.model_quality_secondary.v1",
+  "decision": {
+    "schema": "astckv.model_quality_secondary_decision.v1",
+    "created_utc": "2026-10-28T18:14:09.783403+00:00",
+    "status": "post_holdout_secondary_diagnostic",
+    "selection_reason": "Snapshot heldout results showed channel-wise K U4 + token-wise V U4 was substantially stronger than token-wise U4 for both tensors. Added as a stronger numerical baseline after holdout inspection.",
+    "not_part_of_primary_preregistration": true,
+    "method": "u4_asymmetric_KV",
+    "K": {
+      "bits": 4,
+      "axis": "channel",
+      "group": 96
+    },
+    "V": {
+      "bits": 4,
+      "axis": "token",
+      "group": 64
+    },
+    "prefix_tokens": 288,
+    "context_tokens": 384,
+    "teacher_forcing_targets": [
+      289,
+      383
+    ],
+    "fresh_tail": "FP16, with real autoregressive hidden-state feedback under teacher forcing",
+    "primary_baseline": "/workspace/scratch/af4997db1163/astc-kv/results/model_quality.json",
+    "primary_sha256": "05f792dcabe255f2d7a19ca69d12e21313c16984e97e0a32bccf15e794682869",
+    "gate": "Same provisional relative PPL <=1.02, not a confirmation of generalized model quality",
+    "claim_limit": "Numerical affine baseline, not a KIVI implementation or Metal speed measurement"
+  },
+  "source_script_sha256": "9567a776bd9b44e2b889b96897b41342a1fcc89ccde5e0b5a110bfd3ae1ea975",
+  "fixtures": [
+    {
+      "fixture": "systems",
+      "split": "tune",
+      "method": "u4_asymmetric_KV",
+      "targets": 95,
+      "mean_nll": 3.2396547960976387,
+      "perplexity": 25.524908928159835,
+      "delta_nll_vs_primary_fp16": -0.011375921169466174,
+      "relative_perplexity_vs_primary_fp16": 0.9886885399553227,
+      "pilot_ppl_gate_passed": true,
+      "prefix_byte_counts": {
+        "packed_codes": 1658880,
+        "fp16_offsets": 86400,
+        "fp16_scales": 86400
+      },
+      "fp16_tail_bytes": 2188800,
+      "logical_bytes_at_last_prediction": 4020480,
+      "effective_bits_per_combined_kv_scalar_at_last_prediction": 7.289817232375979
+    },
+    {
+      "fixture": "story",
+      "split": "development",
+      "method": "u4_asymmetric_KV",
+      "targets": 95,
+      "mean_nll": 3.0926737509746545,
+      "perplexity": 22.035917835934345,
+      "delta_nll_vs_primary_fp16": 0.0073633813944304904,
+      "relative_perplexity_vs_primary_fp16": 1.0073905577495494,
+      "pilot_ppl_gate_passed": true,
+      "prefix_byte_counts": {
+        "packed_codes": 1658880,
+        "fp16_offsets": 86400,
+        "fp16_scales": 86400
+      },
+      "fp16_tail_bytes": 2188800,
+      "logical_bytes_at_last_prediction": 4020480,
+      "effective_bits_per_combined_kv_scalar_at_last_prediction": 7.289817232375979
+    },
+    {
+      "fixture": "science",
+      "split": "pilot_holdout",
+      "method": "u4_asymmetric_KV",
+      "targets": 95,
+      "mean_nll": 3.359073626617077,
+      "perplexity": 28.76253368825871,
+      "delta_nll_vs_primary_fp16": 0.020382479782028007,
+      "relative_perplexity_vs_primary_fp16": 1.0205916210454555,
+      "pilot_ppl_gate_passed": false,
+      "prefix_byte_counts": {
+        "packed_codes": 1658880,
+        "fp16_offsets": 86400,
+        "fp16_scales": 86400
+      },
+      "fp16_tail_bytes": 2188800,
+      "logical_bytes_at_last_prediction": 4020480,
+      "effective_bits_per_combined_kv_scalar_at_last_prediction": 7.289817232375979
+    },
+    {
+      "fixture": "records",
+      "split": "pilot_holdout",
+      "method": "u4_asymmetric_KV",
+      "targets": 95,
+      "mean_nll": 3.7771378361831336,
+      "perplexity": 43.690812345324616,
+      "delta_nll_vs_primary_fp16": 5.38601640620584e-07,
+      "relative_perplexity_vs_primary_fp16": 1.0000005386017856,
+      "pilot_ppl_gate_passed": true,
+      "prefix_byte_counts": {
+        "packed_codes": 1658880,
+        "fp16_offsets": 86400,
+        "fp16_scales": 86400
+      },
+      "fp16_tail_bytes": 2188800,
+      "logical_bytes_at_last_prediction": 4020480,
+      "effective_bits_per_combined_kv_scalar_at_last_prediction": 7.289817232375979
+    }
+  ],
+  "status": "completed",
+  "aggregate": {
+    "targets": 380,
+    "mean_nll": 3.367135002468126,
+    "perplexity": 28.995336376997415,
+    "delta_nll_vs_primary_fp16": 0.004092619652158014,
+    "relative_perplexity_vs_primary_fp16": 1.0041010058565787,
+    "pilot_ppl_gate_passed": true
+  },
+  "raw_results_sha256": "a51fe241dbf0c1a6868d9fb28e4461e400e34f806987c96eb1b4d744f96adceb"
+}

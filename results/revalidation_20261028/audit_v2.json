@@ -1,0 +1,100 @@
+{
+  "schema": "astckv.independent_audit.v1",
+  "scope": "Recalculation of archived results; no fresh model execution",
+  "archive_sha256": "13ddaaa57a0b2c81457155aeece426e1977c3bc3a805bca0f8f0988d77e60b95",
+  "archive_manifest_files_verified": 113,
+  "local_result_files_verified_against_archive": [
+    "results/model_quality.json",
+    "results/model_quality.jsonl",
+    "results/model_quality_decision.json",
+    "results/model_quality_secondary.json",
+    "results/model_quality_secondary.jsonl",
+    "results/model_quality_secondary_decision.json",
+    "results/model_quality_source_note.json",
+    "results/pilot_records.jsonl",
+    "results/pilot_records.provenance.json",
+    "results/pilot_science.jsonl",
+    "results/pilot_science.provenance.json",
+    "results/pilot_story.jsonl",
+    "results/pilot_story.provenance.json",
+    "results/pilot_summary.json",
+    "results/pilot_systems.jsonl",
+    "results/pilot_systems.provenance.json"
+  ],
+  "snapshot_rows": 936,
+  "snapshot_aggregates": 117,
+  "max_snapshot_difference": 0.0,
+  "model_loss_rows": 3040,
+  "max_nll_difference": 8.881784197001252e-16,
+  "selected_snapshot": [
+    {
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "relative_l2": 0.07425469323115132,
+      "bits_per_kv": 11.5625
+    },
+    {
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "relative_l2": 0.06645038004152973,
+      "bits_per_kv": 7.3125
+    },
+    {
+      "variant": "u4_token",
+      "mode": "V_only",
+      "relative_l2": 0.04039357218176319,
+      "bits_per_kv": 11.6875
+    }
+  ],
+  "model_recomputed": {
+    "fp16": {
+      "targets": 380,
+      "mean_nll": 3.363042382815968,
+      "ppl_ratio": 1.0
+    },
+    "scalar6_page_KV": {
+      "targets": 380,
+      "mean_nll": 3.454703878084965,
+      "ppl_ratio": 1.0959937602082803
+    },
+    "scalar6_page_V_only": {
+      "targets": 380,
+      "mean_nll": 3.447986461679293,
+      "ppl_ratio": 1.0886561861047832
+    },
+    "scalar6_token_KV": {
+      "targets": 380,
+      "mean_nll": 3.384095005220879,
+      "ppl_ratio": 1.021275792211801
+    },
+    "scalar6_token_V_only": {
+      "targets": 380,
+      "mean_nll": 3.3730947361043597,
+      "ppl_ratio": 1.0101030479160862
+    },
+    "u4_asymmetric_KV": {
+      "targets": 380,
+      "mean_nll": 3.3671350024681255,
+      "ppl_ratio": 1.0041010058565782
+    },
+    "u4_token_KV": {
+      "targets": 380,
+      "mean_nll": 3.3909255682874457,
+      "ppl_ratio": 1.0282755598806974
+    },
+    "u4_token_V_only": {
+      "targets": 380,
+      "mean_nll": 3.364849051452183,
+      "ppl_ratio": 1.001808301645283
+    }
+  },
+  "memory_bytes": {
+    "fp16": 8824320,
+    "u4_V": 6439680.0,
+    "astc_token6_V": 6370560.0,
+    "u4_asymmetric_KV": 4020480.0
+  },
+  "astc_V_saving_vs_u4_V_fraction": 0.01073345259391767,
+  "source_sha256": "07c79b793e680d4e71c0a8870a1d680f07e53d4f67ecce7fd31c2629bd2a2e1d",
+  "passed": true
+}

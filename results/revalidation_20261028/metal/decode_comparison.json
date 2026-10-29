@@ -1,0 +1,148 @@
+{
+  "schema": "astckv.hardware_decode_comparison.v1",
+  "source_sha256": "c05de80fe096fe70312cf2b23ba225de89b154cb81c06bfc0326f7d7c21e106d",
+  "inputs": {
+    "results/captures/story.npz": "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+    "results/metal_fixtures/story_l17_v_token6/manifest.json": "e68c1fa8dd1cecccd80da4593525c8b49ea9930db67844731fe3111debcfa513",
+    "results/metal_fixtures/story_l17_v_token6/k_decoded.f32": "58a0d3ca8da69fb4b8911a27b6d975629b01ee5bd36e9aae2c080fab60a9eaf3",
+    "results/revalidation_20261028/metal/readback_v/k_hardware.f32": "58a0d3ca8da69fb4b8911a27b6d975629b01ee5bd36e9aae2c080fab60a9eaf3",
+    "results/metal_fixtures/story_l17_v_token6/v_decoded.f32": "a5f75095ea03ba8aafec37afe620c230fb18a893782b4091affb0ee69f75ea25",
+    "results/revalidation_20261028/metal/readback_v/v_hardware.f32": "bb34ed7edf3603572213bc1df943fab1ff0b9ced383e91ec83548478d0f0d7d9",
+    "results/revalidation_20261028/metal/readback_v/v_normalized_hardware.f32": "d8acf364edf73b6502cd28c5bf11bfefec8e08a2e1a3b489787acbb8f5481bfa",
+    "results/metal_fixtures/story_l17_v_token6/v-h000.astc": "d257c1828a48f8cb222df6c6fd604d7a4b4a67afd08dfb181792c00c2a1fa8c3",
+    "results/metal_fixtures/story_l17_v_token6/v-h001.astc": "3608b95ac7654e2de78434649de57b728cb5f440f849d315ecfade00b2cdea85",
+    "results/metal_fixtures/story_l17_v_token6/v-h002.astc": "cce7cdfa553e9c688110a3959bb217bd97c9d941d51d25e50d950c116cfccbaa",
+    "results/metal_fixtures/story_l17_kv_page6/manifest.json": "64891c1d8daa152a15ac4c10fdb4f81af860ab0ef9187cf1e10a8e306a0f2113",
+    "results/metal_fixtures/story_l17_kv_page6/k_decoded.f32": "69e585aa8cde4a76872ec46dc84635499ff2023dfd32afef68850410253dea3e",
+    "results/revalidation_20261028/metal/readback_kv/k_hardware.f32": "38b60888b65b3710cfacd95e48e045ad20edb02aabb762ab0f2c0170e7e55310",
+    "results/revalidation_20261028/metal/readback_kv/k_normalized_hardware.f32": "852d9e96c9c2dea8cd2e716975857c95be511c33a557bedffb3d686869813003",
+    "results/metal_fixtures/story_l17_kv_page6/k-h000.astc": "47efa76bc9336e8c1fd6d49cf1fc399e41905200905e226755fa336644fe1f61",
+    "results/metal_fixtures/story_l17_kv_page6/k-h001.astc": "88241275f87cae7a5c2903967edd42e205a93e1a4e1d73dc5511cf2089046f0a",
+    "results/metal_fixtures/story_l17_kv_page6/k-h002.astc": "86412b847ca9a5070c44671b7491b378ecdd53dbe4177fca1b8badd128ecf1ef",
+    "results/metal_fixtures/story_l17_kv_page6/v_decoded.f32": "cea5f9c99ae96c56e707e73d3e9ff98871625c9b09b8e12cb7f547540613ce33",
+    "results/revalidation_20261028/metal/readback_kv/v_hardware.f32": "1eeaab038e0bd7116dc9b09308ed0d00baf5871d63da7c47d6d165f8639c70f1",
+    "results/revalidation_20261028/metal/readback_kv/v_normalized_hardware.f32": "3d402e389dfb9e226d81eddc1c49c39e74380bdd1295c2cc94fe67f7e7711adb",
+    "results/metal_fixtures/story_l17_kv_page6/v-h000.astc": "afcb291f760c34b2591fde5e2e977589c92390a4ec48bad4a3cd324a8e1fa725",
+    "results/metal_fixtures/story_l17_kv_page6/v-h001.astc": "edea4b3a503b4f77176b85274fd96cc1ede349ffb86f42ad73f5e811d337d604",
+    "results/metal_fixtures/story_l17_kv_page6/v-h002.astc": "d94c3fee85b14c5dfa2cd7e67d4d744f4d63cab0ce86f3b2ffb96931f8eaef1b"
+  },
+  "results": [
+    {
+      "fixture": "story_l17_v_token6",
+      "normalized_decode_controls": {
+        "v": {
+          "fp32_software": {
+            "mse": 4.1647064843298084e-08,
+            "relative_l2": 0.00039566659488314836,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999792719226,
+            "exact_fraction": 0.030843098958333332
+          },
+          "fp16_nearest": {
+            "mse": 4.1647064843298084e-08,
+            "relative_l2": 0.00039566659488314836,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999792719226,
+            "exact_fraction": 0.030843098958333332
+          },
+          "fp16_floor": {
+            "mse": 4.1647064843298084e-08,
+            "relative_l2": 0.00039566659488314836,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999792719226,
+            "exact_fraction": 0.030843098958333332
+          },
+          "unorm8_nearest": {
+            "mse": 9.502974231184537e-07,
+            "relative_l2": 0.0018900224451215174,
+            "max_abs": 0.0023845434188842773,
+            "cosine": 0.99999829538047,
+            "exact_fraction": 0.035685221354166664
+          }
+        }
+      },
+      "software_snapshot_relative_l2": 0.09913324886277285,
+      "hardware_snapshot_relative_l2": 0.09908071970603771,
+      "hardware_vs_software_output": {
+        "mse": 1.3698656100944622e-07,
+        "relative_l2": 0.0012122037749756813,
+        "max_abs": 0.0021705522634900554,
+        "cosine": 0.9999992705301223
+      }
+    },
+    {
+      "fixture": "story_l17_kv_page6",
+      "normalized_decode_controls": {
+        "k": {
+          "fp32_software": {
+            "mse": 5.168961623287823e-08,
+            "relative_l2": 0.0004130581678418167,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999804325329,
+            "exact_fraction": 0.020738389756944444
+          },
+          "fp16_nearest": {
+            "mse": 5.168961623287823e-08,
+            "relative_l2": 0.0004130581678418167,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999804325329,
+            "exact_fraction": 0.020738389756944444
+          },
+          "fp16_floor": {
+            "mse": 5.168961623287823e-08,
+            "relative_l2": 0.0004130581678418167,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999804325329,
+            "exact_fraction": 0.020738389756944444
+          },
+          "unorm8_nearest": {
+            "mse": 9.630588951589305e-07,
+            "relative_l2": 0.001782936943515363,
+            "max_abs": 0.0024132728576660156,
+            "cosine": 0.9999984967216882,
+            "exact_fraction": 0.025729709201388888
+          }
+        },
+        "v": {
+          "fp32_software": {
+            "mse": 5.001839899607269e-08,
+            "relative_l2": 0.0004115767070615467,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999805283307,
+            "exact_fraction": 0.020779079861111112
+          },
+          "fp16_nearest": {
+            "mse": 5.001839899607269e-08,
+            "relative_l2": 0.0004115767070615467,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999805283307,
+            "exact_fraction": 0.020779079861111112
+          },
+          "fp16_floor": {
+            "mse": 5.001839899607269e-08,
+            "relative_l2": 0.0004115767070615467,
+            "max_abs": 0.00048732757568359375,
+            "cosine": 0.9999999805283307,
+            "exact_fraction": 0.020779079861111112
+          },
+          "unorm8_nearest": {
+            "mse": 9.72799996168185e-07,
+            "relative_l2": 0.0018150879556952453,
+            "max_abs": 0.002355813980102539,
+            "cosine": 0.9999984354008964,
+            "exact_fraction": 0.026028103298611112
+          }
+        }
+      },
+      "software_snapshot_relative_l2": 0.3121585436267749,
+      "hardware_snapshot_relative_l2": 0.31216046753496896,
+      "hardware_vs_software_output": {
+        "mse": 3.5602501884570313e-07,
+        "relative_l2": 0.0019062671464838445,
+        "max_abs": 0.003952014338276688,
+        "cosine": 0.9999981831080467
+      }
+    }
+  ],
+  "scope": "Exploratory decoder characterization, two real fixtures and one stored layer. No full GPU model run or universal format guarantee."
+}

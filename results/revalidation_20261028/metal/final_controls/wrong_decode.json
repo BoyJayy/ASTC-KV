@@ -1,0 +1,58 @@
+{
+  "correctness" : {
+    "astc_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 8.0466270446777344e-07,
+        "relative_l2" : 4.0123749332529551e-07,
+        "rmse" : 7.5407625137182424e-08
+      }
+    },
+    "fp16_buffer" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 1.5497207641601562e-06,
+        "relative_l2" : 5.0420987205143639e-07,
+        "rmse" : 9.4764664974790146e-08
+      }
+    },
+    "k_decode_gate" : {
+      "criterion" : "exact FP16 values",
+      "passed" : true,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "k_fp16_vs_offline_values" : {
+      "finite" : true,
+      "max_abs" : 0,
+      "relative_l2" : 0,
+      "rmse" : 0
+    },
+    "uncompressed_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 2.0265579223632812e-06,
+        "relative_l2" : 6.1421548773015917e-07,
+        "rmse" : 1.1544193019927667e-07
+      }
+    },
+    "v_decode_gate" : {
+      "criterion" : "abs_delta <= scale\/1024 + FP32_roundoff",
+      "passed" : false,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "v_gpu_vs_offline_decode" : {
+      "finite" : true,
+      "max_abs" : 999.99959270749241,
+      "relative_l2" : 0.97240577705384668,
+      "rmse" : 3.68284644366067
+    }
+  },
+  "raw_samples" : [
+
+  ],
+  "schema" : "astc-kv-metal-probe-failure-v1",
+  "status" : "correctness_failed"
+}

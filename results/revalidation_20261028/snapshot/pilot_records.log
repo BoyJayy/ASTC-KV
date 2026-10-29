@@ -1,0 +1,13 @@
+{"capture": "records", "variant": "fp16", "wall_s": 0.03470270899561001}
+{"capture": "records", "variant": "u2_token", "wall_s": 0.03324845799943432}
+{"capture": "records", "variant": "u4_token", "wall_s": 0.0334987500027637}
+{"capture": "records", "variant": "u8_token", "wall_s": 0.03238812500057975}
+{"capture": "records", "variant": "u4_asymmetric", "wall_s": 0.033192958995641675}
+{"capture": "records", "variant": "scalar4_page", "wall_s": 1.0887706659996184}
+{"capture": "records", "variant": "scalar6_page", "wall_s": 1.4120539159994223}
+{"capture": "records", "variant": "scalar8_page", "wall_s": 1.794041750006727}
+{"capture": "records", "variant": "rgba4_page", "wall_s": 0.5663682910017087}
+{"capture": "records", "variant": "scalar6_token", "wall_s": 1.4511415000015404}
+{"capture": "records", "variant": "scalar6_hdr_block", "wall_s": 1.4609711250013788}
+{"capture": "records", "variant": "scalar6_token_permuted", "wall_s": 1.3717820410020067}
+{"capture": "records", "variant": "scalar6_channel_permuted", "wall_s": 1.381921375003003}

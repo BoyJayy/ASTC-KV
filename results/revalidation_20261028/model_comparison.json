@@ -1,0 +1,112 @@
+{
+  "scope": "Independent Mac rerun of old CPU model experiment; same weights and captures, no new holdout",
+  "aggregate_comparison": [
+    {
+      "method": "fp16",
+      "old_mean_nll": 3.363042382815968,
+      "new_mean_nll": 3.3630370052202214,
+      "delta_mean_nll": -5.377595746480779e-06,
+      "old_ppl_ratio": 1.0,
+      "new_ppl_ratio": 1.0,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "u4_token_V_only",
+      "old_mean_nll": 3.3648490514521834,
+      "new_mean_nll": 3.3649197445472714,
+      "delta_mean_nll": 7.069309508800359e-05,
+      "old_ppl_ratio": 1.0018083016452834,
+      "new_ppl_ratio": 1.0018845127935538,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "u4_token_KV",
+      "old_mean_nll": 3.3909255682874457,
+      "new_mean_nll": 3.390962350345715,
+      "delta_mean_nll": 3.6782058269402285e-05,
+      "old_ppl_ratio": 1.0282755598806974,
+      "new_ppl_ratio": 1.0283189125363952,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "scalar6_page_V_only",
+      "old_mean_nll": 3.4479864616792932,
+      "new_mean_nll": 3.4470269814652235,
+      "delta_mean_nll": -0.0009594802140697745,
+      "old_ppl_ratio": 1.0886561861047837,
+      "new_ppl_ratio": 1.0876179917379059,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "scalar6_page_KV",
+      "old_mean_nll": 3.454703878084966,
+      "new_mean_nll": 3.453079687497565,
+      "delta_mean_nll": -0.001624190587401042,
+      "old_ppl_ratio": 1.0959937602082814,
+      "new_ppl_ratio": 1.0942209865521344,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "scalar6_token_V_only",
+      "old_mean_nll": 3.3730947361043597,
+      "new_mean_nll": 3.373193000906879,
+      "delta_mean_nll": 9.826480251939884e-05,
+      "old_ppl_ratio": 1.0101030479160862,
+      "new_ppl_ratio": 1.010207742843791,
+      "same_pilot_gate": true
+    },
+    {
+      "method": "scalar6_token_KV",
+      "old_mean_nll": 3.3840950052208787,
+      "new_mean_nll": 3.383961369616696,
+      "delta_mean_nll": -0.00013363560418255815,
+      "old_ppl_ratio": 1.0212757922118005,
+      "new_ppl_ratio": 1.0211448138123214,
+      "same_pilot_gate": true
+    }
+  ],
+  "raw_comparison": [
+    {
+      "file": "model_quality.jsonl",
+      "loss_rows": 2660,
+      "max_per_target_nll_delta": 0.1195677185720978
+    },
+    {
+      "file": "model_quality_secondary.jsonl",
+      "loss_rows": 380,
+      "max_per_target_nll_delta": 0.009648026311644742
+    }
+  ],
+  "greedy_comparison": [
+    {
+      "method": "fp16",
+      "same_ids": true,
+      "same_position_fraction": 1.0
+    },
+    {
+      "method": "scalar6_page_V_only",
+      "same_ids": true,
+      "same_position_fraction": 1.0
+    },
+    {
+      "method": "scalar6_token_V_only",
+      "same_ids": true,
+      "same_position_fraction": 1.0
+    },
+    {
+      "method": "u4_token_V_only",
+      "same_ids": true,
+      "same_position_fraction": 1.0
+    }
+  ],
+  "source_and_weight_hashes": {
+    "astc_kv/codec.py": "f566dc855e64066bce57769c709ef0ae32e02e596b56c68ca284255b2e7d6fa7",
+    "astc_kv/bridge.cpp": "24c7269e304c5f2b7d76837e53eff7e31fd3555dd2e88c91930c0d9cce4a124f",
+    "astc_kv/libakv_astc.dylib": "ffbf5f0324cc639b5dd315dbe256ca952d6b66994886a14e6b35615eed32166b",
+    "scripts/capture_qkv.py": "b1ea14070bdb46cce6451c11492abb2936a2af9515727f165e86505fa5e3c907",
+    "scripts/evaluate_model.py": "2ff259ad9882b3fd3a79bd74a6f1292cbc9fad2e5623973a67cfacc41e38c199",
+    "scripts/evaluate_model_secondary.py": "9567a776bd9b44e2b889b96897b41342a1fcc89ccde5e0b5a110bfd3ae1ea975",
+    "third_party/model/model.safetensors": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1"
+  },
+  "physical_GPU_model_execution": false
+}

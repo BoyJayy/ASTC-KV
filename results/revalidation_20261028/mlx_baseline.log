@@ -1,0 +1,5 @@
+mx.metal.device_info is deprecated and will be removed in a future version. Use mx.device_info instead.
+{
+  "status": "isolated_attention_executed",
+  "out": "results/revalidation_20261028/mlx_baseline.json"
+}

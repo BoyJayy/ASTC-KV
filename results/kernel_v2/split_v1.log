@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/path/to/ASTC-KV/scripts/run_kernel_sweep.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/path/to/ASTC-KV/scripts/run_kernel_sweep.py", line 42, in main
+    if proc.returncode:raise RuntimeError(f'{stem} failed exit={proc.returncode}')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: s0_t2048_tile256 failed exit=-6

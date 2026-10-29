@@ -1,0 +1,201 @@
+{
+  "correctness" : {
+    "astc_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 7.152557373046875e-07,
+        "relative_l2" : 4.1902051267365616e-07,
+        "rmse" : 9.1064151069004537e-08
+      }
+    },
+    "fp16_buffer" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 8.9406967163085938e-07,
+        "relative_l2" : 3.986746022471076e-07,
+        "rmse" : 8.6676323342521392e-08
+      }
+    },
+    "k_decode_gate" : {
+      "criterion" : "abs_delta <= scale\/1024 + FP32_roundoff",
+      "passed" : true,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "k_gpu_vs_offline_decode" : {
+      "finite" : true,
+      "max_abs" : 0.0068111419677734375,
+      "relative_l2" : 0.00066802267903173925,
+      "rmse" : 0.0012474003459955268
+    },
+    "uncompressed_texture" : {
+      "passed_rtol_l2_1e_4" : true,
+      "vs_same_values_cpu_fp64_accumulation" : {
+        "finite" : true,
+        "max_abs" : 1.1920928955078125e-06,
+        "relative_l2" : 4.7606296014914057e-07,
+        "rmse" : 1.0344269821880554e-07
+      }
+    },
+    "v_decode_gate" : {
+      "criterion" : "exact FP16 values",
+      "passed" : true,
+      "scope" : "engineering fixture check; no model-quality or exact ASTC equivalence claim"
+    },
+    "v_fp16_vs_offline_values" : {
+      "finite" : true,
+      "max_abs" : 0,
+      "relative_l2" : 0,
+      "rmse" : 0
+    }
+  },
+  "environment" : {
+    "astc_allocation_probe" : {
+      "ASTC_4x4_LDR" : true,
+      "ASTC_6x6_LDR" : true,
+      "ASTC_8x8_LDR" : true
+    },
+    "counter_sampling_dispatch" : false,
+    "counter_sets" : [
+      {
+        "counters" : [
+          "GPUTimestamp"
+        ],
+        "name" : "timestamp"
+      }
+    ],
+    "device" : "Apple M5 Pro",
+    "max_buffer_length" : 30150672384,
+    "note" : "Allocation is not a decoding test; full probe execution tests texture reads.",
+    "os" : "Version 26.6.2 (Build 25G83)",
+    "physical_memory_bytes" : 51539607552,
+    "recommended_max_working_set_bytes" : 40200896512,
+    "registry_id" : 4294968641,
+    "supports_apple7" : true,
+    "supports_apple8" : true,
+    "unified_memory" : true
+  },
+  "hardware_astc_read_exercised" : true,
+  "input_manifest" : {
+    "capture_sha256" : "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+    "encoder" : {
+      "input_decode" : "float32 library",
+      "name" : "Arm astcenc",
+      "profile" : "LDR",
+      "quality" : 98,
+      "version" : "5.7.0"
+    },
+    "file_header_bytes" : 96,
+    "format" : "astc-kv-probe-v1",
+    "head_dim" : 64,
+    "k_decoded_file" : "k_decoded.f32",
+    "k_files" : [
+      "k-h000.astc",
+      "k-h001.astc",
+      "k-h002.astc"
+    ],
+    "k_normalization" : "page_channel",
+    "k_offset_file" : "k_offset.f16",
+    "k_scale_file" : "k_scale.f16",
+    "k_storage" : "astc",
+    "kv_heads" : 3,
+    "layer" : 17,
+    "layout" : "scalar",
+    "metadata_dtype" : "float16_le",
+    "model" : "HuggingFaceTB\/SmolLM2-135M",
+    "model_revision" : "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+    "page_tokens" : 96,
+    "query_absolute_position" : 383,
+    "query_file" : "q.f32",
+    "query_heads" : 9,
+    "status" : "derived validation control; not a new quality experiment",
+    "tokens" : 384,
+    "v_decoded_file" : "v_fp16.f32",
+    "v_file" : "v_fp16.f16",
+    "v_files" : [
+      "v-h000.astc",
+      "v-h001.astc",
+      "v-h002.astc"
+    ],
+    "v_normalization" : "page_channel",
+    "v_offset_file" : "v_offset.f16",
+    "v_scale_file" : "v_scale.f16",
+    "v_storage" : "fp16"
+  },
+  "memory" : {
+    "astc_file_bytes" : 33840,
+    "astc_payload_with_texture_padding_bytes" : 33792,
+    "astc_texture_allocated_bytes" : 49152,
+    "attention_scratch_allocated_bytes" : 7056,
+    "compressed_upload_staging_bytes" : 49152,
+    "control_params_bytes" : 60,
+    "device_current_allocated_bytes_all_diagnostics" : 2408448,
+    "fp16_buffer_allocated_bytes" : 294912,
+    "fp16_cache_allocated_bytes" : 147456,
+    "fp16_cache_logical_bytes" : 147456,
+    "fp16_decode_control_only_allocated_bytes" : 147456,
+    "inactive_binding_allocated_bytes" : 16,
+    "k_logical_effective_bits_per_scalar" : 4,
+    "logical_effective_bits_per_original_kv_scalar" : 10,
+    "metadata_allocated_bytes" : 3072,
+    "metadata_logical_bytes" : 3072,
+    "ordinary_texture_allocated_bytes" : 409600,
+    "peak_note" : "Probe keeps decoded CPU tensors and control GPU resources live; process peak is a diagnostic-process peak, not a compressed-runtime peak.",
+    "process_max_rss_bytes_macos" : 19660800,
+    "production_peak_bytes" : null,
+    "v_logical_effective_bits_per_scalar" : 16
+  },
+  "raw_samples" : [
+    {
+      "gpu_batch_ms" : 0.11345832899678499,
+      "iterations" : 1,
+      "order_within_round" : 0,
+      "round" : 0,
+      "variant" : "astc_texture",
+      "wall_batch_ms" : 0.27612500000000001
+    },
+    {
+      "gpu_batch_ms" : 0.39575000118929893,
+      "iterations" : 1,
+      "order_within_round" : 1,
+      "round" : 0,
+      "variant" : "uncompressed_texture",
+      "wall_batch_ms" : 0.57337499999999997
+    },
+    {
+      "gpu_batch_ms" : 0.08129166963044554,
+      "iterations" : 1,
+      "order_within_round" : 2,
+      "round" : 0,
+      "variant" : "fp16_buffer",
+      "wall_batch_ms" : 0.25483299999999998
+    }
+  ],
+  "schema" : "astc-kv-metal-probe-result-v1",
+  "scope" : "precompressed, one-query diagnostic; no runtime speedup claim",
+  "shader_compilation" : "runtime_source_metal3_no_fast_math",
+  "shape" : {
+    "atlas_height" : 384,
+    "atlas_width" : 66,
+    "head_dim" : 64,
+    "kv_heads" : 3,
+    "page_tokens" : 96,
+    "query_heads" : 9,
+    "splits" : 2,
+    "tile_tokens" : 256,
+    "tokens" : 384
+  },
+  "status" : "executed_on_metal",
+  "timing" : {
+    "block_upload_gpu_ms" : 0.0034166587283834815,
+    "block_upload_wall_ms" : 2.393834,
+    "cache_state" : "repeated read of same cache; run large working sets separately",
+    "codec_time_ms" : null,
+    "decode_or_model_latency_ms" : null,
+    "pipeline_creation_wall_ms" : 1.0407090000000001,
+    "process_elapsed_ms" : 20.130958,
+    "warmup_command_buffers_per_variant" : 10,
+    "warmup_iterations_per_variant" : 10
+  }
+}

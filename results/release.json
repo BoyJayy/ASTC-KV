@@ -1,0 +1,7 @@
+{
+  "project_commit": "869ffc277aa38dd8b12f96409c037f1edc32d414",
+  "date": "2026-10-28",
+  "hardware_status": "Metal source only, no Mac execution",
+  "included": "source+docs+raw CPU measurements+captures+precompressed Metal fixtures",
+  "excluded": "model weights, downloaded upstream sources, dependency wheels and compiled binaries"
+}

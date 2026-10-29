@@ -1,0 +1,124 @@
+{
+  "schema": "astckv.snapshot_reproduction.run.v1",
+  "started_at_utc": "2026-10-28T19:21:19.734065+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "input_source_binary_sha256": {
+    "scripts/run_pilot.py": "8f30a8ab5da2d349e6efa6066a6b6cf1a242c90c34c2582fa87907119b74a94d",
+    "scripts/summarize_pilot.py": "b7aedcc8d6a76331c7bff08621852a4320c4a4f2e43c73c1ecbca31775e3c2f8",
+    "astc_kv/codec.py": "f566dc855e64066bce57769c709ef0ae32e02e596b56c68ca284255b2e7d6fa7",
+    "astc_kv/bridge.cpp": "24c7269e304c5f2b7d76837e53eff7e31fd3555dd2e88c91930c0d9cce4a124f",
+    "astc_kv/libakv_astc.dylib": "ffbf5f0324cc639b5dd315dbe256ca952d6b66994886a14e6b35615eed32166b",
+    "configs/pilot_v1.json": "c7a3fcaef593815a46d8e4b6182923f13255472e5d95517fdb830b9a1e7d63a3",
+    "third_party/download_manifest.json": "411dd57fad06906adc5bbe1f04efca6db4b84833125b90a749ef5689fcab2211",
+    "results/captures/systems.npz": "01d188a02b59b0cf6dad51a7ae40fff87896e09432388b169a01747d0f1c190e",
+    "results/captures/story.npz": "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+    "results/captures/science.npz": "a42ba0ae7fdd70fe5d15894bd3864aebe822d340288775c2708963b6bf4f7029",
+    "results/captures/records.npz": "2f0e3d45c202ad60ecc95d1d74bb4c683b8be63637ff49ade0763d4b5b4139b4"
+  },
+  "runs": [
+    {
+      "capture": "systems",
+      "command": [
+        "/path/to/ASTC-KV/.venv-research/bin/python",
+        "scripts/run_pilot.py",
+        "--capture",
+        "results/captures/systems.npz",
+        "--config",
+        "configs/pilot_v1.json",
+        "--out",
+        "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_systems.jsonl"
+      ],
+      "exit_code": 0,
+      "duration_wall_s": 10.559769084000436,
+      "rows": 234,
+      "raw_sha256": "3ec91b4fbc13ed0056220d37d7f181d6a15292d7f732da162a267687aae12a37"
+    },
+    {
+      "capture": "story",
+      "command": [
+        "/path/to/ASTC-KV/.venv-research/bin/python",
+        "scripts/run_pilot.py",
+        "--capture",
+        "results/captures/story.npz",
+        "--config",
+        "configs/pilot_v1.json",
+        "--out",
+        "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_story.jsonl"
+      ],
+      "exit_code": 0,
+      "duration_wall_s": 10.633058916995651,
+      "rows": 234,
+      "raw_sha256": "d556a4a18708ce3a0d3ba0db368478e1a01fc103e1dd0579daac5d78808228e3"
+    },
+    {
+      "capture": "science",
+      "command": [
+        "/path/to/ASTC-KV/.venv-research/bin/python",
+        "scripts/run_pilot.py",
+        "--capture",
+        "results/captures/science.npz",
+        "--config",
+        "configs/pilot_v1.json",
+        "--out",
+        "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_science.jsonl"
+      ],
+      "exit_code": 0,
+      "duration_wall_s": 10.662505792002776,
+      "rows": 234,
+      "raw_sha256": "3def961500ac8492bd03bc0d1e04d76567b970922533bc5480e145264a68a764"
+    },
+    {
+      "capture": "records",
+      "command": [
+        "/path/to/ASTC-KV/.venv-research/bin/python",
+        "scripts/run_pilot.py",
+        "--capture",
+        "results/captures/records.npz",
+        "--config",
+        "configs/pilot_v1.json",
+        "--out",
+        "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_records.jsonl"
+      ],
+      "exit_code": 0,
+      "duration_wall_s": 10.772051375002775,
+      "rows": 234,
+      "raw_sha256": "f20e3e371492fac3cd6fa38bb1dbf4093aa0d924dbd8958a745eb4343754c5ab"
+    }
+  ],
+  "claim": "CPU snapshot reproduction; no GPU speed measurement",
+  "summarize": {
+    "command": [
+      "/path/to/ASTC-KV/.venv-research/bin/python",
+      "scripts/summarize_pilot.py",
+      "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_systems.jsonl",
+      "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_story.jsonl",
+      "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_science.jsonl",
+      "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_records.jsonl",
+      "--out",
+      "/path/to/ASTC-KV/results/revalidation_20261028/snapshot/pilot_summary.json"
+    ],
+    "exit_code": 0,
+    "sha256": "b615987e5cc22f507f93f02902d3e677dfa108e73b3ee07f2a52cf8715a14f83"
+  },
+  "duration_wall_s": 42.720076375000644,
+  "finished_at_utc": "2026-10-28T19:22:02.488205+00:00",
+  "source_binary_unchanged": {
+    "scripts/run_pilot.py": true,
+    "scripts/summarize_pilot.py": true,
+    "astc_kv/codec.py": true,
+    "astc_kv/bridge.cpp": true,
+    "astc_kv/libakv_astc.dylib": true,
+    "configs/pilot_v1.json": true,
+    "third_party/download_manifest.json": true,
+    "results/captures/systems.npz": true,
+    "results/captures/story.npz": true,
+    "results/captures/science.npz": true,
+    "results/captures/records.npz": true
+  }
+}

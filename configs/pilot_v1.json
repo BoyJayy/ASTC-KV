@@ -1,0 +1,45 @@
+{
+  "schema": "astc-kv-pilot-v1",
+  "registered_before_first_codec_result": true,
+  "date": "2026-10-28",
+  "hypothesis": "Scalar ASTC6x6 for completed V pages can achieve useful attention fidelity near 4 effective bits/scalar; independent RGBA packing may fail because color endpoints share low-dimensional structure.",
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "weight_format": "original BF16 weights, exact widening to FP32 for CPU arithmetic",
+  "context_tokens": 384,
+  "compressed_prefix_tokens": 288,
+  "page_tokens": 96,
+  "layers": [0,5,11,17,23,29],
+  "snapshot_query_positions": [288,294,300,306,312,318,324,330,336,342,348,354,360,366,372,383],
+  "split": {"tune": ["systems"], "development": ["story"], "pilot_holdout": ["science", "records"]},
+  "final_confirmation_data": "not selected or evaluated; authored pilot prompts are not a public benchmark",
+  "representations": [
+    {"name":"scalar4_page","layout":"scalar","block":4,"normalization":"page_channel","profile":"ldr"},
+    {"name":"scalar6_page","layout":"scalar","block":6,"normalization":"page_channel","profile":"ldr"},
+    {"name":"scalar8_page","layout":"scalar","block":8,"normalization":"page_channel","profile":"ldr"},
+    {"name":"rgba4_page","layout":"rgba","block":4,"normalization":"page_channel","profile":"ldr"},
+    {"name":"scalar6_token","layout":"scalar","block":6,"normalization":"token","profile":"ldr"},
+    {"name":"scalar6_hdr_block","layout":"scalar","block":6,"normalization":"block_min","profile":"hdr"},
+    {"name":"scalar6_token_permuted","layout":"scalar","block":6,"normalization":"page_channel","profile":"ldr","permutation":"tokens_within_page"},
+    {"name":"scalar6_channel_permuted","layout":"scalar","block":6,"normalization":"page_channel","profile":"ldr","permutation":"channels"}
+  ],
+  "encoder": {"name":"Arm astcenc","version":"5.7.0","quality":98,"threads":1,"input":"float32 RGBA through library; no PNG/U8 intermediate","decode":"float32 software reference; hardware equivalence requires Mac"},
+  "numerical_baselines": ["fp16","affine_u2_group64","affine_u4_group64","affine_u8_group64","asymmetric_u4_Kchannel96_Vtoken64"],
+  "compression_modes": ["K_only","V_only","KV"],
+  "pilot_screen": {
+    "attention_aggregate_relative_l2_max": 0.10,
+    "attention_mean_KL_max_nats": 0.01,
+    "memory_max_vs_u4_same_compression_mode": 1.0,
+    "meaning": "numerical candidate only, not model-quality acceptance or performance claim"
+  },
+  "model_acceptance_provisional": {
+    "teacher_forced_relative_ppl_max": 1.02,
+    "retrieval_accuracy_drop_max_absolute": 0.02,
+    "multi_document_accuracy_drop_max_absolute": 0.02,
+    "autoregressive_generation_required": true,
+    "final_validation": "requires separately frozen representative evaluation, confidence intervals and at least second model"
+  },
+  "random_seed": 20261028,
+  "causality": "For every query at t>=288 encode only tokens [0,288); all later keys/values remain exact and causal masking excludes future positions. No query-derived weights are fitted in this pilot.",
+  "memory": "Report byte counts for ASTC payload, FP16 metadata, texture extent padding, FP16 uncompressed tail, and K/V combined. Resource allocation/peak GPU memory unknown until Mac execution. Permutation controls charge fixed uint16 maps; not deployable candidates."
+}

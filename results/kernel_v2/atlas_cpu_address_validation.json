@@ -1,0 +1,77 @@
+{
+  "scope": "CPU inverse-address property check, not GPU shader validation",
+  "cases": [
+    {
+      "tokens": 1,
+      "source_padded_height": 96,
+      "source_blocks": 528,
+      "capacity_blocks": 544,
+      "coordinates_checked": 192,
+      "float4_block_crossings_checked": 15,
+      "float4_atlas_row_seams_checked": 0,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 96,
+      "source_padded_height": 96,
+      "source_blocks": 528,
+      "capacity_blocks": 544,
+      "coordinates_checked": 18432,
+      "float4_block_crossings_checked": 1440,
+      "float4_atlas_row_seams_checked": 42,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 97,
+      "source_padded_height": 192,
+      "source_blocks": 1056,
+      "capacity_blocks": 1056,
+      "coordinates_checked": 18624,
+      "float4_block_crossings_checked": 1455,
+      "float4_atlas_row_seams_checked": 36,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 384,
+      "source_padded_height": 384,
+      "source_blocks": 2112,
+      "capacity_blocks": 2112,
+      "coordinates_checked": 73728,
+      "float4_block_crossings_checked": 5760,
+      "float4_atlas_row_seams_checked": 180,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 391,
+      "source_padded_height": 480,
+      "source_blocks": 2640,
+      "capacity_blocks": 2656,
+      "coordinates_checked": 75072,
+      "float4_block_crossings_checked": 5865,
+      "float4_atlas_row_seams_checked": 181,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 2048,
+      "source_padded_height": 2112,
+      "source_blocks": 11616,
+      "capacity_blocks": 11616,
+      "coordinates_checked": 393216,
+      "float4_block_crossings_checked": 30720,
+      "float4_atlas_row_seams_checked": 954,
+      "status": "PASS_inverse_address_mapping"
+    },
+    {
+      "tokens": 8192,
+      "source_padded_height": 8256,
+      "source_blocks": 45408,
+      "capacity_blocks": 45408,
+      "coordinates_checked": 1572864,
+      "float4_block_crossings_checked": 122880,
+      "float4_atlas_row_seams_checked": 3834,
+      "status": "PASS_inverse_address_mapping"
+    }
+  ],
+  "original_merge_and_decode_unchanged": true,
+  "original_value_and_decode_gates_unchanged": true
+}

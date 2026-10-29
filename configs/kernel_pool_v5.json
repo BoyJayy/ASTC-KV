@@ -1,0 +1,17 @@
+{
+  "schema": "astckv.pool.v5",
+  "registered_before_results": true,
+  "tokens": 8192,
+  "tile_tokens": 256,
+  "pool_sizes": [1, 8, 64],
+  "sessions": 3,
+  "rounds": 30,
+  "iterations": "one complete pool cycle per timed batch",
+  "seed": 20261029,
+  "maximum_pool_allocated_bytes": 1073741824,
+  "hypothesis": "Repeated one-cache reads may conceal a bandwidth advantage of ASTC. Distinct resident allocations traversed once per cycle can expose a useful crossover.",
+  "positive_criterion": "For pool_size=64, ASTC GPU median per call <= 0.8 times own FP16 in every one of three sessions. This would justify a next experiment, not prove whole-model acceleration.",
+  "negative_criterion": "For pool_size=64, ASTC GPU median per call > 1.05 times own FP16 in every one of three sessions. Otherwise inconclusive by this gate.",
+  "scope": "Precompressed identical-value repeated-block traffic fixtures, different resident GPU allocations. Same v4 D64 kernel and fixed tile256 for both paths; no tile retuning, eviction command, encoder, append, model quality, or hardware-counter evidence. Large pool does not by itself prove a specific cache miss rate or DRAM bandwidth.",
+  "correctness": "Existing seven path own-reference gates plus selected pool-slot/wraparound checks before timing. No timing interpretation on failed gate. Report pool memory and actual GPU allocated sizes."
+}

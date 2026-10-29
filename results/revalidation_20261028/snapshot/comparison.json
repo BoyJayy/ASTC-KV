@@ -1,0 +1,5625 @@
+{
+  "schema": "astckv.snapshot_reproduction.comparison.v1",
+  "scope": "Independent row and aggregate comparison after CPU re-encoding; no new holdout or GPU speed claim",
+  "rows": 936,
+  "aggregates": 117,
+  "source_sha256": "e3e2720a96c8657afd960cf319c95280f067b7a9efbdc4456bb0fcd0e4c31e22",
+  "input_sha256": {
+    "original": {
+      "pilot_systems.jsonl": "0569b7792efa2324941e9ad97c11106dad09967b5577a35e508522281f78eda8",
+      "pilot_story.jsonl": "2bc552004feacee8ea0e7ac9a40806353091d7b03f7458bd2ae3ea9c545376df",
+      "pilot_science.jsonl": "6804ba31332cb45126eb3ed7435e1fc149ed603018ca5e64f9a6dc816694192b",
+      "pilot_records.jsonl": "b4af1ede16a618896b91adf477772f0143d03a7df8d07ba9a2de19943db4eae2"
+    },
+    "reproduced": {
+      "pilot_systems.jsonl": "3ec91b4fbc13ed0056220d37d7f181d6a15292d7f732da162a267687aae12a37",
+      "pilot_story.jsonl": "d556a4a18708ce3a0d3ba0db368478e1a01fc103e1dd0579daac5d78808228e3",
+      "pilot_science.jsonl": "3def961500ac8492bd03bc0d1e04d76567b970922533bc5480e145264a68a764",
+      "pilot_records.jsonl": "f20e3e371492fac3cd6fa38bb1dbf4093aa0d924dbd8958a745eb4343754c5ab"
+    }
+  },
+  "structural_mismatches": [],
+  "memory_mismatches": [],
+  "screening_changes": [],
+  "variant_stats": {
+    "fp16": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5937,
+      "max_row_relative_l2_abs_difference": 1.0973255898556744e-08,
+      "max_error_sse_symmetric_relative_difference": 0.00010597512147299913,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "rgba4_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5977,
+      "max_row_relative_l2_abs_difference": 1.8471512541751167e-08,
+      "max_error_sse_symmetric_relative_difference": 1.749687250083144e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar4_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5996,
+      "max_row_relative_l2_abs_difference": 1.0139969777028801e-08,
+      "max_error_sse_symmetric_relative_difference": 1.5469309242452843e-05,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar6_channel_permuted": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5988,
+      "max_row_relative_l2_abs_difference": 1.4576188478443441e-08,
+      "max_error_sse_symmetric_relative_difference": 6.423858360406731e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar6_hdr_block": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5950,
+      "max_row_relative_l2_abs_difference": 2.2800961632651884e-08,
+      "max_error_sse_symmetric_relative_difference": 5.815839431406862e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar6_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5933,
+      "max_row_relative_l2_abs_difference": 1.2910160456305886e-08,
+      "max_error_sse_symmetric_relative_difference": 1.977403504854379e-06,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar6_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5944,
+      "max_row_relative_l2_abs_difference": 7.603652374399417e-09,
+      "max_error_sse_symmetric_relative_difference": 2.790919595706791e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar6_token_permuted": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5980,
+      "max_row_relative_l2_abs_difference": 1.325994873624392e-08,
+      "max_error_sse_symmetric_relative_difference": 1.7565291719492858e-06,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "scalar8_page": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 6001,
+      "max_row_relative_l2_abs_difference": 2.3295044115911878e-08,
+      "max_error_sse_symmetric_relative_difference": 4.1371030332438414e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "u2_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5954,
+      "max_row_relative_l2_abs_difference": 2.6886591397712323e-08,
+      "max_error_sse_symmetric_relative_difference": 6.177468808098342e-08,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "u4_asymmetric": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 6020,
+      "max_row_relative_l2_abs_difference": 9.261699154133884e-09,
+      "max_error_sse_symmetric_relative_difference": 1.7340724905514627e-06,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "u4_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5980,
+      "max_row_relative_l2_abs_difference": 9.146003565607685e-09,
+      "max_error_sse_symmetric_relative_difference": 5.371407586017744e-07,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    },
+    "u8_token": {
+      "rows": 72,
+      "compared_numbers": 7488,
+      "changed_numbers": 5997,
+      "max_row_relative_l2_abs_difference": 1.6077416164009262e-08,
+      "max_error_sse_symmetric_relative_difference": 1.4490924283247551e-05,
+      "max_reference_sse_symmetric_relative_difference": 4.40829255999208e-08
+    }
+  },
+  "numeric_fields": {
+    "error_sum_squares": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "K_only",
+        "field": "error_sum_squares",
+        "original": 4312.157020797206,
+        "reproduced": 4312.157074996674,
+        "absolute_difference": 5.4199467740545515e-05,
+        "symmetric_relative_difference": 1.2568991991226878e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "error_sum_squares",
+        "original": 5.726834136483029e-08,
+        "reproduced": 5.72622723453976e-08,
+        "absolute_difference": 6.0690194326950706e-12,
+        "symmetric_relative_difference": 0.00010597512147299913
+      }
+    },
+    "metrics.cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "metrics.cosine",
+        "original": 0.6932592046740564,
+        "reproduced": 0.6932591974065194,
+        "absolute_difference": 7.267537016630854e-09,
+        "symmetric_relative_difference": 1.0483145362704225e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "metrics.cosine",
+        "original": 0.6932592046740564,
+        "reproduced": 0.6932591974065194,
+        "absolute_difference": 7.267537016630854e-09,
+        "symmetric_relative_difference": 1.0483145362704225e-08
+      }
+    },
+    "metrics.max_abs": {
+      "compared": 936,
+      "changed": 505,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "metrics.max_abs",
+        "original": 1.6534175872802734,
+        "reproduced": 1.6534181833267212,
+        "absolute_difference": 5.960464477539062e-07,
+        "symmetric_relative_difference": 3.604934636406653e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.max_abs",
+        "original": 5.672872066497803e-05,
+        "reproduced": 5.669891834259033e-05,
+        "absolute_difference": 2.9802322387695312e-08,
+        "symmetric_relative_difference": 0.0005253480430785396
+      }
+    },
+    "metrics.mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "metrics.mean_kl_nats",
+        "original": 0.42390721375533924,
+        "reproduced": 0.4239072008021223,
+        "absolute_difference": 1.2953216943500934e-08,
+        "symmetric_relative_difference": 3.055672685715833e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_kl_nats",
+        "original": 3.4605234540914016e-08,
+        "reproduced": 3.925074156815333e-08,
+        "absolute_difference": 4.645507027239315e-09,
+        "symmetric_relative_difference": 0.11835463080800786
+      }
+    },
+    "metrics.mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "u4_asymmetric",
+        "mode": "KV",
+        "field": "metrics.mean_total_variation",
+        "original": 0.02487227211573373,
+        "reproduced": 0.02487227593308614,
+        "absolute_difference": 3.8173524098683576e-09,
+        "symmetric_relative_difference": 1.5347821084560886e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mean_total_variation",
+        "original": 0.00023913079664199602,
+        "reproduced": 0.00023912847862342813,
+        "absolute_difference": 2.3180185678914333e-09,
+        "symmetric_relative_difference": 9.693517524477415e-06
+      }
+    },
+    "metrics.mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "K_only",
+        "field": "metrics.mse",
+        "original": 0.4678989822913635,
+        "reproduced": 0.4678989881723822,
+        "absolute_difference": 5.881018672049265e-09,
+        "symmetric_relative_difference": 1.2568992070319662e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.mse",
+        "original": 6.21401273489912e-12,
+        "reproduced": 6.213354204144704e-12,
+        "absolute_difference": 6.585307544156978e-16,
+        "symmetric_relative_difference": 0.00010597512147299913
+      }
+    },
+    "metrics.p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "metrics.p95_kl_nats",
+        "original": 2.5507152582828447,
+        "reproduced": 2.550715021997586,
+        "absolute_difference": 2.3628525891439267e-07,
+        "symmetric_relative_difference": 9.263490236595878e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.p95_kl_nats",
+        "original": 7.115158840104898e-07,
+        "reproduced": 6.200288097523724e-07,
+        "absolute_difference": 9.148707425811742e-08,
+        "symmetric_relative_difference": 0.12858050862118017
+      }
+    },
+    "metrics.relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "metrics.relative_l2",
+        "original": 1.5369501591786636,
+        "reproduced": 1.536950186065255,
+        "absolute_difference": 2.6886591397712323e-08,
+        "symmetric_relative_difference": 1.7493469626718785e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "metrics.relative_l2",
+        "original": 0.00010090207059902403,
+        "reproduced": 0.00010089672612668325,
+        "absolute_difference": 5.344472340772515e-09,
+        "symmetric_relative_difference": 5.296692435590325e-05
+      }
+    },
+    "per_kv_head.k[0].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 11,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].cosine",
+        "original": 0.983074060631036,
+        "reproduced": 0.9830740606310336,
+        "absolute_difference": 2.3314683517128287e-15,
+        "symmetric_relative_difference": 2.371610080136035e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 11,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].cosine",
+        "original": 0.983074060631036,
+        "reproduced": 0.9830740606310336,
+        "absolute_difference": 2.3314683517128287e-15,
+        "symmetric_relative_difference": 2.371610080136035e-15
+      }
+    },
+    "per_kv_head.k[0].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].max_abs",
+        "original": 0.0019006729125976562,
+        "reproduced": 0.0019006729125976562,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].max_abs",
+        "original": 0.0019006729125976562,
+        "reproduced": 0.0019006729125976562,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].mse",
+        "original": 4.2922731716509865e-08,
+        "reproduced": 4.2922731716509865e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].mse",
+        "original": 4.2922731716509865e-08,
+        "reproduced": 4.2922731716509865e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[0].relative_l2": {
+      "compared": 936,
+      "changed": 795,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].relative_l2",
+        "original": 0.5914538721233633,
+        "reproduced": 0.5914538721233638,
+        "absolute_difference": 4.440892098500626e-16,
+        "symmetric_relative_difference": 7.508433552996264e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 29,
+        "variant": "u8_token",
+        "mode": "KV",
+        "field": "per_kv_head.k[0].relative_l2",
+        "original": 0.0075465896062885075,
+        "reproduced": 0.007546589606288498,
+        "absolute_difference": 9.540979117872439e-18,
+        "symmetric_relative_difference": 1.2642769271462733e-15
+      }
+    },
+    "per_kv_head.k[1].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "scalar6_channel_permuted",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].cosine",
+        "original": 0.9956809998024477,
+        "reproduced": 0.9956809998024458,
+        "absolute_difference": 1.887379141862766e-15,
+        "symmetric_relative_difference": 1.8955660921894054e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].cosine",
+        "original": 0.9806988225801135,
+        "reproduced": 0.9806988225801117,
+        "absolute_difference": 1.887379141862766e-15,
+        "symmetric_relative_difference": 1.9245247352263296e-15
+      }
+    },
+    "per_kv_head.k[1].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].mse",
+        "original": 1.4086481333857982e-07,
+        "reproduced": 1.4086481333857982e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].mse",
+        "original": 1.4086481333857982e-07,
+        "reproduced": 1.4086481333857982e-07,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[1].relative_l2": {
+      "compared": 936,
+      "changed": 804,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].relative_l2",
+        "original": 0.7120368278641636,
+        "reproduced": 0.7120368278641629,
+        "absolute_difference": 6.661338147750939e-16,
+        "symmetric_relative_difference": 9.35532810533465e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[1].relative_l2",
+        "original": 0.00020665367123616873,
+        "reproduced": 0.00020665367123616846,
+        "absolute_difference": 2.710505431213761e-19,
+        "symmetric_relative_difference": 1.3116173620337628e-15
+      }
+    },
+    "per_kv_head.k[2].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 11,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].cosine",
+        "original": 0.9872007372470089,
+        "reproduced": 0.9872007372470065,
+        "absolute_difference": 2.3314683517128287e-15,
+        "symmetric_relative_difference": 2.3616963235000796e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 11,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].cosine",
+        "original": 0.9872007372470089,
+        "reproduced": 0.9872007372470065,
+        "absolute_difference": 2.3314683517128287e-15,
+        "symmetric_relative_difference": 2.3616963235000796e-15
+      }
+    },
+    "per_kv_head.k[2].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].max_abs",
+        "original": 0.0019168853759765625,
+        "reproduced": 0.0019168853759765625,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].max_abs",
+        "original": 0.0019168853759765625,
+        "reproduced": 0.0019168853759765625,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].mse",
+        "original": 5.6715454482319586e-08,
+        "reproduced": 5.6715454482319586e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].mse",
+        "original": 5.6715454482319586e-08,
+        "reproduced": 5.6715454482319586e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.k[2].relative_l2": {
+      "compared": 936,
+      "changed": 813,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].relative_l2",
+        "original": 0.5156786640824478,
+        "reproduced": 0.5156786640824481,
+        "absolute_difference": 3.3306690738754696e-16,
+        "symmetric_relative_difference": 6.458807210497569e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "u8_token",
+        "mode": "KV",
+        "field": "per_kv_head.k[2].relative_l2",
+        "original": 0.008672519811448462,
+        "reproduced": 0.008672519811448452,
+        "absolute_difference": 1.0408340855860843e-17,
+        "symmetric_relative_difference": 1.200151868447847e-15
+      }
+    },
+    "per_kv_head.v[0].cosine": {
+      "compared": 936,
+      "changed": 882,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "scalar4_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].cosine",
+        "original": 0.9998065557763907,
+        "reproduced": 0.9998065557763893,
+        "absolute_difference": 1.3322676295501878e-15,
+        "symmetric_relative_difference": 1.3325253988914162e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].cosine",
+        "original": 0.9065385548069681,
+        "reproduced": 0.9065385548069669,
+        "absolute_difference": 1.2212453270876722e-15,
+        "symmetric_relative_difference": 1.347152110201993e-15
+      }
+    },
+    "per_kv_head.v[0].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].max_abs",
+        "original": 0.00011584162712097168,
+        "reproduced": 0.00011584162712097168,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].max_abs",
+        "original": 0.00011584162712097168,
+        "reproduced": 0.00011584162712097168,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].mse",
+        "original": 4.969242373402422e-11,
+        "reproduced": 4.969242373402422e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].mse",
+        "original": 4.969242373402422e-11,
+        "reproduced": 4.969242373402422e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[0].relative_l2": {
+      "compared": 936,
+      "changed": 852,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].relative_l2",
+        "original": 0.5369220377600504,
+        "reproduced": 0.5369220377600509,
+        "absolute_difference": 4.440892098500626e-16,
+        "symmetric_relative_difference": 8.271018483479067e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "scalar6_token",
+        "mode": "KV",
+        "field": "per_kv_head.v[0].relative_l2",
+        "original": 0.21468442015450936,
+        "reproduced": 0.21468442015450964,
+        "absolute_difference": 2.7755575615628914e-16,
+        "symmetric_relative_difference": 1.292854674580161e-15
+      }
+    },
+    "per_kv_head.v[1].cosine": {
+      "compared": 936,
+      "changed": 909,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "scalar6_channel_permuted",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].cosine",
+        "original": 0.9831098193359812,
+        "reproduced": 0.9831098193359802,
+        "absolute_difference": 9.992007221626409e-16,
+        "symmetric_relative_difference": 1.0163673503307371e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "scalar6_channel_permuted",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].cosine",
+        "original": 0.9831098193359812,
+        "reproduced": 0.9831098193359802,
+        "absolute_difference": 9.992007221626409e-16,
+        "symmetric_relative_difference": 1.0163673503307371e-15
+      }
+    },
+    "per_kv_head.v[1].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].max_abs",
+        "original": 0.00010994076728820801,
+        "reproduced": 0.00010994076728820801,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].max_abs",
+        "original": 0.00010994076728820801,
+        "reproduced": 0.00010994076728820801,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].mse",
+        "original": 4.677428373568947e-11,
+        "reproduced": 4.677428373568947e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].mse",
+        "original": 4.677428373568947e-11,
+        "reproduced": 4.677428373568947e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[1].relative_l2": {
+      "compared": 936,
+      "changed": 870,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].relative_l2",
+        "original": 0.6131835124549219,
+        "reproduced": 0.6131835124549224,
+        "absolute_difference": 5.551115123125783e-16,
+        "symmetric_relative_difference": 9.052942570000799e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "per_kv_head.v[1].relative_l2",
+        "original": 0.33994981417035014,
+        "reproduced": 0.33994981417035053,
+        "absolute_difference": 3.885780586188048e-16,
+        "symmetric_relative_difference": 1.1430453626431058e-15
+      }
+    },
+    "per_kv_head.v[2].cosine": {
+      "compared": 936,
+      "changed": 900,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "scalar6_token_permuted",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].cosine",
+        "original": 0.9930441472466147,
+        "reproduced": 0.9930441472466137,
+        "absolute_difference": 9.992007221626409e-16,
+        "symmetric_relative_difference": 1.0061996991101516e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "scalar6_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].cosine",
+        "original": 0.9828579719446506,
+        "reproduced": 0.9828579719446496,
+        "absolute_difference": 9.992007221626409e-16,
+        "symmetric_relative_difference": 1.016627784160569e-15
+      }
+    },
+    "per_kv_head.v[2].max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].mse",
+        "original": 9.619481603632129e-11,
+        "reproduced": 9.619481603632129e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].mse",
+        "original": 9.619481603632129e-11,
+        "reproduced": 9.619481603632129e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "per_kv_head.v[2].relative_l2": {
+      "compared": 936,
+      "changed": 879,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 11,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].relative_l2",
+        "original": 0.4734538860955562,
+        "reproduced": 0.47345388609555666,
+        "absolute_difference": 4.440892098500626e-16,
+        "symmetric_relative_difference": 9.379777479752961e-16
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_kv_head.v[2].relative_l2",
+        "original": 0.3066684404430167,
+        "reproduced": 0.30666844044301705,
+        "absolute_difference": 3.3306690738754696e-16,
+        "symmetric_relative_difference": 1.0860814595280634e-15
+      }
+    },
+    "per_query_head[0].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "K_only",
+        "field": "per_query_head[0].cosine",
+        "original": 0.9003547045285818,
+        "reproduced": 0.900354715869069,
+        "absolute_difference": 1.1340487215960593e-08,
+        "symmetric_relative_difference": 1.2595577072103373e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[0].cosine",
+        "original": 0.5960742147867042,
+        "reproduced": 0.596074223756893,
+        "absolute_difference": 8.9701888139615e-09,
+        "symmetric_relative_difference": 1.5048778250173024e-08
+      }
+    },
+    "per_query_head[0].max_abs": {
+      "compared": 936,
+      "changed": 634,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[0].max_abs",
+        "original": 1.9130571782588959,
+        "reproduced": 1.913056492805481,
+        "absolute_difference": 6.854534149169922e-07,
+        "symmetric_relative_difference": 3.583026282261121e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].max_abs",
+        "original": 9.313225746154785e-06,
+        "reproduced": 9.309500455856323e-06,
+        "absolute_difference": 3.725290298461914e-09,
+        "symmetric_relative_difference": 0.0004
+      }
+    },
+    "per_query_head[0].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_kl_nats",
+        "original": 0.9920365936093406,
+        "reproduced": 0.992036632870397,
+        "absolute_difference": 3.9261056405948125e-08,
+        "symmetric_relative_difference": 3.957621634631442e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_kl_nats",
+        "original": 1.7820073743568068e-09,
+        "reproduced": 1.221776515580392e-08,
+        "absolute_difference": 1.0435757781447114e-08,
+        "symmetric_relative_difference": 0.8541462082768645
+      }
+    },
+    "per_query_head[0].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 11,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_total_variation",
+        "original": 0.07423180790046091,
+        "reproduced": 0.07423182166199593,
+        "absolute_difference": 1.3761535022638327e-08,
+        "symmetric_relative_difference": 1.853859263389699e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mean_total_variation",
+        "original": 0.00018754229226081165,
+        "reproduced": 0.00018754871525028527,
+        "absolute_difference": 6.422989473620078e-09,
+        "symmetric_relative_difference": 3.4247045974420816e-05
+      }
+    },
+    "per_query_head[0].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "K_only",
+        "field": "per_query_head[0].mse",
+        "original": 0.18346310044400935,
+        "reproduced": 0.18346308282656912,
+        "absolute_difference": 1.7617440228878678e-08,
+        "symmetric_relative_difference": 9.602715851984252e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].mse",
+        "original": 1.6098262028421278e-12,
+        "reproduced": 1.6093341879214846e-12,
+        "absolute_difference": 4.920149206431707e-16,
+        "symmetric_relative_difference": 0.0003056323221565934
+      }
+    },
+    "per_query_head[0].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[0].p95_kl_nats",
+        "original": 2.4458641821780946,
+        "reproduced": 2.445864435631833,
+        "absolute_difference": 2.534537384413227e-07,
+        "symmetric_relative_difference": 1.0362542369436298e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].p95_kl_nats",
+        "original": 1.2270439721597834e-07,
+        "reproduced": 1.4613892082787127e-07,
+        "absolute_difference": 2.3434523611892936e-08,
+        "symmetric_relative_difference": 0.16035785319295692
+      }
+    },
+    "per_query_head[0].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[0].relative_l2",
+        "original": 1.467063063140501,
+        "reproduced": 1.4670629940115902,
+        "absolute_difference": 6.912891081789496e-08,
+        "symmetric_relative_difference": 4.712061298163463e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[0].relative_l2",
+        "original": 0.0001305998281627225,
+        "reproduced": 0.00013057986348615356,
+        "absolute_difference": 1.9964676568933392e-08,
+        "symmetric_relative_difference": 0.00015286908757688528
+      }
+    },
+    "per_query_head[1].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "K_only",
+        "field": "per_query_head[1].cosine",
+        "original": 0.8811051069551632,
+        "reproduced": 0.8811051312272131,
+        "absolute_difference": 2.4272049925500028e-08,
+        "symmetric_relative_difference": 2.754728018856688e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[1].cosine",
+        "original": 0.8190552239948219,
+        "reproduced": 0.8190552482376184,
+        "absolute_difference": 2.4242796548001877e-08,
+        "symmetric_relative_difference": 2.9598487525921732e-08
+      }
+    },
+    "per_query_head[1].max_abs": {
+      "compared": 936,
+      "changed": 542,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "scalar6_channel_permuted",
+        "mode": "V_only",
+        "field": "per_query_head[1].max_abs",
+        "original": 0.15083599090576172,
+        "reproduced": 0.15083694458007812,
+        "absolute_difference": 9.5367431640625e-07,
+        "symmetric_relative_difference": 6.322551275890847e-06
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].max_abs",
+        "original": 3.2961368560791016e-05,
+        "reproduced": 3.293156623840332e-05,
+        "absolute_difference": 2.9802322387695312e-08,
+        "symmetric_relative_difference": 0.0009041591320072332
+      }
+    },
+    "per_query_head[1].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_kl_nats",
+        "original": 1.0120290644845191,
+        "reproduced": 1.012028983868052,
+        "absolute_difference": 8.06164670574816e-08,
+        "symmetric_relative_difference": 7.965825279785211e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_kl_nats",
+        "original": 2.8919901484929256e-08,
+        "reproduced": 1.1254201843235133e-08,
+        "absolute_difference": 1.7665699641694123e-08,
+        "symmetric_relative_difference": 0.6108492330411317
+      }
+    },
+    "per_query_head[1].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_total_variation",
+        "original": 0.44043669568385224,
+        "reproduced": 0.4404366790517815,
+        "absolute_difference": 1.663207072066797e-08,
+        "symmetric_relative_difference": 3.776268163769568e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mean_total_variation",
+        "original": 7.877880352680222e-05,
+        "reproduced": 7.878097986235844e-05,
+        "absolute_difference": 2.176335556214326e-09,
+        "symmetric_relative_difference": 2.7625139469154782e-05
+      }
+    },
+    "per_query_head[1].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[1].mse",
+        "original": 1.0992765054989868,
+        "reproduced": 1.0992765413455445,
+        "absolute_difference": 3.5846557722152284e-08,
+        "symmetric_relative_difference": 3.260922649934394e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].mse",
+        "original": 3.791119064166425e-12,
+        "reproduced": 3.788045938234382e-12,
+        "absolute_difference": 3.0731259320428124e-15,
+        "symmetric_relative_difference": 0.0008106118220052575
+      }
+    },
+    "per_query_head[1].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "per_query_head[1].p95_kl_nats",
+        "original": 1.6072227348818102,
+        "reproduced": 1.6072223188701769,
+        "absolute_difference": 4.160116333640218e-07,
+        "symmetric_relative_difference": 2.588388182516681e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].p95_kl_nats",
+        "original": 1.0919237149263427e-07,
+        "reproduced": 7.22223575878339e-08,
+        "absolute_difference": 3.697001390480037e-08,
+        "symmetric_relative_difference": 0.33857689323373874
+      }
+    },
+    "per_query_head[1].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[1].relative_l2",
+        "original": 1.8895066232004194,
+        "reproduced": 1.8895067476900023,
+        "absolute_difference": 1.244895828644843e-07,
+        "symmetric_relative_difference": 6.588469875361801e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[1].relative_l2",
+        "original": 0.00011859302117753959,
+        "reproduced": 0.00011854495360741467,
+        "absolute_difference": 4.806757012492074e-08,
+        "symmetric_relative_difference": 0.00040531533514911663
+      }
+    },
+    "per_query_head[2].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[2].cosine",
+        "original": 0.7876022551388615,
+        "reproduced": 0.78760226820092,
+        "absolute_difference": 1.306205854589848e-08,
+        "symmetric_relative_difference": 1.658458726348704e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[2].cosine",
+        "original": 0.4000768539419479,
+        "reproduced": 0.40007684533311993,
+        "absolute_difference": 8.608827983813683e-09,
+        "symmetric_relative_difference": 2.1517935614097894e-08
+      }
+    },
+    "per_query_head[2].max_abs": {
+      "compared": 936,
+      "changed": 575,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 17,
+        "variant": "scalar8_page",
+        "mode": "K_only",
+        "field": "per_query_head[2].max_abs",
+        "original": 1.326796531677246,
+        "reproduced": 1.3267959356307983,
+        "absolute_difference": 5.960464477539062e-07,
+        "symmetric_relative_difference": 4.492372669985991e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].max_abs",
+        "original": 2.625584602355957e-05,
+        "reproduced": 2.6270747184753418e-05,
+        "absolute_difference": 1.4901161193847656e-08,
+        "symmetric_relative_difference": 0.0005672149744753262
+      }
+    },
+    "per_query_head[2].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_kl_nats",
+        "original": 0.7433275570340574,
+        "reproduced": 0.7433274954173774,
+        "absolute_difference": 6.161667998050291e-08,
+        "symmetric_relative_difference": 8.289303873834424e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_kl_nats",
+        "original": 6.21179325234204e-09,
+        "reproduced": 1.8446694795441727e-08,
+        "absolute_difference": 1.2234901543099687e-08,
+        "symmetric_relative_difference": 0.6632571134707012
+      }
+    },
+    "per_query_head[2].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 29,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_total_variation",
+        "original": 0.1539599835311014,
+        "reproduced": 0.1539599947579584,
+        "absolute_difference": 1.1226856999613233e-08,
+        "symmetric_relative_difference": 7.292061172944994e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 17,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mean_total_variation",
+        "original": 0.0002209530362673462,
+        "reproduced": 0.0002209554615077991,
+        "absolute_difference": 2.4252404529079286e-09,
+        "symmetric_relative_difference": 1.097615074258902e-05
+      }
+    },
+    "per_query_head[2].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[2].mse",
+        "original": 0.3692430836512487,
+        "reproduced": 0.3692431031654963,
+        "absolute_difference": 1.9514247606711166e-08,
+        "symmetric_relative_difference": 5.284932186794238e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].mse",
+        "original": 2.5605177607741095e-12,
+        "reproduced": 2.5591654710664776e-12,
+        "absolute_difference": 1.3522897076318599e-15,
+        "symmetric_relative_difference": 0.0005281313523179892
+      }
+    },
+    "per_query_head[2].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[2].p95_kl_nats",
+        "original": 1.3930996419905979,
+        "reproduced": 1.3930994125911493,
+        "absolute_difference": 2.2939944854805105e-07,
+        "symmetric_relative_difference": 1.6466837090006178e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].p95_kl_nats",
+        "original": 1.3937159474124284e-07,
+        "reproduced": 8.199071924901045e-08,
+        "absolute_difference": 5.738087549223239e-08,
+        "symmetric_relative_difference": 0.41171140790033767
+      }
+    },
+    "per_query_head[2].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "scalar6_channel_permuted",
+        "mode": "K_only",
+        "field": "per_query_head[2].relative_l2",
+        "original": 0.23269250094919933,
+        "reproduced": 0.23269256084572654,
+        "absolute_difference": 5.989652721027916e-08,
+        "symmetric_relative_difference": 2.574062831771838e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[2].relative_l2",
+        "original": 0.00010725226342209643,
+        "reproduced": 0.0001072239414294595,
+        "absolute_difference": 2.8321992636933576e-08,
+        "symmetric_relative_difference": 0.0002640689504656048
+      }
+    },
+    "per_query_head[3].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 17,
+        "variant": "scalar8_page",
+        "mode": "K_only",
+        "field": "per_query_head[3].cosine",
+        "original": 0.70633492026559,
+        "reproduced": 0.7063349487831146,
+        "absolute_difference": 2.8517524675031325e-08,
+        "symmetric_relative_difference": 4.0373939763509905e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "K_only",
+        "field": "per_query_head[3].cosine",
+        "original": 0.5405330773612181,
+        "reproduced": 0.5405331026232739,
+        "absolute_difference": 2.5262055780572723e-08,
+        "symmetric_relative_difference": 4.673544628066782e-08
+      }
+    },
+    "per_query_head[3].max_abs": {
+      "compared": 936,
+      "changed": 541,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 29,
+        "variant": "u4_asymmetric",
+        "mode": "K_only",
+        "field": "per_query_head[3].max_abs",
+        "original": 0.07515811920166016,
+        "reproduced": 0.07515907287597656,
+        "absolute_difference": 9.5367431640625e-07,
+        "symmetric_relative_difference": 1.268874508311128e-05
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].max_abs",
+        "original": 5.672872066497803e-05,
+        "reproduced": 5.669891834259033e-05,
+        "absolute_difference": 2.9802322387695312e-08,
+        "symmetric_relative_difference": 0.0005253480430785396
+      }
+    },
+    "per_query_head[3].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_kl_nats",
+        "original": 3.5204502968604086,
+        "reproduced": 3.5204502434774594,
+        "absolute_difference": 5.338294917223152e-08,
+        "symmetric_relative_difference": 1.51636707440066e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_kl_nats",
+        "original": 1.4187199980360068e-07,
+        "reproduced": 1.1805231406040619e-07,
+        "absolute_difference": 2.3819685743194496e-08,
+        "symmetric_relative_difference": 0.1678956085497426
+      }
+    },
+    "per_query_head[3].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "scalar6_token_permuted",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_total_variation",
+        "original": 0.04186270112054831,
+        "reproduced": 0.04186268909553138,
+        "absolute_difference": 1.2025016926653365e-08,
+        "symmetric_relative_difference": 2.87248949656306e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mean_total_variation",
+        "original": 0.00014186654755943273,
+        "reproduced": 0.00014186999960252855,
+        "absolute_difference": 3.4520430958195902e-09,
+        "symmetric_relative_difference": 2.4332438891175302e-05
+      }
+    },
+    "per_query_head[3].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "K_only",
+        "field": "per_query_head[3].mse",
+        "original": 0.12777478788766872,
+        "reproduced": 0.1277747689414686,
+        "absolute_difference": 1.8946200108782563e-08,
+        "symmetric_relative_difference": 1.48278079126524e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].mse",
+        "original": 2.643775993110943e-10,
+        "reproduced": 2.6444241953589656e-10,
+        "absolute_difference": 6.482022480226895e-14,
+        "symmetric_relative_difference": 0.00024512037409138123
+      }
+    },
+    "per_query_head[3].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 17,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[3].p95_kl_nats",
+        "original": 1.9312949198146852,
+        "reproduced": 1.9312951346114628,
+        "absolute_difference": 2.1479677769775662e-07,
+        "symmetric_relative_difference": 1.1121903320124572e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].p95_kl_nats",
+        "original": 3.5000528036550544e-07,
+        "reproduced": 2.471051573418197e-07,
+        "absolute_difference": 1.0290012302368571e-07,
+        "symmetric_relative_difference": 0.29399591605083386
+      }
+    },
+    "per_query_head[3].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "rgba4_page",
+        "mode": "V_only",
+        "field": "per_query_head[3].relative_l2",
+        "original": 2.626942248034396,
+        "reproduced": 2.626942440830536,
+        "absolute_difference": 1.9279614038580917e-07,
+        "symmetric_relative_difference": 7.339184041080648e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[3].relative_l2",
+        "original": 0.00018683384164056558,
+        "reproduced": 0.0001868567431022486,
+        "absolute_difference": 2.2901461683018072e-08,
+        "symmetric_relative_difference": 0.00012256160148572387
+      }
+    },
+    "per_query_head[4].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 5,
+        "variant": "scalar6_page",
+        "mode": "KV",
+        "field": "per_query_head[4].cosine",
+        "original": 0.718615308198202,
+        "reproduced": 0.718615332043722,
+        "absolute_difference": 2.3845520003007437e-08,
+        "symmetric_relative_difference": 3.3182592883443554e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[4].cosine",
+        "original": 0.44249059691958526,
+        "reproduced": 0.442490578558635,
+        "absolute_difference": 1.8360950260198905e-08,
+        "symmetric_relative_difference": 4.149455465950992e-08
+      }
+    },
+    "per_query_head[4].max_abs": {
+      "compared": 936,
+      "changed": 516,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 29,
+        "variant": "scalar4_page",
+        "mode": "K_only",
+        "field": "per_query_head[4].max_abs",
+        "original": 0.04085731506347656,
+        "reproduced": 0.040857791900634766,
+        "absolute_difference": 4.76837158203125e-07,
+        "symmetric_relative_difference": 1.1670654140164556e-05
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].max_abs",
+        "original": 1.6361474990844727e-05,
+        "reproduced": 1.636892557144165e-05,
+        "absolute_difference": 7.450580596923828e-09,
+        "symmetric_relative_difference": 0.0004551661356395084
+      }
+    },
+    "per_query_head[4].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_kl_nats",
+        "original": 1.328391210528167,
+        "reproduced": 1.3283911547653955,
+        "absolute_difference": 5.576277151142506e-08,
+        "symmetric_relative_difference": 4.1977672743900375e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_kl_nats",
+        "original": -1.5173049131849405e-09,
+        "reproduced": 4.1113334593650955e-08,
+        "absolute_difference": 4.2630639506835896e-08,
+        "symmetric_relative_difference": 1.0369054207882047
+      }
+    },
+    "per_query_head[4].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_total_variation",
+        "original": 0.4004843304629766,
+        "reproduced": 0.4004843190729181,
+        "absolute_difference": 1.1390058507476652e-08,
+        "symmetric_relative_difference": 2.8440709513676278e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mean_total_variation",
+        "original": 0.00012696597403184519,
+        "reproduced": 0.00012695931648977894,
+        "absolute_difference": 6.657542066246247e-09,
+        "symmetric_relative_difference": 5.243563968230122e-05
+      }
+    },
+    "per_query_head[4].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[4].mse",
+        "original": 0.15875773302661886,
+        "reproduced": 0.1587577138426428,
+        "absolute_difference": 1.9183976046610596e-08,
+        "symmetric_relative_difference": 1.208380573398212e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 11,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].mse",
+        "original": 1.1323212984481658e-09,
+        "reproduced": 1.1320569243820954e-09,
+        "absolute_difference": 2.6437406607039136e-13,
+        "symmetric_relative_difference": 0.0002334797256156121
+      }
+    },
+    "per_query_head[4].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[4].p95_kl_nats",
+        "original": 1.119529914330824,
+        "reproduced": 1.1195301878844406,
+        "absolute_difference": 2.735536166476038e-07,
+        "symmetric_relative_difference": 2.443467979765101e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].p95_kl_nats",
+        "original": 7.468963924431776e-08,
+        "reproduced": 1.6699624743234668e-07,
+        "absolute_difference": 9.230660818802891e-08,
+        "symmetric_relative_difference": 0.5527466012397917
+      }
+    },
+    "per_query_head[4].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "K_only",
+        "field": "per_query_head[4].relative_l2",
+        "original": 1.7492046402746604,
+        "reproduced": 1.7492045370307723,
+        "absolute_difference": 1.0324388810545315e-07,
+        "symmetric_relative_difference": 5.9023333078536646e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 11,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[4].relative_l2",
+        "original": 0.00023829764097753786,
+        "reproduced": 0.00023826982323229388,
+        "absolute_difference": 2.7817745243988124e-08,
+        "symmetric_relative_difference": 0.00011673529427263717
+      }
+    },
+    "per_query_head[5].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 17,
+        "variant": "scalar6_hdr_block",
+        "mode": "K_only",
+        "field": "per_query_head[5].cosine",
+        "original": 0.7121293217331396,
+        "reproduced": 0.7121293468153179,
+        "absolute_difference": 2.5082178334301375e-08,
+        "symmetric_relative_difference": 3.522138000135828e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[5].cosine",
+        "original": -0.07853126921609564,
+        "reproduced": -0.07853127862377422,
+        "absolute_difference": 9.407678580597434e-09,
+        "symmetric_relative_difference": 1.197953063475194e-07
+      }
+    },
+    "per_query_head[5].max_abs": {
+      "compared": 936,
+      "changed": 564,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 29,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[5].max_abs",
+        "original": 1.8827481269836426,
+        "reproduced": 1.882749080657959,
+        "absolute_difference": 9.5367431640625e-07,
+        "symmetric_relative_difference": 5.065328812020835e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].max_abs",
+        "original": 0.0007832050323486328,
+        "reproduced": 0.0007836818695068359,
+        "absolute_difference": 4.76837158203125e-07,
+        "symmetric_relative_difference": 0.000608457560085184
+      }
+    },
+    "per_query_head[5].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_kl_nats",
+        "original": 2.894183429172023,
+        "reproduced": 2.8941833913093236,
+        "absolute_difference": 3.7862699642232656e-08,
+        "symmetric_relative_difference": 1.3082342763970745e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_kl_nats",
+        "original": 1.530341127370417e-08,
+        "reproduced": 3.093381637072127e-08,
+        "absolute_difference": 1.5630405097017104e-08,
+        "symmetric_relative_difference": 0.5052853779726713
+      }
+    },
+    "per_query_head[5].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "scalar6_page",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_total_variation",
+        "original": 0.08689007065046167,
+        "reproduced": 0.08689008000301796,
+        "absolute_difference": 9.352556284980551e-09,
+        "symmetric_relative_difference": 1.0763664027764398e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 17,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mean_total_variation",
+        "original": 0.00011320300740239687,
+        "reproduced": 0.00011320749136124487,
+        "absolute_difference": 4.483958847994497e-09,
+        "symmetric_relative_difference": 3.960832268322415e-05
+      }
+    },
+    "per_query_head[5].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "K_only",
+        "field": "per_query_head[5].mse",
+        "original": 1.3439564436989728,
+        "reproduced": 1.3439565056521547,
+        "absolute_difference": 6.195318191792865e-08,
+        "symmetric_relative_difference": 4.609760930311199e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].mse",
+        "original": 2.2070323037193058e-11,
+        "reproduced": 2.2061890716011126e-11,
+        "absolute_difference": 8.432321181932126e-15,
+        "symmetric_relative_difference": 0.0003820660516713743
+      }
+    },
+    "per_query_head[5].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 17,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[5].p95_kl_nats",
+        "original": 3.918989046710554,
+        "reproduced": 3.918988586969716,
+        "absolute_difference": 4.597408378437251e-07,
+        "symmetric_relative_difference": 1.1731108006785923e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].p95_kl_nats",
+        "original": 1.590599497729762e-07,
+        "reproduced": 2.113382280025633e-07,
+        "absolute_difference": 5.2278278229587105e-08,
+        "symmetric_relative_difference": 0.24736782703105198
+      }
+    },
+    "per_query_head[5].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[5].relative_l2",
+        "original": 3.92609670142253,
+        "reproduced": 3.9260968421745304,
+        "absolute_difference": 1.4075200027718893e-07,
+        "symmetric_relative_difference": 3.585036384360586e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[5].relative_l2",
+        "original": 0.00018453371144300156,
+        "reproduced": 0.00018449845786313828,
+        "absolute_difference": 3.5253579863279635e-08,
+        "symmetric_relative_difference": 0.00019104140694730837
+      }
+    },
+    "per_query_head[6].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[6].cosine",
+        "original": 0.6589332393873056,
+        "reproduced": 0.6589332101214288,
+        "absolute_difference": 2.9265876833051152e-08,
+        "symmetric_relative_difference": 4.441402418895027e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "V_only",
+        "field": "per_query_head[6].cosine",
+        "original": 0.4712499573958057,
+        "reproduced": 0.4712499360720415,
+        "absolute_difference": 2.1323764198832862e-08,
+        "symmetric_relative_difference": 4.5249371091025694e-08
+      }
+    },
+    "per_query_head[6].max_abs": {
+      "compared": 936,
+      "changed": 525,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[6].max_abs",
+        "original": 2.010717034339905,
+        "reproduced": 2.0107173919677734,
+        "absolute_difference": 3.5762786865234375e-07,
+        "symmetric_relative_difference": 1.7786083219897646e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].max_abs",
+        "original": 1.1086463928222656e-05,
+        "reproduced": 1.1146068572998047e-05,
+        "absolute_difference": 5.960464477539063e-08,
+        "symmetric_relative_difference": 0.0053475935828877
+      }
+    },
+    "per_query_head[6].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_kl_nats",
+        "original": 1.615104149819717,
+        "reproduced": 1.6151041896643594,
+        "absolute_difference": 3.984464247430708e-08,
+        "symmetric_relative_difference": 2.4670013692792995e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_kl_nats",
+        "original": 5.713993385846398e-08,
+        "reproduced": 2.732780102509657e-08,
+        "absolute_difference": 2.9812132833367406e-08,
+        "symmetric_relative_difference": 0.5217390154355493
+      }
+    },
+    "per_query_head[6].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "u4_asymmetric",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_total_variation",
+        "original": 0.1100602932458936,
+        "reproduced": 0.11006030227378458,
+        "absolute_difference": 9.027890976454067e-09,
+        "symmetric_relative_difference": 8.202676887072691e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mean_total_variation",
+        "original": 8.451629219052847e-05,
+        "reproduced": 8.451802568743005e-05,
+        "absolute_difference": 1.7334969015792012e-09,
+        "symmetric_relative_difference": 2.051038092146319e-05
+      }
+    },
+    "per_query_head[6].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "per_query_head[6].mse",
+        "original": 0.19878931028356345,
+        "reproduced": 0.19878932918869924,
+        "absolute_difference": 1.890513579017039e-08,
+        "symmetric_relative_difference": 9.510136116121624e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].mse",
+        "original": 2.0612471491084777e-12,
+        "reproduced": 2.0641294630811656e-12,
+        "absolute_difference": 2.882313972687852e-15,
+        "symmetric_relative_difference": 0.0013963823608163447
+      }
+    },
+    "per_query_head[6].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[6].p95_kl_nats",
+        "original": 2.426255228838673,
+        "reproduced": 2.4262549215913762,
+        "absolute_difference": 3.0724729693787367e-07,
+        "symmetric_relative_difference": 1.266343677639131e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].p95_kl_nats",
+        "original": 2.1546224454651893e-07,
+        "reproduced": 1.7992249643514712e-07,
+        "absolute_difference": 3.553974811137181e-08,
+        "symmetric_relative_difference": 0.164946523165448
+      }
+    },
+    "per_query_head[6].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "V_only",
+        "field": "per_query_head[6].relative_l2",
+        "original": 2.481342716789754,
+        "reproduced": 2.4813425192002807,
+        "absolute_difference": 1.9758947322756626e-07,
+        "symmetric_relative_difference": 7.963006153507016e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[6].relative_l2",
+        "original": 3.989691276489352e-05,
+        "reproduced": 3.9924799222929854e-05,
+        "absolute_difference": 2.7886458036334308e-08,
+        "symmetric_relative_difference": 0.0006984745967192838
+      }
+    },
+    "per_query_head[7].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[7].cosine",
+        "original": 0.8175159590851978,
+        "reproduced": 0.8175159859332952,
+        "absolute_difference": 2.6848097411935612e-08,
+        "symmetric_relative_difference": 3.284106717654603e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[7].cosine",
+        "original": 0.8175159590851978,
+        "reproduced": 0.8175159859332952,
+        "absolute_difference": 2.6848097411935612e-08,
+        "symmetric_relative_difference": 3.284106717654603e-08
+      }
+    },
+    "per_query_head[7].max_abs": {
+      "compared": 936,
+      "changed": 606,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 23,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[7].max_abs",
+        "original": 1.6534175872802734,
+        "reproduced": 1.6534181833267212,
+        "absolute_difference": 5.960464477539062e-07,
+        "symmetric_relative_difference": 3.604934636406653e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].max_abs",
+        "original": 2.0891427993774414e-05,
+        "reproduced": 2.0831823348999023e-05,
+        "absolute_difference": 5.960464477539063e-08,
+        "symmetric_relative_difference": 0.0028530670470756064
+      }
+    },
+    "per_query_head[7].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_kl_nats",
+        "original": 1.7374628948139943,
+        "reproduced": 1.7374628418723472,
+        "absolute_difference": 5.2941647066262476e-08,
+        "symmetric_relative_difference": 3.047066341634317e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_kl_nats",
+        "original": 3.638401883579207e-08,
+        "reproduced": 2.8829901887475606e-08,
+        "absolute_difference": 7.554116948316462e-09,
+        "symmetric_relative_difference": 0.207621840303283
+      }
+    },
+    "per_query_head[7].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 11,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_total_variation",
+        "original": 0.41333069658913923,
+        "reproduced": 0.41333068409492424,
+        "absolute_difference": 1.2494214995939501e-08,
+        "symmetric_relative_difference": 3.022813233820631e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mean_total_variation",
+        "original": 0.00017152291483753506,
+        "reproduced": 0.00017151821009363894,
+        "absolute_difference": 4.704743896116054e-09,
+        "symmetric_relative_difference": 2.742924407839235e-05
+      }
+    },
+    "per_query_head[7].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[7].mse",
+        "original": 0.9506242576016053,
+        "reproduced": 0.9506242309014188,
+        "absolute_difference": 2.6700186506189993e-08,
+        "symmetric_relative_difference": 2.808700313786828e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].mse",
+        "original": 3.916512100334945e-12,
+        "reproduced": 3.914110414775851e-12,
+        "absolute_difference": 2.401685559094035e-15,
+        "symmetric_relative_difference": 0.0006132205129376824
+      }
+    },
+    "per_query_head[7].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[7].p95_kl_nats",
+        "original": 3.6202161258052987,
+        "reproduced": 3.620215801334543,
+        "absolute_difference": 3.2447075559716154e-07,
+        "symmetric_relative_difference": 8.962745436226812e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].p95_kl_nats",
+        "original": 1.219049958805661e-07,
+        "reproduced": 1.7693810566398204e-07,
+        "absolute_difference": 5.503310978341594e-08,
+        "symmetric_relative_difference": 0.31103028698593455
+      }
+    },
+    "per_query_head[7].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[7].relative_l2",
+        "original": 1.1141453220652051,
+        "reproduced": 1.1141453879915133,
+        "absolute_difference": 6.592630819035605e-08,
+        "symmetric_relative_difference": 5.917208732444013e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[7].relative_l2",
+        "original": 5.478984410616432e-05,
+        "reproduced": 5.477304170697281e-05,
+        "absolute_difference": 1.6802399191511938e-08,
+        "symmetric_relative_difference": 0.00030666995801182663
+      }
+    },
+    "per_query_head[8].cosine": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "per_query_head[8].cosine",
+        "original": 0.5517993077897038,
+        "reproduced": 0.5517993360590173,
+        "absolute_difference": 2.826931355670581e-08,
+        "symmetric_relative_difference": 5.1231148189859886e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "per_query_head[8].cosine",
+        "original": 0.5517993077897038,
+        "reproduced": 0.5517993360590173,
+        "absolute_difference": 2.826931355670581e-08,
+        "symmetric_relative_difference": 5.1231148189859886e-08
+      }
+    },
+    "per_query_head[8].max_abs": {
+      "compared": 936,
+      "changed": 580,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "per_query_head[8].max_abs",
+        "original": 1.6956042051315308,
+        "reproduced": 1.6956034898757935,
+        "absolute_difference": 7.152557373046875e-07,
+        "symmetric_relative_difference": 4.218294193539134e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].max_abs",
+        "original": 2.625584602355957e-05,
+        "reproduced": 2.6285648345947266e-05,
+        "absolute_difference": 2.9802322387695312e-08,
+        "symmetric_relative_difference": 0.0011337868480725624
+      }
+    },
+    "per_query_head[8].mean_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 5,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_kl_nats",
+        "original": 1.0222368010261027,
+        "reproduced": 1.022236847877981,
+        "absolute_difference": 4.685187837694116e-08,
+        "symmetric_relative_difference": 4.5832703520910074e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_kl_nats",
+        "original": 5.4449636215394355e-08,
+        "reproduced": 7.094738234426032e-08,
+        "absolute_difference": 1.6497746128865963e-08,
+        "symmetric_relative_difference": 0.23253495173103647
+      }
+    },
+    "per_query_head[8].mean_total_variation": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 5,
+        "variant": "scalar6_token",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_total_variation",
+        "original": 0.1358556645351846,
+        "reproduced": 0.1358556794669028,
+        "absolute_difference": 1.4931718195221322e-08,
+        "symmetric_relative_difference": 1.0990867848744587e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 17,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mean_total_variation",
+        "original": 0.00027445677137066804,
+        "reproduced": 0.00027446553170545895,
+        "absolute_difference": 8.76033479091376e-09,
+        "symmetric_relative_difference": 3.191779578469933e-05
+      }
+    },
+    "per_query_head[8].mse": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[8].mse",
+        "original": 0.5918216590897821,
+        "reproduced": 0.5918216480534664,
+        "absolute_difference": 1.1036315750168058e-08,
+        "symmetric_relative_difference": 1.8648043005289532e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].mse",
+        "original": 9.606398794309628e-12,
+        "reproduced": 9.613081501185246e-12,
+        "absolute_difference": 6.682706875618624e-15,
+        "symmetric_relative_difference": 0.000695168024404524
+      }
+    },
+    "per_query_head[8].p95_kl_nats": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 23,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "per_query_head[8].p95_kl_nats",
+        "original": 2.958535149115023,
+        "reproduced": 2.9585355107053215,
+        "absolute_difference": 3.615902985920627e-07,
+        "symmetric_relative_difference": 1.2221935389440663e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].p95_kl_nats",
+        "original": 1.0103948304796127e-07,
+        "reproduced": 1.3795554171606955e-07,
+        "absolute_difference": 3.6916058668108285e-08,
+        "symmetric_relative_difference": 0.26759387994783373
+      }
+    },
+    "per_query_head[8].relative_l2": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "science",
+        "layer": 5,
+        "variant": "u4_token",
+        "mode": "K_only",
+        "field": "per_query_head[8].relative_l2",
+        "original": 0.09363509533073117,
+        "reproduced": 0.09363518343305853,
+        "absolute_difference": 8.810232736411461e-08,
+        "symmetric_relative_difference": 9.409105010949281e-07
+      },
+      "max_symmetric_relative": {
+        "capture": "science",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "per_query_head[8].relative_l2",
+        "original": 7.869640028598068e-05,
+        "reproduced": 7.872376910717822e-05,
+        "absolute_difference": 2.7368821197546107e-08,
+        "symmetric_relative_difference": 0.0003476563877459286
+      }
+    },
+    "reference_sum_squares": {
+      "compared": 936,
+      "changed": 936,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 29,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "reference_sum_squares",
+        "original": 5040.825293840361,
+        "reproduced": 5040.82523030129,
+        "absolute_difference": 6.353907156153582e-05,
+        "symmetric_relative_difference": 1.260489460707504e-08
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "reference_sum_squares",
+        "original": 5.6248953664509855,
+        "reproduced": 5.624895118489142,
+        "absolute_difference": 2.4796184394659804e-07,
+        "symmetric_relative_difference": 4.40829255999208e-08
+      }
+    },
+    "tensor_error_k.cosine": {
+      "compared": 936,
+      "changed": 855,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "tensor_error_k.cosine",
+        "original": 0.969642268809701,
+        "reproduced": 0.9696422688096972,
+        "absolute_difference": 3.774758283725532e-15,
+        "symmetric_relative_difference": 3.892939081914502e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 29,
+        "variant": "rgba4_page",
+        "mode": "KV",
+        "field": "tensor_error_k.cosine",
+        "original": 0.969642268809701,
+        "reproduced": 0.9696422688096972,
+        "absolute_difference": 3.774758283725532e-15,
+        "symmetric_relative_difference": 3.892939081914502e-15
+      }
+    },
+    "tensor_error_k.max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.max_abs",
+        "original": 0.0038671493530273438,
+        "reproduced": 0.0038671493530273438,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.mse",
+        "original": 8.016766651246976e-08,
+        "reproduced": 8.016766651246976e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_k.mse",
+        "original": 8.016766651246976e-08,
+        "reproduced": 8.016766651246976e-08,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_k.relative_l2": {
+      "compared": 936,
+      "changed": 897,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "u2_token",
+        "mode": "KV",
+        "field": "tensor_error_k.relative_l2",
+        "original": 0.5442682738452489,
+        "reproduced": 0.5442682738452502,
+        "absolute_difference": 1.3322676295501878e-15,
+        "symmetric_relative_difference": 2.447814237155015e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "systems",
+        "layer": 11,
+        "variant": "scalar6_hdr_block",
+        "mode": "KV",
+        "field": "tensor_error_k.relative_l2",
+        "original": 0.23966240024020036,
+        "reproduced": 0.23966240024020133,
+        "absolute_difference": 9.71445146547012e-16,
+        "symmetric_relative_difference": 4.0533898749798984e-15
+      }
+    },
+    "tensor_error_v.cosine": {
+      "compared": 936,
+      "changed": 855,
+      "max_absolute": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "scalar6_channel_permuted",
+        "mode": "KV",
+        "field": "tensor_error_v.cosine",
+        "original": 0.9878475333965142,
+        "reproduced": 0.9878475333965123,
+        "absolute_difference": 1.887379141862766e-15,
+        "symmetric_relative_difference": 1.910597615578787e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "story",
+        "layer": 0,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "tensor_error_v.cosine",
+        "original": 0.91994088620703,
+        "reproduced": 0.9199408862070281,
+        "absolute_difference": 1.887379141862766e-15,
+        "symmetric_relative_difference": 2.051630892985462e-15
+      }
+    },
+    "tensor_error_v.max_abs": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.max_abs",
+        "original": 0.00012171268463134766,
+        "reproduced": 0.00012171268463134766,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.mse": {
+      "compared": 936,
+      "changed": 0,
+      "max_absolute": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.mse",
+        "original": 6.422050783534498e-11,
+        "reproduced": 6.422050783534498e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "fp16",
+        "mode": "KV",
+        "field": "tensor_error_v.mse",
+        "original": 6.422050783534498e-11,
+        "reproduced": 6.422050783534498e-11,
+        "absolute_difference": 0.0,
+        "symmetric_relative_difference": 0.0
+      }
+    },
+    "tensor_error_v.relative_l2": {
+      "compared": 936,
+      "changed": 918,
+      "max_absolute": {
+        "capture": "systems",
+        "layer": 17,
+        "variant": "scalar8_page",
+        "mode": "KV",
+        "field": "tensor_error_v.relative_l2",
+        "original": 0.38581031016167594,
+        "reproduced": 0.3858103101616773,
+        "absolute_difference": 1.3322676295501878e-15,
+        "symmetric_relative_difference": 3.453167513827946e-15
+      },
+      "max_symmetric_relative": {
+        "capture": "records",
+        "layer": 0,
+        "variant": "u4_asymmetric",
+        "mode": "KV",
+        "field": "tensor_error_v.relative_l2",
+        "original": 0.1539706522738183,
+        "reproduced": 0.15397065227381898,
+        "absolute_difference": 6.938893903907228e-16,
+        "symmetric_relative_difference": 4.506634089960994e-15
+      }
+    }
+  },
+  "top_absolute_differences": [
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "fp16",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "fp16",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "fp16",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "field": "reference_sum_squares",
+      "original": 5040.825293840361,
+      "reproduced": 5040.82523030129,
+      "absolute_difference": 6.353907156153582e-05,
+      "symmetric_relative_difference": 1.260489460707504e-08
+    }
+  ],
+  "top_symmetric_relative_differences": [
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "KV",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "K_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "u2_token",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "u4_token",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "u8_token",
+      "mode": "V_only",
+      "field": "per_query_head[4].mean_kl_nats",
+      "original": -1.5173049131849405e-09,
+      "reproduced": 4.1113334593650955e-08,
+      "absolute_difference": 4.2630639506835896e-08,
+      "symmetric_relative_difference": 1.0369054207882047
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "KV",
+      "field": "per_query_head[0].mean_kl_nats",
+      "original": 1.7820073743568068e-09,
+      "reproduced": 1.221776515580392e-08,
+      "absolute_difference": 1.0435757781447114e-08,
+      "symmetric_relative_difference": 0.8541462082768645
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "K_only",
+      "field": "per_query_head[0].mean_kl_nats",
+      "original": 1.7820073743568068e-09,
+      "reproduced": 1.221776515580392e-08,
+      "absolute_difference": 1.0435757781447114e-08,
+      "symmetric_relative_difference": 0.8541462082768645
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "fp16",
+      "mode": "V_only",
+      "field": "per_query_head[0].mean_kl_nats",
+      "original": 1.7820073743568068e-09,
+      "reproduced": 1.221776515580392e-08,
+      "absolute_difference": 1.0435757781447114e-08,
+      "symmetric_relative_difference": 0.8541462082768645
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "field": "per_query_head[0].mean_kl_nats",
+      "original": 1.7820073743568068e-09,
+      "reproduced": 1.221776515580392e-08,
+      "absolute_difference": 1.0435757781447114e-08,
+      "symmetric_relative_difference": 0.8541462082768645
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "field": "per_query_head[0].mean_kl_nats",
+      "original": 1.7820073743568068e-09,
+      "reproduced": 1.221776515580392e-08,
+      "absolute_difference": 1.0435757781447114e-08,
+      "symmetric_relative_difference": 0.8541462082768645
+    }
+  ],
+  "aggregate_comparison": [
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042566787784981396,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.159263561555969e-09
+    },
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042566787784981396,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.159263561555969e-09
+    },
+    {
+      "split": "development",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004256667185862524,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042566787784981396,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.159263561555969e-09
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.6688106703217376,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.6688106767151475,
+        "mean_kl_nats": 0.3387456097338939,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.393409912597292e-09
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4505662553726199,
+        "mean_kl_nats": 0.33874561131902986,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4505662611315395,
+        "mean_kl_nats": 0.3387456097338939,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.758919618958913e-09
+    },
+    {
+      "split": "development",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5955938322434815,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5955938328094209,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.65939406449445e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.039598330217345636,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03959833065112105,
+        "mean_kl_nats": 0.0003162941697769837,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.337754114236425e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.016206630612469054,
+        "mean_kl_nats": 0.0003162945677195968,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.016206631792363767,
+        "mean_kl_nats": 0.0003162941697769837,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.1798947131824722e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.03610592954438744,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03610592927706741,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.673200272251819e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2798197756373597,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.27981977733325464,
+        "mean_kl_nats": 0.038702232747295263,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.6958949244916255e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.16767156672077616,
+        "mean_kl_nats": 0.038702230982679144,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1676715692442755,
+        "mean_kl_nats": 0.038702232747295263,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.5234993539235973e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2540894064384817,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.25408940677779895,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.3931724097158167e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5066489376738547,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5066489375280427,
+        "mean_kl_nats": 0.26573555725783055,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.4581191809526217e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4257303615207261,
+        "mean_kl_nats": 0.26573555731395876,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.42573036061252056,
+        "mean_kl_nats": 0.26573555725783055,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 9.082055107967335e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3519976734273752,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.35199767338698085,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.0394354527961696e-11
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2857165923743375,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.28571659332692,
+        "mean_kl_nats": 0.032045709670503054,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 9.525825128697818e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14553350261887704,
+        "mean_kl_nats": 0.03204570884287659,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14553350376587942,
+        "mean_kl_nats": 0.032045709670503054,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.1470023819626363e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.26342512898599824,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.26342512887358427,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.1241396702388329e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.1671462624537682,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.16714626172355035,
+        "mean_kl_nats": 0.03314361569472627,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.302178584023267e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14364972267234524,
+        "mean_kl_nats": 0.033143616806925805,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14364972038014578,
+        "mean_kl_nats": 0.03314361569472627,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.292199458020505e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0827655652091951,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.08276556504486776,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 1.6432734339932864e-10
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.30500161725543656,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.30500161927755204,
+        "mean_kl_nats": 0.033266256440863035,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.0221154750643677e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.18409187182752387,
+        "mean_kl_nats": 0.033266256362392,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.18409187446744926,
+        "mean_kl_nats": 0.033266256440863035,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.6399253894027197e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2600704847599516,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.26007048484436907,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 8.441747301191072e-11
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5693195754806393,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5693195782270443,
+        "mean_kl_nats": 0.31632577064999534,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.7464049923153766e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4347161731638661,
+        "mean_kl_nats": 0.3163257690211589,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4347161781911233,
+        "mean_kl_nats": 0.31632577064999534,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.02725716611252e-09
+    },
+    {
+      "split": "development",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5427582178858754,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5427582180717601,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.8588464101298996e-10
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9907852457443845,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.9907852524479077,
+        "mean_kl_nats": 0.6613073359646804,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.703523180995319e-09
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8679997175021998,
+        "mean_kl_nats": 0.6613073380978283,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8679997249963582,
+        "mean_kl_nats": 0.6613073359646804,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.4941584049526e-09
+    },
+    {
+      "split": "development",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2554353746091028,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2554353742218559,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.8724690121227923e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.07334872056561109,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07334872092443519,
+        "mean_kl_nats": 0.005104656111693522,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 3.588240954366384e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.05707311400644395,
+        "mean_kl_nats": 0.0051046576249408225,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.057073113452518,
+        "mean_kl_nats": 0.005104656111693522,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 5.539259537168384e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.044485867911784306,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 8.191453071404453e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.125650967849803,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1256509672832117,
+        "mean_kl_nats": 0.02265125799810669,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.665913016539292e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.11647985557994711,
+        "mean_kl_nats": 0.022651257939927564,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1164798549068179,
+        "mean_kl_nats": 0.02265125799810669,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.731292051531668e-10
+    },
+    {
+      "split": "development",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.044485867092639,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.044485867911784306,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 8.191453071404453e-10
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006730427865490805,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006730428917286075,
+        "mean_kl_nats": 7.871522006931151e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.0517952706706746e-09
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0062256543283632435,
+        "mean_kl_nats": 7.871471669186736e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006225655123194845,
+        "mean_kl_nats": 7.871522006931151e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.948316015776724e-10
+    },
+    {
+      "split": "development",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.002553664894770778,
+        "mean_kl_nats": 2.1211763101577036e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.002553665658011064,
+        "mean_kl_nats": 2.135590037213883e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.632402860766052e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042676547502264666,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.775420807426894e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042676547502264666,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.775420807426894e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004267662525647274,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00042676547502264666,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 16.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.775420807426894e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.6277160417803375,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.6277160406832323,
+        "mean_kl_nats": 0.4641411578408177,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.097105184477698e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.5156932489921296,
+        "mean_kl_nats": 0.46414115899903097,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5156932480478857,
+        "mean_kl_nats": 0.4641411578408177,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 9.442439052875784e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5152259125763246,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5152259119724414,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.038831656951515e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.03114897591851522,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 10.25,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.031148976967492536,
+        "mean_kl_nats": 0.00039103492630549987,
+        "bits_per_kv": 10.25,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.0489773147326353e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.015328205902760699,
+        "mean_kl_nats": 0.0003910368514319723,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.015328207353722385,
+        "mean_kl_nats": 0.00039103492630549987,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.4509616858698893e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.027097540053279703,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.02709754004705895,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 13.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.22075307932235e-12
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2607596833232289,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2607596828643916,
+        "mean_kl_nats": 0.031043439885566963,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.5883730148688073e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.14226433154993295,
+        "mean_kl_nats": 0.031043439747657747,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14226433216854095,
+        "mean_kl_nats": 0.031043439885566963,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.186079981596038e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.23400135267963038,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.23400135247801246,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.0161791680628482e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.4763654376258883,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 7.09375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4763654369652191,
+        "mean_kl_nats": 0.2207352652745611,
+        "bits_per_kv": 7.09375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.606691860255864e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.39472829940492665,
+        "mean_kl_nats": 0.22073526825198567,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.39472829889872535,
+        "mean_kl_nats": 0.2207352652745611,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.062013030965318e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3163712707581256,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3163712705973803,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.6074530595489023e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2490054739598667,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 7.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.24900547502012324,
+        "mean_kl_nats": 0.028579002241181626,
+        "bits_per_kv": 7.0,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.0602565492234817e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12531267150410097,
+        "mean_kl_nats": 0.02857900296792867,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12531267434755566,
+        "mean_kl_nats": 0.028579002241181626,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.843454693923775e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22552408807696553,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.22552408791156597,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.5,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.653995551631482e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.14791282938291583,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 7.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.14791282878859247,
+        "mean_kl_nats": 0.03536750973261172,
+        "bits_per_kv": 7.125,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.943233682970117e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12960696402117855,
+        "mean_kl_nats": 0.03536751151468253,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12960696347754824,
+        "mean_kl_nats": 0.03536750973261172,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.436303074368709e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.07425469323115132,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07425469259359645,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 6.375548700088274e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2717269908039377,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2717269917623693,
+        "mean_kl_nats": 0.045230760647682645,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 9.58431611852717e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.19750421160793372,
+        "mean_kl_nats": 0.04523076135292913,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1975042130428424,
+        "mean_kl_nats": 0.045230760647682645,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.4349086918663545e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22170894938838281,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2217089495249358,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.3655299113679575e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5585440719829965,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5585440715370297,
+        "mean_kl_nats": 0.37539282812896335,
+        "bits_per_kv": 5.75,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.459668190293087e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4907953788777958,
+        "mean_kl_nats": 0.37539282972361643,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4907953785094176,
+        "mean_kl_nats": 0.37539282812896335,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.683781613084136e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.49336859441598,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.49336859376438863,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 10.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.515913919535876e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9868821713715635,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 5.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.9868821754596943,
+        "mean_kl_nats": 0.6833704215895565,
+        "bits_per_kv": 5.875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.088130722834649e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8726299285022313,
+        "mean_kl_nats": 0.683370423114957,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8726299313848283,
+        "mean_kl_nats": 0.6833704215895565,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.8825969389245643e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.21977375979852376,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.21977376018635686,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.878330989692813e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.06645038004152973,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 7.3125,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.06645038052383499,
+        "mean_kl_nats": 0.006308323014048819,
+        "bits_per_kv": 7.3125,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 4.823052651703463e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.05274666053653759,
+        "mean_kl_nats": 0.006308323718463858,
+        "bits_per_kv": 11.625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.05274666143441917,
+        "mean_kl_nats": 0.006308323014048819,
+        "bits_per_kv": 11.625,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 8.978815746463198e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.0403935724485317,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 2.6676851005991153e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.11562565752767523,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 7.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.11562565933417786,
+        "mean_kl_nats": 0.024947993537507377,
+        "bits_per_kv": 7.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.8065026280433827e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.10785921726391413,
+        "mean_kl_nats": 0.024947993090043977,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.10785921850528776,
+        "mean_kl_nats": 0.024947993537507377,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.2413736288907629e-09
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.04039357218176319,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.0403935724485317,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 12,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 2.6676851005991153e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006399442971618025,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 10.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006399443514177166,
+        "mean_kl_nats": 7.921412585691367e-05,
+        "bits_per_kv": 10.375,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.425591408439456e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.005974251422745501,
+        "mean_kl_nats": 7.921654453855491e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.005974251961893824,
+        "mean_kl_nats": 7.921412585691367e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.391483232086713e-10
+    },
+    {
+      "split": "pilot_holdout",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0023893737097791163,
+        "mean_kl_nats": 2.2959356233394598e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0023893740777969504,
+        "mean_kl_nats": 2.293281754793147e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 12,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.680178340889628e-10
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00045453162940592597,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.9459746822449277e-09
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00045453162940592597,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.9459746822449277e-09
+    },
+    {
+      "split": "tune",
+      "variant": "fp16",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0004545345753806082,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.00045453162940592597,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 16.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.9459746822449277e-09
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.5785175965878333,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5785175912772497,
+        "mean_kl_nats": 0.4393940604371684,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.310583639506206e-09
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.4946078342629457,
+        "mean_kl_nats": 0.43939405717677166,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4946078276603668,
+        "mean_kl_nats": 0.4393940604371684,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.602578872527687e-09
+    },
+    {
+      "split": "tune",
+      "variant": "rgba4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.5667833174724983,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.5667833145348768,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.937621479404129e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.03410981514070659,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.03410981587076022,
+        "mean_kl_nats": 0.0003271257239393962,
+        "bits_per_kv": 10.25,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.300536356003029e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.014117428655381082,
+        "mean_kl_nats": 0.0003271254450592475,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.014117430763333789,
+        "mean_kl_nats": 0.0003271257239393962,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.1079527064843395e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar4_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.03096393711866243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.030963936693150722,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 13.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.255117092011318e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2599186486141668,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2599186489423623,
+        "mean_kl_nats": 0.029526804752745297,
+        "bits_per_kv": 7.013888888888889,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.281954708000967e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12350503636275971,
+        "mean_kl_nats": 0.029526805384285256,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12350503992425657,
+        "mean_kl_nats": 0.029526804752745297,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.5614968613151277e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_channel_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.23541097254944243,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2354109708829864,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.506944444444445,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.66645602872606e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.4907627849909334,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.49076278217123537,
+        "mean_kl_nats": 0.265375596251431,
+        "bits_per_kv": 7.09375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.8196980306205432e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.41063661516020583,
+        "mean_kl_nats": 0.2653755945601299,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4106366117785469,
+        "mean_kl_nats": 0.265375596251431,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.381658952861244e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_hdr_block",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.3490057508484043,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3490057490963551,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.546875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.7520491724098974e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.251157208555282,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.25115720792070034,
+        "mean_kl_nats": 0.02750261554701007,
+        "bits_per_kv": 7.0,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.345816649933056e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.12328068127389018,
+        "mean_kl_nats": 0.027502616329850783,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.12328068129593096,
+        "mean_kl_nats": 0.02750261554701007,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.2040785863097767e-11
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.2295118992155167,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.22951189800380772,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.5,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.2117089831509276e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.13632529801798232,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.1363252967203233,
+        "mean_kl_nats": 0.034092136729789786,
+        "bits_per_kv": 7.125,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.2976590080260308e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.11425985464209835,
+        "mean_kl_nats": 0.03409213581954455,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.11425985385771753,
+        "mean_kl_nats": 0.034092136729789786,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 7.843808241814187e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.07442183607123024,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.07442183567114458,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.5625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 4.000856590469226e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.2781532156176207,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2781532152322893,
+        "mean_kl_nats": 0.03688011980044469,
+        "bits_per_kv": 7.020833333333333,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.853313779167422e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.15804898022684608,
+        "mean_kl_nats": 0.036880118307275674,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.15804898063069187,
+        "mean_kl_nats": 0.03688011980044469,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.038457901422987e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar6_token_permuted",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.25339388157958476,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.25339388103729527,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.510416666666666,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 5.422894910900311e-10
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.48966085180398167,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4896608479747981,
+        "mean_kl_nats": 0.21628913656271073,
+        "bits_per_kv": 5.75,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.8291835813275554e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.35197054232729297,
+        "mean_kl_nats": 0.2162891360183872,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.3519705390956935,
+        "mean_kl_nats": 0.21628913656271073,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 3.2315994880072196e-09
+    },
+    {
+      "split": "tune",
+      "variant": "scalar8_page",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.47673846086971805,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.4767384580822049,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 10.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.787513164737021e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.9272742621444551,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.927274255529512,
+        "mean_kl_nats": 0.6591969166754561,
+        "bits_per_kv": 5.875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.6149430377748786e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.8248416208592447,
+        "mean_kl_nats": 0.659196915504633,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.8248416159894068,
+        "mean_kl_nats": 0.6591969166754561,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 4.869837977317104e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u2_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.22644007234534286,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.2264400717047732,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 10.9375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 6.405696528766214e-10
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.06734612690406358,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.06734612867841482,
+        "mean_kl_nats": 0.005199133418469882,
+        "bits_per_kv": 7.3125,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 1.774351235384053e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.052827124630767594,
+        "mean_kl_nats": 0.005199132319197902,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.05282712685873751,
+        "mean_kl_nats": 0.005199133418469882,
+        "bits_per_kv": 11.625,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 2.2279699127270014e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u4_asymmetric",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.04089913972449149,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 4.2578970904649793e-10
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.10800480912424562,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.10800481091120627,
+        "mean_kl_nats": 0.0233997521971228,
+        "bits_per_kv": 7.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.7869606488973844e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.09958457360195552,
+        "mean_kl_nats": 0.023399751895670205,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.0995845762299271,
+        "mean_kl_nats": 0.0233997521971228,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.6279715764632172e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u4_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.0408991401502812,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "reproduced": {
+        "relative_l2": 0.04089913972449149,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 11.6875,
+        "rows": 6,
+        "screen_pass": true
+      },
+      "relative_l2_abs_difference": 4.2578970904649793e-10
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "KV",
+      "original": {
+        "relative_l2": 0.006364314010150029,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.006364316093751471,
+        "mean_kl_nats": 8.449485814938359e-05,
+        "bits_per_kv": 10.375,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 2.0836014424235882e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "K_only",
+      "original": {
+        "relative_l2": 0.005931029687918382,
+        "mean_kl_nats": 8.449381380374532e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.005931031010538717,
+        "mean_kl_nats": 8.449485814938359e-05,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 1.322620335302005e-09
+    },
+    {
+      "split": "tune",
+      "variant": "u8_token",
+      "mode": "V_only",
+      "original": {
+        "relative_l2": 0.002399799333888225,
+        "mean_kl_nats": 2.8524288597858777e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "reproduced": {
+        "relative_l2": 0.002399799238764515,
+        "mean_kl_nats": 2.862320243284085e-07,
+        "bits_per_kv": 13.1875,
+        "rows": 6,
+        "screen_pass": false
+      },
+      "relative_l2_abs_difference": 9.512371012404541e-11
+    }
+  ],
+  "reproduced_summary_max_difference_vs_independent": 0.0,
+  "reproduced_summary_gate_agreement": true,
+  "equality_tolerance": "None chosen post hoc: numerical differences are reported. Exact memory and screening agreement are separate checks."
+}

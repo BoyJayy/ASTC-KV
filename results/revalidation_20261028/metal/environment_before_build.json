@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-28T19:08:39.524065+00:00",
+  "python": "3.15.1 (main, Oct 21 2026, 05:55:12) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "machine": "arm64",
+  "macos": {
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "stderr": ""
+  },
+  "xcode": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  },
+  "sdk_version": {
+    "returncode": 0,
+    "stdout": "26.5",
+    "stderr": ""
+  },
+  "sdk_path": {
+    "returncode": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+    "stderr": ""
+  },
+  "metal_compiler": {
+    "returncode": 72,
+    "stdout": "",
+    "stderr": "xcrun: error: unable to find utility \"metal\", not a developer tool or in PATH"
+  },
+  "power_settings": {
+    "returncode": 0,
+    "stdout": "AC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         10\n womp                 1\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10",
+    "stderr": ""
+  },
+  "power_source": {
+    "returncode": 0,
+    "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t99%; AC attached; not charging present: true",
+    "stderr": ""
+  },
+  "hardware": {
+    "SPDisplaysDataType": [
+      {
+        "_name": "Apple M5 Pro",
+        "spdisplays_metal": "spdisplays_supported",
+        "spdisplays_vendor": "sppci_vendor_Apple",
+        "sppci_bus": "spdisplays_builtin",
+        "sppci_cores": "20",
+        "sppci_device_type": "spdisplays_gpu",
+        "sppci_model": "Apple M5 Pro"
+      }
+    ],
+    "SPHardwareDataType": [
+      {
+        "_name": "hardware_overview",
+        "boot_rom_version": "18000.161.10",
+        "chip_type": "Apple M5 Pro",
+        "machine_model": "Mac17,8",
+        "machine_name": "MacBook Pro",
+        "model_number": "MGE64LL/A",
+        "number_processors": "proc 18:6:0:12",
+        "os_loader_version": "18000.161.10",
+        "physical_memory": "48 GB"
+      }
+    ]
+  },
+  "dependency_versions": {
+    "mlx": null,
+    "mlx-lm": null,
+    "numpy": null,
+    "transformers": null,
+    "safetensors": null
+  },
+  "metal_device": {
+    "returncode": null,
+    "stdout": "",
+    "stderr": "[Errno 2] No such file or directory: '/path/to/ASTC-KV/build/metal/astc-kv-probe'"
+  }
+}

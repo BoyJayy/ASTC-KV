@@ -1,0 +1,9 @@
+# Preserve bytes for the published SHA256 manifest, including on Windows.
+* -text
+*.npz binary
+*.npy binary
+*.f16 binary
+*.f32 binary
+*.bin binary
+*.astc binary
+*.png binary

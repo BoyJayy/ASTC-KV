@@ -1,0 +1,585 @@
+{
+  "status": "PASS",
+  "reports": 21,
+  "changed": 19,
+  "special_characters": 442,
+  "special_types": 25,
+  "schema": "astc-kv-report-style-audit-v1",
+  "created_utc": "2026-10-28T21:15:07.277403+00:00",
+  "source_manifest_initial_verification": {
+    "status": "PASS",
+    "manifest_sha256": "352c079ddfae984b14c9404c7995fb0c517a37592bfcd1df342d7698cd787a8f",
+    "historical_files": 1644,
+    "matched_current": 1644,
+    "matched_original_report_backup": 0,
+    "local_binaries": 9,
+    "matched_local_binaries": 9,
+    "failures": []
+  },
+  "backup_manifest": "results/research_v3_20261029/report_style_backup/manifest.json",
+  "backup_manifest_sha256": "9faa4ca874f170f7c09c1ed76aae2395b06b8fa72f23fa4ead614e547796d4dd",
+  "original_prompt_sha256_unchanged": "703f42491208352f45ed2fcdb8352348bb188f4fed29ad74675146f698692c2b",
+  "allowed": "ASCII printable characters, tabs/newlines, Cyrillic letters",
+  "special_character_rules": [
+    {
+      "codepoint": "U+00A7",
+      "name": "SECTION SIGN",
+      "count": 7,
+      "rule": "section "
+    },
+    {
+      "codepoint": "U+00AB",
+      "name": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK",
+      "count": 12,
+      "rule": "\""
+    },
+    {
+      "codepoint": "U+00B1",
+      "name": "PLUS-MINUS SIGN",
+      "count": 1,
+      "rule": "+/-"
+    },
+    {
+      "codepoint": "U+00B2",
+      "name": "SUPERSCRIPT TWO",
+      "count": 6,
+      "rule": "^2"
+    },
+    {
+      "codepoint": "U+00B5",
+      "name": "MICRO SIGN",
+      "count": 13,
+      "rule": "mu"
+    },
+    {
+      "codepoint": "U+00B7",
+      "name": "MIDDLE DOT",
+      "count": 8,
+      "rule": "*"
+    },
+    {
+      "codepoint": "U+00BB",
+      "name": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK",
+      "count": 12,
+      "rule": "\""
+    },
+    {
+      "codepoint": "U+00D7",
+      "name": "MULTIPLICATION SIGN",
+      "count": 62,
+      "rule": "*"
+    },
+    {
+      "codepoint": "U+0394",
+      "name": "GREEK CAPITAL LETTER DELTA",
+      "count": 3,
+      "rule": "delta_"
+    },
+    {
+      "codepoint": "U+03A3",
+      "name": "GREEK CAPITAL LETTER SIGMA",
+      "count": 5,
+      "rule": "sum_t"
+    },
+    {
+      "codepoint": "U+03B4",
+      "name": "GREEK SMALL LETTER DELTA",
+      "count": 2,
+      "rule": "delta_"
+    },
+    {
+      "codepoint": "U+03B8",
+      "name": "GREEK SMALL LETTER THETA",
+      "count": 2,
+      "rule": "theta"
+    },
+    {
+      "codepoint": "U+03BC",
+      "name": "GREEK SMALL LETTER MU",
+      "count": 21,
+      "rule": "mu"
+    },
+    {
+      "codepoint": "U+03C1",
+      "name": "GREEK SMALL LETTER RHO",
+      "count": 1,
+      "rule": "rho"
+    },
+    {
+      "codepoint": "U+2013",
+      "name": "EN DASH",
+      "count": 22,
+      "rule": "-"
+    },
+    {
+      "codepoint": "U+2014",
+      "name": "EM DASH",
+      "count": 143,
+      "rule": "-"
+    },
+    {
+      "codepoint": "U+201C",
+      "name": "LEFT DOUBLE QUOTATION MARK",
+      "count": 1,
+      "rule": "\""
+    },
+    {
+      "codepoint": "U+201D",
+      "name": "RIGHT DOUBLE QUOTATION MARK",
+      "count": 1,
+      "rule": "\""
+    },
+    {
+      "codepoint": "U+2026",
+      "name": "HORIZONTAL ELLIPSIS",
+      "count": 4,
+      "rule": "..."
+    },
+    {
+      "codepoint": "U+2192",
+      "name": "RIGHTWARDS ARROW",
+      "count": 43,
+      "rule": "->"
+    },
+    {
+      "codepoint": "U+2212",
+      "name": "MINUS SIGN",
+      "count": 37,
+      "rule": "-"
+    },
+    {
+      "codepoint": "U+2248",
+      "name": "ALMOST EQUAL TO",
+      "count": 12,
+      "rule": "~"
+    },
+    {
+      "codepoint": "U+2264",
+      "name": "LESS-THAN OR EQUAL TO",
+      "count": 20,
+      "rule": "<="
+    },
+    {
+      "codepoint": "U+2265",
+      "name": "GREATER-THAN OR EQUAL TO",
+      "count": 3,
+      "rule": ">="
+    },
+    {
+      "codepoint": "U+22A5",
+      "name": "UP TACK",
+      "count": 1,
+      "rule": "q perpendicular k -> dot(q,k)=0"
+    }
+  ],
+  "context_rules": [
+    "mu/Greek mu + s -> us",
+    "numeric dimensions -> x; speed factors -> x; inline products -> *",
+    "spaced prose middle dot -> hyphen",
+    "word/number and numeric unit spacing only outside URLs and inline/fenced code",
+    "sum_t denotes summation over t; delta_theta denotes the angular increment"
+  ],
+  "scope_note": "Historical results and manifests are unchanged. Stage hashes do not prohibit later research edits. No claim about authorship or detector output.",
+  "files": [
+    {
+      "path": "README.md",
+      "before_sha256": "0eec5e82afcf5d754d99202496b2dcb9013d6cfde5e4b9f5001f65bd5fb413e7",
+      "stage_after_sha256": "614d6654c58f690028780e94efa09279005c0ddffa5f8985c3099d59fc34b904",
+      "before_bytes": 11894,
+      "stage_after_bytes": 11859,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 6,
+        "original_ascii_inline_spans": 39
+      },
+      "backup_path": "files/README.md"
+    },
+    {
+      "path": "docs/atlas_alloc_probe.md",
+      "before_sha256": "3f5a05d4f82e5339adb957583e5ec91b6cb8c289f9205f99db3e6d07b27d2ed9",
+      "stage_after_sha256": "9d40389228284328c1ebee7814d351697564f0df96666f46a61ae0d9c2f6474b",
+      "before_bytes": 4126,
+      "stage_after_bytes": 4114,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 2,
+        "original_ascii_inline_spans": 13
+      },
+      "backup_path": "files/docs/atlas_alloc_probe.md"
+    },
+    {
+      "path": "docs/atlas_attention_v6.md",
+      "before_sha256": "59d4e8b47fc69bb1792e949fb6e92ed812ac5798685aa439130e9146d422f833",
+      "stage_after_sha256": "d46b89ca80712452f3842087ce4cfbe5dcc14ef755d9194069fa6af187a674bc",
+      "before_bytes": 9259,
+      "stage_after_bytes": 9238,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 4,
+        "original_ascii_inline_spans": 33
+      },
+      "backup_path": "files/docs/atlas_attention_v6.md"
+    },
+    {
+      "path": "docs/block_geometry_v2.md",
+      "before_sha256": "13e11bd59750c2a8cc25e3c3bdf7e6da5fbeac22a6f89334c5c636a4b07a7e1e",
+      "stage_after_sha256": "25bbc5e26b0181c46c31097b96ba77d69d96a4982a7a9baf82dd534b2d845828",
+      "before_bytes": 14525,
+      "stage_after_bytes": 14513,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 3,
+        "original_ascii_inline_spans": 23
+      },
+      "backup_path": "files/docs/block_geometry_v2.md"
+    },
+    {
+      "path": "docs/followup_experiments.md",
+      "before_sha256": "4e0d8fd664f3de9c6d1518cf1fe8a6d1017b012923af4ca55fe04bacec88303d",
+      "stage_after_sha256": "dd2f8f0beb951c893f5c20f153f18b52545b2673b09aecb9be6a737ccfcf90ee",
+      "before_bytes": 16589,
+      "stage_after_bytes": 16577,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 3,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 7
+      },
+      "backup_path": "files/docs/followup_experiments.md"
+    },
+    {
+      "path": "docs/geometry_holdout_v2.md",
+      "before_sha256": "cf0eccd5de71cbaa5a4c19dda324f9fea99819693de0868ac79c6b0e4ec67c4d",
+      "stage_after_sha256": "6c46197d2c3b3714072a6e594fd35aa147954160c924ea817a5ef8d9ef5192ab",
+      "before_bytes": 11947,
+      "stage_after_bytes": 11924,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 3,
+        "original_ascii_inline_spans": 15
+      },
+      "backup_path": "files/docs/geometry_holdout_v2.md"
+    },
+    {
+      "path": "docs/independent_research_20261028.md",
+      "before_sha256": "fc2fad298672b7d7944c79e6a0630cfc8ecce5c364daa205c4ebb7ce205d1a4a",
+      "stage_after_sha256": "2374eeb3e4df5f09d3d9a03f76bcfe3d6a5de287866136ab3ba79f89553014d7",
+      "before_bytes": 21320,
+      "stage_after_bytes": 21323,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 14,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 39
+      },
+      "backup_path": "files/docs/independent_research_20261028.md"
+    },
+    {
+      "path": "docs/initial_report.md",
+      "before_sha256": "f6deaa4977d7d12453f96d83894585a026566cec025365829523ab4702482d10",
+      "stage_after_sha256": "e520dd6619f48c8bc0d24713b32aa3f76652595a5c110f9daf181d48bf6006f4",
+      "before_bytes": 29870,
+      "stage_after_bytes": 29821,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 9,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 14
+      },
+      "backup_path": "files/docs/initial_report.md"
+    },
+    {
+      "path": "docs/kernel_attribution_design_v2.md",
+      "before_sha256": "0e33e070aaec011d814bf90c15e8f0875a3ed1924ac9fe601088a2b8de49ebeb",
+      "stage_after_sha256": "1e20fa45c10a5ecfb0778b985724aeaef4b4eb266ab38addf6ac38d66220eecf",
+      "before_bytes": 12919,
+      "stage_after_bytes": 12908,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 3,
+        "original_ascii_inline_spans": 51
+      },
+      "backup_path": "files/docs/kernel_attribution_design_v2.md"
+    },
+    {
+      "path": "docs/llama_baseline_v2.md",
+      "before_sha256": "5174ea25d36085b040c7dc98bb6b45ef7a283204547aaf39b322ffc1ccb701a8",
+      "stage_after_sha256": "2e169f747293f4ae706f269e8bbff3bee178073f1c5517eb1bebafe9230fd57b",
+      "before_bytes": 22063,
+      "stage_after_bytes": 22041,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 9,
+        "fenced_blocks": 2,
+        "original_ascii_inline_spans": 84
+      },
+      "backup_path": "files/docs/llama_baseline_v2.md"
+    },
+    {
+      "path": "docs/metal_path.md",
+      "before_sha256": "7f744fdff11bb15281a95fa5a30dcfc9e50ee81586f24cb2d2bc8d9e132a7d81",
+      "stage_after_sha256": "76505b420fc44a4bf16626aab65ef64bed2bc9e0f6a1d92ddaca45409c2bd9ef",
+      "before_bytes": 21113,
+      "stage_after_bytes": 21090,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 8,
+        "fenced_blocks": 1,
+        "original_ascii_inline_spans": 97
+      },
+      "backup_path": "files/docs/metal_path.md"
+    },
+    {
+      "path": "docs/metal_revalidation_20261028.md",
+      "before_sha256": "4c85195712e3299bb0f5aea4bd8e522802975a5de2a81fe0bdfba1a6243feaa4",
+      "stage_after_sha256": "0100226c245753828f1c8f6139004c08abd031f803525a446329b4b03b5aa5fd",
+      "before_bytes": 12346,
+      "stage_after_bytes": 12327,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 1,
+        "fenced_blocks": 5,
+        "original_ascii_inline_spans": 54
+      },
+      "backup_path": "files/docs/metal_revalidation_20261028.md"
+    },
+    {
+      "path": "docs/model_baselines.md",
+      "before_sha256": "2a7b03aab1ac37019f5e0f9fc0737303e6c18093011cb4796d746a4ff2f2c765",
+      "stage_after_sha256": "2a7b03aab1ac37019f5e0f9fc0737303e6c18093011cb4796d746a4ff2f2c765",
+      "before_bytes": 10270,
+      "stage_after_bytes": 10270,
+      "changed": false,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 8,
+        "fenced_blocks": 3,
+        "original_ascii_inline_spans": 48
+      },
+      "backup_path": "files/docs/model_baselines.md"
+    },
+    {
+      "path": "docs/pool_probe_v5.md",
+      "before_sha256": "64a2ebf2d328e5033927b3d483c954ff79e0bb6e8f526e7ac6902220f9e68d08",
+      "stage_after_sha256": "17bbc88ffe20900501e0b310bcb1908b376a7c73076aea5078eb3f649c45b77b",
+      "before_bytes": 10635,
+      "stage_after_bytes": 10616,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 4,
+        "original_ascii_inline_spans": 37
+      },
+      "backup_path": "files/docs/pool_probe_v5.md"
+    },
+    {
+      "path": "docs/prior_art.md",
+      "before_sha256": "16941c5093364a347425d325219647a77732125a0d1625fb7fd58f58f7301f39",
+      "stage_after_sha256": "0d3a3500f7845ce2ffdbe62e712eb37ceaa5a548f5f9786de416f6ccac6ea64a",
+      "before_bytes": 40901,
+      "stage_after_bytes": 40894,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 55,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 36
+      },
+      "backup_path": "files/docs/prior_art.md"
+    },
+    {
+      "path": "docs/protocol.md",
+      "before_sha256": "666a3f77d14266271432b57889bc1b4d2533ebc4e3d3af842b190f52f29e4a22",
+      "stage_after_sha256": "666a3f77d14266271432b57889bc1b4d2533ebc4e3d3af842b190f52f29e4a22",
+      "before_bytes": 6003,
+      "stage_after_bytes": 6003,
+      "changed": false,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 3
+      },
+      "backup_path": "files/docs/protocol.md"
+    },
+    {
+      "path": "docs/representation_v0.1.md",
+      "before_sha256": "316a6c38d061056a2a740d5c7966e7e0454ab26c9f29bfeaf260012929833379",
+      "stage_after_sha256": "9dc178b32ca3673787bd5acc5b7a5423c04a5f5b7a45a675d299a837df136ec3",
+      "before_bytes": 5411,
+      "stage_after_bytes": 5403,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 21
+      },
+      "backup_path": "files/docs/representation_v0.1.md"
+    },
+    {
+      "path": "docs/research_decision_v2.md",
+      "before_sha256": "8238523619908ece2302b9ded7e99bee2cf27cd3719ee10f559ceb5790091afe",
+      "stage_after_sha256": "4926328c1251203e7d903fe80d95e22e4b578c38ab8ac193668e08310198f736",
+      "before_bytes": 19632,
+      "stage_after_bytes": 19561,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 4,
+        "fenced_blocks": 0,
+        "original_ascii_inline_spans": 7
+      },
+      "backup_path": "files/docs/research_decision_v2.md"
+    },
+    {
+      "path": "docs/research_v2_report.md",
+      "before_sha256": "572b46512ed05ebd3c464a880efd28aa8cffcdc402697096b0ecc3e04ea657ee",
+      "stage_after_sha256": "f08e4165ade0d1646f490c3fb664eb0e91a10c28384651c6391d7ee9cf5a0c6b",
+      "before_bytes": 27733,
+      "stage_after_bytes": 27653,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 2,
+        "fenced_blocks": 1,
+        "original_ascii_inline_spans": 33
+      },
+      "backup_path": "files/docs/research_v2_report.md"
+    },
+    {
+      "path": "docs/revalidation_report_20261028.md",
+      "before_sha256": "30fac909f9415727ab11773273c5987585558ae4d98b6d838e289717db2be135",
+      "stage_after_sha256": "27b276abe9659885aa5cae85eca835dcd2ace95b5b4b0711dc9937f224965c89",
+      "before_bytes": 21840,
+      "stage_after_bytes": 21801,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 3,
+        "fenced_blocks": 1,
+        "original_ascii_inline_spans": 18
+      },
+      "backup_path": "files/docs/revalidation_report_20261028.md"
+    },
+    {
+      "path": "docs/snapshot_revalidation_20261028.md",
+      "before_sha256": "40c5a4291b54f511126707fea6dc634927bab97cdab2b12b36c57faa8db1f102",
+      "stage_after_sha256": "eb85c6238eb4c34983c4d2904e8f9b4363428aab384ebb9576e845b191bef632",
+      "before_bytes": 12149,
+      "stage_after_bytes": 12137,
+      "changed": true,
+      "invariants": {
+        "urls_preserved": true,
+        "fenced_blocks_preserved": true,
+        "original_ascii_inline_spans_preserved": true,
+        "urls": 0,
+        "fenced_blocks": 2,
+        "original_ascii_inline_spans": 30
+      },
+      "backup_path": "files/docs/snapshot_revalidation_20261028.md"
+    }
+  ],
+  "source_manifest_after_style_verification": {
+    "status": "PASS",
+    "manifest_sha256": "352c079ddfae984b14c9404c7995fb0c517a37592bfcd1df342d7698cd787a8f",
+    "historical_files": 1644,
+    "matched_current": 1625,
+    "matched_original_report_backup": 19,
+    "report_backups": 21,
+    "matched_report_backups": 21,
+    "local_binaries": 9,
+    "matched_local_binaries": 9,
+    "historical_anchors": {
+      "previous_manifest_sha256": true,
+      "original_archive_sha256": true
+    },
+    "failures": []
+  },
+  "stage_after_special_characters": 0,
+  "text_integrity_verification": {
+    "status": "PASS",
+    "reports": 21,
+    "backups": 21,
+    "urls": 116,
+    "fenced_blocks": 40,
+    "ascii_inline_spans": 702,
+    "numeric_tokens_preserved_except_equivalent_superscript_or_orthogonality_notation": [
+      "docs/independent_research_20261028.md",
+      "docs/prior_art.md"
+    ],
+    "current_reports_including_new_and_outer_readme": 24,
+    "new_reports_read_only": true,
+    "ast_parse_scripts": 2
+  },
+  "self_tests": {
+    "normalization": {
+      "status": "PASS",
+      "cases": 8
+    },
+    "historical_verification": {
+      "status": "PASS",
+      "cases": 10
+    }
+  },
+  "prose_check": "PASS: obvious word/number/unit joins repaired; source claims and formula meaning retained. Existing mixed Russian/English terminology was not rewritten."
+}

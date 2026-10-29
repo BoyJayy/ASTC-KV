@@ -1,0 +1,10 @@
+{
+  "schema": "astckv.atlas_ragged.v6",
+  "tokens": [391],
+  "tile_tokens": [13],
+  "sessions": 1,
+  "rounds": 1,
+  "iterations": 1,
+  "seed": 20261029,
+  "scope": "Correctness smoke only. T391/tile13 exercises partial page, partial SIMD wave, 6x6 channel boundaries and incomplete compact-atlas final block row. Timing is not interpreted."
+}

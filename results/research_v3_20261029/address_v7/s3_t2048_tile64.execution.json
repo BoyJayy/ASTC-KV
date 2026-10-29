@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/path/to/ASTC-KV/build/metal-atlas-v7/astc-kv-probe-atlas-v7",
+    "/path/to/ASTC-KV/results/kernel_v2/fixtures_page/t2048/manifest.json",
+    "/path/to/ASTC-KV/metal/attention_atlas_v7.metal",
+    "60",
+    "20",
+    "64",
+    "-",
+    "20263128"
+  ],
+  "exit": 0,
+  "environment_before": {
+    "utc": "2026-10-28T21:09:44.639313+00:00",
+    "battery": {
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    "thermal": {
+      "exit": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  },
+  "environment_after": {
+    "utc": "2026-10-28T21:09:45.183087+00:00",
+    "battery": {
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    "thermal": {
+      "exit": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  }
+}

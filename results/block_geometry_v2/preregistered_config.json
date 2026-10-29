@@ -1,0 +1,84 @@
+{
+  "schema": "astc-kv-block-geometry-v2",
+  "registered_before_first_result": true,
+  "date": "2026-10-28",
+  "status": "exploratory reused pilot captures; no fresh holdout",
+  "hypothesis": "With identical per-token normalization and identical values in each 6x6 block, spatial placement can change astcenc reconstruction and attention error. A globally fixed D4 orientation may be a cheap same-cache-bit candidate; no orientation is selected before observing this experiment.",
+  "captures": [
+    "systems",
+    "story",
+    "science",
+    "records"
+  ],
+  "layers": [
+    0,
+    5,
+    11,
+    17,
+    23,
+    29
+  ],
+  "pilot": {
+    "capture": "story",
+    "layer": 17
+  },
+  "extension_rule": "Run remaining 23 capture/layer pairs only when pilot controls pass and pilot wall time is <=30 seconds; stop between pairs at 180 seconds overall. Never extend based on quality gains.",
+  "pilot_max_wall_s": 30,
+  "total_max_wall_s": 180,
+  "seed": 20261028,
+  "block": 6,
+  "profile": "ldr",
+  "layout": "scalar RGB with alpha=1",
+  "normalization": "token; fp16_floor(min), fp16_ceil(max-offset), normalized once before transforms",
+  "quality": 98,
+  "encoder": "unmodified Arm astcenc 5.7.0; threads=1",
+  "page_tokens": 96,
+  "prefix_tokens": 288,
+  "query_positions": [
+    288,
+    294,
+    300,
+    306,
+    312,
+    318,
+    324,
+    330,
+    336,
+    342,
+    348,
+    354,
+    360,
+    366,
+    372,
+    383
+  ],
+  "variants": [
+    "identity",
+    "rot90",
+    "rot180",
+    "rot270",
+    "flip_horizontal",
+    "flip_vertical",
+    "transpose",
+    "anti_transpose",
+    "random36",
+    "whole_block_permutation"
+  ],
+  "transform_contract": "D4 and random36 apply the same bijection to all normalized padded 6x6 blocks. Inverse each block before trimming padding and denormalizing with unchanged original token metadata. Whole-block negative control moves full normalized blocks within each head, then inverse orders payload and reconstruction. All maps use only fixed constants/seed and dimensions, never Q, K, V or errors.",
+  "padding": "D=64 edge-pad to66 before transforms; padded values are part of the fixed block multiset; exclude padding from original tensor/attention metrics",
+  "negative_criteria": {
+    "map_inverse": "Every transform is bijective and inverse restores synthetic coordinates exactly; all eight D4 maps distinct",
+    "unchanged_ranges_values": "Per-block normalized sorted values exactly unchanged for local transforms; token FP16 offsets/scales computed once and reused",
+    "identity_reference": "Identity payload bytes, decoded tensor and byte counts exactly equal existing encode_tensor scalar6/token result",
+    "whole_block": "After inverse permutation, payload bytes and decoded values exactly equal identity for every block",
+    "finite": "All reconstructions and metrics finite; any failure aborts quality interpretation and extension"
+  },
+  "metrics": {
+    "primary": "FP64 causal GQA fixed original Q/K: relative L2 = sqrt(sum ||P_prefix*(Vdecoded-V)||^2 / sum ||P*V||^2), aggregated by summed SSE, never mean relative L2",
+    "secondary": "Original-prefix tensor relative L2/MSE; normalized reconstruction SSE; practical V-only snapshot with K and V tail rounded FP16; per-capture and per-layer primary aggregates",
+    "astc_modes": "Read 11-bit block-mode identifiers and partition counts directly from each 16-byte payload using vendored astcenc physical format. Group normalized and original-prefix tensor SSE by mode; associations are descriptive, not causal proof about modes. No encoder mode search knobs are changed.",
+    "selection": "Report every predefined variant. Any best global D4 orientation is exploratory and requires new frozen confirmation; no fitted per-block orientation or Q-dependent selection. No significance or novelty claim."
+  },
+  "memory": "ASTC payload and FP16 ranges identical size for all variants. D4 has zero per-cache transform metadata using fixed coordinate arithmetic. Diagnostic random36 additionally reports36 uint8 map bytes shared globally. Whole-block control reports uint16 block-index map bytes shared across heads; neither diagnostic map is a same-cache-bit candidate. GPU indexing/latency and allocation unmeasured.",
+  "budget": "CPU only, one process, OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1; at most24 pairs x10 variants plus identity reference; no model/library downloads; save new outputs only"
+}

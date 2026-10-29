@@ -1,0 +1,188 @@
+{
+  "created_utc": "2026-10-28T20:22:39.414778+00:00",
+  "config": {
+    "schema": "astckv.kernel_wave.v4",
+    "registered_before_results": true,
+    "hypothesis": "Process eight tokens concurrently per SIMD wave, with quad QK reductions and cross-quad V reductions; reduce serial softmax iterations. Same seven paths as v3. Useful effect is unknown before experiment.",
+    "source_fixture": "results/metal_fixtures/story_l17_v_token6/manifest.json",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tile_tokens": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "sessions": 2,
+    "rounds": 30,
+    "iterations": 10,
+    "seed": 20261029,
+    "correctness": "Unchanged v1 relative-L2 <=1e-4 on each path's own reconstructed values, plus existing engineering decode gate",
+    "scope": "T384 is the original fixture; T2048/T8192 repeat its known blocks and FP16 K solely as traffic/shape controls, not long-context model quality. All tests repeatedly read one cache and may fit GPU cache.",
+    "negative_outcome": "Reducing tile length gives no reproducible latency reduction, or an optimized ASTC path remains slower than the best own buffer path. No inference claim from microbenchmarks.",
+    "decision": "Exploratory tile sweep, then freeze tile choices before synchronized-host official baseline comparison. No claim of new flash-attention scheduling principle.",
+    "negative_manifest": "results/kernel_v2/fixtures/t2048/manifest.json"
+  },
+  "hashes_before": {
+    "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4": "3609f3082948365f109a4292d6e2ae80279169f17ef9b81d3904f53c1695aacd",
+    "/path/to/ASTC-KV/metal/attention_v4.metal": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+    "/path/to/ASTC-KV/configs/kernel_wave_v4.json": "356d657497a0be4bfdd7a35c74baea9c01f17667ee06303ce2fee4f4a7854227",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "30013acee5fb53942b79f5ba1fc19f093c6e02c48d6a933e77cb9636bf3acf8b"
+  },
+  "schedule": [
+    [
+      0,
+      2048,
+      256
+    ],
+    [
+      0,
+      384,
+      32
+    ],
+    [
+      0,
+      384,
+      16
+    ],
+    [
+      0,
+      8192,
+      256
+    ],
+    [
+      0,
+      8192,
+      64
+    ],
+    [
+      0,
+      2048,
+      32
+    ],
+    [
+      0,
+      8192,
+      32
+    ],
+    [
+      0,
+      384,
+      64
+    ],
+    [
+      0,
+      384,
+      256
+    ],
+    [
+      0,
+      8192,
+      128
+    ],
+    [
+      0,
+      2048,
+      16
+    ],
+    [
+      0,
+      8192,
+      16
+    ],
+    [
+      0,
+      384,
+      128
+    ],
+    [
+      0,
+      2048,
+      64
+    ],
+    [
+      0,
+      2048,
+      128
+    ],
+    [
+      1,
+      384,
+      32
+    ],
+    [
+      1,
+      2048,
+      16
+    ],
+    [
+      1,
+      2048,
+      256
+    ],
+    [
+      1,
+      384,
+      16
+    ],
+    [
+      1,
+      8192,
+      128
+    ],
+    [
+      1,
+      8192,
+      256
+    ],
+    [
+      1,
+      2048,
+      64
+    ],
+    [
+      1,
+      8192,
+      64
+    ],
+    [
+      1,
+      2048,
+      128
+    ],
+    [
+      1,
+      384,
+      128
+    ],
+    [
+      1,
+      8192,
+      16
+    ],
+    [
+      1,
+      2048,
+      32
+    ],
+    [
+      1,
+      384,
+      64
+    ],
+    [
+      1,
+      384,
+      256
+    ],
+    [
+      1,
+      8192,
+      32
+    ]
+  ]
+}

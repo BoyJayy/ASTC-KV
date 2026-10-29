@@ -1,0 +1,3 @@
+Built /path/to/ASTC-KV/results/revalidation_20261028/metal/launcher_build/astc-kv-probe
+Offline Metal compiler unavailable; probe will compile /path/to/ASTC-KV/metal/attention.metal at runtime.
+Host build succeeded; shader compilation and GPU execution remain unverified until the probe runs.

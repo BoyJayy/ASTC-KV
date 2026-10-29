@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "report_files_checked": 30,
+  "forbidden_characters": 0,
+  "new_report_links": "PASS",
+  "totals": {
+    "gpu_processes": 72,
+    "attention_checks": 1008,
+    "gather_scalar_checks": 32624640,
+    "main_blocks": 6600,
+    "main_samples": 26400,
+    "max_relative_l2": 9.307367557825085e-07
+  },
+  "note": "Original master prompt is an immutable input and is excluded from report style rewriting."
+}

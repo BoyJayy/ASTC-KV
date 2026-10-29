@@ -1,0 +1,10 @@
+{
+  "observed_utc": "2026-10-28T18:09:28.210153+00:00",
+  "reason": "np.load BadZipFile; truncated archive, cause not established",
+  "corrupt_bytes": 14317621,
+  "corrupt_sha256": "4b572025f31a7301af245c98f653877f0d8389fbc4e75e78d895f16f210a3061",
+  "previous_expected_sha256": "a42ba0ae7fdd70fe5d15894bd3864aebe822d340288775c2708963b6bf4f7029",
+  "repair": "regenerated from pinned checkpoint and identical prompt/config, archive and SHA256 verified, atomically replaced",
+  "repaired_sha256": "a42ba0ae7fdd70fe5d15894bd3864aebe822d340288775c2708963b6bf4f7029",
+  "repaired_bytes": 16530473
+}

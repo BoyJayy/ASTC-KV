@@ -1,0 +1,5 @@
+third_party/model/config.json
+third_party/model/model.safetensors
+third_party/model/tokenizer.json
+third_party/model/tokenizer_config.json
+third_party/model/special_tokens_map.json

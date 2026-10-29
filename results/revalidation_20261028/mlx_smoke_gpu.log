@@ -1,0 +1,7 @@
+mx.metal.device_info is deprecated and will be removed in a future version. Use mx.device_info instead.
+Traceback (most recent call last):
+  File "/path/to/ASTC-KV/scripts/probe_mlx.py", line 177, in <module>
+    main()
+  File "/path/to/ASTC-KV/scripts/probe_mlx.py", line 134, in main
+    raise RuntimeError('MLX attention failed pre-timing correctness gate')
+RuntimeError: MLX attention failed pre-timing correctness gate

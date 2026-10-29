@@ -1,0 +1,17 @@
+test_coherent_and_cancelling_errors_same_mse (test_error_diagnostic.ErrorDiagnosticTests.test_coherent_and_cancelling_errors_same_mse) ... ok
+test_diagonal_expectation_against_exhaustive_signs (test_error_diagnostic.ErrorDiagnosticTests.test_diagonal_expectation_against_exhaustive_signs) ... ok
+test_mask_and_gqa_with_irrelevant_future_key (test_error_diagnostic.ErrorDiagnosticTests.test_mask_and_gqa_with_irrelevant_future_key) ... ok
+test_prefix_error_does_not_renormalize_attention (test_error_diagnostic.ErrorDiagnosticTests.test_prefix_error_does_not_renormalize_attention) ... ok
+test_zero_error_identity (test_error_diagnostic.ErrorDiagnosticTests.test_zero_error_identity) ... ok
+test_gqa_causal_against_scalar_oracle (test_numeric.NumericTests.test_gqa_causal_against_scalar_oracle) ... ok
+test_metadata_bounds (test_numeric.NumericTests.test_metadata_bounds) ... ok
+test_no_future_in_incomplete_page (test_numeric.NumericTests.test_no_future_in_incomplete_page) ... ok
+test_payload_and_metadata_padding (test_numeric.NumericTests.test_payload_and_metadata_padding) ... ok
+test_quantizer_counts (test_numeric.NumericTests.test_quantizer_counts) ... ok
+test_real_astc_constants (test_numeric.NumericTests.test_real_astc_constants) ... ok
+test_transforms_and_permutation_inverses (test_numeric.NumericTests.test_transforms_and_permutation_inverses) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.031s
+
+OK

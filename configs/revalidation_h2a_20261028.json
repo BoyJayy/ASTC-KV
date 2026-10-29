@@ -1,0 +1,21 @@
+{
+  "schema": "astckv.exploratory.h2a.v1",
+  "registered_before_new_measurements": true,
+  "date": "2026-10-28",
+  "scope": "Exploratory reuse of old pilot data, never a fresh confirmation set",
+  "hypothesis": "Cross-token alignment of ASTC V errors increases attention-output error beyond independent sign noise with exactly the same row energies; a causal page-mean correction may remove part of it.",
+  "primary_input": "story layer17 supplied software-decoded token6 and page6 fixtures",
+  "extension_if_cpu_encoder_available": "All four existing captures and six stored layers, same frozen analysis; no parameter fitting",
+  "prefix_tokens": 288,
+  "page_tokens": 96,
+  "query_positions": [288,294,300,306,312,318,324,330,336,342,348,354,360,366,372,383],
+  "representations": ["scalar6_token", "scalar6_page", "u4_token"],
+  "controls": ["fixed exact Q/K, isolate V only", "exact diagonal expectation under independent token-row Rademacher signs", "256 seeded random sign trials on primary fixture", "256 within-page row permutations on primary fixture", "page-mean FP16 correction computed from completed prefix only", "identical FP16 K/tail policy when comparing to historical snapshot"],
+  "seed": 20261028,
+  "decomposition": "E=B+R; report ||PB||^2, ||PR||^2, 2<PB,PR>, and their checked sum. Terms are not independent shares.",
+  "negative_outcome": "No consistent positive cross-token excess, or mean correction worsens output error, or corrected ASTC remains dominated by U4 at equal or lower logical byte budget. Report per document/head heterogeneity.",
+  "decision_rule": "Advance correction only if each document's aggregate output SSE improves by at least 10% and pooled relative-L2 is no worse than U4 at <=4.5 V-prefix bits; otherwise retain it as diagnostic and do not implement runtime correction.",
+  "memory": "One FP16 correction per page/channel costs 16/96=1/6 additional bit per V scalar. token6 becomes 13/3 bits per V-prefix scalar; page6 becomes 25/6. Include exact FP16 tail and K separately.",
+  "budget": "CPU only, at most four captures x six layers x two ASTC representations; no model download, training, future queries in correction or hardware speed claim.",
+  "limitations": "Bias correction and attention error decomposition are known principles. A positive result alone establishes neither novelty nor model-level improvement. Encoder residual evaluation has nonzero runtime cost."
+}

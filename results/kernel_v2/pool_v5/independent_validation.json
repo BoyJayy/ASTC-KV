@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "processes": 9,
+  "slot_hash_sets_verified": 219,
+  "input_hashes_identical_across_all_sessions": true,
+  "query_sha256": "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+  "kv_and_metadata_hashes": {
+    "k_half_sha256": "91d46481d6c204c40114e142f9d376431a65ca9a71f8a13dd8029542423336b8",
+    "v_offset_sha256": "e441167f444b4289142e59d14faf1e2093f85db765bad4bdf03632348869bb34",
+    "v_scale_sha256": "b79603c9587317c25fd62dd01bf8cd8cad5175433ef4216ecbc1c3102905e92b",
+    "v_astc_payload_sha256": "097d374d598a6d25087a9b9093e30dddf3d85502e284429ceddcf677da900fb4",
+    "v_half_sha256": "839892af64039a76dbf1e36406d80d83e8fa7c091914c6bfd4b78083535bff09"
+  },
+  "maximum_pool_reference_relative_l2": 9.307367557825085e-07,
+  "outcome": "negative",
+  "scope": "Post-run independent audit of hashes actually recorded by GPU host, source fixtures, separate hardware readback, every-slot coverage, cycle schedule and raw medians. Does not establish cache miss rates."
+}

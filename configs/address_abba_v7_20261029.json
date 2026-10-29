@@ -1,0 +1,15 @@
+{
+  "schema": "astckv.address_abba.v7",
+  "registered_before_results": true,
+  "sessions": 5,
+  "blocks": 60,
+  "iterations": 20,
+  "tokens": 8192,
+  "tile": 256,
+  "seed": 20261030,
+  "motivation": "First ten-variant sweep met its median criterion but had broad timing tails. A separate ABBA/BAAB confirmation reduces separation between compared calls and balances smooth time drift. No old data are discarded.",
+  "primary": "v6_to_recurrent: sqrt(B1*B2/(A1*A2)), where A is compact v6 and B is recurrent v7",
+  "positive_criterion": "Median primary block ratio <=0.95 in each of five sessions; all original correctness gates and exact normalized decode must pass.",
+  "secondary": "hoisted_to_recurrent and original_to_recurrent remain descriptive; no substitute primary. Report all block ratios, tails and fractions, without claiming independence of blocks or hardware-counter attribution.",
+  "scope": "Same immutable v7 shader, inputs, memory and represented values. Only host timing order changes. No inference/runtime or model-quality claim. ABBA cancels ideal linear log-time drift, not arbitrary interference."
+}

@@ -1,0 +1,8 @@
+numpy==2.3.5
+tokenizers==0.21.4
+cmake==3.31.6
+
+# Optional independent validation: torch==2.6.0, transformers==4.51.3,
+# safetensors==0.5.3. Install a CPU wheel on Linux to avoid CUDA downloads.
+# Optional figures: matplotlib. Mac performance dependencies are separately
+# recorded by probe_mlx.py; freeze the actual tested runtime before comparison.

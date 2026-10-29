@@ -1,0 +1,116 @@
+{
+  "schema": "astckv.metal.controls.v1",
+  "cases": [
+    {
+      "case": "v_only",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/metal_fixtures/story_l17_v_token6/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "30",
+        "10",
+        "256"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "e68c1fa8dd1cecccd80da4593525c8b49ea9930db67844731fe3111debcfa513"
+    },
+    {
+      "case": "kv",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/metal_fixtures/story_l17_kv_page6/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "30",
+        "10",
+        "256"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "64891c1d8daa152a15ac4c10fdb4f81af860ab0ef9187cf1e10a8e306a0f2113"
+    },
+    {
+      "case": "k_only",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/revalidation_20261028/metal/final_controls/k_only/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "1",
+        "1",
+        "256"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "cc36ed1e6d182ce40943b655240e3ddf8d4248a2db7b3d45ab3e5eca55f78cbe"
+    },
+    {
+      "case": "fp16",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/revalidation_20261028/metal/final_controls/fp16/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "1",
+        "1",
+        "256"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "02bf55eb2da3a9f5674986e018acc5c8f48fbd733ae3c7216c2e474142847e86"
+    },
+    {
+      "case": "wrong_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/revalidation_20261028/metal/final_controls/wrong_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "1",
+        "1",
+        "256"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "9ba4d251853fe07c53a52b482d865f7665758ec0ed18dd1ac6521fe50b3dbcb6"
+    },
+    {
+      "case": "nonfinite_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/revalidation_20261028/metal/final_controls/nonfinite_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "1",
+        "1",
+        "256"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "9ba4d251853fe07c53a52b482d865f7665758ec0ed18dd1ac6521fe50b3dbcb6"
+    },
+    {
+      "case": "missing_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal/astc-kv-probe",
+        "/path/to/ASTC-KV/results/revalidation_20261028/metal/final_controls/missing_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention.metal",
+        "1",
+        "1",
+        "256"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "db519af27f063dcfeea878da871fd1653d7d12ab52d36710259d267336c23515"
+    }
+  ],
+  "passed": true,
+  "binary_sha256": "c4d78d74336e0938832b19318c94e28819f4e48b597eac4fb322dff652901146",
+  "host_source_sha256": "d86243ad1110e902ca48af4923d6740798d46db2d935b8dda6b49c015e4b9da3",
+  "shader_sha256": "0c05dd441f46df989e27cf325688f6decbe4a5b747025513091a5f208208fd61",
+  "script_sha256": "87a102caee7b44244d055c24416818b9516c9666057563b3a1263e0f8431aa01",
+  "scope": "Two real fixtures, two derived storage controls, three refusal tests; not all shapes/formats or model inference"
+}

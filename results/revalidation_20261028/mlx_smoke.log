@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/path/to/ASTC-KV/scripts/probe_mlx.py", line 177, in <module>
+    main()
+  File "/path/to/ASTC-KV/scripts/probe_mlx.py", line 65, in main
+    import mlx.core as mx
+ImportError: [metal::load_device] No Metal device available. This typically occurs in headless, sandboxed, or virtualized macOS sessions where the GPU is not accessible.

@@ -1,0 +1,131 @@
+{
+  "schema": "astckv.metal.controls.v4",
+  "cases": [
+    {
+      "case": "ragged",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/ragged/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20"
+    },
+    {
+      "case": "v_only",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/metal_fixtures/story_l17_v_token6/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "e68c1fa8dd1cecccd80da4593525c8b49ea9930db67844731fe3111debcfa513"
+    },
+    {
+      "case": "kv",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/metal_fixtures/story_l17_kv_page6/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "64891c1d8daa152a15ac4c10fdb4f81af860ab0ef9187cf1e10a8e306a0f2113"
+    },
+    {
+      "case": "k_only",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/k_only/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "cc36ed1e6d182ce40943b655240e3ddf8d4248a2db7b3d45ab3e5eca55f78cbe"
+    },
+    {
+      "case": "fp16",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/fp16/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "manifest_sha256": "02bf55eb2da3a9f5674986e018acc5c8f48fbd733ae3c7216c2e474142847e86"
+    },
+    {
+      "case": "wrong_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/wrong_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "9ba4d251853fe07c53a52b482d865f7665758ec0ed18dd1ac6521fe50b3dbcb6"
+    },
+    {
+      "case": "nonfinite_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/nonfinite_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "9ba4d251853fe07c53a52b482d865f7665758ec0ed18dd1ac6521fe50b3dbcb6"
+    },
+    {
+      "case": "missing_decode",
+      "command": [
+        "/path/to/ASTC-KV/build/metal-v4/astc-kv-probe-v4",
+        "/path/to/ASTC-KV/results/kernel_v2/v4_controls/missing_decode/manifest.json",
+        "/path/to/ASTC-KV/metal/attention_v4.metal",
+        "1",
+        "1",
+        "13"
+      ],
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "manifest_sha256": "db519af27f063dcfeea878da871fd1653d7d12ab52d36710259d267336c23515"
+    }
+  ],
+  "passed": true,
+  "binary_sha256": "3609f3082948365f109a4292d6e2ae80279169f17ef9b81d3904f53c1695aacd",
+  "host_source_sha256": "38ab358900b7825c099e743459c5ad47da864af33bc3737a2b32a1473a776aa8",
+  "shader_sha256": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+  "script_sha256": "4ca7f460cb39516861a6e7e685cf3e132e6875fea3f0dfc9d7c68dfecb35b445",
+  "scope": "Two real fixtures, two derived storage controls, three refusal tests; not all shapes/formats or model inference"
+}

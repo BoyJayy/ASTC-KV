@@ -1,0 +1,26 @@
+{
+  "astc_allocation_probe" : {
+    "ASTC_4x4_LDR" : true,
+    "ASTC_6x6_LDR" : true,
+    "ASTC_8x8_LDR" : true
+  },
+  "counter_sampling_dispatch" : false,
+  "counter_sets" : [
+    {
+      "counters" : [
+        "GPUTimestamp"
+      ],
+      "name" : "timestamp"
+    }
+  ],
+  "device" : "Apple M5 Pro",
+  "max_buffer_length" : 30150672384,
+  "note" : "Allocation is not a decoding test; full probe execution tests texture reads.",
+  "os" : "Version 26.6.2 (Build 25G83)",
+  "physical_memory_bytes" : 51539607552,
+  "recommended_max_working_set_bytes" : 40200896512,
+  "registry_id" : 4294968641,
+  "supports_apple7" : true,
+  "supports_apple8" : true,
+  "unified_memory" : true
+}

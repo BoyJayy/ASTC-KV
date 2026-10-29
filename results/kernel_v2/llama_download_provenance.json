@@ -1,0 +1,8 @@
+{
+  "revision": "c3df4b7e22a1ac38da663552d19e649dd97ca936",
+  "url": "https://github.com/ggml-org/llama.cpp/archive/c3df4b7e22a1ac38da663552d19e649dd97ca936.tar.gz",
+  "archive_sha256": "d82221b4491ba3879ec55786eaf0cc7cae468b05951b12e508e8c614b49f4374",
+  "archive_bytes": 38688283,
+  "source_dir": "/path/to/ASTC-KV/third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936",
+  "scope": "Pinned public source downloaded; compiled behavior still requires validation"
+}

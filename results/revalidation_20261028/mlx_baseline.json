@@ -1,0 +1,1673 @@
+{
+  "schema": "astckv.mlx_attention_baseline.v1",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.14",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "numpy": "2.3.5"
+  },
+  "git_commit": {
+    "returncode": 0,
+    "stdout": "869ffc277aa38dd8b12f96409c037f1edc32d414",
+    "stderr": ""
+  },
+  "macos": {
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "stderr": ""
+  },
+  "xcode": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "xcode-select: error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance"
+  },
+  "metal_sdk": {
+    "returncode": 0,
+    "stdout": "26.5",
+    "stderr": ""
+  },
+  "power": {
+    "returncode": 0,
+    "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t92%; AC attached; not charging present: true",
+    "stderr": ""
+  },
+  "status": "isolated_attention_executed",
+  "metal_performance_verified": true,
+  "source_sha256": "c956d454ab81c4482310f5f4121afb2f8d4df781fb042483ad0a44b8f710ddef",
+  "mlx_default_device": "Device(gpu, 0)",
+  "metal_device_info": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 40200896512,
+    "memory_size": 51539607552,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 30150672384,
+    "resource_limit": 499000
+  },
+  "correctness": {
+    "fp16_fast_sdpa": {
+      "relative_l2_vs_own_fp64_reference": 0.00022660115722203058,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q4_g32": {
+      "relative_l2_vs_own_fp64_reference": 0.0005031414657046478,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q4_g64": {
+      "relative_l2_vs_own_fp64_reference": 0.0005453594228198126,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q8_g32": {
+      "relative_l2_vs_own_fp64_reference": 0.0005515282119062596,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    },
+    "mlx_q8_g64": {
+      "relative_l2_vs_own_fp64_reference": 0.0005281367764635885,
+      "finite": true,
+      "threshold": 0.005,
+      "passed": true
+    }
+  },
+  "capture": "results/captures/story.npz",
+  "layer": 17,
+  "capture_sha256": "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+  "query_dtype": "float16",
+  "input_KV_dtype": "float16 before cache quantization",
+  "query_isolation": "fresh q+0 expression per quantized operation; included in host timing; prevents MLX-LM in-place query scaling",
+  "shape": {
+    "batch": 1,
+    "query_heads": 9,
+    "kv_heads": 3,
+    "query_tokens": 1,
+    "kv_tokens": 384,
+    "head_dim": 64
+  },
+  "warmup": 10,
+  "repeats": 50,
+  "seed": 2718,
+  "raw_timings": [
+    {
+      "trial": 0,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 239958
+    },
+    {
+      "trial": 0,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 239209
+    },
+    {
+      "trial": 0,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 253333
+    },
+    {
+      "trial": 0,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 479209
+    },
+    {
+      "trial": 0,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 190125
+    },
+    {
+      "trial": 1,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 186625
+    },
+    {
+      "trial": 1,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 199208
+    },
+    {
+      "trial": 1,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 158917
+    },
+    {
+      "trial": 1,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 199958
+    },
+    {
+      "trial": 1,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 176583
+    },
+    {
+      "trial": 2,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 180500
+    },
+    {
+      "trial": 2,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 796750
+    },
+    {
+      "trial": 2,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 265625
+    },
+    {
+      "trial": 2,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 273917
+    },
+    {
+      "trial": 2,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 468083
+    },
+    {
+      "trial": 3,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 236000
+    },
+    {
+      "trial": 3,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 171125
+    },
+    {
+      "trial": 3,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 182542
+    },
+    {
+      "trial": 3,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 197666
+    },
+    {
+      "trial": 3,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 231667
+    },
+    {
+      "trial": 4,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 190375
+    },
+    {
+      "trial": 4,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 207167
+    },
+    {
+      "trial": 4,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 180042
+    },
+    {
+      "trial": 4,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 179000
+    },
+    {
+      "trial": 4,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 212708
+    },
+    {
+      "trial": 5,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 190625
+    },
+    {
+      "trial": 5,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 226958
+    },
+    {
+      "trial": 5,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 237250
+    },
+    {
+      "trial": 5,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 180750
+    },
+    {
+      "trial": 5,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 188417
+    },
+    {
+      "trial": 6,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 214000
+    },
+    {
+      "trial": 6,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 187208
+    },
+    {
+      "trial": 6,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 196541
+    },
+    {
+      "trial": 6,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 444208
+    },
+    {
+      "trial": 6,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 176916
+    },
+    {
+      "trial": 7,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 185708
+    },
+    {
+      "trial": 7,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 198708
+    },
+    {
+      "trial": 7,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 209625
+    },
+    {
+      "trial": 7,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 221375
+    },
+    {
+      "trial": 7,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 219125
+    },
+    {
+      "trial": 8,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 193750
+    },
+    {
+      "trial": 8,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 176167
+    },
+    {
+      "trial": 8,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 147125
+    },
+    {
+      "trial": 8,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 179167
+    },
+    {
+      "trial": 8,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 191292
+    },
+    {
+      "trial": 9,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 178458
+    },
+    {
+      "trial": 9,
+      "order": 1,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 195916
+    },
+    {
+      "trial": 9,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 201958
+    },
+    {
+      "trial": 9,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 189584
+    },
+    {
+      "trial": 9,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 209917
+    },
+    {
+      "trial": 10,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 738042
+    },
+    {
+      "trial": 10,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 233708
+    },
+    {
+      "trial": 10,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 219375
+    },
+    {
+      "trial": 10,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 341792
+    },
+    {
+      "trial": 10,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 227666
+    },
+    {
+      "trial": 11,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 170542
+    },
+    {
+      "trial": 11,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 187792
+    },
+    {
+      "trial": 11,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 213000
+    },
+    {
+      "trial": 11,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 190750
+    },
+    {
+      "trial": 11,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 202083
+    },
+    {
+      "trial": 12,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 177792
+    },
+    {
+      "trial": 12,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 279917
+    },
+    {
+      "trial": 12,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 226500
+    },
+    {
+      "trial": 12,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 210708
+    },
+    {
+      "trial": 12,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 194459
+    },
+    {
+      "trial": 13,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 186208
+    },
+    {
+      "trial": 13,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 197167
+    },
+    {
+      "trial": 13,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 190709
+    },
+    {
+      "trial": 13,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 204958
+    },
+    {
+      "trial": 13,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 185584
+    },
+    {
+      "trial": 14,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 182875
+    },
+    {
+      "trial": 14,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 177708
+    },
+    {
+      "trial": 14,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 196000
+    },
+    {
+      "trial": 14,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 201459
+    },
+    {
+      "trial": 14,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 197209
+    },
+    {
+      "trial": 15,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 198166
+    },
+    {
+      "trial": 15,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 211708
+    },
+    {
+      "trial": 15,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 180167
+    },
+    {
+      "trial": 15,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 169584
+    },
+    {
+      "trial": 15,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 177042
+    },
+    {
+      "trial": 16,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 209292
+    },
+    {
+      "trial": 16,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 191625
+    },
+    {
+      "trial": 16,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 178708
+    },
+    {
+      "trial": 16,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 207750
+    },
+    {
+      "trial": 16,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 204250
+    },
+    {
+      "trial": 17,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 158000
+    },
+    {
+      "trial": 17,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 214084
+    },
+    {
+      "trial": 17,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 268625
+    },
+    {
+      "trial": 17,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 768084
+    },
+    {
+      "trial": 17,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 290042
+    },
+    {
+      "trial": 18,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 566000
+    },
+    {
+      "trial": 18,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 224792
+    },
+    {
+      "trial": 18,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 154625
+    },
+    {
+      "trial": 18,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 209708
+    },
+    {
+      "trial": 18,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 187000
+    },
+    {
+      "trial": 19,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 207208
+    },
+    {
+      "trial": 19,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 181500
+    },
+    {
+      "trial": 19,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 213333
+    },
+    {
+      "trial": 19,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 171458
+    },
+    {
+      "trial": 19,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 195083
+    },
+    {
+      "trial": 20,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 200292
+    },
+    {
+      "trial": 20,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 143917
+    },
+    {
+      "trial": 20,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 212458
+    },
+    {
+      "trial": 20,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 217333
+    },
+    {
+      "trial": 20,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 181917
+    },
+    {
+      "trial": 21,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 212709
+    },
+    {
+      "trial": 21,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 181750
+    },
+    {
+      "trial": 21,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 195500
+    },
+    {
+      "trial": 21,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 153000
+    },
+    {
+      "trial": 21,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 208250
+    },
+    {
+      "trial": 22,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 179666
+    },
+    {
+      "trial": 22,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 147833
+    },
+    {
+      "trial": 22,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 187000
+    },
+    {
+      "trial": 22,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 269958
+    },
+    {
+      "trial": 22,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 228167
+    },
+    {
+      "trial": 23,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 204208
+    },
+    {
+      "trial": 23,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 143500
+    },
+    {
+      "trial": 23,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 198458
+    },
+    {
+      "trial": 23,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 198166
+    },
+    {
+      "trial": 23,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 193375
+    },
+    {
+      "trial": 24,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 132292
+    },
+    {
+      "trial": 24,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 178541
+    },
+    {
+      "trial": 24,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 271958
+    },
+    {
+      "trial": 24,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 727209
+    },
+    {
+      "trial": 24,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 226000
+    },
+    {
+      "trial": 25,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 135834
+    },
+    {
+      "trial": 25,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 561583
+    },
+    {
+      "trial": 25,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 227334
+    },
+    {
+      "trial": 25,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 188083
+    },
+    {
+      "trial": 25,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 189500
+    },
+    {
+      "trial": 26,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 162083
+    },
+    {
+      "trial": 26,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 200667
+    },
+    {
+      "trial": 26,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 186375
+    },
+    {
+      "trial": 26,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 220250
+    },
+    {
+      "trial": 26,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 173917
+    },
+    {
+      "trial": 27,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 205250
+    },
+    {
+      "trial": 27,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 197708
+    },
+    {
+      "trial": 27,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 217459
+    },
+    {
+      "trial": 27,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 240708
+    },
+    {
+      "trial": 27,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 162625
+    },
+    {
+      "trial": 28,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 216041
+    },
+    {
+      "trial": 28,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 219958
+    },
+    {
+      "trial": 28,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 156375
+    },
+    {
+      "trial": 28,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 209041
+    },
+    {
+      "trial": 28,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 168750
+    },
+    {
+      "trial": 29,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 181208
+    },
+    {
+      "trial": 29,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 151459
+    },
+    {
+      "trial": 29,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 182333
+    },
+    {
+      "trial": 29,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 204875
+    },
+    {
+      "trial": 29,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 216041
+    },
+    {
+      "trial": 30,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 178916
+    },
+    {
+      "trial": 30,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 198333
+    },
+    {
+      "trial": 30,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 203292
+    },
+    {
+      "trial": 30,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 185708
+    },
+    {
+      "trial": 30,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 173208
+    },
+    {
+      "trial": 31,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 172625
+    },
+    {
+      "trial": 31,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 145042
+    },
+    {
+      "trial": 31,
+      "order": 2,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 202542
+    },
+    {
+      "trial": 31,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 176375
+    },
+    {
+      "trial": 31,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 183833
+    },
+    {
+      "trial": 32,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 182333
+    },
+    {
+      "trial": 32,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 201334
+    },
+    {
+      "trial": 32,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 173750
+    },
+    {
+      "trial": 32,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 189375
+    },
+    {
+      "trial": 32,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 712625
+    },
+    {
+      "trial": 33,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 297291
+    },
+    {
+      "trial": 33,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 558875
+    },
+    {
+      "trial": 33,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 173375
+    },
+    {
+      "trial": 33,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 208916
+    },
+    {
+      "trial": 33,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 202083
+    },
+    {
+      "trial": 34,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 179166
+    },
+    {
+      "trial": 34,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 184917
+    },
+    {
+      "trial": 34,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 170875
+    },
+    {
+      "trial": 34,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 214916
+    },
+    {
+      "trial": 34,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 203417
+    },
+    {
+      "trial": 35,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 204375
+    },
+    {
+      "trial": 35,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 200834
+    },
+    {
+      "trial": 35,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 177042
+    },
+    {
+      "trial": 35,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 215959
+    },
+    {
+      "trial": 35,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 144750
+    },
+    {
+      "trial": 36,
+      "order": 0,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 211625
+    },
+    {
+      "trial": 36,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 214209
+    },
+    {
+      "trial": 36,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 202750
+    },
+    {
+      "trial": 36,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 181750
+    },
+    {
+      "trial": 36,
+      "order": 4,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 150042
+    },
+    {
+      "trial": 37,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 210750
+    },
+    {
+      "trial": 37,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 199084
+    },
+    {
+      "trial": 37,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 188583
+    },
+    {
+      "trial": 37,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 217750
+    },
+    {
+      "trial": 37,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 256208
+    },
+    {
+      "trial": 38,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 201083
+    },
+    {
+      "trial": 38,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 186084
+    },
+    {
+      "trial": 38,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 200417
+    },
+    {
+      "trial": 38,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 143541
+    },
+    {
+      "trial": 38,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 204583
+    },
+    {
+      "trial": 39,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 197625
+    },
+    {
+      "trial": 39,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 142959
+    },
+    {
+      "trial": 39,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 207625
+    },
+    {
+      "trial": 39,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 201542
+    },
+    {
+      "trial": 39,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 204083
+    },
+    {
+      "trial": 40,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 517709
+    },
+    {
+      "trial": 40,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 236209
+    },
+    {
+      "trial": 40,
+      "order": 2,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 230334
+    },
+    {
+      "trial": 40,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 762167
+    },
+    {
+      "trial": 40,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 217375
+    },
+    {
+      "trial": 41,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 212625
+    },
+    {
+      "trial": 41,
+      "order": 1,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 194167
+    },
+    {
+      "trial": 41,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 183333
+    },
+    {
+      "trial": 41,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 218667
+    },
+    {
+      "trial": 41,
+      "order": 4,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 200166
+    },
+    {
+      "trial": 42,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 192750
+    },
+    {
+      "trial": 42,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 209791
+    },
+    {
+      "trial": 42,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 227334
+    },
+    {
+      "trial": 42,
+      "order": 3,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 174625
+    },
+    {
+      "trial": 42,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 208583
+    },
+    {
+      "trial": 43,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 191166
+    },
+    {
+      "trial": 43,
+      "order": 1,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 162917
+    },
+    {
+      "trial": 43,
+      "order": 2,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 214125
+    },
+    {
+      "trial": 43,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 192333
+    },
+    {
+      "trial": 43,
+      "order": 4,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 210833
+    },
+    {
+      "trial": 44,
+      "order": 0,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 183000
+    },
+    {
+      "trial": 44,
+      "order": 1,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 178541
+    },
+    {
+      "trial": 44,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 179875
+    },
+    {
+      "trial": 44,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 206542
+    },
+    {
+      "trial": 44,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 202250
+    },
+    {
+      "trial": 45,
+      "order": 0,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 161417
+    },
+    {
+      "trial": 45,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 217375
+    },
+    {
+      "trial": 45,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 188750
+    },
+    {
+      "trial": 45,
+      "order": 3,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 191584
+    },
+    {
+      "trial": 45,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 204542
+    },
+    {
+      "trial": 46,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 193708
+    },
+    {
+      "trial": 46,
+      "order": 1,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 199958
+    },
+    {
+      "trial": 46,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 205375
+    },
+    {
+      "trial": 46,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 136958
+    },
+    {
+      "trial": 46,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 183541
+    },
+    {
+      "trial": 47,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 212833
+    },
+    {
+      "trial": 47,
+      "order": 1,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 204042
+    },
+    {
+      "trial": 47,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 177834
+    },
+    {
+      "trial": 47,
+      "order": 3,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 239500
+    },
+    {
+      "trial": 47,
+      "order": 4,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 766125
+    },
+    {
+      "trial": 48,
+      "order": 0,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 254583
+    },
+    {
+      "trial": 48,
+      "order": 1,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 202083
+    },
+    {
+      "trial": 48,
+      "order": 2,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 364125
+    },
+    {
+      "trial": 48,
+      "order": 3,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 216375
+    },
+    {
+      "trial": 48,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 210042
+    },
+    {
+      "trial": 49,
+      "order": 0,
+      "mode": "mlx_q4_g32",
+      "host_latency_ns": 218000
+    },
+    {
+      "trial": 49,
+      "order": 1,
+      "mode": "mlx_q8_g64",
+      "host_latency_ns": 182583
+    },
+    {
+      "trial": 49,
+      "order": 2,
+      "mode": "mlx_q4_g64",
+      "host_latency_ns": 192000
+    },
+    {
+      "trial": 49,
+      "order": 3,
+      "mode": "fp16_fast_sdpa",
+      "host_latency_ns": 174041
+    },
+    {
+      "trial": 49,
+      "order": 4,
+      "mode": "mlx_q8_g32",
+      "host_latency_ns": 216834
+    }
+  ],
+  "summaries": {
+    "fp16_fast_sdpa": {
+      "kv_logical_bytes": 294912,
+      "kv_bits": 16,
+      "group_size": null,
+      "median_host_latency_us": 172.125,
+      "median_bootstrap_ci95_us": [
+        160.5,
+        178.708
+      ],
+      "attention_relative_l2_vs_fp16": 0.0
+    },
+    "mlx_q4_g32": {
+      "kv_logical_bytes": 92160,
+      "allocated_cache_array_bytes": 122880,
+      "effective_bits_per_kv_scalar": 5.0,
+      "kv_bits_payload": 4,
+      "group_size": 32,
+      "median_host_latency_us": 199.375,
+      "median_bootstrap_ci95_us": [
+        194.8335,
+        204.958
+      ],
+      "attention_relative_l2_vs_fp16": 0.3542953365317065
+    },
+    "mlx_q4_g64": {
+      "kv_logical_bytes": 82944,
+      "allocated_cache_array_bytes": 110592,
+      "effective_bits_per_kv_scalar": 4.5,
+      "kv_bits_payload": 4,
+      "group_size": 64,
+      "median_host_latency_us": 201.3125,
+      "median_bootstrap_ci95_us": [
+        191.292,
+        205.708
+      ],
+      "attention_relative_l2_vs_fp16": 0.4986052196695518
+    },
+    "mlx_q8_g32": {
+      "kv_logical_bytes": 165888,
+      "allocated_cache_array_bytes": 221184,
+      "effective_bits_per_kv_scalar": 9.0,
+      "kv_bits_payload": 8,
+      "group_size": 32,
+      "median_host_latency_us": 207.396,
+      "median_bootstrap_ci95_us": [
+        200.7085,
+        214.916
+      ],
+      "attention_relative_l2_vs_fp16": 0.012483561389200796
+    },
+    "mlx_q8_g64": {
+      "kv_logical_bytes": 156672,
+      "allocated_cache_array_bytes": 208896,
+      "effective_bits_per_kv_scalar": 8.5,
+      "kv_bits_payload": 8,
+      "group_size": 64,
+      "median_host_latency_us": 204.479,
+      "median_bootstrap_ci95_us": [
+        198.333,
+        213.271
+      ],
+      "attention_relative_l2_vs_fp16": 0.025556058466131848
+    }
+  },
+  "timing_scope": "isolated cached attention, including host dispatch + mx.eval completion; not pure GPU kernel time",
+  "excluded": [
+    "weight inference",
+    "initial cache quantization",
+    "cache appends",
+    "prefill",
+    "model generation"
+  ],
+  "memory_caveat": "All modes coexist for interleaved trials; process/allocator peak is not a per-mode peak."
+}

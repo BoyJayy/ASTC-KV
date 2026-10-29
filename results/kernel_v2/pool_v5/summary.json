@@ -1,0 +1,198 @@
+{
+  "rows": [
+    {
+      "session": 0,
+      "pool": 1,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 42.854167986661196,
+      "gpu_min_us": 41.958337533287704,
+      "gpu_max_us": 1562.7083339495584,
+      "wall_amortized_median_us": 201.3745,
+      "raw": "s0_pool1.json"
+    },
+    {
+      "session": 0,
+      "pool": 1,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 27.000001864507794,
+      "gpu_min_us": 26.708337827585638,
+      "gpu_max_us": 587.9583331989124,
+      "wall_amortized_median_us": 184.16649999999998,
+      "raw": "s0_pool1.json"
+    },
+    {
+      "session": 0,
+      "pool": 8,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 45.28906356426887,
+      "gpu_min_us": 44.802083721151575,
+      "gpu_max_us": 122.59375034773257,
+      "wall_amortized_median_us": 70.20825,
+      "raw": "s0_pool8.json"
+    },
+    {
+      "session": 0,
+      "pool": 8,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 33.75260348548181,
+      "gpu_min_us": 33.25000034237746,
+      "gpu_max_us": 73.74999950116035,
+      "wall_amortized_median_us": 56.953125,
+      "raw": "s0_pool8.json"
+    },
+    {
+      "session": 0,
+      "pool": 64,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 44.85221347749757,
+      "gpu_min_us": 44.750000142812496,
+      "gpu_max_us": 54.75781244967948,
+      "wall_amortized_median_us": 49.834312499999996,
+      "raw": "s0_pool64.json"
+    },
+    {
+      "session": 0,
+      "pool": 64,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 33.927734421013156,
+      "gpu_min_us": 33.73437493792153,
+      "gpu_max_us": 44.100911281930166,
+      "wall_amortized_median_us": 38.122398437499996,
+      "raw": "s0_pool64.json"
+    },
+    {
+      "session": 1,
+      "pool": 64,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 44.87988280743593,
+      "gpu_min_us": 44.76757794691366,
+      "gpu_max_us": 46.83984366238292,
+      "wall_amortized_median_us": 49.611328125,
+      "raw": "s1_pool64.json"
+    },
+    {
+      "session": 1,
+      "pool": 64,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 34.01660160307074,
+      "gpu_min_us": 33.81835927029897,
+      "gpu_max_us": 36.16861977207009,
+      "wall_amortized_median_us": 38.1640546875,
+      "raw": "s1_pool64.json"
+    },
+    {
+      "session": 1,
+      "pool": 8,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 45.32812545221532,
+      "gpu_min_us": 44.854166844743304,
+      "gpu_max_us": 87.44791557546705,
+      "wall_amortized_median_us": 67.7864375,
+      "raw": "s1_pool8.json"
+    },
+    {
+      "session": 1,
+      "pool": 8,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 34.4505206157919,
+      "gpu_min_us": 33.46874837006908,
+      "gpu_max_us": 59.2500000493601,
+      "wall_amortized_median_us": 55.7604375,
+      "raw": "s1_pool8.json"
+    },
+    {
+      "session": 1,
+      "pool": 1,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 43.000000005122274,
+      "gpu_min_us": 41.54165799263865,
+      "gpu_max_us": 166.62500274833292,
+      "wall_amortized_median_us": 192.0625,
+      "raw": "s1_pool1.json"
+    },
+    {
+      "session": 1,
+      "pool": 1,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 27.145833882968873,
+      "gpu_min_us": 26.83333877939731,
+      "gpu_max_us": 126.16666208487004,
+      "wall_amortized_median_us": 185.8125,
+      "raw": "s1_pool1.json"
+    },
+    {
+      "session": 2,
+      "pool": 1,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 49.24999666400254,
+      "gpu_min_us": 42.750005377456546,
+      "gpu_max_us": 195.00000053085387,
+      "wall_amortized_median_us": 222.125,
+      "raw": "s2_pool1.json"
+    },
+    {
+      "session": 2,
+      "pool": 1,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 29.749993700534105,
+      "gpu_min_us": 27.49999111983925,
+      "gpu_max_us": 67.25000275764614,
+      "wall_amortized_median_us": 198.89600000000002,
+      "raw": "s2_pool1.json"
+    },
+    {
+      "session": 2,
+      "pool": 64,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 44.919921947439434,
+      "gpu_min_us": 44.761718754671165,
+      "gpu_max_us": 47.97265614797652,
+      "wall_amortized_median_us": 49.7906875,
+      "raw": "s2_pool64.json"
+    },
+    {
+      "session": 2,
+      "pool": 64,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 34.066731814164086,
+      "gpu_min_us": 33.8203126375447,
+      "gpu_max_us": 36.6289064004377,
+      "wall_amortized_median_us": 38.380859375,
+      "raw": "s2_pool64.json"
+    },
+    {
+      "session": 2,
+      "pool": 8,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 45.234375647851266,
+      "gpu_min_us": 44.765625716536306,
+      "gpu_max_us": 59.32812564424239,
+      "wall_amortized_median_us": 66.20575,
+      "raw": "s2_pool8.json"
+    },
+    {
+      "session": 2,
+      "pool": 8,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 34.06250016269041,
+      "gpu_min_us": 33.62499955983367,
+      "gpu_max_us": 45.265625885804184,
+      "wall_amortized_median_us": 53.557312499999995,
+      "raw": "s2_pool8.json"
+    }
+  ],
+  "pool64_astc_over_fp16_by_session": [
+    1.3219925893347695,
+    1.3193523365774595,
+    1.31858618526955
+  ],
+  "preregistered_outcome": "negative",
+  "hashes_after": {
+    "configs/kernel_pool_v5.json": "8634dd5940c59eca4a5646951a28afb7cf1f344d7da44af31474eb404b8c6773",
+    "build/metal-pool-v5/astc-kv-probe-pool-v5": "4598159edae99615cd9c313d63aec048c68e8c1b18a747d36029105e3e66f1b3",
+    "metal/attention_v4.metal": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+    "scripts/run_pool_sweep.py": "8539e6364ca99ec418545f055f881a9a7ac1cccbda549f2af7a297ef0ae50edc",
+    "metal/probe_pool_v5.mm": "c329463aa80a47044e1ea527ba608916f59994f3dcdc5f130a4a15d4a216c140"
+  },
+  "scope": "Precompressed identical-value repeated-block traffic fixtures, different resident GPU allocations. Same v4 D64 kernel and fixed tile256 for both paths; no tile retuning, eviction command, encoder, append, model quality, or hardware-counter evidence. Large pool does not by itself prove a specific cache miss rate or DRAM bandwidth."
+}

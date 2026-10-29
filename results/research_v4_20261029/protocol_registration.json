@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-28T21:39:42.781795+00:00",
+  "status": "protocol_frozen_before_first_gpu_run",
+  "files": {
+    "configs/gather_v8_20261029.json": "44464053fb2a24468435d825b93a631a72a0f3fbfb1d3bc9b355e94dd27b83c9",
+    "scripts/run_gather_v8.py": "f2293a646937bfbf0aea02d45d9a1fca87d64258e1e62824bed06ddb30af8ed0",
+    "tests/test_gather_pairs_v8.py": "4e4b48e7ef03ac757b9245e5e8dad524be1ea4b51025621922a56a63fc96492b",
+    "tests/test_gather_protocol_v8.py": "f15923d72099ce381d482b7e938d6e6307ba96ef7463eac8d690fb915fac43ff"
+  },
+  "prior_state_manifest_sha256": "7a897d33e96c275b7811daa3acd03ca91df018a16de5074cdd2be09196fceb18"
+}

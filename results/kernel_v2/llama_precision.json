@@ -1,0 +1,164 @@
+{
+  "caveat" : "Reference C rounds official CPU dequant to half; extreme\/subnormal Q4 scale arithmetic may need a more detailed decoder model",
+  "hypothesis" : "Official FA_TYPES use half4 Q\/K\/V, float QK\/softmax\/output; references B and C reflect explicit operand rounding",
+  "input_provenance" : {
+    "k_base_f16_sha256" : "e40394b03b8bcc20d37d7f5defba46592143bb5d7665ab08ba4a521152e7cbc8",
+    "k_file" : "k_hardware.f32",
+    "k_file_sha256" : "58a0d3ca8da69fb4b8911a27b6d975629b01ee5bd36e9aae2c080fab60a9eaf3",
+    "k_source_kind" : "explicit baseline F32 override rounded to F16",
+    "manifest_path" : "\/path\/to\/ASTC-KV\/results\/kernel_v2\/llama_comparison\/matched_inputs\/t384\/manifest.json",
+    "manifest_sha256" : "0780ef3b8466069a3a41bc87992a365b193f06261e2853a49200e9cbef923e80",
+    "query_file" : "q.f32",
+    "query_precision" : "unchanged FP32 fixture Q for every variant",
+    "query_sha256" : "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+    "v_base_f16_sha256" : "35383727edcf5af294909539a1e00e0781b7df9d7ae31f5b6e578a246c150e30",
+    "v_file" : "v_hardware.f32",
+    "v_file_sha256" : "bb34ed7edf3603572213bc1df943fab1ff0b9ced383e91ec83548478d0f0d7d9",
+    "v_source_kind" : "explicit baseline F32 override rounded to F16"
+  },
+  "schema" : "llama-fused-precision-diagnosis-v1",
+  "scope" : "Separate precision attribution; no benchmark, no threshold change, no timing result",
+  "source_revision" : "c3df4b7e22a1ac38da663552d19e649dd97ca936",
+  "status" : "gpu_diagnosis_executed",
+  "variants" : {
+    "f16_kv" : {
+      "actual_vs_A_original_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0017875134944915771,
+        "passed" : false,
+        "reference_max_abs" : 1.0258384943008423,
+        "relative_l2" : 0.00082670939540656124
+      },
+      "actual_vs_B_half_query_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 3.5762786865234375e-07,
+        "passed" : true,
+        "reference_max_abs" : 1.025556206703186,
+        "relative_l2" : 2.0163446181239869e-07
+      },
+      "actual_vs_C_half_query_half_decode_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 3.5762786865234375e-07,
+        "passed" : true,
+        "reference_max_abs" : 1.025556206703186,
+        "relative_l2" : 2.0163446181239869e-07
+      },
+      "B_vs_A_predicted_query_rounding_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0017874836921691895,
+        "passed" : false,
+        "reference_max_abs" : 1.0258384943008423,
+        "relative_l2" : 0.00082674148620991074
+      },
+      "C_vs_A_predicted_combined_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0017874836921691895,
+        "passed" : false,
+        "reference_max_abs" : 1.0258384943008423,
+        "relative_l2" : 0.00082674148620991074
+      },
+      "C_vs_B_predicted_dequant_rounding_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0,
+        "passed" : true,
+        "reference_max_abs" : 1.025556206703186,
+        "relative_l2" : 0
+      },
+      "combined_rounding_explains_delta" : {
+        "cosine_of_actual_and_predicted_deltas" : 0.99999997102032401,
+        "remaining_error_l2_fraction" : 0.00024386143878092932
+      },
+      "file_sha256" : {
+        "actual_gpu_output" : "4e6c1a83102d34e21cc14ae5390b31cf31ed0181a1792d3d3e955c4afc2be2ed",
+        "reference_A_original_q_cpu_decode" : "c8012a89b9afe07895c5a9384ab3edb7986ec0ac11e335b2178493b41dafcdbd",
+        "reference_B_half_q_cpu_decode" : "50eb02a03c903eca582c8a79bd441525245a42640fcbf8b50d67232de9810029",
+        "reference_C_half_q_half_decode" : "50eb02a03c903eca582c8a79bd441525245a42640fcbf8b50d67232de9810029"
+      },
+      "packed_k_sha256" : "e40394b03b8bcc20d37d7f5defba46592143bb5d7665ab08ba4a521152e7cbc8",
+      "packed_v_sha256" : "35383727edcf5af294909539a1e00e0781b7df9d7ae31f5b6e578a246c150e30",
+      "pipeline_messages" : [
+        "ggml_metal_library_compile_pipeline: compiling pipeline: base = 'kernel_flash_attn_ext_vec_f16_dk64_dv64', name = 'kernel_flash_attn_ext_vec_f16_dk64_dv64_mask=0_sink=0_bias=0_scap=0_kvpad=0_sparse=0_ns10=64_ns20=64_nsg=1_nwg=32'\n",
+        "ggml_metal_library_compile_pipeline: compiling pipeline: base = 'kernel_flash_attn_ext_vec_reduce', name = 'kernel_flash_attn_ext_vec_reduce_dv=64_nwg=32'\n"
+      ],
+      "query_rounding_explains_delta" : {
+        "cosine_of_actual_and_predicted_deltas" : 0.99999997102032401,
+        "remaining_error_l2_fraction" : 0.00024386143878092932
+      }
+    },
+    "q4_0_kv" : {
+      "actual_vs_A_original_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0017895549535751343,
+        "passed" : false,
+        "reference_max_abs" : 1.4126882553100586,
+        "relative_l2" : 0.00087898227106376144
+      },
+      "actual_vs_B_half_query_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.00096666812896728516,
+        "passed" : true,
+        "reference_max_abs" : 1.4124218225479126,
+        "relative_l2" : 0.00056233229748678317
+      },
+      "actual_vs_C_half_query_half_decode_reference" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 4.76837158203125e-07,
+        "passed" : true,
+        "reference_max_abs" : 1.4130685329437256,
+        "relative_l2" : 2.7037673589391943e-07
+      },
+      "B_vs_A_predicted_query_rounding_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0019678622484207153,
+        "passed" : false,
+        "reference_max_abs" : 1.4126882553100586,
+        "relative_l2" : 0.00069512227728102795
+      },
+      "C_vs_A_predicted_combined_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.0017896741628646851,
+        "passed" : false,
+        "reference_max_abs" : 1.4126882553100586,
+        "relative_l2" : 0.00087890124072221144
+      },
+      "C_vs_B_predicted_dequant_rounding_effect" : {
+        "criterion" : "relative_L2 <= 1e-3 AND max_abs <= 1e-3 * max(1,reference_max_abs)",
+        "finite" : true,
+        "max_abs" : 0.00096619129180908203,
+        "passed" : true,
+        "reference_max_abs" : 1.4124218225479126,
+        "relative_l2" : 0.00056212039571882126
+      },
+      "combined_rounding_explains_delta" : {
+        "cosine_of_actual_and_predicted_deltas" : 0.99999995690773791,
+        "remaining_error_l2_fraction" : 0.0003076929296587767
+      },
+      "file_sha256" : {
+        "actual_gpu_output" : "ea67591be73f4baeb468d811a08ff93f05937ddfbe17370f1ebe152ec271968b",
+        "reference_A_original_q_cpu_decode" : "5dd76d57ee96eb0305eb07218d89c3aca7f6270d7768ab11a55531ad0102b3fa",
+        "reference_B_half_q_cpu_decode" : "412b294ee6b2a10eb4307f11187ecacb009fef9f21f300e7a46bce6f25b43ecf",
+        "reference_C_half_q_half_decode" : "7f50e27250a8942f8324152b3e3fcc375765d9f646e3ca2a8b8d9804669b891e"
+      },
+      "packed_k_sha256" : "521fd872022e6840e5cc0eef088f5f7320f93eeda4d907b26fd41c2e7857f50a",
+      "packed_v_sha256" : "75fb2add6a8cd43f5dc0525244e5c5409ec1e18fff2e7c20751e6943e3a07e6b",
+      "pipeline_messages" : [
+        "ggml_metal_library_compile_pipeline: compiling pipeline: base = 'kernel_flash_attn_ext_vec_q4_0_dk64_dv64', name = 'kernel_flash_attn_ext_vec_q4_0_dk64_dv64_mask=0_sink=0_bias=0_scap=0_kvpad=0_sparse=0_ns10=2_ns20=2_nsg=1_nwg=32'\n"
+      ],
+      "query_rounding_explains_delta" : {
+        "cosine_of_actual_and_predicted_deltas" : 0.76893529740267219,
+        "remaining_error_l2_fraction" : 0.6397012766997342
+      }
+    }
+  }
+}

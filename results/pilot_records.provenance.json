@@ -1,0 +1,9 @@
+{
+  "config_sha256": "c7a3fcaef593815a46d8e4b6182923f13255472e5d95517fdb830b9a1e7d63a3",
+  "capture_sha256": "2f0e3d45c202ad60ecc95d1d74bb4c683b8be63637ff49ade0763d4b5b4139b4",
+  "source_sha256": "be3ded33876902290f4acc5379dae6fe6f0e28c3a416cf353b958d5ce9125b11",
+  "rows": 234,
+  "numpy": "2.3.5",
+  "measurement": "CPU numerical roundtrip + snapshot attention",
+  "hardware_claim": false
+}

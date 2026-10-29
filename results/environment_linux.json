@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-10-28",
+  "host_platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "python": "3.12.14",
+  "cpu_count": 9,
+  "metal_gpu_available": false,
+  "macos": null,
+  "xcode": null,
+  "metal_sdk": null,
+  "mlx": null,
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "Pillow": "12.3.0"
+  },
+  "status": "executed_linux_cpu_only",
+  "device_on_user_mac": "not_probed"
+}

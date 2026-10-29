@@ -1,0 +1,39 @@
+{
+  "format": "astc-kv-probe-v1",
+  "tokens": 384,
+  "query_heads": 9,
+  "kv_heads": 3,
+  "head_dim": 64,
+  "page_tokens": 96,
+  "layout": "scalar",
+  "metadata_dtype": "float16_le",
+  "query_file": "q.f32",
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "layer": 17,
+  "query_absolute_position": 383,
+  "capture_sha256": "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152",
+  "status": "derived validation control; not a new quality experiment",
+  "encoder": {
+    "name": "Arm astcenc",
+    "version": "5.7.0",
+    "quality": 98,
+    "profile": "LDR",
+    "input_decode": "float32 library"
+  },
+  "file_header_bytes": 48,
+  "k_storage": "fp16",
+  "k_file": "k.f16",
+  "k_decoded_file": "k_decoded.f32",
+  "v_storage": "fp16",
+  "v_files": [
+    "v-h000.astc",
+    "v-h001.astc",
+    "v-h002.astc"
+  ],
+  "v_normalization": "token",
+  "v_offset_file": "v_offset.f16",
+  "v_scale_file": "v_scale.f16",
+  "v_decoded_file": "v_fp16.f32",
+  "v_file": "v_fp16.f16"
+}

@@ -1,0 +1,13 @@
+{"capture": "science", "variant": "fp16", "wall_s": 0.0346598339965567}
+{"capture": "science", "variant": "u2_token", "wall_s": 0.03329612499510404}
+{"capture": "science", "variant": "u4_token", "wall_s": 0.03307570800097892}
+{"capture": "science", "variant": "u8_token", "wall_s": 0.032344541999918874}
+{"capture": "science", "variant": "u4_asymmetric", "wall_s": 0.03302712499862537}
+{"capture": "science", "variant": "scalar4_page", "wall_s": 1.08104650000314}
+{"capture": "science", "variant": "scalar6_page", "wall_s": 1.3966606670001056}
+{"capture": "science", "variant": "scalar8_page", "wall_s": 1.7865078750037355}
+{"capture": "science", "variant": "rgba4_page", "wall_s": 0.5491544579999754}
+{"capture": "science", "variant": "scalar6_token", "wall_s": 1.4018198330013547}
+{"capture": "science", "variant": "scalar6_hdr_block", "wall_s": 1.4336246250022668}
+{"capture": "science", "variant": "scalar6_token_permuted", "wall_s": 1.385091417003423}
+{"capture": "science", "variant": "scalar6_channel_permuted", "wall_s": 1.3861805839987937}

@@ -1,0 +1,6 @@
+{
+  "execution_script_snapshot": "results/execution_sources/evaluate_model_runtime.py",
+  "execution_script_sha256": "6bab85ca384782f32962b64952754c395f87ca414555a9c53ee8d52e74d01d2f",
+  "current_script_sha256": "2ff259ad9882b3fd3a79bd74a6f1292cbc9fad2e5623973a67cfacc41e38c199",
+  "change": "Only EncodedTensor.resident_bytes accessor renamed to logical_bytes, no arithmetic/config/result change. Running process imported the previous name before the rename."
+}

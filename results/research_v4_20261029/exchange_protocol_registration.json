@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-28T21:48:03.927776+00:00",
+  "status": "protocol_frozen_before_v9_gpu",
+  "motivation": "v8 primary failed; a separate experiment preserves the old scheduling and exchanges texels rather than weights",
+  "hashes": {
+    "configs/gather_exchange_v9_20261029.json": "ec25ac11790b2bc0e1e8f486dc11942bd46bf6561953b9ff7aafe0b7badb5e38",
+    "scripts/run_gather_exchange_v9.py": "cbffa44590604719e23425fe0e348f8f61a1ba837da398f8c3c972520631cf90",
+    "tests/test_gather_protocol_v9.py": "9ad57e315726981e866f518d914a745a7e56bfaf796f14288c9bef5cc4c1cdee"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "Diagnostic attention kernel only; repeated reads of one cache.",
+  "warning": "Bootstrap assumes exchangeable rounds; inspect drift and rerun on independent sessions.",
+  "summary": {
+    "astc_texture": {
+      "gpu_ms": {
+        "median": 0.09071874956134707,
+        "bootstrap_median_ci95": [
+          0.09053125031641684,
+          0.09086249920073897
+        ],
+        "n_rounds": 30
+      },
+      "wall_ms": {
+        "median": 0.10833124999999999,
+        "bootstrap_median_ci95": [
+          0.10670625,
+          0.11084165
+        ],
+        "n_rounds": 30
+      }
+    },
+    "uncompressed_texture": {
+      "gpu_ms": {
+        "median": 0.09340624965261668,
+        "bootstrap_median_ci95": [
+          0.09303541737608612,
+          0.09391666681040078
+        ],
+        "n_rounds": 30
+      },
+      "wall_ms": {
+        "median": 0.1120729,
+        "bootstrap_median_ci95": [
+          0.1106708,
+          0.11734995000000001
+        ],
+        "n_rounds": 30
+      }
+    },
+    "fp16_buffer": {
+      "gpu_ms": {
+        "median": 0.04316875056247227,
+        "bootstrap_median_ci95": [
+          0.042264582589268684,
+          0.04415000003064051
+        ],
+        "n_rounds": 30
+      },
+      "wall_ms": {
+        "median": 0.061,
+        "bootstrap_median_ci95": [
+          0.05933335,
+          0.06885625000000001
+        ],
+        "n_rounds": 30
+      }
+    }
+  },
+  "memory": {
+    "astc_file_bytes": 67680,
+    "astc_payload_with_texture_padding_bytes": 67584,
+    "astc_texture_allocated_bytes": 98304,
+    "attention_scratch_allocated_bytes": 7056,
+    "compressed_upload_staging_bytes": 98304,
+    "control_params_bytes": 60,
+    "device_current_allocated_bytes_all_diagnostics": 3801088,
+    "fp16_buffer_allocated_bytes": 294912,
+    "fp16_cache_allocated_bytes": 0,
+    "fp16_cache_logical_bytes": 0,
+    "fp16_decode_control_only_allocated_bytes": 294912,
+    "inactive_binding_allocated_bytes": 0,
+    "k_logical_effective_bits_per_scalar": 4,
+    "logical_effective_bits_per_original_kv_scalar": 4,
+    "metadata_allocated_bytes": 6144,
+    "metadata_logical_bytes": 6144,
+    "ordinary_texture_allocated_bytes": 819200,
+    "peak_note": "Probe keeps decoded CPU tensors and control GPU resources live; process peak is a diagnostic-process peak, not a compressed-runtime peak.",
+    "process_max_rss_bytes_macos": 20856832,
+    "production_peak_bytes": null,
+    "v_logical_effective_bits_per_scalar": 4
+  }
+}

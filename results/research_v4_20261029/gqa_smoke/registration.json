@@ -1,0 +1,118 @@
+{
+  "config": {
+    "schema": "astckv.gqa.v10",
+    "registered_before_results": true,
+    "hypothesis": "Sharing one K/V load across the three query heads of a KV group can reduce repeated texture work. The same fusion is implemented for FP16 to avoid attributing a generic scheduling improvement to ASTC.",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tiles": {
+      "384": 32,
+      "2048": 64,
+      "8192": 256
+    },
+    "sessions": 5,
+    "primary_max_ratio": 1.05,
+    "blocks": 40,
+    "iterations": 20,
+    "seed": 20261102,
+    "primary": "T8192: compact GQA ASTC GPU time <=1.05 times BOTH original FP16 and fused GQA FP16 in every one of five sessions, with persistent K/V/metadata bytes <=0.75 of FP16.",
+    "positive_criterion": "Both timing contrasts pass in all five sessions, memory criterion passes, and all sixteen own-reference attention gates plus original exact decode gates pass.",
+    "secondary": "Old hoisted ASTC versus shared GQA ASTC; original FP16 versus fused FP16. Neither substitutes for the primary. Existing v8/v9 candidates are retained as correctness controls only.",
+    "correctness_cases": [
+      [
+        391,
+        1
+      ],
+      [
+        391,
+        7
+      ],
+      [
+        391,
+        13
+      ],
+      [
+        391,
+        256
+      ]
+    ],
+    "timing_design": "Seeded ABBA or BAAB for four comparisons, random comparison order per block, ten warmup command buffers per variant, retain every sample. Five separately launched sessions, shapes shuffled per session.",
+    "scope": "Precompressed warm fixtures, D64/Hq9/Hkv3 and one model capture. GQA fusion is known prior art. Each query head retains separate exact softmax states; K/V/affine data are loaded once then reused in registers. Increased live state can erase benefit; no register/occupancy counter claim. No model PPL, full decode, dynamic encoder or production peak result. T2048/T8192 repeat fixture blocks.",
+    "max_persistent_memory_ratio": 0.75
+  },
+  "smoke": true,
+  "schedule": [
+    [
+      0,
+      384,
+      32
+    ]
+  ],
+  "hashes_before": {
+    "configs/gqa_v10_20261029.json": "c95dce9ce9106bed8ebf61442f9fdab59ded090494e54a1067c7b0eb1a0a771a",
+    "build/metal-gqa-v10/astc-kv-probe-gqa-v10": "cb6d5398ce0187ae5caca65d1ec2446cfe544fcd2d11d4270af289e0c1cf1320",
+    "metal/attention_gqa_v10.metal": "1fa0a3445870590e15b73155e8319b7738f8663b42b775f934262e842223db5c",
+    "metal/probe_gqa_v10.mm": "9717c54415508a7202cbf1a6491bf46b687530a0d2291c0f203b4cad4a665d7c",
+    "metal/build_gqa_v10.sh": "27675e975f976619a8d2364f25f97bc11ed542cc291a67ba9a6ab3d601ff0970",
+    "tests/test_gqa_states_v10.py": "70a845eefccbb2446a97456cc70d31471bc45385502ff63e573a5d692b5a9905",
+    "tests/test_gqa_protocol_v10.py": "d0ba548d612875c65adc4231349ca1ce0915731c15be73530f233d87b771f161",
+    "scripts/run_address_sweep.py": "296690899b5154c7bae461d11f1d1934523c95739e16a4ca176cbaf7ef741497",
+    "scripts/run_gqa_v10.py": "cf9336796e67f3ebc3c2788e4bb343e78683dbc63093bdd2f154e85e3800cfcd",
+    "results/kernel_v2/fixtures_page/t384/v-h002.astc": "cce7cdfa553e9c688110a3959bb217bd97c9d941d51d25e50d950c116cfccbaa",
+    "results/kernel_v2/fixtures_page/t384/v_offset.f16": "c2c836870bb6d4ec59435174ffe59649360e26acaa969d04e7c66ac351f50a1e",
+    "results/kernel_v2/fixtures_page/t384/k_decoded.f32": "58a0d3ca8da69fb4b8911a27b6d975629b01ee5bd36e9aae2c080fab60a9eaf3",
+    "results/kernel_v2/fixtures_page/t384/k.f16": "e40394b03b8bcc20d37d7f5defba46592143bb5d7665ab08ba4a521152e7cbc8",
+    "results/kernel_v2/fixtures_page/t384/v_decoded.f32": "a5f75095ea03ba8aafec37afe620c230fb18a893782b4091affb0ee69f75ea25",
+    "results/kernel_v2/fixtures_page/t384/manifest.json": "8b05532d464e60d4142b90a7cf6db02909ee16e0fd752611d8ddfbb5c58b746e",
+    "results/kernel_v2/fixtures_page/t384/v-h001.astc": "3608b95ac7654e2de78434649de57b728cb5f440f849d315ecfade00b2cdea85",
+    "results/kernel_v2/fixtures_page/t384/v-h000.astc": "d257c1828a48f8cb222df6c6fd604d7a4b4a67afd08dfb181792c00c2a1fa8c3",
+    "results/kernel_v2/fixtures_page/t384/q.f32": "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+    "results/kernel_v2/fixtures_page/t384/v_scale.f16": "c9c9e95c34b215a753a79a64c610ce28bdcf8ee8621a3d38cbd17147f9d8103e",
+    "results/kernel_v2/fixtures_page/t2048/v-h002.astc": "c2c001b423a7673986b86c59cf7c3ec06c30a491a9de519489b575cf0c044d24",
+    "results/kernel_v2/fixtures_page/t2048/v_offset.f16": "eb1be2a506f3855c1feae7536d707c965977caf58c58f5a0dcf02cb95a753786",
+    "results/kernel_v2/fixtures_page/t2048/k_decoded.f32": "069f43a86f7cdc1eb262a2fa1e16312fc1ecc146fdae37d35313272e00e34418",
+    "results/kernel_v2/fixtures_page/t2048/k.f16": "e14fda2e68419ba4c4a63c38996e510a15e4e4b2859e6e1cd516850a6cd2ac25",
+    "results/kernel_v2/fixtures_page/t2048/v_decoded.f32": "e3a0c6d6f0fceb448ae680eb92959e407151808f34c612a4521ace9ebe8417df",
+    "results/kernel_v2/fixtures_page/t2048/manifest.json": "cbef388253bdc5d1ed6325d03c7a41821d5a1d851619ce5f3b76475890634740",
+    "results/kernel_v2/fixtures_page/t2048/v-h001.astc": "5b49b49f619bb6b8072c79c18f9e38b9aaecfca4eba819d7e38db2ef04733396",
+    "results/kernel_v2/fixtures_page/t2048/v-h000.astc": "a71c79dcfbba18875c9291db4d4a7420516976bf79c1d1115a80d18c92b280d5",
+    "results/kernel_v2/fixtures_page/t2048/q.f32": "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+    "results/kernel_v2/fixtures_page/t2048/v_scale.f16": "1791d73e5f886e2e3a6ee60825a608586440e2e167cf4a8665ca0afee986ad51",
+    "results/kernel_v2/fixtures_page/t8192/v-h002.astc": "b204bf4788ec23d69fa702a0431b0138822354c2aab4e395e3444b1b325934b1",
+    "results/kernel_v2/fixtures_page/t8192/v_offset.f16": "e441167f444b4289142e59d14faf1e2093f85db765bad4bdf03632348869bb34",
+    "results/kernel_v2/fixtures_page/t8192/k_decoded.f32": "912072d7556cf1a36d093eed5ff3004e06a9321bd3c33963241b72cdfd6518d2",
+    "results/kernel_v2/fixtures_page/t8192/k.f16": "91d46481d6c204c40114e142f9d376431a65ca9a71f8a13dd8029542423336b8",
+    "results/kernel_v2/fixtures_page/t8192/v_decoded.f32": "48ef298c05fbaa28311ce293595305069b6b3b0147d1b0888376f4824a976880",
+    "results/kernel_v2/fixtures_page/t8192/manifest.json": "66e88707ce5d2c80484feb8e01bcbc4244268803391893c039aa7bc627a7ff41",
+    "results/kernel_v2/fixtures_page/t8192/v-h001.astc": "3b3c6815bbde7aac1dac34bce06a979805baea842167840257f7a947eeddbe97",
+    "results/kernel_v2/fixtures_page/t8192/v-h000.astc": "7c01586eb8d0986142aeeb1ce3384aa1d836259577f6201435389166200397b5",
+    "results/kernel_v2/fixtures_page/t8192/q.f32": "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+    "results/kernel_v2/fixtures_page/t8192/v_scale.f16": "b79603c9587317c25fd62dd01bf8cd8cad5175433ef4216ecbc1c3102905e92b",
+    "results/kernel_v2/fixtures_page/t391/v-h002.astc": "34073c5143c6395d7350a99d7f013ade87440b985cbcce3e1e3fcdbbb151be81",
+    "results/kernel_v2/fixtures_page/t391/v_offset.f16": "0d11e9d192419196f2b3ad51b5e976782bb7069a1df4d5c1bd2bb0dee85c205f",
+    "results/kernel_v2/fixtures_page/t391/k_decoded.f32": "305ae7914d87f89e06a5014a3df70cdb4e9deb89929dad89f2289d65e32f01f6",
+    "results/kernel_v2/fixtures_page/t391/k.f16": "47f31fc5e7e5d52cd3899506304b3827c2ecd414ebb58505c2f39baa4637ed70",
+    "results/kernel_v2/fixtures_page/t391/v_decoded.f32": "03283520260ec50a8ffc9c5c9baeda5ae656e800c444ce3493c85b604178f5bd",
+    "results/kernel_v2/fixtures_page/t391/manifest.json": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+    "results/kernel_v2/fixtures_page/t391/v-h001.astc": "343426313eb2232fce9adf6d549f28b052a3143b3eee0ef4e4413048e0247b58",
+    "results/kernel_v2/fixtures_page/t391/v-h000.astc": "e5a094344f18815becfd086ef1cf7b7fe7b3a4b9a28986530b984b5857f5788e",
+    "results/kernel_v2/fixtures_page/t391/q.f32": "7ebcfc0fd72107c7e16c378fddbc8503e437d86d85e8d0c7cdf7835f0c656401",
+    "results/kernel_v2/fixtures_page/t391/v_scale.f16": "fac3a9fcde7fef838fe51fb915b677c7f8b78c1a568d39a383cc1806fe14dbeb"
+  },
+  "environment": {
+    "utc": "2026-10-28T21:56:58.057121+00:00",
+    "battery": {
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    "thermal": {
+      "exit": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  }
+}

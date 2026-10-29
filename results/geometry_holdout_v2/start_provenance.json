@@ -1,0 +1,32 @@
+{
+  "schema": "astckv.geometry_holdout.v2",
+  "status": "running",
+  "config_sha256": "722a3e90541d99f30ea6d92cb8e9a159f935f0531ec56c4a00810e04cbb99fd4",
+  "source_hashes": {
+    "scripts/evaluate_geometry_holdout.py": "b77a43c5431caa1bd49ace765b4c7bde8754341b25306e3d3dfb5e7d79455956",
+    "scripts/capture_qkv.py": "b1ea14070bdb46cce6451c11492abb2936a2af9515727f165e86505fa5e3c907",
+    "scripts/evaluate_model.py": "2ff259ad9882b3fd3a79bd74a6f1292cbc9fad2e5623973a67cfacc41e38c199",
+    "astc_kv/codec.py": "f566dc855e64066bce57769c709ef0ae32e02e596b56c68ca284255b2e7d6fa7",
+    "astc_kv/bridge.cpp": "24c7269e304c5f2b7d76837e53eff7e31fd3555dd2e88c91930c0d9cce4a124f",
+    "astc_kv/libakv_astc.dylib": "ffbf5f0324cc639b5dd315dbe256ca952d6b66994886a14e6b35615eed32166b"
+  },
+  "model_weights_sha256": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "scope": "Four newly authored English texts, frozen before inference; separate from old four pilot texts. Small controlled confirmation, not representative benchmark or robust-quality proof.",
+  "gpu_executed": false,
+  "self_tests": {
+    "passed": true,
+    "checks": [
+      "explicit_coordinate_oracle",
+      "transpose_involution",
+      "same_block_multisets",
+      "variable_token_ranges_padding_roundtrip",
+      "causal_target_window",
+      "tail_only_fp16",
+      "immutable_prefix"
+    ]
+  },
+  "fixtures": []
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "gather-exchange-v9-preparation",
+  "build": "PASS",
+  "shell_syntax": "PASS",
+  "cpu_route_simulation": "PASS",
+  "preservation_checks": "PASS",
+  "gpu_status": "NOT_RUN_BY_PREPARING_AGENT",
+  "frozen_v7_v8_unchanged": true,
+  "hashes": {
+    "metal/attention_gather_exchange_v9.metal": "b65fa6371f3bbbe8489aeff47ac7132fd8efa6979083d01a6c0e2689b4610367",
+    "metal/probe_gather_exchange_v9.mm": "7ca3867ad517ebb257cd00d09eaa21684c7bd953ad96e744f4a6aba9bf47c198",
+    "metal/build_gather_exchange_v9.sh": "e91feac8d18edf915b00db7ffcbb851b2dbb64706fd7c18b583983959a612c3f",
+    "docs/gather_exchange_v9_design.md": "476ac2ff485195e400491e362c7ef36632b6e0db0e1f415271ca7e4722bf07bb",
+    "build/metal-gather-exchange-v9/astc-kv-probe-gather-exchange-v9": "52b0f2d6fc123b6213eeeb818472ab610845e170ee1bd16876d14286250ab692",
+    "build/metal-gather-exchange-v9/exchange_sim.cpp": "d28f06be9105a1c6031323357ad803a66f8ada417345b3febdb623637bb0f0e9",
+    "build/metal-gather-exchange-v9/exchange_validation.json": "99f205f3270383cf3218bbe28cfe8c0acdf204193abcd2ce7294b4c82d3c0b3c"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "commands": [
+    "bash -n metal/build_gather_exchange_v9.sh",
+    "bash metal/build_gather_exchange_v9.sh",
+    "xcrun clang++ -std=c++17 -O2 -Wall -Wextra build/metal-gather-exchange-v9/exchange_sim.cpp -o build/metal-gather-exchange-v9/exchange-sim",
+    "build/metal-gather-exchange-v9/exchange-sim"
+  ]
+}

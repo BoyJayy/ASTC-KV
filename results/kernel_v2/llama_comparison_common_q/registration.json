@@ -1,0 +1,39 @@
+{
+  "config": {
+    "schema": "astckv.llama_comparison.common_q.v3",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tiles_by_tokens": {
+      "384": [
+        32
+      ],
+      "2048": [
+        64,
+        128
+      ],
+      "8192": [
+        256
+      ]
+    },
+    "sessions": 3,
+    "rounds": 150,
+    "seed": 20261029,
+    "selection": "Frozen after exploratory v4 sweep, before any real llama GPU result. Include ASTC-best tile and at T2048 separately buffer-best tile.",
+    "correctness": "V4 gate <=1e-4 own-ref relative L2; llama preregistered gate <=1e-3 relative L2 and scaled max-abs, no fallback and no pipeline compilation during timed rounds. Q unchanged. Baseline F16 base must exactly match hardware readback rounded to F16 by hashes. Original CPU-dequant Q4 reference retained including its small difference from half4 Metal decode. Dedicated precision diagnostic reports that contribution separately.",
+    "scope": "Same FP16-rounded Q in FP32 storage and common hardware-reconstructed K/V base. Q4 requantizes that base, so this is a systems/correctness comparison, not codec-quality evidence. Both report one host submission through completed GPU work, with no timed output readback; their framework/dispatch overhead remains included. Reused one-query cache. T2048/T8192 repeat original blocks, not fresh long contexts. No whole-model or bandwidth claim. Unsupported mixed K/V is reported, never silently replaced.",
+    "negative_outcome": "ASTC does not beat official fused quantized attention or results are dominated by host overhead; retain outcome. No comparison of batched GPU time against host latency.",
+    "reason": "Initial benchmark withheld timing after max-abs failure. Source plus separate GPU precision probe proved internal half4 Q and half4 Q4 dequant explains error. New query inputs rounded FP16->FP32 identically for BOTH paths; original harness/reference thresholds stay unchanged. This is a protocol correction before successful baseline timings, not threshold relaxation."
+  },
+  "hashes": {
+    "build/metal-v4/astc-kv-probe-v4": "3609f3082948365f109a4292d6e2ae80279169f17ef9b81d3904f53c1695aacd",
+    "build/llama-baseline/bin/astc-llama-baseline": "be4a3bcf49baa426c1f1b72940f147d10f799a64176e6498f897681162c12d73",
+    "metal/attention_v4.metal": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+    "scripts/compare_llama_metal_common_q.py": "21f8df735f5edf6a065476ed4f2ac57094b6d261148b0fb26ec4eaf98362d85d",
+    "configs/llama_comparison_common_q.json": "1cfbbc0d977307d4f87028eda4116509fcfd41a6ec092664109e7a6114cb520e",
+    "metal/probe_v4.mm": "38ab358900b7825c099e743459c5ad47da864af33bc3737a2b32a1473a776aa8",
+    "baselines/llama/probe.mm": "53ca1d0d19f7189aa9f17edbc6fe9e365b7b568cfb5544ae34d77579da7aa499"
+  }
+}

@@ -1,0 +1,41 @@
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+build/
+third_party/
+astc_kv/*.so
+astc_kv/*.dylib
+.DS_Store
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.partial
+new-metal-result.json
+results/new_*/
+results/new*.json
+results/new*.jsonl
+results/new*.log
+dist/
+
+# Local workspace copies and editor settings are not part of the repository.
+/astc-kv/
+/github-release/
+/research-backup-*/
+/.vscode/
+/.idea/
+
+# Local shortcuts to the existing environment and dependencies.
+/.venv-research
+/third_party
+
+# Historical local executables remain on disk, outside the public snapshot.
+results/revalidation_20261028/metal/astc-kv-probe-original
+results/revalidation_20261028/metal/astc-kv-probe-readback
+results/revalidation_20261028/metal/astc-kv-probe-runtime
+results/revalidation_20261028/metal/launcher_build/astc-kv-probe
+

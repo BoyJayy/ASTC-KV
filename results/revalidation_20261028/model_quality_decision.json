@@ -1,0 +1,72 @@
+{
+  "schema": "astckv.model_quality_decision.v1",
+  "created_utc": "2026-10-28T19:32:18.685684+00:00",
+  "registered_before_model_quality_results": true,
+  "basis": "Original scalar6_page retained; scalar6_token added prospectively using only systems TUNE snapshot: V-only relative L2 page .2295 failed, token .0744 passed screen. No development/holdout snapshot or model-quality results inspected for this amendment.",
+  "methods": [
+    "fp16",
+    "u4_token_V_only",
+    "u4_token_KV",
+    "scalar6_page_V_only",
+    "scalar6_page_KV",
+    "scalar6_token_V_only",
+    "scalar6_token_KV"
+  ],
+  "generation_methods": [
+    "fp16",
+    "scalar6_page_V_only",
+    "scalar6_token_V_only",
+    "u4_token_V_only"
+  ],
+  "model_id": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "all_layers": true,
+  "prefix_tokens": 288,
+  "context_tokens": 384,
+  "compressed_page_tokens": 96,
+  "astc_configs": [
+    {
+      "name": "scalar6_page",
+      "layout": "scalar",
+      "block": 6,
+      "normalization": "page_channel",
+      "profile": "ldr"
+    },
+    {
+      "name": "scalar6_token",
+      "layout": "scalar",
+      "block": 6,
+      "normalization": "token",
+      "profile": "ldr"
+    }
+  ],
+  "astcenc_quality": 98,
+  "teacher_forcing_targets": [
+    289,
+    383
+  ],
+  "excluded_target": 288,
+  "fresh_tail_dtype": "FP16, widened to FP32 for CPU attention",
+  "compressed_reconstructions_dtype": "FP32 with FP16 codec metadata; no extra FP16 round trip",
+  "weights": "Original BF16 checkpoint exactly widened to FP32; identical in all methods",
+  "arithmetic": "FP32 model, FP64 reduction only for scalar NLL measurement",
+  "pilot_relative_perplexity_gate": 1.02,
+  "gate_scope": "A pilot screen only; no claim of task quality or representative generalization",
+  "greedy_fixture": "story",
+  "greedy_tokens": 32,
+  "splits": {
+    "tune": [
+      "systems"
+    ],
+    "development": [
+      "story"
+    ],
+    "pilot_holdout": [
+      "science",
+      "records"
+    ]
+  },
+  "confidence_intervals": "Not claimed from four authored fixtures",
+  "memory_scope": "Logical encoded-prefix bytes plus FP16 tail; GPU resources/peak process memory unmeasured",
+  "execution_scope": "CPU reconstructed-cache quality only; no hardware compressed-cache or GPU performance claim"
+}

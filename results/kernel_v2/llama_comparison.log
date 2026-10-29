@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/path/to/ASTC-KV/scripts/compare_llama_metal.py", line 98, in <module>
+    main()
+  File "/path/to/ASTC-KV/scripts/compare_llama_metal.py", line 76, in main
+    data = execute(cmd, stem)
+           ^^^^^^^^^^^^^^^^^^
+  File "/path/to/ASTC-KV/scripts/compare_llama_metal.py", line 25, in execute
+    raise RuntimeError(f'{out.name}: exit {result.returncode}; retained raw output')
+RuntimeError: s0_llama_t384_tile0: exit 2; retained raw output

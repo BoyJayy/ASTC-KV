@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/path/to/ASTC-KV/build/metal-gather-exchange-v9/astc-kv-probe-gather-exchange-v9",
+    "/path/to/ASTC-KV/results/kernel_v2/fixtures_page/t2048/manifest.json",
+    "/path/to/ASTC-KV/metal/attention_gather_exchange_v9.metal",
+    "40",
+    "20",
+    "64",
+    "-",
+    "20263149"
+  ],
+  "exit": 0,
+  "environment_before": {
+    "utc": "2026-10-28T21:51:05.162109+00:00",
+    "battery": {
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    "thermal": {
+      "exit": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  },
+  "environment_after": {
+    "utc": "2026-10-28T21:51:05.771892+00:00",
+    "battery": {
+      "exit": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=23003235)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    "thermal": {
+      "exit": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  }
+}

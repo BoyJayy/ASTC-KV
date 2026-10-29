@@ -1,0 +1,27 @@
+{
+  "schema": "atlas-v7-preparation",
+  "build": "PASS",
+  "shell_syntax": "PASS",
+  "cpu_address_sim": "PASS",
+  "source_preservation_checks": "PASS",
+  "ascii_punctuation": "PASS",
+  "gpu_status": "NOT_RUN_BY_PREPARING_AGENT",
+  "hashes": {
+    "metal/attention_atlas_v6.metal": "cd054608d3b9eea121757dc0358f24bbdacaea01536e8315cc6e2a7b69d1d02f",
+    "metal/probe_atlas_v6.mm": "a5fa39a71f450e5141ca4496fd1052e7a492c2b1d1eb34f492676daf3060520c",
+    "metal/attention_atlas_v7.metal": "48a5451635f394725c4f7fad47dd3cb997604da05c8c17f1ce3fd31da067d249",
+    "metal/probe_atlas_v7.mm": "dcc69045caad0721e73f69cc81c8ecc4a37971ac17b9356bfbd42ac6dd143124",
+    "metal/build_atlas_v7.sh": "d05ccf43145d44a4954e8d116122eda8275b9948c86e8504e86d92e5ff113355",
+    "docs/atlas_address_v7.md": "856a018b7130fbb8b09d82856a23209fe889b03f80ea5ae98aa656a5c134f8a2",
+    "build/metal-atlas-v7/astc-kv-probe-atlas-v7": "82151a902e64918eb8a6d511c55393ae30eee9676397e4f74f504d7c99f3d77f",
+    "build/metal-atlas-v7/address_sim.cpp": "8e23f7f67e9ce5f7366b821ca42ac1074f2a531348fc1130bd4d626aa6698923",
+    "build/metal-atlas-v7/address_validation.json": "82c8f6c7ecb68012f2de52273da59345dec607fe25e5957ab73e99d44690804f"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "commands": [
+    "bash -n metal/build_atlas_v7.sh",
+    "bash metal/build_atlas_v7.sh",
+    "xcrun clang++ -std=c++17 -O2 -Wall -Wextra build/metal-atlas-v7/address_sim.cpp -o build/metal-atlas-v7/address-sim",
+    "build/metal-atlas-v7/address-sim"
+  ]
+}

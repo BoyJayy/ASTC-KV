@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "reports": 21,
+  "backups": 21,
+  "urls": 116,
+  "fenced_blocks": 40,
+  "ascii_inline_spans": 702,
+  "numeric_tokens_preserved_except_equivalent_superscript_or_orthogonality_notation": [
+    "docs/independent_research_20261028.md",
+    "docs/prior_art.md"
+  ],
+  "current_reports_including_new_and_outer_readme": 24,
+  "new_reports_read_only": true,
+  "ast_parse_scripts": 2
+}

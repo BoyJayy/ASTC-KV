@@ -1,0 +1,23 @@
+{
+  "schema": "gather-v8-preparation",
+  "build": "PASS",
+  "shell_syntax": "PASS",
+  "preserved_v7_shader_prefix": "PASS",
+  "preserved_payload_and_value_decode_gates": "PASS",
+  "ascii_punctuation": "PASS",
+  "gpu_status": "NOT_RUN_BY_PREPARING_AGENT",
+  "commands": [
+    "bash -n metal/build_gather_v8.sh",
+    "bash metal/build_gather_v8.sh"
+  ],
+  "hashes": {
+    "metal/attention_atlas_v7.metal": "48a5451635f394725c4f7fad47dd3cb997604da05c8c17f1ce3fd31da067d249",
+    "metal/probe_atlas_v7.mm": "dcc69045caad0721e73f69cc81c8ecc4a37971ac17b9356bfbd42ac6dd143124",
+    "metal/attention_gather_v8.metal": "17391aac08e37524c138a8103944be5292b14cb1ae747fae32ef5da09dfa7daa",
+    "metal/probe_gather_v8.mm": "e5cfbb8fd62bb3a36eab307624ccb7e037fc75e25e7d6445f23da355bfb28f22",
+    "metal/build_gather_v8.sh": "218f05ec07fe2ec2fe5da63ceb0c970dc625cf4783b6b5b8915a96a4156c4301",
+    "docs/gather_v8_design.md": "df89e21f669c51eca8c54a5dc81548b2012401ce0c037bc19b12b6ed22f3b7c1",
+    "build/metal-gather-v8/astc-kv-probe-gather-v8": "674bc36b8fc2ebd66adc7a151953cd21d4cf430396c8a912c0e1b536a9533d92"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n"
+}

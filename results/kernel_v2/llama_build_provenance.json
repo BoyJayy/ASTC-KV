@@ -1,0 +1,69 @@
+{
+  "schema": "astc-kv-llama-baseline-build-v1",
+  "pinned_source": {
+    "revision": "c3df4b7e22a1ac38da663552d19e649dd97ca936",
+    "url": "https://github.com/ggml-org/llama.cpp/archive/c3df4b7e22a1ac38da663552d19e649dd97ca936.tar.gz",
+    "archive_sha256": "d82221b4491ba3879ec55786eaf0cc7cae468b05951b12e508e8c614b49f4374",
+    "archive_bytes": 38688283,
+    "source_dir": "/path/to/ASTC-KV/third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936",
+    "scope": "Pinned public source downloaded; compiled behavior still requires validation"
+  },
+  "source_modifications": "none; harness links unmodified upstream ggml",
+  "sha256": {
+    "baselines/llama/probe.mm": "53ca1d0d19f7189aa9f17edbc6fe9e365b7b568cfb5544ae34d77579da7aa499",
+    "baselines/llama/CMakeLists.txt": "a0043b4fd0dc8beae299eec957f49fa84d08cb0e9efc8db7c052d16dfa278789",
+    "scripts/build_llama_baseline.sh": "e23add38578b0a233ddcf07d938d5e6d355e8181bc1a0bb53bd517b92b8e3b5e",
+    "baselines/llama/write_build_provenance.py": "978efb14e0f143023b905b2d62fe9d95f4cceaac57925f62afbe3263a6bad4b8",
+    "build/llama-baseline/bin/astc-llama-baseline": "be4a3bcf49baa426c1f1b72940f147d10f799a64176e6498f897681162c12d73",
+    "build/llama-baseline/CMakeCache.txt": "8555643155069f4fbc1b664a899e6b4fc7ab889f94f6c247d6453c02a6f9f5b8",
+    "build/llama-baseline/compile_commands.json": "d23d89505bc1f9a014b7e43ffd3d57ef37d0fc73363fbd05a92a56bb246884d8",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/ggml-metal-device.m": "a0bc096d0bb27c0ed1461666a271b24168449ec371b08032f3c2e6badb6c46b7",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/ggml-metal-device.cpp": "81b603b5dca551a39bd4ee85f4c91b1b51bda8023203c3f29cc073a5a814abac",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/ggml-metal-ops.cpp": "c996f88af4c4e5f7dc354271c387a62161febec37457194b8ff25500ec945f22",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/kernels/fa_vec_common.metal": "0a8d29a82fb0ddc48e3c27598e95d665545bf97c9ca734cdbc5a86cf8c2724bc",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/kernels/fa_vec_f16.metal": "60ed68dee021ccc2319035920bf41b2fc3046d2b05f33aa3f6871d6c2350a24b",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-metal/kernels/fa_vec_q4_0.metal": "e8fe05fb2091b90d89116c3c94b4e6d1914427b036d74369cbeaf715db8ac074",
+    "third_party/llama.cpp-c3df4b7e22a1ac38da663552d19e649dd97ca936/ggml/src/ggml-quants.c": "57a90557099ff9d248d68cab88462a97d110b3e0a83d88732e38508c28075080"
+  },
+  "compiler": {
+    "argv": [
+      "xcrun",
+      "clang++",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+    "stderr": ""
+  },
+  "sdk": {
+    "argv": [
+      "xcrun",
+      "--sdk",
+      "macosx",
+      "--show-sdk-version"
+    ],
+    "returncode": 0,
+    "stdout": "26.5",
+    "stderr": ""
+  },
+  "macos": {
+    "argv": [
+      "sw_vers"
+    ],
+    "returncode": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+    "stderr": ""
+  },
+  "cmake": {
+    "argv": [
+      "/opt/homebrew/bin/cmake",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "cmake version 4.4.4\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "stderr": ""
+  },
+  "configure": "Exact options in scripts/build_llama_baseline.sh; CMakeCache and compile_commands hashes above",
+  "metal_library": "Upstream GGML_METAL_EMBED_LIBRARY=ON embeds MSL sources; runtime compile, no offline metal compiler",
+  "gpu_execution": "not performed by this build script"
+}

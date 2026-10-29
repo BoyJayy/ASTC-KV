@@ -1,0 +1,27 @@
+{
+  "sha256": {
+    "scripts/probe_block_geometry.py": "f9394632755b6a88a1a0b1712fa0c304bc06fb3a19905b63ec2db0e186b2c5b4",
+    "configs/block_geometry_v2.json": "a661ffc59464e9b196b5b56e26963e80dd6acabd4e94b7ba2dda427c8d7999a5",
+    "astc_kv/codec.py": "f566dc855e64066bce57769c709ef0ae32e02e596b56c68ca284255b2e7d6fa7",
+    "astc_kv/bridge.cpp": "24c7269e304c5f2b7d76837e53eff7e31fd3555dd2e88c91930c0d9cce4a124f",
+    "astc_kv/libakv_astc.dylib": "ffbf5f0324cc639b5dd315dbe256ca952d6b66994886a14e6b35615eed32166b",
+    "third_party/astc-encoder-5.7.0/Source/astcenc_symbolic_physical.cpp": "67a9b6c3c641faf50e7d122566d8793b1b2c647bfcad3df073d514a594954d8a"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "cpu_threads": 1,
+  "hardware_gpu_executed": false,
+  "self_tests": {
+    "passed": true,
+    "checks": [
+      "block_roundtrip",
+      "all_9_map_inverses",
+      "D4_unique",
+      "multisets",
+      "whole_block_inverse",
+      "causal_GQA",
+      "header_parser"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-28T21:55:04.996481+00:00",
+  "status": "protocol_frozen_before_v10_gpu",
+  "hashes": {
+    "configs/gqa_v10_20261029.json": "c95dce9ce9106bed8ebf61442f9fdab59ded090494e54a1067c7b0eb1a0a771a",
+    "scripts/run_gqa_v10.py": "cf9336796e67f3ebc3c2788e4bb343e78683dbc63093bdd2f154e85e3800cfcd",
+    "tests/test_gqa_protocol_v10.py": "d0ba548d612875c65adc4231349ca1ce0915731c15be73530f233d87b771f161",
+    "tests/test_gqa_states_v10.py": "70a845eefccbb2446a97456cc70d31471bc45385502ff63e573a5d692b5a9905"
+  },
+  "primary": "<=1.05 vs BOTH original and fused FP16 in ALL five T8192 sessions and persistent byte ratio <=.75"
+}

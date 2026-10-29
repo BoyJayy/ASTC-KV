@@ -1,0 +1,113 @@
+{
+  "schema": "astckv.hybrid.v1",
+  "status": "completed",
+  "decision": {
+    "schema": "astckv.hybrid_diagnostic.v1",
+    "registered_before_hybrid_results": true,
+    "date": "2026-10-28",
+    "hypothesis": "Combining channel-wise affine U4 K with scalar6 token-normalized ASTC V retains the pilot PPL screen while reducing logical bytes relative to asymmetric U4 K+V.",
+    "selection": "Post-hoc combination selected after independent reproduction of old pilot and the negative mean-correction experiment; not a fresh confirmation dataset.",
+    "K": {
+      "bits": 4,
+      "axis": "channel",
+      "group": 96
+    },
+    "V": {
+      "layout": "scalar",
+      "block": 6,
+      "normalization": "token",
+      "profile": "ldr",
+      "quality": 98
+    },
+    "prefix_tokens": 288,
+    "context_tokens": 384,
+    "precise_tail": "FP16 with genuine model error feedback; compress historical prefix once",
+    "model": "SmolLM2-135M, fixed original BF16 weights widened to FP32, 30 layers",
+    "comparators": "New same-Mac FP16 and asymmetric U4 reproductions",
+    "pilot_gate": "aggregate PPL ratio to FP16 <=1.02; no per-document gate retroactively imposed",
+    "negative_outcome": "Aggregate PPL ratio exceeds1.02, nonfinite outputs, or no logical-memory saving versus asymmetric U4. Even a pass is only a candidate; latency and physical memory remain unmeasured.",
+    "budget": "One fixed hybrid, all four old documents,380 target losses. No tuning, corrections, mode selection, GPU encoder or new model."
+  },
+  "config_sha256": "512d4696439d552eafb430347b59b7605c60f9d59805dab6211d79b331d01c20",
+  "source_hashes": {
+    "scripts/evaluate_hybrid.py": "1503a89dde34b9eadb20ecaca28306fc2c5672d188a433a8aac1393cf959df0b",
+    "scripts/capture_qkv.py": "b1ea14070bdb46cce6451c11492abb2936a2af9515727f165e86505fa5e3c907",
+    "scripts/evaluate_model.py": "2ff259ad9882b3fd3a79bd74a6f1292cbc9fad2e5623973a67cfacc41e38c199",
+    "astc_kv/codec.py": "f566dc855e64066bce57769c709ef0ae32e02e596b56c68ca284255b2e7d6fa7",
+    "astc_kv/bridge.cpp": "24c7269e304c5f2b7d76837e53eff7e31fd3555dd2e88c91930c0d9cce4a124f",
+    "astc_kv/libakv_astc.dylib": "ffbf5f0324cc639b5dd315dbe256ca952d6b66994886a14e6b35615eed32166b"
+  },
+  "weight_sha256": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+  "primary_sha256": "3db83edbfeb62d0c25fb4f813f6801e29830a15071b79827b88fea8b86f0d33e",
+  "secondary_sha256": "9b346448dec6302f113e31d6fafa32c02765a919a4e72bd879393c744808c2b3",
+  "numpy": "2.3.5",
+  "fixtures": [
+    {
+      "fixture": "systems",
+      "targets": 95,
+      "mean_nll": 3.2711051591995575,
+      "relative_ppl_vs_fp16": 1.0202496594319534,
+      "logical_bytes_at_last_prediction": 3951360,
+      "prefix_bytes": {
+        "k": 898560,
+        "v": 864000
+      },
+      "fp16_tail_bytes": 2188800,
+      "bits_per_combined_kv": 7.164490861618799,
+      "capture_sha256": "01d188a02b59b0cf6dad51a7ae40fff87896e09432388b169a01747d0f1c190e"
+    },
+    {
+      "fixture": "story",
+      "targets": 95,
+      "mean_nll": 3.105183163482224,
+      "relative_ppl_vs_fp16": 1.0201485596945166,
+      "logical_bytes_at_last_prediction": 3951360,
+      "prefix_bytes": {
+        "k": 898560,
+        "v": 864000
+      },
+      "fp16_tail_bytes": 2188800,
+      "bits_per_combined_kv": 7.164490861618799,
+      "capture_sha256": "678aab6ebdf440e42c65be19dbc462c0e893a4b480b87ac676e71174d9d9d152"
+    },
+    {
+      "fixture": "science",
+      "targets": 95,
+      "mean_nll": 3.3563535749377227,
+      "relative_ppl_vs_fp16": 1.017788851947441,
+      "logical_bytes_at_last_prediction": 3951360,
+      "prefix_bytes": {
+        "k": 898560,
+        "v": 864000
+      },
+      "fp16_tail_bytes": 2188800,
+      "bits_per_combined_kv": 7.164490861618799,
+      "capture_sha256": "a42ba0ae7fdd70fe5d15894bd3864aebe822d340288775c2708963b6bf4f7029"
+    },
+    {
+      "fixture": "records",
+      "targets": 95,
+      "mean_nll": 3.773398400318442,
+      "relative_ppl_vs_fp16": 0.9962711396175787,
+      "logical_bytes_at_last_prediction": 3951360,
+      "prefix_bytes": {
+        "k": 898560,
+        "v": 864000
+      },
+      "fp16_tail_bytes": 2188800,
+      "bits_per_combined_kv": 7.164490861618799,
+      "capture_sha256": "2f0e3d45c202ad60ecc95d1d74bb4c683b8be63637ff49ade0763d4b5b4139b4"
+    }
+  ],
+  "scope": "Exploratory reused pilot documents; CPU reconstruction, no GPU runtime",
+  "raw_sha256": "192826141dc512706251640568bcf4a62795d831028f1c992046251028af8c7c",
+  "aggregate": {
+    "targets": 380,
+    "mean_nll": 3.3765100744844863,
+    "relative_ppl_vs_fp16": 1.0135642400519522,
+    "relative_ppl_vs_asymmetric_u4": 1.0093810751963492,
+    "logical_bytes": 3951360,
+    "logical_saving_vs_asymmetric_u4_fraction": 0.017191977077363862,
+    "pilot_ppl_screen_pass": true
+  }
+}

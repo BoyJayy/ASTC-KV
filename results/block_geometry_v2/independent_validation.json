@@ -1,0 +1,594 @@
+{
+  "verification": "PASS",
+  "method": "independent stdlib parsing with math.fsum; no experiment rerun",
+  "rows": 240,
+  "aggregate_groups": 110,
+  "payload_and_whole_block_reconstruction_bytes": "PASS",
+  "input_and_source_hashes": "PASS",
+  "mode_accounting": "PASS",
+  "memory_28800_bytes_all": "PASS",
+  "transpose_pair_ratios": [
+    {
+      "capture": "story",
+      "layer": 17,
+      "attention_sse_ratio": 1.0966853000474581,
+      "tensor_sse_ratio": 1.0016662190675596
+    },
+    {
+      "capture": "systems",
+      "layer": 0,
+      "attention_sse_ratio": 0.9977128457120955,
+      "tensor_sse_ratio": 1.0161179190325613
+    },
+    {
+      "capture": "systems",
+      "layer": 5,
+      "attention_sse_ratio": 0.9341045178636164,
+      "tensor_sse_ratio": 1.0048683254082142
+    },
+    {
+      "capture": "systems",
+      "layer": 11,
+      "attention_sse_ratio": 0.8912463271215404,
+      "tensor_sse_ratio": 1.0097612915755287
+    },
+    {
+      "capture": "systems",
+      "layer": 17,
+      "attention_sse_ratio": 0.9042675239646754,
+      "tensor_sse_ratio": 1.002744273587034
+    },
+    {
+      "capture": "systems",
+      "layer": 23,
+      "attention_sse_ratio": 0.8986311933354779,
+      "tensor_sse_ratio": 0.9926837780257378
+    },
+    {
+      "capture": "systems",
+      "layer": 29,
+      "attention_sse_ratio": 0.8110021420691994,
+      "tensor_sse_ratio": 1.0008223011623432
+    },
+    {
+      "capture": "story",
+      "layer": 0,
+      "attention_sse_ratio": 0.9024367887680984,
+      "tensor_sse_ratio": 1.0276598430256783
+    },
+    {
+      "capture": "story",
+      "layer": 5,
+      "attention_sse_ratio": 0.9649594563316544,
+      "tensor_sse_ratio": 0.9979309457634028
+    },
+    {
+      "capture": "story",
+      "layer": 11,
+      "attention_sse_ratio": 0.7708418283002482,
+      "tensor_sse_ratio": 1.00565917412709
+    },
+    {
+      "capture": "story",
+      "layer": 23,
+      "attention_sse_ratio": 0.9904567884151413,
+      "tensor_sse_ratio": 0.9950678493661195
+    },
+    {
+      "capture": "story",
+      "layer": 29,
+      "attention_sse_ratio": 0.885528532304747,
+      "tensor_sse_ratio": 0.9951812867602953
+    },
+    {
+      "capture": "science",
+      "layer": 0,
+      "attention_sse_ratio": 0.8776323751662439,
+      "tensor_sse_ratio": 1.0159952884879389
+    },
+    {
+      "capture": "science",
+      "layer": 5,
+      "attention_sse_ratio": 1.0217285563379408,
+      "tensor_sse_ratio": 0.999817968790849
+    },
+    {
+      "capture": "science",
+      "layer": 11,
+      "attention_sse_ratio": 1.0767791585127926,
+      "tensor_sse_ratio": 1.0036486041923023
+    },
+    {
+      "capture": "science",
+      "layer": 17,
+      "attention_sse_ratio": 0.9400634366796734,
+      "tensor_sse_ratio": 0.9988641007250272
+    },
+    {
+      "capture": "science",
+      "layer": 23,
+      "attention_sse_ratio": 0.9970405590545657,
+      "tensor_sse_ratio": 0.9980456794995486
+    },
+    {
+      "capture": "science",
+      "layer": 29,
+      "attention_sse_ratio": 0.8722768259302648,
+      "tensor_sse_ratio": 0.9935801449035948
+    },
+    {
+      "capture": "records",
+      "layer": 0,
+      "attention_sse_ratio": 1.110639386301559,
+      "tensor_sse_ratio": 1.023197105522095
+    },
+    {
+      "capture": "records",
+      "layer": 5,
+      "attention_sse_ratio": 0.9195817213290126,
+      "tensor_sse_ratio": 1.0061768599275396
+    },
+    {
+      "capture": "records",
+      "layer": 11,
+      "attention_sse_ratio": 0.940232513720787,
+      "tensor_sse_ratio": 0.9959926853670239
+    },
+    {
+      "capture": "records",
+      "layer": 17,
+      "attention_sse_ratio": 0.9494399892969464,
+      "tensor_sse_ratio": 0.9981426434297318
+    },
+    {
+      "capture": "records",
+      "layer": 23,
+      "attention_sse_ratio": 1.05371936905103,
+      "tensor_sse_ratio": 1.000112835941308
+    },
+    {
+      "capture": "records",
+      "layer": 29,
+      "attention_sse_ratio": 0.9438065887650011,
+      "tensor_sse_ratio": 0.9930589575178201
+    }
+  ],
+  "mode_totals": {
+    "identity": {
+      "264": {
+        "blocks": 9830.0,
+        "normalized_sse": 390.3906597289346,
+        "tensor_sse": 8341.241464424
+      },
+      "280": {
+        "blocks": 15456.0,
+        "normalized_sse": 762.4489225467065,
+        "tensor_sse": 18990.584824571302
+      },
+      "111": {
+        "blocks": 425.0,
+        "normalized_sse": 13.38300725754392,
+        "tensor_sse": 124.53267674537281
+      },
+      "268": {
+        "blocks": 9800.0,
+        "normalized_sse": 445.35023949829264,
+        "tensor_sse": 10942.840604999545
+      },
+      "370": {
+        "blocks": 394.0,
+        "normalized_sse": 13.145269196407348,
+        "tensor_sse": 285.57771574060126
+      },
+      "371": {
+        "blocks": 143.0,
+        "normalized_sse": 5.550149079775752,
+        "tensor_sse": 162.26950417237413
+      },
+      "354": {
+        "blocks": 101.0,
+        "normalized_sse": 2.4593413525103336,
+        "tensor_sse": 39.23817717029793
+      },
+      "355": {
+        "blocks": 428.0,
+        "normalized_sse": 14.887269700999918,
+        "tensor_sse": 347.41181340027
+      },
+      "276": {
+        "blocks": 615.0,
+        "normalized_sse": 17.825568002285188,
+        "tensor_sse": 267.3308832183058
+      },
+      "590": {
+        "blocks": 21.0,
+        "normalized_sse": 0.4095586890541267,
+        "tensor_sse": 2.448311947387612
+      },
+      "126": {
+        "blocks": 404.0,
+        "normalized_sse": 12.773507135907542,
+        "tensor_sse": 191.775010544067
+      },
+      "834": {
+        "blocks": 5.0,
+        "normalized_sse": 0.27069942498261973,
+        "tensor_sse": 9.23817328724008
+      },
+      "94": {
+        "blocks": 21.0,
+        "normalized_sse": 0.3816383190197151,
+        "tensor_sse": 4.074494187519783
+      },
+      "833": {
+        "blocks": 3.0,
+        "normalized_sse": 0.11380941481048618,
+        "tensor_sse": 2.078814544667489
+      },
+      "127": {
+        "blocks": 172.0,
+        "normalized_sse": 5.168537701625478,
+        "tensor_sse": 37.58355496433177
+      },
+      "323": {
+        "blocks": 14.0,
+        "normalized_sse": 0.3893245377721284,
+        "tensor_sse": 10.057844962813355
+      },
+      "110": {
+        "blocks": 90.0,
+        "normalized_sse": 2.3972192574270927,
+        "tensor_sse": 28.44175767101546
+      },
+      "95": {
+        "blocks": 14.0,
+        "normalized_sse": 0.22910599711653196,
+        "tensor_sse": 0.7671190154456357
+      },
+      "243": {
+        "blocks": 4.0,
+        "normalized_sse": 0.08968452403748868,
+        "tensor_sse": 0.0070697664050028705
+      },
+      "78": {
+        "blocks": 3.0,
+        "normalized_sse": 0.0695035129636099,
+        "tensor_sse": 0.00825160762227533
+      },
+      "79": {
+        "blocks": 23.0,
+        "normalized_sse": 0.5469974759626811,
+        "tensor_sse": 6.420646917335671
+      },
+      "338": {
+        "blocks": 9.0,
+        "normalized_sse": 0.18045375995104918,
+        "tensor_sse": 2.0475805018852937
+      },
+      "558": {
+        "blocks": 1.0,
+        "normalized_sse": 0.010018265886674649,
+        "tensor_sse": 0.0013355926903705388
+      },
+      "369": {
+        "blocks": 7.0,
+        "normalized_sse": 0.13703171347306195,
+        "tensor_sse": 3.1817790476583863
+      },
+      "589": {
+        "blocks": 11.0,
+        "normalized_sse": 0.24925038748259554,
+        "tensor_sse": 3.250892710269444
+      },
+      "339": {
+        "blocks": 4.0,
+        "normalized_sse": 0.11986443111214129,
+        "tensor_sse": 3.1836066002100454
+      },
+      "322": {
+        "blocks": 2.0,
+        "normalized_sse": 0.042508610230629906,
+        "tensor_sse": 1.2780710324098183
+      },
+      "227": {
+        "blocks": 3.0,
+        "normalized_sse": 0.047474167477774915,
+        "tensor_sse": 0.9278415575173561
+      },
+      "242": {
+        "blocks": 3.0,
+        "normalized_sse": 0.0717324526944032,
+        "tensor_sse": 0.005350109870159082
+      },
+      "125": {
+        "blocks": 5.0,
+        "normalized_sse": 0.08021021484425576,
+        "tensor_sse": 1.1263660912159943
+      },
+      "605": {
+        "blocks": 1.0,
+        "normalized_sse": 0.00440549809114571,
+        "tensor_sse": 0.0005865328155352548
+      },
+      "63": {
+        "blocks": 1.0,
+        "normalized_sse": 0.005400995304712997,
+        "tensor_sse": 0.0007395362439012985
+      },
+      "849": {
+        "blocks": 1.0,
+        "normalized_sse": 0.023490405855180585,
+        "tensor_sse": 0.6441911447047002
+      },
+      "226": {
+        "blocks": 1.0,
+        "normalized_sse": 0.01293232299694802,
+        "tensor_sse": 0.0013463178394565497
+      },
+      "291": {
+        "blocks": 1.0,
+        "normalized_sse": 0.005270746503436119,
+        "tensor_sse": 0.0008457518540219129
+      }
+    },
+    "transpose": {
+      "280": {
+        "blocks": 15502.0,
+        "normalized_sse": 766.6298797775103,
+        "tensor_sse": 19064.860772588672
+      },
+      "264": {
+        "blocks": 9790.0,
+        "normalized_sse": 391.81116557813476,
+        "tensor_sse": 8385.710038149022
+      },
+      "111": {
+        "blocks": 360.0,
+        "normalized_sse": 13.3955951154797,
+        "tensor_sse": 334.11258466656426
+      },
+      "268": {
+        "blocks": 9811.0,
+        "normalized_sse": 441.18276809823976,
+        "tensor_sse": 10698.803468940718
+      },
+      "276": {
+        "blocks": 584.0,
+        "normalized_sse": 17.804147617756733,
+        "tensor_sse": 307.45536216622594
+      },
+      "355": {
+        "blocks": 492.0,
+        "normalized_sse": 16.084550928119327,
+        "tensor_sse": 214.32917333816545
+      },
+      "126": {
+        "blocks": 372.0,
+        "normalized_sse": 12.15852374733881,
+        "tensor_sse": 234.58293735507252
+      },
+      "127": {
+        "blocks": 134.0,
+        "normalized_sse": 4.936804803486328,
+        "tensor_sse": 136.66059672999327
+      },
+      "110": {
+        "blocks": 108.0,
+        "normalized_sse": 2.627648048028021,
+        "tensor_sse": 47.548629002883345
+      },
+      "354": {
+        "blocks": 97.0,
+        "normalized_sse": 2.653737419216415,
+        "tensor_sse": 38.1485169982484
+      },
+      "370": {
+        "blocks": 355.0,
+        "normalized_sse": 11.506055112085622,
+        "tensor_sse": 159.87625327960424
+      },
+      "371": {
+        "blocks": 194.0,
+        "normalized_sse": 5.915443059390407,
+        "tensor_sse": 35.72219950530051
+      },
+      "323": {
+        "blocks": 24.0,
+        "normalized_sse": 0.5173169220210053,
+        "tensor_sse": 5.532642015501627
+      },
+      "95": {
+        "blocks": 11.0,
+        "normalized_sse": 0.31323166730562035,
+        "tensor_sse": 4.037019199926662
+      },
+      "338": {
+        "blocks": 25.0,
+        "normalized_sse": 0.623583400612216,
+        "tensor_sse": 5.663937218784351
+      },
+      "339": {
+        "blocks": 24.0,
+        "normalized_sse": 0.4681648962469334,
+        "tensor_sse": 2.88681023610934
+      },
+      "79": {
+        "blocks": 39.0,
+        "normalized_sse": 0.8876010198363578,
+        "tensor_sse": 4.855488167839573
+      },
+      "369": {
+        "blocks": 9.0,
+        "normalized_sse": 0.144534609026309,
+        "tensor_sse": 1.617812240192943
+      },
+      "834": {
+        "blocks": 29.0,
+        "normalized_sse": 0.5280058534038565,
+        "tensor_sse": 2.5186613045597857
+      },
+      "833": {
+        "blocks": 9.0,
+        "normalized_sse": 0.22431364610472848,
+        "tensor_sse": 4.60222166997173
+      },
+      "125": {
+        "blocks": 5.0,
+        "normalized_sse": 0.12679523416112884,
+        "tensor_sse": 1.7581785085981982
+      },
+      "94": {
+        "blocks": 13.0,
+        "normalized_sse": 0.3062035096971903,
+        "tensor_sse": 1.4947854629364807
+      },
+      "322": {
+        "blocks": 2.0,
+        "normalized_sse": 0.031780421411149964,
+        "tensor_sse": 0.1382309303982336
+      },
+      "227": {
+        "blocks": 7.0,
+        "normalized_sse": 0.1021706114519926,
+        "tensor_sse": 1.562014259877348
+      },
+      "210": {
+        "blocks": 1.0,
+        "normalized_sse": 0.0019632416423525645,
+        "tensor_sse": 0.00020245687095045797
+      },
+      "849": {
+        "blocks": 2.0,
+        "normalized_sse": 0.010306822283328035,
+        "tensor_sse": 0.0012571204875577592
+      },
+      "78": {
+        "blocks": 2.0,
+        "normalized_sse": 0.032052037202418726,
+        "tensor_sse": 0.0034995856562082595
+      },
+      "226": {
+        "blocks": 1.0,
+        "normalized_sse": 0.004692050434537576,
+        "tensor_sse": 0.0004551504047013027
+      },
+      "589": {
+        "blocks": 3.0,
+        "normalized_sse": 0.1064851294348437,
+        "tensor_sse": 1.9876147152494683
+      },
+      "590": {
+        "blocks": 4.0,
+        "normalized_sse": 0.20812590729903568,
+        "tensor_sse": 9.330569718000636
+      },
+      "243": {
+        "blocks": 2.0,
+        "normalized_sse": 0.033424174301976306,
+        "tensor_sse": 1.5742597131103333
+      },
+      "211": {
+        "blocks": 1.0,
+        "normalized_sse": 0.013322171823283657,
+        "tensor_sse": 0.0010256773018978123
+      },
+      "819": {
+        "blocks": 1.0,
+        "normalized_sse": 0.005609908350011683,
+        "tensor_sse": 0.0007508387919868524
+      },
+      "260": {
+        "blocks": 1.0,
+        "normalized_sse": 0.02274863533774707,
+        "tensor_sse": 0.1683743286050859
+      },
+      "605": {
+        "blocks": 1.0,
+        "normalized_sse": 0.023490405855180585,
+        "tensor_sse": 0.6441911447047002
+      },
+      "47": {
+        "blocks": 1.0,
+        "normalized_sse": 0.03497961775428787,
+        "tensor_sse": 2.1779688103220853
+      }
+    },
+    "random36": {
+      "280": {
+        "blocks": 15092.0,
+        "normalized_sse": 799.7857767140176,
+        "tensor_sse": 19309.425223675968
+      },
+      "268": {
+        "blocks": 16891.0,
+        "normalized_sse": 790.946378704097,
+        "tensor_sse": 17411.34305513391
+      },
+      "264": {
+        "blocks": 5582.0,
+        "normalized_sse": 264.3871480370827,
+        "tensor_sse": 5852.010925892979
+      },
+      "111": {
+        "blocks": 53.0,
+        "normalized_sse": 2.29694849596473,
+        "tensor_sse": 65.19632026778251
+      },
+      "355": {
+        "blocks": 70.0,
+        "normalized_sse": 3.2135588034221914,
+        "tensor_sse": 70.5944899445442
+      },
+      "276": {
+        "blocks": 166.0,
+        "normalized_sse": 7.635543212274568,
+        "tensor_sse": 135.53055872099458
+      },
+      "126": {
+        "blocks": 57.0,
+        "normalized_sse": 2.75938998322777,
+        "tensor_sse": 66.73704527067598
+      },
+      "370": {
+        "blocks": 30.0,
+        "normalized_sse": 1.3451301227718406,
+        "tensor_sse": 28.700983734284026
+      },
+      "127": {
+        "blocks": 28.0,
+        "normalized_sse": 1.1387878194334426,
+        "tensor_sse": 22.75437502671679
+      },
+      "260": {
+        "blocks": 1.0,
+        "normalized_sse": 0.03367325577898986,
+        "tensor_sse": 0.003593807302716914
+      },
+      "371": {
+        "blocks": 29.0,
+        "normalized_sse": 1.2848227785632276,
+        "tensor_sse": 31.025154878659016
+      },
+      "110": {
+        "blocks": 10.0,
+        "normalized_sse": 0.37836220027957973,
+        "tensor_sse": 3.704798577570729
+      },
+      "354": {
+        "blocks": 4.0,
+        "normalized_sse": 0.14636621694405716,
+        "tensor_sse": 3.3540301455788857
+      },
+      "339": {
+        "blocks": 1.0,
+        "normalized_sse": 0.049237620799224946,
+        "tensor_sse": 1.7273784732347115
+      },
+      "79": {
+        "blocks": 2.0,
+        "normalized_sse": 0.07963903482560694,
+        "tensor_sse": 2.4954670314784178
+      }
+    }
+  }
+}

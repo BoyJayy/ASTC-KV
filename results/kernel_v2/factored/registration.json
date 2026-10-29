@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-28T20:15:29.758204+00:00",
+  "config": {
+    "schema": "astckv.kernel_attribution.v2",
+    "registered_before_results": true,
+    "hypothesis": "Factoring scalar per-token V affine into attention weights reduces vector affine overhead while retaining represented values; alternatively added scalar state worsens performance.",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tiles_by_tokens": {
+      "384": [
+        16
+      ],
+      "2048": [
+        32,
+        64
+      ],
+      "8192": [
+        128
+      ]
+    },
+    "tile_selection": "Frozen from v1 two-session sweep;2048 includes ASTC-best32 and buffer-best64;other shapes share best tile. No v2 results used.",
+    "sessions": 3,
+    "rounds": 30,
+    "iterations": 10,
+    "seed": 20261029,
+    "negative_manifest": "results/kernel_v2/fixtures/t2048/manifest.json",
+    "scope": "7 interleaved paths; same cache and query; per-token V factoring has same CPU FP64 reference, other normalizations fall back. Repeated traffic fixtures are not quality samples. No novel mathematical identity claim.",
+    "negative_outcome": "No consistent difference attributable to affine or texture layout, or ASTC still slower than strong baseline. An ordinary RGBA control is not a quality result for RGBA ASTC.",
+    "experiment": "kernel_factored_v3"
+  },
+  "hashes_before": {
+    "/path/to/ASTC-KV/build/metal-v3/astc-kv-probe-v3": "f8dbba5599ce886458156f76ba4546b4b4fc696337e2e8e53d31e68c738e786e",
+    "/path/to/ASTC-KV/metal/attention_v3.metal": "d00c71a282c777aa3af0b64162c0b076bdb09ba65c80e329d97d3228d26fabde",
+    "/path/to/ASTC-KV/configs/kernel_factored_v3.json": "fd02b374cfe5e8845faab81ee9d7a800bacb2792635ca1ed235e918e7e3f6cce",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "30013acee5fb53942b79f5ba1fc19f093c6e02c48d6a933e77cb9636bf3acf8b"
+  },
+  "schedule": [
+    [
+      0,
+      2048,
+      64
+    ],
+    [
+      0,
+      2048,
+      32
+    ],
+    [
+      0,
+      384,
+      16
+    ],
+    [
+      0,
+      8192,
+      128
+    ],
+    [
+      1,
+      2048,
+      64
+    ],
+    [
+      1,
+      384,
+      16
+    ],
+    [
+      1,
+      2048,
+      32
+    ],
+    [
+      1,
+      8192,
+      128
+    ],
+    [
+      2,
+      384,
+      16
+    ],
+    [
+      2,
+      2048,
+      32
+    ],
+    [
+      2,
+      2048,
+      64
+    ],
+    [
+      2,
+      8192,
+      128
+    ]
+  ]
+}

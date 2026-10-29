@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "352c079ddfae984b14c9404c7995fb0c517a37592bfcd1df342d7698cd787a8f",
+  "historical_files": 1644,
+  "matched_current": 1625,
+  "matched_original_report_backup": 19,
+  "local_binaries": 9,
+  "matched_local_binaries": 9,
+  "failures": []
+}

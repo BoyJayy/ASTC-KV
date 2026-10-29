@@ -1,0 +1,17 @@
+{
+  "schema": "astckv.address.v7",
+  "registered_before_results": true,
+  "tokens": [384, 2048, 8192],
+  "tiles": {"384":32, "2048":64, "8192":256},
+  "sessions": 5,
+  "rounds": 60,
+  "iterations": 20,
+  "seed": 20261029,
+  "primary": "astc_compact_recurrent_v versus astc_compact_factored_v at T8192",
+  "positive_criterion": "Median of within-round GPU time ratios <=0.95 in every one of 5 sessions, with unchanged memory and all correctness gates passed.",
+  "negative_criterion": "Median of within-round GPU time ratios >=1.05 in every one of 5 sessions. Other outcomes are mixed or below the prespecified effect size.",
+  "secondary": "Hoisted versus original compact, recurrent versus hoisted, and all other shapes are descriptive. Do not substitute a secondary comparison for the primary criterion.",
+  "correctness": "All original v6 gates retained, compact normalized decode bit-exact, all ten attention paths relative L2 <=1e-4 against their own represented-value FP64 references. Ragged T391/tile13 checked first.",
+  "scope": "Same original ASTC blocks, compact texture, ranges, Q and split softmax. Only address computation changes. Hoisting also specializes width66; recurrence isolates loop division/removal relative to hoisted path. No new codec, model quality, encoding/update or full inference claim. T2048/T8192 are repeated-block traffic fixtures. Host pipeline metadata is not a register or hardware counter profile.",
+  "environment": "Serialize processes, record available pmset battery/thermal snapshots, vary seeded variant shuffle by session, preserve all sessions and raw rounds. Ratios are primary because absolute timing can drift. Missing thermal telemetry is unavailable, not zero thermal pressure."
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "astckv.kernel_sweep.v2",
+  "scope": "Correctness smoke only. T391/tile13 exercises partial page, partial SIMD wave, 6x6 channel boundaries and incomplete compact-atlas final block row. Timing is not interpreted.",
+  "rows": [
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "astc_compact_factored_v",
+      "gpu_median_us": 61.37500167824328,
+      "gpu_min_us": 61.37500167824328,
+      "gpu_max_us": 61.37500167824328,
+      "wall_median_us": 232.708,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "astc_factored_v",
+      "gpu_median_us": 61.37500167824328,
+      "gpu_min_us": 61.37500167824328,
+      "gpu_max_us": 61.37500167824328,
+      "wall_median_us": 320.458,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "astc_texture",
+      "gpu_median_us": 69.75000724196434,
+      "gpu_min_us": 69.75000724196434,
+      "gpu_max_us": 69.75000724196434,
+      "wall_median_us": 252.417,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "fp16_buffer",
+      "gpu_median_us": 51.37501284480095,
+      "gpu_min_us": 51.37501284480095,
+      "gpu_max_us": 51.37501284480095,
+      "wall_median_us": 232.459,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "normalized_buffer_factored_v",
+      "gpu_median_us": 58.00000508315861,
+      "gpu_min_us": 58.00000508315861,
+      "gpu_max_us": 58.00000508315861,
+      "wall_median_us": 208.333,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "normalized_fp16_buffer",
+      "gpu_median_us": 57.66667891293764,
+      "gpu_min_us": 57.66667891293764,
+      "gpu_max_us": 57.66667891293764,
+      "wall_median_us": 220.084,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "uncompressed_rgba_texture",
+      "gpu_median_us": 61.333339544944465,
+      "gpu_min_us": 61.333339544944465,
+      "gpu_max_us": 61.333339544944465,
+      "wall_median_us": 210.167,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    },
+    {
+      "session": 0,
+      "tokens": 391,
+      "tile": 13,
+      "variant": "uncompressed_texture",
+      "gpu_median_us": 69.41666651982814,
+      "gpu_min_us": 69.41666651982814,
+      "gpu_max_us": 69.41666651982814,
+      "wall_median_us": 253.79200000000003,
+      "manifest_sha256": "838ddf6ad8496cd4dca833ab511a200b399c385b1de76a0f4be34d0cc1a95e20",
+      "raw": "s0_t391_tile13.json",
+      "scratch_bytes": 86456
+    }
+  ],
+  "hashes_after": {
+    "/path/to/ASTC-KV/build/metal-atlas-v6/astc-kv-probe-atlas-v6": "22b5bd222fd404885c61621c91fc451edd6fb07b242997c425fc4dcf2e59cf75",
+    "/path/to/ASTC-KV/metal/attention_atlas_v6.metal": "cd054608d3b9eea121757dc0358f24bbdacaea01536e8315cc6e2a7b69d1d02f",
+    "/path/to/ASTC-KV/configs/kernel_atlas_ragged_v6.json": "2bbb76f53074e355abb56a7bb573a09f020a504a209b885926248e977ff4cc2e",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "30013acee5fb53942b79f5ba1fc19f093c6e02c48d6a933e77cb9636bf3acf8b"
+  }
+}

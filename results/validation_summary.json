@@ -1,0 +1,15 @@
+{
+  "status": "checked",
+  "numeric_tests": 7,
+  "hf_reference": "passed32_and384_all30layers",
+  "incremental_position383": "passed",
+  "astc_cpu_build": "passed_dynamic_and_native_static_pic",
+  "python_shell_syntax": "passed",
+  "metal_compile": false,
+  "metal_gpu_correctness": false,
+  "performance_claim": false,
+  "raw_quality_secondary": "380 next-token losses",
+  "snapshot_rows": 936,
+  "primary_model_rows": 2664,
+  "data_integrity_note": "One truncated capture repaired bit-identically; see science_capture_repair.json"
+}

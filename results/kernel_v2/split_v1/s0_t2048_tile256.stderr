@@ -1,0 +1,2 @@
+astc-kv-probe: ASTC height must equal ceil(tokens/page_tokens)*page_tokens
+-[_MTLCommandEncoder dealloc]:134: failed assertion `Command encoder released without endEncoding'

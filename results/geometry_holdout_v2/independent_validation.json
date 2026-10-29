@@ -1,0 +1,30 @@
+{
+  "verification": "PASS",
+  "method": "independent stdlib recompute from raw losses; exact equality of math.fsum/exp aggregates",
+  "rows": 1520,
+  "targets_per_method": 380,
+  "matching_target_positions_ids": "PASS",
+  "hashes_payloads_sources_config_inputs": "PASS",
+  "memory_arithmetic": "PASS",
+  "primary": {
+    "ppl_transpose_over_identity": 1.0011360376642466,
+    "max_ratio": 1.0,
+    "passed": false,
+    "complete_targets_per_method": 380,
+    "no_posthoc_threshold": true
+  },
+  "aggregate_mean_nll": {
+    "fp16": 3.432309007019688,
+    "astc_identity_V_only": 3.4455007264896227,
+    "astc_transpose_V_only": 3.4466361193513824,
+    "asymmetric_u4_KV": 3.4351784295748313
+  },
+  "per_document_transpose_over_identity": {
+    "ceramic_workshop": 1.002354892907719,
+    "coastal_letter": 1.0024154854245901,
+    "bread_notes": 1.004664136893505,
+    "choir_rehearsal": 0.9951354510447845
+  },
+  "logical_memory_ratio_astc_vs_fp16": 0.7219321148825065,
+  "logical_memory_ratio_astc_vs_asymmetric_u4": 1.5845272206303724
+}

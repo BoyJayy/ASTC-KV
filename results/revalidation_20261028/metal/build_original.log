@@ -1,0 +1,2 @@
+The selected Xcode installation does not provide the Metal compiler.
+Install/select Xcode and its Metal toolchain, then rerun.

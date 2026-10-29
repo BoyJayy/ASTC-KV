@@ -1,0 +1,419 @@
+{
+  "scope": "Same FP16-rounded Q in FP32 storage and common hardware-reconstructed K/V base. Q4 requantizes that base, so this is a systems/correctness comparison, not codec-quality evidence. Both report one host submission through completed GPU work, with no timed output readback; their framework/dispatch overhead remains included. Reused one-query cache. T2048/T8192 repeat original blocks, not fresh long contexts. No whole-model or bandwidth claim. Unsupported mixed K/V is reported, never silently replaced.",
+  "matched_f16_input_hashes_passed": true,
+  "groups": [
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "astc_factored_v",
+      "tile": 32,
+      "median_us": 156.0625,
+      "session_medians_us": [
+        160.97899999999998,
+        153.35399999999998,
+        156.0625
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "astc_texture",
+      "tile": 32,
+      "median_us": 157.4585,
+      "session_medians_us": [
+        162.125,
+        157.4585,
+        156.5835
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "fp16_buffer",
+      "tile": 32,
+      "median_us": 152.938,
+      "session_medians_us": [
+        152.938,
+        150.667,
+        158.042
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "normalized_buffer_factored_v",
+      "tile": 32,
+      "median_us": 156.7295,
+      "session_medians_us": [
+        157.60399999999998,
+        156.7295,
+        153.89600000000002
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "normalized_fp16_buffer",
+      "tile": 32,
+      "median_us": 157.271,
+      "session_medians_us": [
+        156.729,
+        157.27100000000002,
+        157.271
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "uncompressed_rgba_texture",
+      "tile": 32,
+      "median_us": 157.16649999999998,
+      "session_medians_us": [
+        157.16649999999998,
+        156.97949999999997,
+        159.1045
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "astc",
+      "variant": "uncompressed_texture",
+      "tile": 32,
+      "median_us": 159.6455,
+      "session_medians_us": [
+        159.6455,
+        159.875,
+        157.3755
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "llama",
+      "variant": "f16_kv",
+      "tile": 0,
+      "median_us": 155.83300000000003,
+      "session_medians_us": [
+        155.83300000000003,
+        158.58350000000002,
+        149.64600000000002
+      ]
+    },
+    {
+      "tokens": 384,
+      "backend": "llama",
+      "variant": "q4_0_kv",
+      "tile": 0,
+      "median_us": 160.2505,
+      "session_medians_us": [
+        163.5625,
+        160.2505,
+        147.3125
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "astc_factored_v",
+      "tile": 64,
+      "median_us": 164.041,
+      "session_medians_us": [
+        175.83350000000002,
+        163.9375,
+        164.041
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "astc_factored_v",
+      "tile": 128,
+      "median_us": 166.64600000000002,
+      "session_medians_us": [
+        166.64600000000002,
+        165.5,
+        167.54149999999998
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "astc_texture",
+      "tile": 64,
+      "median_us": 169.29149999999998,
+      "session_medians_us": [
+        173.8125,
+        167.79149999999998,
+        169.29149999999998
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "astc_texture",
+      "tile": 128,
+      "median_us": 176.04149999999998,
+      "session_medians_us": [
+        176.04149999999998,
+        177.72899999999998,
+        175.2705
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "fp16_buffer",
+      "tile": 64,
+      "median_us": 163.77100000000002,
+      "session_medians_us": [
+        166.39600000000002,
+        160.875,
+        163.77100000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "fp16_buffer",
+      "tile": 128,
+      "median_us": 158.77100000000002,
+      "session_medians_us": [
+        155.3755,
+        160.063,
+        158.77100000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "normalized_buffer_factored_v",
+      "tile": 64,
+      "median_us": 163.2505,
+      "session_medians_us": [
+        167.91649999999998,
+        162.47899999999998,
+        163.2505
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "normalized_buffer_factored_v",
+      "tile": 128,
+      "median_us": 166.875,
+      "session_medians_us": [
+        166.875,
+        166.6255,
+        167.27100000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "normalized_fp16_buffer",
+      "tile": 64,
+      "median_us": 165.10399999999998,
+      "session_medians_us": [
+        167.95850000000002,
+        165.10399999999998,
+        164.75
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "normalized_fp16_buffer",
+      "tile": 128,
+      "median_us": 167.54149999999998,
+      "session_medians_us": [
+        167.54149999999998,
+        175.583,
+        165.083
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "uncompressed_rgba_texture",
+      "tile": 64,
+      "median_us": 168.20850000000002,
+      "session_medians_us": [
+        179.64600000000002,
+        167.917,
+        168.20850000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "uncompressed_rgba_texture",
+      "tile": 128,
+      "median_us": 173.83399999999997,
+      "session_medians_us": [
+        173.97899999999998,
+        173.83399999999997,
+        173.625
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "uncompressed_texture",
+      "tile": 64,
+      "median_us": 172.25,
+      "session_medians_us": [
+        180.33350000000002,
+        169.89600000000002,
+        172.25
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "astc",
+      "variant": "uncompressed_texture",
+      "tile": 128,
+      "median_us": 176.45850000000002,
+      "session_medians_us": [
+        177.70850000000002,
+        175.6455,
+        176.45850000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "llama",
+      "variant": "f16_kv",
+      "tile": 0,
+      "median_us": 155.91649999999998,
+      "session_medians_us": [
+        155.91649999999998,
+        164.417,
+        143.02100000000002
+      ]
+    },
+    {
+      "tokens": 2048,
+      "backend": "llama",
+      "variant": "q4_0_kv",
+      "tile": 0,
+      "median_us": 160.333,
+      "session_medians_us": [
+        160.333,
+        167.208,
+        148.667
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "astc_factored_v",
+      "tile": 256,
+      "median_us": 188.04199999999997,
+      "session_medians_us": [
+        192.625,
+        188.04199999999997,
+        187.08350000000002
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "astc_texture",
+      "tile": 256,
+      "median_us": 214.3125,
+      "session_medians_us": [
+        214.33350000000002,
+        213.9795,
+        214.3125
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "fp16_buffer",
+      "tile": 256,
+      "median_us": 174.8535,
+      "session_medians_us": [
+        179.6045,
+        172.458,
+        174.8535
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "normalized_buffer_factored_v",
+      "tile": 256,
+      "median_us": 194.667,
+      "session_medians_us": [
+        204.0625,
+        194.667,
+        189.70850000000002
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "normalized_fp16_buffer",
+      "tile": 256,
+      "median_us": 195.5625,
+      "session_medians_us": [
+        205.91649999999998,
+        195.5625,
+        192.72899999999998
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "uncompressed_rgba_texture",
+      "tile": 256,
+      "median_us": 203.9375,
+      "session_medians_us": [
+        207.91649999999998,
+        203.9375,
+        203.125
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "astc",
+      "variant": "uncompressed_texture",
+      "tile": 256,
+      "median_us": 220.47899999999998,
+      "session_medians_us": [
+        225.917,
+        220.47899999999998,
+        220.3125
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "llama",
+      "variant": "f16_kv",
+      "tile": 0,
+      "median_us": 167.83350000000002,
+      "session_medians_us": [
+        176.1455,
+        166.22899999999998,
+        167.83350000000002
+      ]
+    },
+    {
+      "tokens": 8192,
+      "backend": "llama",
+      "variant": "q4_0_kv",
+      "tile": 0,
+      "median_us": 175.77100000000002,
+      "session_medians_us": [
+        184.1255,
+        169.45850000000002,
+        175.77100000000002
+      ]
+    }
+  ],
+  "max_llama_ref_error": {
+    "f16_kv": 2.016344618123987e-07,
+    "q4_0_kv": 0.0005839713467104328
+  },
+  "processes": 9
+}

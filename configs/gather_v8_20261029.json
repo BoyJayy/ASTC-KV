@@ -1,0 +1,18 @@
+{
+  "schema": "astckv.gather.v8",
+  "registered_before_results": true,
+  "hypothesis": "An exact 2x2 texture gather reduces source-level V texture instructions for two tokens and two channels. It can remove part of the compact scalar ASTC latency gap without changing stored blocks or decoded values.",
+  "tokens": [384, 2048, 8192],
+  "tiles": {"384": 32, "2048": 64, "8192": 256},
+  "sessions": 5,
+  "primary_max_ratio": 0.85,
+  "blocks": 40,
+  "iterations": 20,
+  "seed": 20261031,
+  "primary": "compact hoisted v7 to paired gather v8, T8192, median ABBA/BAAB GPU ratio B/A <=0.85 in all five sessions",
+  "positive_criterion": "At least 15% lower GPU time than hoisted v7 in every session, unchanged persistent memory, all twelve represented-value attention gates <=1e-4 and exact gather-versus-read checks passed.",
+  "secondary": "Paired direct versus gather isolates the texture instruction change from the pairing/scheduling change. Own FP16 versus gather measures the remaining gap. No secondary comparison replaces the primary.",
+  "correctness_cases": [[391, 1], [391, 7], [391, 13], [391, 256]],
+  "timing_design": "Seeded ABBA or BAAB for each comparison, random comparison order per block, ten warmup command buffers per variant, retain every sample. Five separately launched sessions, shapes shuffled per session.",
+  "scope": "Same compressed payload, normalized values, affine metadata and Q/K. Same persistent resources. Pairing changes reduction order. Source-level instruction count is not measured hardware instruction count or DRAM traffic. Precompressed warm repeated fixtures, not a model-quality, dynamic-cache or full-inference result. T2048 and T8192 repeat real fixture blocks."
+}

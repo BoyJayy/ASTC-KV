@@ -1,0 +1,83 @@
+{
+  "schema": "astckv.gqa.v10.preparation",
+  "host_build": "PASS",
+  "shell_syntax": "PASS",
+  "offline_metal_compiler": "unavailable",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101), arm64-apple-darwin25.6.0",
+  "commands": [
+    "bash -n metal/build_gqa_v10.sh",
+    "bash metal/build_gqa_v10.sh"
+  ],
+  "frozen_inputs_unchanged": true,
+  "v9_shader_byte_identical_prefix": true,
+  "old_14_references_and_attention_gate_unchanged": true,
+  "root_cpu_tests": {
+    "reported_pass": 5,
+    "files": [
+      "tests/test_gqa_states_v10.py",
+      "tests/test_gqa_protocol_v10.py"
+    ],
+    "not_repeated_during_gpu_series": true
+  },
+  "gpu_owner": "root; preparation agent did not run GPU",
+  "gpu_results_read_only_validation": {
+    "gqa_smoke": {
+      "processes": 5,
+      "attention_gates_passed": 80,
+      "exact_gates_passed": 10,
+      "max_relative_l2": 6.491584266324739e-07,
+      "abba_blocks_validated": 20,
+      "raw_samples_validated": 80,
+      "primary_passed": null
+    },
+    "gqa_main": {
+      "processes": 19,
+      "attention_gates_passed": 304,
+      "exact_gates_passed": 38,
+      "max_relative_l2": 9.307367557825085e-07,
+      "abba_blocks_validated": 2416,
+      "raw_samples_validated": 9664,
+      "primary_passed": false
+    }
+  },
+  "t8192_session_medians": {
+    "hoisted_to_gqa": [
+      1.2666425168546624,
+      1.3115626037085615,
+      1.265226244504618,
+      1.265318403561757,
+      1.2611582152547256
+    ],
+    "fused_fp16_to_astc": [
+      1.1561719132109147,
+      1.0570372532777945,
+      1.1586722255134592,
+      1.1487894536702319,
+      1.084247102211052
+    ],
+    "fp16_to_gqa_astc": [
+      2.00088104196832,
+      2.1323152070096976,
+      1.9894426057037986,
+      2.0184567284819432,
+      1.9800625037272916
+    ],
+    "fp16_to_gqa_fp16": [
+      1.9002699587693213,
+      1.726323357713912,
+      1.7196661707625416,
+      1.6935757921765882,
+      1.7303390346602057
+    ]
+  },
+  "t8192_persistent_astc_bytes": 3981312,
+  "t8192_persistent_fp16_bytes": 6291456,
+  "t8192_persistent_ratio": 0.6328125,
+  "primary_passed": false,
+  "hashes": {
+    "metal/attention_gqa_v10.metal": "1fa0a3445870590e15b73155e8319b7738f8663b42b775f934262e842223db5c",
+    "metal/probe_gqa_v10.mm": "9717c54415508a7202cbf1a6491bf46b687530a0d2291c0f203b4cad4a665d7c",
+    "metal/build_gqa_v10.sh": "27675e975f976619a8d2364f25f97bc11ed542cc291a67ba9a6ab3d601ff0970",
+    "build/metal-gqa-v10/astc-kv-probe-gqa-v10": "cb6d5398ce0187ae5caca65d1ec2446cfe544fcd2d11d4270af289e0c1cf1320"
+  }
+}

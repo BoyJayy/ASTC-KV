@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-10-28T20:53:41.518144+00:00",
+  "config": {
+    "schema": "astckv.compact_atlas.v6",
+    "registered_before_results": true,
+    "hypothesis": "Linear packing of unchanged ASTC blocks into a 32-block-wide atlas may remove physical allocation waste. Attention must decode exactly the same normalized V values; address arithmetic may hurt latency.",
+    "tokens": [
+      384,
+      2048,
+      8192
+    ],
+    "tiles_by_tokens": {
+      "384": [
+        32
+      ],
+      "2048": [
+        64
+      ],
+      "8192": [
+        256
+      ]
+    },
+    "tile_selection": "Frozen from v1 two-session sweep;2048 includes ASTC-best32 and buffer-best64;other shapes share best tile. No v2 results used.",
+    "sessions": 3,
+    "rounds": 30,
+    "iterations": 10,
+    "seed": 20261029,
+    "negative_manifest": "results/kernel_v2/fixtures/t2048/manifest.json",
+    "scope": "Same payload blocks, original source width/height and ranges, compactatlas width192texels. Decode all normalized V and require exactfloat match against original ASTCtexture before timing. Same Q/ref, ownFP16 control. T2048/8192 repeatedblock trafficcontrols. Noencoder/update/modelqualityclaim.",
+    "negative_outcome": "Any payload/decode mismatch invalidates result; otherwise report actual allocation and all timing outcomes, including slowdowns. Smaller allocation alone does not establish runtime advantage.",
+    "experiment": "compact_block_atlas_v6",
+    "selection": "Width32 chosen by completed allocation-only probe (among32/64/128/256 widths); no compact attention results used. Tiles frozen from v4 per-shape ASTC optima. Exploratory representation-layout check, not independent universal performance confirmation."
+  },
+  "hashes_before": {
+    "/path/to/ASTC-KV/build/metal-atlas-v6/astc-kv-probe-atlas-v6": "22b5bd222fd404885c61621c91fc451edd6fb07b242997c425fc4dcf2e59cf75",
+    "/path/to/ASTC-KV/metal/attention_atlas_v6.metal": "cd054608d3b9eea121757dc0358f24bbdacaea01536e8315cc6e2a7b69d1d02f",
+    "/path/to/ASTC-KV/configs/kernel_atlas_v6.json": "b71c1929d5e5696249bbdb7e596cad79f880bec6ebc0c3e976923aac3cab7c38",
+    "/path/to/ASTC-KV/scripts/run_kernel_sweep.py": "30013acee5fb53942b79f5ba1fc19f093c6e02c48d6a933e77cb9636bf3acf8b"
+  },
+  "schedule": [
+    [
+      0,
+      384,
+      32
+    ],
+    [
+      0,
+      2048,
+      64
+    ],
+    [
+      0,
+      8192,
+      256
+    ],
+    [
+      1,
+      8192,
+      256
+    ],
+    [
+      1,
+      2048,
+      64
+    ],
+    [
+      1,
+      384,
+      32
+    ],
+    [
+      2,
+      384,
+      32
+    ],
+    [
+      2,
+      8192,
+      256
+    ],
+    [
+      2,
+      2048,
+      64
+    ]
+  ]
+}

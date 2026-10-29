@@ -1,0 +1,8 @@
+{
+  "metal/attention_gather_v8.metal": "17391aac08e37524c138a8103944be5292b14cb1ae747fae32ef5da09dfa7daa",
+  "metal/probe_gather_v8.mm": "e5cfbb8fd62bb3a36eab307624ccb7e037fc75e25e7d6445f23da355bfb28f22",
+  "metal/build_gather_v8.sh": "218f05ec07fe2ec2fe5da63ceb0c970dc625cf4783b6b5b8915a96a4156c4301",
+  "metal/attention_atlas_v7.metal": "48a5451635f394725c4f7fad47dd3cb997604da05c8c17f1ce3fd31da067d249",
+  "metal/probe_atlas_v7.mm": "dcc69045caad0721e73f69cc81c8ecc4a37971ac17b9356bfbd42ac6dd143124",
+  "build/metal-gather-v8/astc-kv-probe-gather-v8": "674bc36b8fc2ebd66adc7a151953cd21d4cf430396c8a912c0e1b536a9533d92"
+}

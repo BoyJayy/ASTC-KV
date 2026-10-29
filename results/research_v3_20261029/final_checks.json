@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "report_files_checked": 25,
+  "forbidden_report_symbols": 0,
+  "report_links": "PASS",
+  "gpu_processes": 21,
+  "attention_gates": 210,
+  "exact_decode_gates": 21,
+  "max_attention_relative_l2": 9.307367557825085e-07
+}

@@ -1,0 +1,1 @@
+{"status":"PASS","shape_tile_cases":221,"scalar_coordinates":48580608,"valid_scalar_coordinates":29507712,"invalid_lane_waves_checked":298014,"recurrence_steps_including_last_invalid":759072,"includes_T391_tile13":true,"scope":"CPU address simulation only; GPU execution not tested"}

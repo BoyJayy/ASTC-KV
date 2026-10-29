@@ -1,0 +1,44 @@
+{
+  "schema": "astckv.gqa.v10",
+  "registered_before_results": true,
+  "hypothesis": "Sharing one K/V load across the three query heads of a KV group can reduce repeated texture work. The same fusion is implemented for FP16 to avoid attributing a generic scheduling improvement to ASTC.",
+  "tokens": [
+    384,
+    2048,
+    8192
+  ],
+  "tiles": {
+    "384": 32,
+    "2048": 64,
+    "8192": 256
+  },
+  "sessions": 5,
+  "primary_max_ratio": 1.05,
+  "blocks": 40,
+  "iterations": 20,
+  "seed": 20261102,
+  "primary": "T8192: compact GQA ASTC GPU time <=1.05 times BOTH original FP16 and fused GQA FP16 in every one of five sessions, with persistent K/V/metadata bytes <=0.75 of FP16.",
+  "positive_criterion": "Both timing contrasts pass in all five sessions, memory criterion passes, and all sixteen own-reference attention gates plus original exact decode gates pass.",
+  "secondary": "Old hoisted ASTC versus shared GQA ASTC; original FP16 versus fused FP16. Neither substitutes for the primary. Existing v8/v9 candidates are retained as correctness controls only.",
+  "correctness_cases": [
+    [
+      391,
+      1
+    ],
+    [
+      391,
+      7
+    ],
+    [
+      391,
+      13
+    ],
+    [
+      391,
+      256
+    ]
+  ],
+  "timing_design": "Seeded ABBA or BAAB for four comparisons, random comparison order per block, ten warmup command buffers per variant, retain every sample. Five separately launched sessions, shapes shuffled per session.",
+  "scope": "Precompressed warm fixtures, D64/Hq9/Hkv3 and one model capture. GQA fusion is known prior art. Each query head retains separate exact softmax states; K/V/affine data are loaded once then reused in registers. Increased live state can erase benefit; no register/occupancy counter claim. No model PPL, full decode, dynamic encoder or production peak result. T2048/T8192 repeat fixture blocks.",
+  "max_persistent_memory_ratio": 0.75
+}

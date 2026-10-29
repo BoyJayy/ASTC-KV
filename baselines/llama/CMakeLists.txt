@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+project(astc_kv_llama_baseline LANGUAGES C CXX OBJC OBJCXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_OBJCXX_STANDARD 17)
+set(CMAKE_OBJCXX_STANDARD_REQUIRED ON)
+if(NOT IS_DIRECTORY "${LLAMA_SOURCE_DIR}/ggml")
+  message(FATAL_ERROR "LLAMA_SOURCE_DIR must point to the pinned llama.cpp source")
+endif()
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+add_subdirectory("${LLAMA_SOURCE_DIR}/ggml" ggml)
+add_executable(astc-llama-baseline probe.mm)
+target_link_libraries(astc-llama-baseline PRIVATE ggml "-framework Foundation")
+target_compile_options(astc-llama-baseline PRIVATE -fobjc-arc -Wall -Wextra)
+target_compile_definitions(astc-llama-baseline PRIVATE
+  AKV_LLAMA_REVISION="c3df4b7e22a1ac38da663552d19e649dd97ca936"
+  AKV_BUILD_INFO_PATH="${CMAKE_BINARY_DIR}/build-provenance.json")

@@ -1,0 +1,68 @@
+{
+  "config": {
+    "schema": "astckv.pool.v5",
+    "registered_before_results": true,
+    "tokens": 8192,
+    "tile_tokens": 256,
+    "pool_sizes": [
+      1,
+      8,
+      64
+    ],
+    "sessions": 3,
+    "rounds": 30,
+    "iterations": "one complete pool cycle per timed batch",
+    "seed": 20261029,
+    "maximum_pool_allocated_bytes": 1073741824,
+    "hypothesis": "Repeated one-cache reads may conceal a bandwidth advantage of ASTC. Distinct resident allocations traversed once per cycle can expose a useful crossover.",
+    "positive_criterion": "For pool_size=64, ASTC GPU median per call <= 0.8 times own FP16 in every one of three sessions. This would justify a next experiment, not prove whole-model acceleration.",
+    "negative_criterion": "For pool_size=64, ASTC GPU median per call > 1.05 times own FP16 in every one of three sessions. Otherwise inconclusive by this gate.",
+    "scope": "Precompressed identical-value repeated-block traffic fixtures, different resident GPU allocations. Same v4 D64 kernel and fixed tile256 for both paths; no tile retuning, eviction command, encoder, append, model quality, or hardware-counter evidence. Large pool does not by itself prove a specific cache miss rate or DRAM bandwidth.",
+    "correctness": "Existing seven path own-reference gates plus selected pool-slot/wraparound checks before timing. No timing interpretation on failed gate. Report pool memory and actual GPU allocated sizes."
+  },
+  "hashes_before": {
+    "configs/kernel_pool_v5.json": "8634dd5940c59eca4a5646951a28afb7cf1f344d7da44af31474eb404b8c6773",
+    "build/metal-pool-v5/astc-kv-probe-pool-v5": "4598159edae99615cd9c313d63aec048c68e8c1b18a747d36029105e3e66f1b3",
+    "metal/attention_v4.metal": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+    "scripts/run_pool_sweep.py": "8539e6364ca99ec418545f055f881a9a7ac1cccbda549f2af7a297ef0ae50edc",
+    "metal/probe_pool_v5.mm": "c329463aa80a47044e1ea527ba608916f59994f3dcdc5f130a4a15d4a216c140"
+  },
+  "schedule": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      64
+    ],
+    [
+      1,
+      64
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      64
+    ],
+    [
+      2,
+      8
+    ]
+  ]
+}

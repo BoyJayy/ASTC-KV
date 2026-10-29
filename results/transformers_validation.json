@@ -1,0 +1,111 @@
+{
+  "schema": "astckv.independent_reference_validation.v1",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "weights_sha256": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+  "capture_sha256": "01d188a02b59b0cf6dad51a7ae40fff87896e09432388b169a01747d0f1c190e",
+  "fixture": "systems",
+  "checks": [
+    {
+      "status": "passed",
+      "tokens": 32,
+      "metrics": {
+        "q": {
+          "max_abs": 2.396106719970703e-05,
+          "rms": 1.0013786735413026e-06,
+          "relative_l2": 5.811801451058577e-07
+        },
+        "k": {
+          "max_abs": 4.38690185546875e-05,
+          "rms": 1.0748072624963003e-06,
+          "relative_l2": 5.393072652621185e-07
+        },
+        "v": {
+          "max_abs": 1.5556812286376953e-05,
+          "rms": 9.335640857952008e-07,
+          "relative_l2": 1.1312556983655926e-06
+        },
+        "final_hidden": {
+          "max_abs": 0.00014781951904296875,
+          "rms": 3.384633732843153e-06,
+          "relative_l2": 1.6628505417325474e-06
+        },
+        "logits": {
+          "max_abs": 0.00019073486328125,
+          "rms": 1.5910252557483087e-05,
+          "relative_l2": 1.5333347060735251e-06
+        }
+      },
+      "torch_version": "2.6.0+cpu",
+      "transformers_version": "4.51.3",
+      "dtype": "FP32",
+      "attention": "eager",
+      "thresholds": {
+        "max_abs": 0.001,
+        "relative_l2": 0.0001
+      },
+      "wall_seconds": 5.234267362000537
+    },
+    {
+      "status": "passed",
+      "tokens": 384,
+      "metrics": {
+        "q": {
+          "max_abs": 0.0001112520694732666,
+          "rms": 1.69752351612566e-06,
+          "relative_l2": 9.438452057390327e-07
+        },
+        "k": {
+          "max_abs": 7.343292236328125e-05,
+          "rms": 2.0309515435206675e-06,
+          "relative_l2": 9.520935123872402e-07
+        },
+        "v": {
+          "max_abs": 1.5556812286376953e-05,
+          "rms": 9.735202534020283e-07,
+          "relative_l2": 1.1233924771808352e-06
+        },
+        "final_hidden": {
+          "max_abs": 0.00014781951904296875,
+          "rms": 1.8812074223759563e-06,
+          "relative_l2": 8.882769066707708e-07
+        },
+        "logits": {
+          "max_abs": 0.00019073486328125,
+          "rms": 9.698803614332223e-06,
+          "relative_l2": 9.511984610464384e-07
+        }
+      },
+      "torch_version": "2.6.0+cpu",
+      "transformers_version": "4.51.3",
+      "dtype": "FP32",
+      "attention": "eager",
+      "thresholds": {
+        "max_abs": 0.001,
+        "relative_l2": 0.0001
+      },
+      "wall_seconds": 2.2287764650009194
+    }
+  ],
+  "incremental_384": {
+    "status": "passed",
+    "tokens": 384,
+    "metrics": {
+      "logits": {
+        "max_abs": 2.47955322265625e-05,
+        "rms": 8.897646163734513e-06,
+        "relative_l2": 5.25370445839485e-07
+      },
+      "k": {
+        "max_abs": 1.9073486328125e-05,
+        "rms": 7.03040846345978e-07,
+        "relative_l2": 3.2957981907442084e-07
+      },
+      "v": {
+        "max_abs": 8.344650268554688e-06,
+        "rms": 7.05660357280095e-07,
+        "relative_l2": 8.142958802593897e-07
+      }
+    },
+    "comparison": "full causal forward vs prefill(T-1) plus step(T-1)"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "astckv.model_quality_secondary_decision.v1",
+  "created_utc": "2026-10-28T18:14:09.783403+00:00",
+  "status": "post_holdout_secondary_diagnostic",
+  "selection_reason": "Snapshot heldout results showed channel-wise K U4 + token-wise V U4 was substantially stronger than token-wise U4 for both tensors. Added as a stronger numerical baseline after holdout inspection.",
+  "not_part_of_primary_preregistration": true,
+  "method": "u4_asymmetric_KV",
+  "K": {
+    "bits": 4,
+    "axis": "channel",
+    "group": 96
+  },
+  "V": {
+    "bits": 4,
+    "axis": "token",
+    "group": 64
+  },
+  "prefix_tokens": 288,
+  "context_tokens": 384,
+  "teacher_forcing_targets": [
+    289,
+    383
+  ],
+  "fresh_tail": "FP16, with real autoregressive hidden-state feedback under teacher forcing",
+  "primary_baseline": "/workspace/scratch/af4997db1163/astc-kv/results/model_quality.json",
+  "primary_sha256": "05f792dcabe255f2d7a19ca69d12e21313c16984e97e0a32bccf15e794682869",
+  "gate": "Same provisional relative PPL <=1.02, not a confirmation of generalized model quality",
+  "claim_limit": "Numerical affine baseline, not a KIVI implementation or Metal speed measurement"
+}

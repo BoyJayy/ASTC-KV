@@ -1,0 +1,55 @@
+# Working directory: /path/to/ASTC-KV
+# Executed commands, not commands to rerun over existing output directories.
+# GPU commands used approved access outside the sandbox. No upstream push/deploy.
+
+# PASS: builds
+bash metal/build_v2.sh
+bash metal/build_v3.sh
+bash metal/build_v4.sh
+bash scripts/build_llama_baseline.sh
+bash metal/build_pool_v5.sh
+bash metal/build_atlas_alloc.sh
+bash metal/build_atlas_v6.sh
+
+# EXPECTED RETAINED FAILURE: original traffic fixture height was not page padded.
+.venv-research/bin/python scripts/run_kernel_sweep.py --fixtures results/kernel_v2/fixtures --out results/kernel_v2/split_v1
+
+# PASS: corrected fixtures; GPU own-value correctness gates precede all timings.
+.venv-research/bin/python scripts/run_kernel_sweep.py --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/split_v1_page
+.venv-research/bin/python scripts/run_kernel_sweep.py --config configs/kernel_attribution_v2.json --binary build/metal-v2/astc-kv-probe-v2 --shader metal/attention_v2.metal --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/attribution
+.venv-research/bin/python scripts/run_kernel_sweep.py --config configs/kernel_factored_v3.json --binary build/metal-v3/astc-kv-probe-v3 --shader metal/attention_v3.metal --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/factored
+.venv-research/bin/python scripts/verify_metal_v3.py --out-dir results/kernel_v2/v3_controls
+.venv-research/bin/python scripts/verify_metal_v4.py --out-dir results/kernel_v2/v4_controls
+.venv-research/bin/python scripts/run_kernel_sweep.py --config configs/kernel_wave_v4.json --binary build/metal-v4/astc-kv-probe-v4 --shader metal/attention_v4.metal --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/wave
+
+# RETAINED FAILURE: reference used original FP32 Q, while official kernel uses half Q.
+.venv-research/bin/python scripts/compare_llama_metal.py --out results/kernel_v2/llama_comparison
+
+# PASS: separate precision diagnosis, then common-Q comparison with unchanged gates.
+build/llama-baseline/bin/astc-llama-precision results/kernel_v2/llama_comparison/matched_inputs/t384/manifest.json results/kernel_v2/llama_precision
+.venv-research/bin/python scripts/compare_llama_metal_common_q.py --out results/kernel_v2/llama_comparison_common_q
+
+# PASS correctness, NEGATIVE preregistered performance outcome.
+.venv-research/bin/python scripts/run_pool_sweep.py --out results/kernel_v2/pool_v5
+.venv-research/bin/python scripts/verify_pool_results.py
+
+# PASS allocations, then PASS unchanged normalized GPU decode/attention.
+build/metal-atlas-alloc/astc-kv-atlas-alloc
+.venv-research/bin/python scripts/make_traffic_fixture.py --tokens 391 --out results/kernel_v2/fixtures_page/t391
+.venv-research/bin/python scripts/run_kernel_sweep.py --config configs/kernel_atlas_ragged_v6.json --binary build/metal-atlas-v6/astc-kv-probe-atlas-v6 --shader metal/attention_atlas_v6.metal --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/atlas_ragged
+.venv-research/bin/python scripts/run_kernel_sweep.py --config configs/kernel_atlas_v6.json --binary build/metal-atlas-v6/astc-kv-probe-atlas-v6 --shader metal/attention_atlas_v6.metal --fixtures results/kernel_v2/fixtures_page --out results/kernel_v2/atlas
+
+# PASS numerical geometry controls; primary holdout performance criterion FAIL.
+env OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv-research/bin/python scripts/probe_block_geometry.py
+env OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 TOKENIZERS_PARALLELISM=false .venv-research/bin/python scripts/evaluate_geometry_holdout.py --mode run
+
+# PASS focused algebra tests, all15 unit tests, raw recomputation, whitespace.
+.venv-research/bin/python -m unittest discover -s tests -p test_factored_v.py -v
+env OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv-research/bin/python -m unittest discover -s tests -v
+.venv-research/bin/python scripts/summarize_kernel_research.py --verify
+.venv-research/bin/python results/block_geometry_v2/verify_saved.py
+.venv-research/bin/python results/geometry_holdout_v2/verify_saved.py
+git diff --check
+
+# NOT PERFORMED: dynamic GPU encoding/append, complete inference runtime,
+# second-model validation, production deployment, hardware cache-miss counters.

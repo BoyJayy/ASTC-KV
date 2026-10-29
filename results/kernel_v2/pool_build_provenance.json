@@ -1,0 +1,21 @@
+{
+  "schema": "pool-probe-v5-preparation",
+  "source_v4_blocks_unchanged": true,
+  "build_status": "PASS",
+  "shell_syntax_status": "PASS",
+  "gpu_status": "NOT_RUN_BY_PREPARING_AGENT",
+  "commands": [
+    "bash -n metal/build_pool_v5.sh",
+    "bash metal/build_pool_v5.sh"
+  ],
+  "hashes": {
+    "metal/probe_v4.mm": "38ab358900b7825c099e743459c5ad47da864af33bc3737a2b32a1473a776aa8",
+    "metal/attention_v4.metal": "a3f81b1aaa5c96ac75a9011f8ea767694be74ec6e91bc084df1fdf527850a5fa",
+    "metal/probe_pool_v5.mm": "c329463aa80a47044e1ea527ba608916f59994f3dcdc5f130a4a15d4a216c140",
+    "metal/build_pool_v5.sh": "6f0c128f7f146fcc9ac2cfea88f081d8539e3bb9f91f805f65c934c2ca05a144",
+    "build/metal-pool-v5/astc-kv-probe-pool-v5": "4598159edae99615cd9c313d63aec048c68e8c1b18a747d36029105e3e66f1b3",
+    "docs/pool_probe_v5.md": "e354781bc11d1e9ffd902c058d57cffa9788d410ee6f5e9e46dc62a4f7c8e690"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "sdk": "26.5"
+}
